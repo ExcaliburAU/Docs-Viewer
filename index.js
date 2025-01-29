@@ -280,6 +280,20 @@ async function loadDocument(path) {
         document.title = `Litruv / ${titleContent}`;
         document.querySelector('.title-text .page-title').textContent = titleContent;
 
+        // Update Twitter meta tags dynamically
+        document.querySelector('meta[name="twitter:title"]').setAttribute('content', titleContent);
+        document.querySelector('meta[name="twitter:description"]').setAttribute('content', metadata.description || `Documentation for ${titleContent}`);
+        if (metadata.image) {
+            const imageUrl = `${window.location.origin}${window.location.pathname}${basePath}/images/${metadata.image}`;
+            let twitterImageMeta = document.querySelector('meta[name="twitter:image"]');
+            if (!twitterImageMeta) {
+                twitterImageMeta = document.createElement('meta');
+                twitterImageMeta.setAttribute('name', 'twitter:image');
+                document.head.appendChild(twitterImageMeta);
+            }
+            twitterImageMeta.setAttribute('content', imageUrl);
+        }
+
         documentContent.className = 'markdown-content';
         documentContent.innerHTML = marked.parse(finalContent);
 

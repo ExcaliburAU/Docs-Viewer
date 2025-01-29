@@ -15,14 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
-    <script> 
-        var link = document.createElement('meta');
-        link.setAttribute('property', 'twitter:title');
-        link.content = "Litruv Documentation Test OG Tags";
-        document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
-
 </head>
 <body>
     <div class="container">
@@ -62,7 +54,7 @@
                     </a>
                 </div>
                 <div class="github-link">
-                    <a href="https://github.com/litruv/Docs-Viewer" target="_blank" title="Docs Viewer GitHub">
+                    <a href="https://github.com/litruv/docs" target="_blank" title="Docs Viewer GitHub">
                         <i class="fab fa-github"></i> Docs Viewer
                     </a>
                 </div>
@@ -77,7 +69,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
     <script>
-        // Fallback in case CDN fails
         window.addEventListener('error', function(e) {
             if (e.target.src && e.target.src.includes('marked.min.js')) {
                 const script = document.createElement('script');
