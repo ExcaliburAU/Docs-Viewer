@@ -79,6 +79,11 @@ function createFileIndexItem(doc, container, level = 0) {
             e.preventDefault();
             loadDocument(doc.path);
             history.pushState(null, '', link.href);
+            // Hide sidebar on mobile after clicking a link
+            const leftSidebar = document.querySelector('.left-sidebar');
+            if (window.innerWidth <= 1000) {
+                leftSidebar.classList.remove('show');
+            }
         };
         container.appendChild(link);
     }
