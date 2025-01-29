@@ -24,7 +24,12 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 .title-bar {
@@ -59,6 +64,7 @@ body {
     display: flex;
     flex: 1;
     overflow: hidden;
+    height: calc(100% - var(--title-bar-height));
 }
 
 .sidebar {
@@ -74,9 +80,7 @@ body {
     border-right: 1px solid var(--ifm-border-color);
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - var(--title-bar-height));
-    position: sticky;
-    top: var(--title-bar-height);
+    height: 100%;
 }
 
 #file-index {
@@ -415,11 +419,9 @@ body {
         position: fixed;
         left: -100%;
         top: var(--title-bar-height);
-        bottom: 0;
+        height: calc(100% - env(safe-area-inset-top) - var(--title-bar-height));
         z-index: 100;
         transition: var(--sidebar-transition);
-        min-height: unset; /* Remove min-height for mobile */
-        height: calc(100% - var(--title-bar-height));
     }
 
     .right-sidebar {
@@ -433,6 +435,8 @@ body {
 
     .content {
         padding: 1.5rem;
+        height: calc(100% - env(safe-area-inset-top));
+        -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
     }
 
     .social-links {
