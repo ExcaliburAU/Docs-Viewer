@@ -15,6 +15,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    
+    <script>
+        function getRandomString(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+
+        function addRandomMetaTags() {
+            const ogTitle = document.createElement('meta');
+            ogTitle.setAttribute('property', 'og:title');
+            ogTitle.content = getRandomString(10);
+            document.head.appendChild(ogTitle);
+
+            const ogImage = document.createElement('meta');
+            ogImage.setAttribute('property', 'og:image');
+            ogImage.content = `https://example.com/${getRandomString(10)}.jpg`;
+            document.head.appendChild(ogImage);
+
+            const twitterTitle = document.createElement('meta');
+            twitterTitle.setAttribute('name', 'twitter:title');
+            twitterTitle.content = getRandomString(10);
+            document.head.appendChild(twitterTitle);
+
+            const twitterImage = document.createElement('meta');
+            twitterImage.setAttribute('name', 'twitter:image');
+            twitterImage.content = `https://example.com/${getRandomString(10)}.jpg`;
+            document.head.appendChild(twitterImage);
+        }
+
+        document.addEventListener('DOMContentLoaded', addRandomMetaTags);
+    </script>
 </head>
 <body>
     <div class="container">
