@@ -198,6 +198,8 @@ body {
     overflow-y: auto;
     min-width: 0;  /* Fix flexbox content overflow */
     color: var(--ifm-color-content);
+    height: 100%;
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
 }
 
 #file-index a, #document-outline a {
@@ -435,7 +437,9 @@ body {
 
     .content {
         padding: 1.5rem;
-        height: calc(100% - env(safe-area-inset-top));
+        padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+        height: 100%;
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
     }
 
