@@ -179,6 +179,35 @@ async function loadDocument(path) {
             return `\n![${filename}](${mediaPath})\n\n`;
         });
 
+        // Update meta tags
+        const description = metadata.description || `Documentation for ${titleContent}`;
+        const url = `${window.location.origin}${window.location.pathname}${window.location.search}`;
+        
+        document.title = `Litruv / ${titleContent}`;
+        document.querySelector('meta[name="description"]').setAttribute('content', description);
+        document.querySelector('meta[property="og:title"]').setAttribute('content', titleContent);
+        document.querySelector('meta[property="og:description"]').setAttribute('content', description);
+        document.querySelector('meta[property="og:url"]').setAttribute('content', url);
+        document.querySelector('meta[name="twitter:title"]').setAttribute('content', titleContent);
+        document.querySelector('meta[name="twitter:description"]').setAttribute('content', description);
+
+        // If there's a cover image in metadata
+        if (metadata.image) {
+            const imageUrl = `${window.location.origin}${window.location.pathname}${basePath}/images/${metadata.image}`;
+            document.querySelector('meta[property="og:image"]')?.remove();
+            document.querySelector('meta[name="twitter:image"]')?.remove();
+            
+            const ogImage = document.createElement('meta');
+            ogImage.setAttribute('property', 'og:image');
+            ogImage.setAttribute('content', imageUrl);
+            document.head.appendChild(ogImage);
+            
+            const twitterImage = document.createElement('meta');
+            twitterImage.setAttribute('name', 'twitter:image');
+            twitterImage.setAttribute('content', imageUrl);
+            document.head.appendChild(twitterImage);
+        }
+
         // Update page and title bar while preserving menu button and brand
         document.title = `Litruv / ${titleContent}`;
         document.querySelector('.title-text .page-title').textContent = titleContent;

@@ -1,5 +1,7 @@
 ---
 title: Blueprint Depth Trace
+description: A Blueprint Function Library for depth-based line traces in Unreal Engine, providing realistic penetration and bullet holes
+image: TraceExample.png
 ---
 This is a `Blueprint Function Library` with a few functions that are callable in `AActors` to do depth trace results, for use in things like projectiles and tools.
 
