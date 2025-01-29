@@ -1,4 +1,3 @@
-// Initialize marked when it's available
 let markedPromise = new Promise((resolve) => {
     if (typeof marked !== 'undefined') {
         resolve(marked);
@@ -7,9 +6,24 @@ let markedPromise = new Promise((resolve) => {
     }
 });
 
-// Configure marked options
 async function initializeMarked() {
     const marked = await markedPromise;
+    
+    // Create a new renderer
+    const renderer = new marked.Renderer();
+    
+    // Store the original link renderer
+    const originalLink = renderer.link.bind(renderer);
+    
+    // Override the link renderer
+    renderer.link = (href, title, text) => {
+        const isExternal = href.startsWith('http') || href.startsWith('https');
+        const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
+        const link = originalLink(href, title, text);
+        return link.replace(/^<a /, `<a${attrs} `);
+    };
+
+    // Set options with the custom renderer
     marked.setOptions({
         highlight: function(code, lang) {
             if (Prism.languages[lang]) {
@@ -18,8 +32,10 @@ async function initializeMarked() {
             return code;
         },
         breaks: true,
-        gfm: true
+        gfm: true,
+        renderer: renderer
     });
+
     return marked;
 }
 
@@ -27,7 +43,7 @@ function createFileIndexItem(doc, container, level = 0) {
     if (doc.type === 'folder') {
         const folderDiv = document.createElement('div');
         folderDiv.className = 'folder open';
-        folderDiv.dataset.path = doc.title;  // Add data attribute for folder identification
+        folderDiv.dataset.path = doc.title;
         folderDiv.style.paddingLeft = `${level * 0.8}rem`;
 
         const folderHeader = document.createElement('div');
@@ -52,8 +68,10 @@ function createFileIndexItem(doc, container, level = 0) {
         container.appendChild(folderDiv);
     } else {
         const link = document.createElement('a');
-        link.href = `?${doc.slug}`; // Use slug instead of generating filename
-        link.textContent = doc.title;
+        link.href = `?${doc.slug}`;
+        // Use title from json or fallback to filename
+        const displayTitle = doc.title || doc.path.split('/').pop().replace('.md', '');
+        link.textContent = displayTitle;
         link.dataset.path = doc.path;
         link.style.paddingLeft = `${level * 0.8 + 1.2}rem`;
         
@@ -66,11 +84,9 @@ function createFileIndexItem(doc, container, level = 0) {
     }
 }
 
-// Add this new function to find parent folders of a path
 function findParentFolders(documents, path, parentFolders = []) {
     for (const doc of documents) {
         if (doc.type === 'folder') {
-            // Check if path is in this folder
             const found = doc.items.find(item => {
                 if (item.path === path) return true;
                 if (item.type === 'folder') {
@@ -81,7 +97,6 @@ function findParentFolders(documents, path, parentFolders = []) {
             
             if (found) {
                 parentFolders.push(doc);
-                // Continue searching in case of nested folders
                 doc.items.forEach(item => {
                     if (item.type === 'folder') {
                         findParentFolders([item], path, parentFolders);
@@ -93,7 +108,6 @@ function findParentFolders(documents, path, parentFolders = []) {
     return parentFolders;
 }
 
-// Helper function to find document by slug in nested structure
 function findDocumentBySlug(documents, slug) {
     for (const doc of documents) {
         if (doc.type === 'folder') {
@@ -112,28 +126,24 @@ async function loadIndex() {
         const data = await response.json();
         const fileIndex = document.getElementById('file-index');
         
-        // Clear existing content
         fileIndex.innerHTML = '';
         
-        // Build file index with folder support
         data.documents.forEach(doc => createFileIndexItem(doc, fileIndex));
 
-        // Handle initial URL load or load index.md by default
         const queryString = window.location.search;
         if (queryString) {
-            const slug = queryString.substring(1); // Remove the leading '?'
-            console.log('Loading document for slug:', slug); // Debug log
+            const slug = queryString.substring(1);
+            console.log('Loading document for slug:', slug);
             
             const matchingDoc = findDocumentBySlug(data.documents, slug);
             
             if (matchingDoc) {
-                console.log('Found matching document:', matchingDoc); // Debug log
+                console.log('Found matching document:', matchingDoc);
                 await loadDocument(matchingDoc.path);
             } else {
-                console.warn('No matching document found for slug:', slug); // Debug log
+                console.warn('No matching document found for slug:', slug);
             }
         } else {
-            // Load index.md by default when no document is specified
             const defaultDoc = findDocumentBySlug(data.documents, 'welcome');
             if (defaultDoc) {
                 await loadDocument(defaultDoc.path);
@@ -146,7 +156,6 @@ async function loadIndex() {
     }
 }
 
-// Add popstate handler for browser back/forward buttons
 window.addEventListener('popstate', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const slug = urlParams.toString().replace(/^=/, '').replace(/^\?/, '');
@@ -165,17 +174,14 @@ function extractMetadata(content) {
     let metadata = {};
     let contentStart = 0;
 
-    // Check if the file starts with a metadata section (accounting for whitespace)
     if (lines[0].trim() === '---') {
         let endMetadata = -1;
         
-        // Find the closing '---'
         for (let i = 1; i < lines.length; i++) {
             if (lines[i].trim() === '---') {
                 endMetadata = i;
                 break;
             }
-            // Parse key-value pairs (ignore empty lines)
             const line = lines[i].trim();
             if (line) {
                 const match = line.match(/^([\w-]+):\s*(.*)$/);
@@ -190,27 +196,39 @@ function extractMetadata(content) {
         }
     }
 
-    // Trim any leading/trailing whitespace from the content
     return {
         metadata,
         content: lines.slice(contentStart).join('\n').trim()
     };
 }
 
+function findDocumentByTitle(documents, title) {
+    for (const doc of documents) {
+        if (doc.type === 'folder') {
+            const found = findDocumentByTitle(doc.items, title);
+            if (found) return found;
+        } else if (doc.title === title || doc.path.endsWith(title + '.md')) {
+            return doc;
+        }
+    }
+    return null;
+}
+
 async function loadDocument(path) {
     try {
-        // Update active state in sidebar and expand folders
+        const documentContent = document.getElementById('document-content');
+        const documentOutline = document.getElementById('document-outline');
+        const basePath = path.substring(0, path.lastIndexOf('/'));
+
         document.querySelectorAll('#file-index a').forEach(link => {
             link.classList.toggle('active', link.dataset.path === path);
             
-            // If this is the active link, expand its parent folders
             if (link.dataset.path === path) {
                 const response = fetch('index.json')
                     .then(res => res.json())
                     .then(data => {
                         const parentFolders = findParentFolders(data.documents, path);
                         parentFolders.forEach(folder => {
-                            // Find and expand the corresponding folder div
                             const folderDiv = document.querySelector(`.folder[data-path="${folder.title}"]`);
                             if (folderDiv) {
                                 folderDiv.classList.add('open');
@@ -231,19 +249,34 @@ async function loadDocument(path) {
         let rawContent = await response.text();
         const { metadata, content } = extractMetadata(rawContent);
         
-        const basePath = path.substring(0, path.lastIndexOf('/'));
-        const documentContent = document.getElementById('document-content');
-        const documentOutline = document.getElementById('document-outline');
+        // Get the title from index.json
+        const indexResponse = await fetch('index.json');
+        const indexData = await indexResponse.json();
+        const docEntry = findDocumentByPath(indexData.documents, path);
         
-        // Create title element
-        const titleContent = metadata.title || path.split('/').pop().replace('.md', '');
-        const processedContent = `# ${titleContent}\n\n${content}`;
+        // Use title priority: frontmatter > json > filename
+        const titleContent = metadata.title || (docEntry && docEntry.title) || path.split('/').pop().replace('.md', '');
         
-        // Convert Obsidian media links to HTML with proper spacing
+        // Process Obsidian internal links before adding the title
+        let processedContent = content.replace(/\[\[(.*?)\]\]/g, (match, linkText) => {
+            // Skip image/media processing
+            if (linkText.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
+                return match;
+            }
+            
+            const doc = findDocumentByTitle(indexData.documents, linkText);
+            if (doc) {
+                return `[${doc.title}](?${doc.slug})`;
+            }
+            return match;
+        });
+
+        processedContent = `# ${titleContent}\n\n${processedContent}`;
+
+        // Process images/media after internal links
         const finalContent = processedContent.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
             const mediaPath = `${basePath}/images/${filename}`;
             
-            // Check if it's a video file
             if (filename.toLowerCase().endsWith('.mp4')) {
                 return `\n<video controls width="100%">
                     <source src="${mediaPath}" type="video/mp4">
@@ -251,11 +284,9 @@ async function loadDocument(path) {
                 </video>\n\n`;
             }
             
-            // Default to image handling with added newlines
             return `\n![${filename}](${mediaPath})\n\n`;
         });
 
-        // Update meta tags
         const description = metadata.description || `Documentation for ${titleContent}`;
         const url = `${window.location.origin}${window.location.pathname}${window.location.search}`;
         
@@ -267,7 +298,6 @@ async function loadDocument(path) {
         document.querySelector('meta[name="twitter:title"]').setAttribute('content', titleContent);
         document.querySelector('meta[name="twitter:description"]').setAttribute('content', description);
 
-        // If there's a cover image in metadata
         if (metadata.image) {
             const imageUrl = `${window.location.origin}${window.location.pathname}${basePath}/images/${metadata.image}`;
             document.querySelector('meta[property="og:image"]')?.remove();
@@ -284,15 +314,12 @@ async function loadDocument(path) {
             document.head.appendChild(twitterImage);
         }
 
-        // Update page and title bar while preserving menu button and brand
         document.title = `Litruv / ${titleContent}`;
         document.querySelector('.title-text .page-title').textContent = titleContent;
 
-        // Parse markdown content
         documentContent.className = 'markdown-content';
         documentContent.innerHTML = marked.parse(finalContent);
 
-        // Generate outline
         documentOutline.innerHTML = '';
         const headings = documentContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
         
@@ -310,25 +337,20 @@ async function loadDocument(path) {
             
             link.onclick = (e) => {
                 e.preventDefault();
-                // Update URL without triggering navigation
                 history.pushState(null, '', link.href);
                 
-                // Remove existing highlights
                 document.querySelectorAll('.highlight').forEach(el => {
                     el.classList.remove('highlight');
                 });
                 
-                // Add highlight class to trigger animation
                 heading.classList.add('highlight');
                 
-                // Smooth scroll
                 heading.scrollIntoView({ behavior: 'smooth' });
             };
             
             documentOutline.appendChild(link);
         });
 
-        // Check for hash in URL and highlight on load
         if (window.location.hash) {
             const id = window.location.hash.substring(1);
             const heading = document.getElementById(id);
@@ -338,7 +360,6 @@ async function loadDocument(path) {
             }
         }
 
-        // Highlight code blocks
         Prism.highlightAll();
     } catch (error) {
         console.error('Error loading document:', error);
@@ -347,7 +368,18 @@ async function loadDocument(path) {
     }
 }
 
-// Handle image paths
+function findDocumentByPath(documents, path) {
+    for (const doc of documents) {
+        if (doc.type === 'folder') {
+            const found = findDocumentByPath(doc.items, path);
+            if (found) return found;
+        } else if (doc.path === path) {
+            return doc;
+        }
+    }
+    return null;
+}
+
 function fixImagePaths(basePath, content) {
     return content.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
         const imagePath = basePath + '/images/' + filename;
@@ -355,7 +387,6 @@ function fixImagePaths(basePath, content) {
     });
 }
 
-// Add menu toggle functionality
 function setupMobileMenu() {
     const menuButton = document.querySelector('.menu-button');
     const leftSidebar = document.querySelector('.left-sidebar');
@@ -365,7 +396,6 @@ function setupMobileMenu() {
         leftSidebar.classList.toggle('show');
     });
 
-    // Close menu when clicking outside
     content.addEventListener('click', () => {
         if (leftSidebar.classList.contains('show')) {
             leftSidebar.classList.remove('show');
@@ -373,9 +403,8 @@ function setupMobileMenu() {
     });
 }
 
-// Add new initialization with proper order
 window.addEventListener('load', () => {
-    console.log('Window loaded, initializing...'); // Debug log
+    console.log('Window loaded, initializing...');
     setupMobileMenu();
     loadIndex().catch(error => {
         console.error('Failed to initialize:', error);

@@ -74,11 +74,15 @@ body {
     border-right: 1px solid var(--ifm-border-color);
     display: flex;
     flex-direction: column;
+    min-height: calc(100vh - var(--title-bar-height));
+    position: sticky;
+    top: var(--title-bar-height);
 }
 
 #file-index {
     flex: 1;
     overflow-y: auto;
+    min-height: 0; /* This ensures the flex item can shrink */
 }
 
 #file-index a {
@@ -139,11 +143,11 @@ body {
 
 .social-links {
     padding: 1rem 1rem 0.5rem;
-    border-top: 1px solid var(--ifm-border-color);
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
+    background: var(--ifm-background-surface-color);
 }
 
 .social-links a {
@@ -157,11 +161,13 @@ body {
 }
 
 .subtitle {
+    margin-top: auto;  /* Push to bottom of flex container */
     text-align: center;
     padding: 0 1rem 1rem;
     font-size: 0.8rem;
     color: var(--ifm-color-content-secondary);
-    border-top: none;
+    border-top: 1px solid var(--ifm-border-color);
+    background: var(--ifm-background-surface-color);
 }
 
 .subtitle .name {
@@ -203,16 +209,15 @@ body {
     color: var(--ifm-color-primary);
 }
 
+#document-outline {
+    padding: 0 1rem;  /* Add horizontal padding */
+}
+
 #document-outline a {
     color: var(--ifm-color-content-secondary);
     border-left: 2px solid transparent;
     margin: 2px 0;
-}
-
-#document-outline a:hover {
-    background-color: transparent;
-    color: var(--ifm-color-primary);
-    border-left: 2px solid var(--ifm-color-primary);
+    padding: 0.4rem 1rem;  /* Adjust padding to match */
 }
 
 /* Markdown content styling */
@@ -413,6 +418,8 @@ body {
         bottom: 0;
         z-index: 100;
         transition: var(--sidebar-transition);
+        min-height: unset; /* Remove min-height for mobile */
+        height: calc(100% - var(--title-bar-height));
     }
 
     .right-sidebar {

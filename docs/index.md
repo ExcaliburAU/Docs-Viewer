@@ -1,13 +1,10 @@
----
-title: Welcome
----
 Welcome to the Documentation
 
 Here you'll find documentation for various tools and projects I've created. Select a document from the sidebar to get started.
 
 ## Available Documentation
 
-- **Blueprint Depth Trace** - A Blueprint Function Library for depth-based line traces in Unreal Engine
+- **[[Blueprint Depth Trace]]** - A Blueprint Function Library for depth-based line traces in Unreal Engine
 - More documentation coming soon...
 
 ## Getting Help
