@@ -20,6 +20,9 @@ async function initializeMarked() {
         const isExternal = href.startsWith('http') || href.startsWith('https');
         const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
         const link = originalLink(href, title, text);
+        if (!isExternal && href.startsWith('?')) {
+            return link.replace(/^<a /, '<a data-internal="true" ');
+        }
         return link.replace(/^<a /, `<a${attrs} `);
     };
 
@@ -327,6 +330,7 @@ async function loadDocument(path) {
 
         documentOutline.innerHTML = '';
         const headings = documentContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        const headingLinks = new Map();
         
         headings.forEach(heading => {
             if (!heading.id) {
@@ -338,34 +342,50 @@ async function loadDocument(path) {
             const link = document.createElement('a');
             link.href = `${window.location.pathname}${window.location.search}#${heading.id}`;
             link.textContent = heading.textContent;
-            link.style.paddingLeft = (heading.tagName[1] - 1) * 15 + 'px';
+            // Add non-zero indentation
+            link.style.paddingLeft = (heading.tagName[1] * 15) + 'px';
+            headingLinks.set(heading, link);
             
+            // Add extra space to avoid scrolling beneath the header
+            heading.style.scrollMarginTop = 'var(--title-bar-height)';
+
             link.onclick = (e) => {
                 e.preventDefault();
                 history.pushState(null, '', link.href);
-                
-                document.querySelectorAll('.highlight').forEach(el => {
-                    el.classList.remove('highlight');
-                });
-                
-                heading.classList.add('highlight');
-                
-                heading.scrollIntoView({ behavior: 'smooth' });
+                if (heading) {
+                    heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    heading.classList.remove('highlight');
+                    void heading.offsetWidth;
+                    heading.classList.add('highlight');
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
             };
             
             documentOutline.appendChild(link);
         });
 
-        if (window.location.hash) {
-            const id = window.location.hash.substring(1);
-            const heading = document.getElementById(id);
-            if (heading) {
-                heading.classList.add('highlight');
-                heading.scrollIntoView({ behavior: 'smooth' });
+        // Replace the existing observer with this refined version
+        const observer = new IntersectionObserver((entries) => {
+            const visibleHeadings = entries
+                .filter(entry => entry.isIntersecting)
+                .sort((a, b) => a.target.offsetTop - b.target.offsetTop);
+            if (visibleHeadings.length) {
+                documentOutline.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+                const topHeading = visibleHeadings[0].target;
+                const link = headingLinks.get(topHeading);
+                if (link) link.classList.add('active');
             }
-        }
+        }, {
+            rootMargin: '-48px 0px -60% 0px',
+            threshold: [0, 0.25, 0.5, 0.75, 1]
+        });
 
-        Prism.highlightAll();
+        headings.forEach(heading => observer.observe(heading));
+
+        // Clean up observer when loading new document
+        return () => observer.disconnect();
+
     } catch (error) {
         console.error('Error loading document:', error);
         document.getElementById('document-content').innerHTML = 
@@ -416,4 +436,21 @@ window.addEventListener('load', () => {
         document.getElementById('document-content').innerHTML = 
             '<div class="error">Failed to load documentation. Please try refreshing the page.</div>';
     });
+});
+
+// Globally intercept clicks on internal links
+document.addEventListener('click', async (e) => {
+    const target = e.target.closest('a[data-internal="true"]');
+    if (target) {
+        e.preventDefault();
+        const slug = target.href.split('?').pop();
+        const indexData = await fetch('index.json').then(res => res.json());
+        const matchingDoc = findDocumentBySlug(indexData.documents, slug);
+        if (matchingDoc) {
+            await loadDocument(matchingDoc.path);
+            // Scroll to the top after loading
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            history.pushState(null, '', target.href);
+        }
+    }
 });

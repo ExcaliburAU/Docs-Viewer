@@ -67,8 +67,9 @@ body {
     right: 0;
     bottom: 0;
     width: var(--doc-outline-width);
-    background: var(--ifm-background-color);
+    background: var(--ifm-background-color);  /* Change to match main content */
     overflow-y: auto;
+    border-left: none;  /* Explicitly remove border */
 }
 
 .content {
@@ -81,15 +82,17 @@ body {
 #file-index {
     flex: 1;
     overflow-y: auto;
+    padding-top: 20px;
 }
 
 @media (max-width: 1000px) {
     .menu-button {
-        display: flex;
+        display: flex !important;  /* Force display on mobile */
     }
 
     .left-sidebar {
         left: -100%;
+        width: min(var(--doc-sidebar-width), 80vw);  /* Limit width on mobile */
         transition: left 0.3s ease; /* Change to left transition */
         box-shadow: none;
     }
@@ -108,19 +111,35 @@ body {
         margin-right: 0;
         padding: 1rem;
     }
+
+    .markdown-content {
+        padding: 0 0.5rem;
+    }
+
+    #file-index {
+        padding-top: 0.75rem;  /* Add top padding to menu */
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .markdown-content {
+        padding: 0 0.25rem;
+    }
 }
 
 .menu-button {
-    display: none;
+    display: none;  /* Initially hidden */
     background: none;
     border: none;
     color: var(--ifm-color-content);
     padding: 8px;
     cursor: pointer;
-    font-size: 1.2rem;
     width: 40px;
     height: 40px;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -134,7 +153,6 @@ body {
 }
 
 .sidebar {
-    background-color: var(--ifm-background-surface-color);
     color: var(--ifm-color-content);
     overflow-y: auto;
     border-color: var(--ifm-border-color);
@@ -145,7 +163,7 @@ body {
     color: var(--ifm-color-content);
     text-decoration: none;
     display: block;
-    padding: 0.4rem 1.2rem;
+    padding: 0.6rem 1.2rem;  /* Increased vertical padding */
     font-size: 0.875rem;
     border-left: 2px solid transparent;
 }
@@ -198,7 +216,7 @@ body {
 }
 
 .social-links {
-    padding: 1rem 1rem 0.5rem;
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -219,7 +237,7 @@ social-links a:hover {
 .subtitle {
     margin-top: auto;  /* Push to bottom of flex container */
     text-align: center;
-    padding: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 0.8rem;
     color: var(--ifm-color-content-secondary);
     border-top: 1px solid var(--ifm-border-color);
@@ -240,7 +258,6 @@ social-links a:hover {
 .content {
     flex: 1;
     background-color: var(--ifm-background-color);
-    padding: 2rem 3rem;
     overflow-y: scroll;
     min-width: 0;  /* Fix flexbox content overflow */
     color: var(--ifm-color-content);
@@ -262,17 +279,23 @@ social-links a:hover {
 }
 
 #document-outline {
-    padding: 0 1rem;  /* Add horizontal padding */
+    padding: 1rem;
 }
 
 #document-outline a {
     color: var(--ifm-color-content-secondary);
     border-left: 2px solid transparent;
     margin: 2px 0;
-    padding: 0.4rem 1rem;  /* Adjust padding to match */
+    padding: 0.25em 1rem;  /* Adjust padding to match */
+    transition: all 0.2s ease;
 }
 
-/* Markdown content styling */
+#document-outline a.active {
+    color: var(--ifm-color-primary);
+    border-left-color: var(--ifm-color-primary);
+    background: rgba(33, 150, 243, 0.1);
+}
+
 .markdown-content {
     line-height: 1.7;
     font-size: 1rem;
@@ -476,4 +499,11 @@ social-links a:hover {
 .title-text .divider,
 .title-text .page-title {
     font-size: 0.9rem;
+}
+
+#document-outline a.active {
+    /* Remove any forced padding-left: 0; here */
+    color: var(--ifm-color-primary);
+    border-left-color: var(--ifm-color-primary);
+    background: rgba(33, 150, 243, 0.1);
 }
