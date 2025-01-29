@@ -1,7 +1,6 @@
 ---
-title: Blueprint Depth Trace
-description: A Blueprint Function Library for depth-based line traces in Unreal Engine, providing realistic penetration and bullet holes
-image: TraceExample.png
+title: DeepImpact
+description: A Blueprint Function Library for depth-based line traces in Unreal Engine, providing realistic penetration and bullet hole positioning
 ---
 This is a `Blueprint Function Library` with a few functions that are callable in `AActors` to do depth trace results, for use in things like projectiles and tools.
 
@@ -32,10 +31,10 @@ Depth Trace by Profile
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Start**            | Start of the Trace                                                                                                                                      |
 | **End**              | End of the Trace                                                                                                                                        |
-| **Trace Complex**    | If the trace will use [Complex Collision](https://dev.epicgames.com/documentation/en-us/unreal-engine/simple-versus-complex-collision-in-unreal-engine) |
-| **Actors To Ignore** | Array of Actors, to ignore while tracing                                                                                                                |
+| **Trace Complex**    | If the trace will use [`Complex Collision`](https://dev.epicgames.com/documentation/en-us/unreal-engine/simple-versus-complex-collision-in-unreal-engine) |
+| **Actors To Ignore** | Array of `AActor`s, to ignore while tracing                                                                                                             |
 | **Draw Debug Type**  | Draw Debug Arrows over Time, or Persistently                                                                                                            |
-| **Ignore Self**      | If the traces should ignore the Current actor (Self)                                                                                                    |
+| **Ignore Self**      | If the traces should ignore the Current actor (`Self`)                                                                                                  |
 | **Trace Color**      | The color of the trace, when it's not going through anything.                                                                                           |
 | **Trace Hit Color**  | The color of the trace, when it's going through something.                                                                                              |
 | **Draw Time**        | Amount of time to draw debug lines (if not persistent)                                                                                                  |
@@ -63,7 +62,7 @@ For more detailed instructions on adding a custom object type to your project, y
 
 ## Physical materials (optional)
 
-Default [Physical Material](https://dev.epicgames.com/documentation/en-us/unreal-engine/physical-materials-user-guide-for-unreal-engine) properties are at **1 g/cm**, but adding more physical properties into your game can add extra depth. 
+Default [`Physical Material`](https://dev.epicgames.com/documentation/en-us/unreal-engine/physical-materials-user-guide-for-unreal-engine) properties are at **1 g/cm³**, but adding more physical properties into your game can add extra depth. 
 ### Example Material Densities
 
 | Material   | Density (g/cm³) |

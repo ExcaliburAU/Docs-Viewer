@@ -10,9 +10,9 @@
             "type": "folder",
             "items": [
                 {
-                    "title": "Blueprint Depth Trace",
-                    "path": "docs/Blueprint Depth Trace.md",
-                    "slug": "blueprint-depth-trace"
+                    "title": "DeepImpact",
+                    "path": "docs/DeepImpact.md",
+                    "slug": "deep-impact"
                 }
             ]
         }

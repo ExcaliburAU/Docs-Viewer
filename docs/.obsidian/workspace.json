@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "DeepImpact.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "DeepImpact"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "DeepImpact.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for DeepImpact"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "DeepImpact.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from index"
+              "title": "Outgoing links from DeepImpact"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "DeepImpact.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of DeepImpact"
             }
           }
         ]
@@ -164,8 +164,8 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "Blueprint Penetration Trace.md",
-    "Blueprint Depth Trace.md",
-    "index.md"
+    "index.md",
+    "DeepImpact.md",
+    "Blueprint Penetration Trace.md"
   ]
 }

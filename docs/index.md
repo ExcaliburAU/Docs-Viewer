@@ -4,7 +4,7 @@ Here you'll find documentation for various tools and projects I've created. Sele
 
 ## Available Documentation
 
-- **[[Blueprint Depth Trace]]** - A Blueprint Function Library for depth-based line traces in Unreal Engine
+- **[[DeepImpact]]** - A Blueprint Function Library for depth-based line traces in Unreal Engine
 - More documentation coming soon...
 
 ## Getting Help
