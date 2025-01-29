@@ -9,13 +9,9 @@ let markedPromise = new Promise((resolve) => {
 async function initializeMarked() {
     const marked = await markedPromise;
     
-    // Create a new renderer
     const renderer = new marked.Renderer();
-    
-    // Store the original link renderer
     const originalLink = renderer.link.bind(renderer);
     
-    // Override the link renderer
     renderer.link = (href, title, text) => {
         const isExternal = href.startsWith('http') || href.startsWith('https');
         const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
@@ -26,7 +22,6 @@ async function initializeMarked() {
         return link.replace(/^<a /, `<a${attrs} `);
     };
 
-    // Set options with the custom renderer
     marked.setOptions({
         highlight: function(code, lang) {
             if (Prism.languages[lang]) {
@@ -72,7 +67,6 @@ function createFileIndexItem(doc, container, level = 0) {
     } else {
         const link = document.createElement('a');
         link.href = `?${doc.slug}`;
-        // Use title from json or fallback to filename
         const displayTitle = doc.title || doc.path.split('/').pop().replace('.md', '');
         link.textContent = displayTitle;
         link.dataset.path = doc.path;
@@ -82,7 +76,6 @@ function createFileIndexItem(doc, container, level = 0) {
             e.preventDefault();
             loadDocument(doc.path);
             history.pushState(null, '', link.href);
-            // Hide sidebar on mobile after clicking a link
             const leftSidebar = document.querySelector('.left-sidebar');
             if (window.innerWidth <= 1000) {
                 leftSidebar.classList.remove('show');
@@ -141,15 +134,10 @@ async function loadIndex() {
         const queryString = window.location.search;
         if (queryString) {
             const slug = queryString.substring(1);
-            console.log('Loading document for slug:', slug);
-            
             const matchingDoc = findDocumentBySlug(data.documents, slug);
             
             if (matchingDoc) {
-                console.log('Found matching document:', matchingDoc);
                 await loadDocument(matchingDoc.path);
-            } else {
-                console.warn('No matching document found for slug:', slug);
             }
         } else {
             const defaultDoc = findDocumentBySlug(data.documents, 'welcome');
@@ -158,7 +146,6 @@ async function loadIndex() {
             }
         }
     } catch (error) {
-        console.error('Failed to load index:', error);
         document.getElementById('document-content').innerHTML = 
             '<div class="error">Failed to load documentation index.</div>';
     }
@@ -257,17 +244,13 @@ async function loadDocument(path) {
         let rawContent = await response.text();
         const { metadata, content } = extractMetadata(rawContent);
         
-        // Get the title from index.json
         const indexResponse = await fetch('index.json');
         const indexData = await indexResponse.json();
         const docEntry = findDocumentByPath(indexData.documents, path);
         
-        // Use title priority: frontmatter > json > filename
         const titleContent = metadata.title || (docEntry && docEntry.title) || path.split('/').pop().replace('.md', '');
         
-        // Process Obsidian internal links before adding the title
         let processedContent = content.replace(/\[\[(.*?)\]\]/g, (match, linkText) => {
-            // Skip image/media processing
             if (linkText.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
                 return match;
             }
@@ -281,7 +264,6 @@ async function loadDocument(path) {
 
         processedContent = `# ${titleContent}\n\n${processedContent}`;
 
-        // Process images/media after internal links
         const finalContent = processedContent.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
             const mediaPath = `${basePath}/images/${filename}`;
             
@@ -294,33 +276,6 @@ async function loadDocument(path) {
             
             return `\n![${filename}](${mediaPath})\n\n`;
         });
-
-        const description = metadata.description || `Documentation for ${titleContent}`;
-        const url = `${window.location.origin}${window.location.pathname}${window.location.search}`;
-        
-        document.title = `Litruv / ${titleContent}`;
-        document.querySelector('meta[name="description"]').setAttribute('content', description);
-        document.querySelector('meta[property="og:title"]').setAttribute('content', titleContent);
-        document.querySelector('meta[property="og:description"]').setAttribute('content', description);
-        document.querySelector('meta[property="og:url"]').setAttribute('content', url);
-        document.querySelector('meta[name="twitter:title"]').setAttribute('content', titleContent);
-        document.querySelector('meta[name="twitter:description"]').setAttribute('content', description);
-
-        if (metadata.image) {
-            const imageUrl = `${window.location.origin}${window.location.pathname}${basePath}/images/${metadata.image}`;
-            document.querySelector('meta[property="og:image"]')?.remove();
-            document.querySelector('meta[name="twitter:image"]')?.remove();
-            
-            const ogImage = document.createElement('meta');
-            ogImage.setAttribute('property', 'og:image');
-            ogImage.setAttribute('content', imageUrl);
-            document.head.appendChild(ogImage);
-            
-            const twitterImage = document.createElement('meta');
-            twitterImage.setAttribute('name', 'twitter:image');
-            twitterImage.setAttribute('content', imageUrl);
-            document.head.appendChild(twitterImage);
-        }
 
         document.title = `Litruv / ${titleContent}`;
         document.querySelector('.title-text .page-title').textContent = titleContent;
@@ -342,11 +297,9 @@ async function loadDocument(path) {
             const link = document.createElement('a');
             link.href = `${window.location.pathname}${window.location.search}#${heading.id}`;
             link.textContent = heading.textContent;
-            // Add non-zero indentation
             link.style.paddingLeft = (heading.tagName[1] * 15) + 'px';
             headingLinks.set(heading, link);
             
-            // Add extra space to avoid scrolling beneath the header
             heading.style.scrollMarginTop = 'var(--title-bar-height)';
 
             link.onclick = (e) => {
@@ -365,7 +318,6 @@ async function loadDocument(path) {
             documentOutline.appendChild(link);
         });
 
-        // Replace the existing observer with this refined version
         const observer = new IntersectionObserver((entries) => {
             const visibleHeadings = entries
                 .filter(entry => entry.isIntersecting)
@@ -383,11 +335,9 @@ async function loadDocument(path) {
 
         headings.forEach(heading => observer.observe(heading));
 
-        // Clean up observer when loading new document
         return () => observer.disconnect();
 
     } catch (error) {
-        console.error('Error loading document:', error);
         document.getElementById('document-content').innerHTML = 
             '<div class="error">Error loading document. Please try again.</div>';
     }
@@ -429,16 +379,13 @@ function setupMobileMenu() {
 }
 
 window.addEventListener('load', () => {
-    console.log('Window loaded, initializing...');
     setupMobileMenu();
     loadIndex().catch(error => {
-        console.error('Failed to initialize:', error);
         document.getElementById('document-content').innerHTML = 
             '<div class="error">Failed to load documentation. Please try refreshing the page.</div>';
     });
 });
 
-// Globally intercept clicks on internal links
 document.addEventListener('click', async (e) => {
     const target = e.target.closest('a[data-internal="true"]');
     if (target) {
@@ -448,8 +395,6 @@ document.addEventListener('click', async (e) => {
         const matchingDoc = findDocumentBySlug(indexData.documents, slug);
         if (matchingDoc) {
             await loadDocument(matchingDoc.path);
-            // Scroll to the top after loading
-            window.scrollTo({ top: 0, behavior: 'smooth' });
             history.pushState(null, '', target.href);
         }
     }
