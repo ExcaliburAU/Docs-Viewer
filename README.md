@@ -1,3 +1,15 @@
+# Documentation Viewer
+
+A lightweight, static documentation viewer that renders Markdown files with syntax highlighting. Built as a single-page application with no backend requirements.
+
+## Features
+
+- 📝 Renders Markdown documents with syntax highlighting
+- 📑 Document outline/table of contents
+- 📱 Responsive design with mobile support
+- 🚀 Zero backend requirements - deploy anywhere
+- ⚡ Fast client-side rendering
+
 ## Getting Started
 
 ### Prerequisites
@@ -35,25 +47,37 @@ npx live-server
 - The document outline is displayed on the right sidebar.
 - Use the menu button to toggle the sidebar on mobile devices.
 
+### Directory Structure
+
+```
+docs/               # Your markdown documents go here
+├── images/         # Images referenced in documents
+├── doc1.md
+└── doc2.md
+index.html         # Main entry point
+config.json        # Document index configuration
+styles.css         # Custom styling
+```
+
 ### Adding New Documents
 
-1. Add your Markdown file to the  directory.
+1. Add your Markdown file to the `docs` directory.
 2. Update  to include the new document:
 
-    ```json
-    {
-        "documents": [
-            {
-                "title": "Blueprint Depth Trace",
-                "path": "docs/Blueprint Penetration Trace.md"
-            },
-            {
-                "title": "New Document Title",
-                "path": "docs/NewDocument.md"
-            }
-        ]
-    }
-    ```
+```json
+{
+    "documents": [
+        {
+            "title": "Blueprint Depth Trace",
+            "path": "docs/Blueprint Penetration Trace.md"
+        },
+        {
+            "title": "New Document Title",
+            "path": "docs/NewDocument.md"
+        }
+    ]
+}
+```
 
 ## Acknowledgements
 
