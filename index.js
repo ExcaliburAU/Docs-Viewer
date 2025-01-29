@@ -39,6 +39,7 @@ async function loadIndex() {
             
             link.href = `?${fileName}`;
             link.textContent = doc.title;
+            link.dataset.path = doc.path; // Add path as data attribute for comparison
             link.onclick = (e) => {
                 e.preventDefault();
                 loadDocument(doc.path);
@@ -47,7 +48,7 @@ async function loadIndex() {
             fileIndex.appendChild(link);
         });
 
-        // Handle initial URL load
+        // Handle initial URL load or load index.md by default
         const queryString = window.location.search;
         if (queryString) {
             const fileParam = queryString.substring(1); // Remove the leading '?'
@@ -66,6 +67,12 @@ async function loadIndex() {
                 await loadDocument(matchingDoc.path);
             } else {
                 console.warn('No matching document found for:', fileParam); // Debug log
+            }
+        } else {
+            // Load index.md by default when no document is specified
+            const defaultDoc = data.documents.find(doc => doc.path === 'docs/index.md');
+            if (defaultDoc) {
+                await loadDocument(defaultDoc.path);
             }
         }
     } catch (error) {
@@ -97,24 +104,27 @@ window.addEventListener('popstate', async () => {
 });
 
 function extractMetadata(content) {
-    const lines = content.split('\n');
+    const lines = content.trim().split('\n');
     let metadata = {};
     let contentStart = 0;
 
-    // Check if the file starts with a metadata section
-    if (lines[0] === '---') {
+    // Check if the file starts with a metadata section (accounting for whitespace)
+    if (lines[0].trim() === '---') {
         let endMetadata = -1;
         
         // Find the closing '---'
         for (let i = 1; i < lines.length; i++) {
-            if (lines[i] === '---') {
+            if (lines[i].trim() === '---') {
                 endMetadata = i;
                 break;
             }
-            // Parse key-value pairs
-            const match = lines[i].match(/^([\w-]+):\s*(.*)$/);
-            if (match) {
-                metadata[match[1]] = match[2].trim();
+            // Parse key-value pairs (ignore empty lines)
+            const line = lines[i].trim();
+            if (line) {
+                const match = line.match(/^([\w-]+):\s*(.*)$/);
+                if (match) {
+                    metadata[match[1]] = match[2].trim();
+                }
             }
         }
 
@@ -123,6 +133,7 @@ function extractMetadata(content) {
         }
     }
 
+    // Trim any leading/trailing whitespace from the content
     return {
         metadata,
         content: lines.slice(contentStart).join('\n').trim()
@@ -131,6 +142,11 @@ function extractMetadata(content) {
 
 async function loadDocument(path) {
     try {
+        // Update active state in sidebar
+        document.querySelectorAll('#file-index a').forEach(link => {
+            link.classList.toggle('active', link.dataset.path === path);
+        });
+
         const [response, marked] = await Promise.all([
             fetch(path),
             initializeMarked()

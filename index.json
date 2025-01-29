@@ -1,6 +1,10 @@
 {
     "documents": [
         {
+            "title": "Welcome",
+            "path": "docs/index.md"
+        },
+        {
             "title": "Blueprint Depth Trace",
             "path": "docs/Blueprint Penetration Trace.md"
         }

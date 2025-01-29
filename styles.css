@@ -72,6 +72,72 @@ body {
 .left-sidebar {
     width: var(--doc-sidebar-width);
     border-right: 1px solid var(--ifm-border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#file-index {
+    flex: 1;
+    overflow-y: auto;
+}
+
+#file-index a {
+    color: var(--ifm-color-content);
+    text-decoration: none;
+    display: block;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.875rem;
+    border-left: 2px solid transparent;
+}
+
+#file-index a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--ifm-color-primary);
+    border-left: 2px solid var(--ifm-color-primary);
+}
+
+#file-index a.active {
+    color: var(--ifm-color-primary);
+    background-color: rgba(33, 150, 243, 0.1);
+    border-left: 2px solid var(--ifm-color-primary);
+}
+
+.social-links {
+    padding: 1rem 1rem 0.5rem;
+    border-top: 1px solid var(--ifm-border-color);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--ifm-color-content-secondary);
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--ifm-color-primary);
+}
+
+.subtitle {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    font-size: 0.8rem;
+    color: var(--ifm-color-content-secondary);
+    border-top: none;
+}
+
+.subtitle .name {
+    color: var(--ifm-color-content);
+    font-weight: 500;
+}
+
+.subtitle .role {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
 }
 
 .right-sidebar {
@@ -118,7 +184,7 @@ body {
 .markdown-content {
     line-height: 1.7;
     font-size: 1rem;
-    max-width: 75ch;
+    max-width: 130ch;
     margin: 0 auto;
 }
 
@@ -126,6 +192,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
+    text-align: left;  /* Explicitly set left alignment */
 }
 
 .markdown-content h2 {
@@ -133,12 +200,14 @@ body {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
+    text-align: left;
 }
 
 .markdown-content h3 {
     font-size: 1.5rem;
     margin-top: 2rem;
     font-weight: 600;
+    text-align: left;
 }
 
 .markdown-content a {
@@ -161,22 +230,47 @@ body {
 }
 
 .markdown-content table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     width: 100%;
     margin: 1em 0;
     font-size: 0.9rem;
-    border-color: var(--ifm-border-color);
-}
-
-.markdown-content th,
-.markdown-content td {
-    border: 1px solid var(--ifm-border-color);
-    padding: 0.75rem;
 }
 
 .markdown-content th {
-    background-color: var(--ifm-background-surface-color);
+    background-color: rgba(255, 255, 255, 0.15);  /* Change header background to 15% white */
     font-weight: 600;
+    border: none;
+    border-bottom: 1px solid var(--ifm-border-color);
+    text-align: left;  /* Add this line to left-align table headers */
+    padding: 0.75rem;
+}
+
+.markdown-content th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.markdown-content th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.markdown-content td {
+    border: none;
+    border-bottom: 1px solid var(--ifm-border-color);
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.03);  /* Lighter background for cells */
+}
+
+.markdown-content tr:last-child td {
+    border-bottom: none;
+}
+
+.markdown-content tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.markdown-content tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }
 
 .markdown-content code:not([class*="language-"]) {
@@ -297,6 +391,11 @@ body {
 
     .content {
         padding: 1.5rem;
+    }
+
+    .social-links {
+        background: var(--ifm-background-surface-color);
+        border-color: var(--ifm-border-color);
     }
 }
 
