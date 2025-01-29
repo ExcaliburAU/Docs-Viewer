@@ -258,7 +258,6 @@ social-links a:hover {
 .content {
     flex: 1;
     background-color: var(--ifm-background-color);
-    overflow-y: scroll;
     min-width: 0;  /* Fix flexbox content overflow */
     color: var(--ifm-color-content);
     height: 100%;
