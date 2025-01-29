@@ -23,54 +23,118 @@ async function initializeMarked() {
     return marked;
 }
 
+function createFileIndexItem(doc, container, level = 0) {
+    if (doc.type === 'folder') {
+        const folderDiv = document.createElement('div');
+        folderDiv.className = 'folder open';
+        folderDiv.dataset.path = doc.title;  // Add data attribute for folder identification
+        folderDiv.style.paddingLeft = `${level * 0.8}rem`;
+
+        const folderHeader = document.createElement('div');
+        folderHeader.className = 'folder-header';
+        folderHeader.innerHTML = `
+            <i class="fas fa-folder-open folder-icon"></i>
+            <span>${doc.title}</span>
+        `;
+        folderDiv.appendChild(folderHeader);
+
+        const folderContent = document.createElement('div');
+        folderContent.className = 'folder-content';
+        doc.items.forEach(item => createFileIndexItem(item, folderContent, level + 1));
+        folderDiv.appendChild(folderContent);
+
+        folderHeader.addEventListener('click', () => {
+            folderDiv.classList.toggle('open');
+            folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-closed');
+            folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-open');
+        });
+
+        container.appendChild(folderDiv);
+    } else {
+        const link = document.createElement('a');
+        link.href = `?${doc.slug}`; // Use slug instead of generating filename
+        link.textContent = doc.title;
+        link.dataset.path = doc.path;
+        link.style.paddingLeft = `${level * 0.8 + 1.2}rem`;
+        
+        link.onclick = (e) => {
+            e.preventDefault();
+            loadDocument(doc.path);
+            history.pushState(null, '', link.href);
+        };
+        container.appendChild(link);
+    }
+}
+
+// Add this new function to find parent folders of a path
+function findParentFolders(documents, path, parentFolders = []) {
+    for (const doc of documents) {
+        if (doc.type === 'folder') {
+            // Check if path is in this folder
+            const found = doc.items.find(item => {
+                if (item.path === path) return true;
+                if (item.type === 'folder') {
+                    return findParentFolders([item], path).length > 0;
+                }
+                return false;
+            });
+            
+            if (found) {
+                parentFolders.push(doc);
+                // Continue searching in case of nested folders
+                doc.items.forEach(item => {
+                    if (item.type === 'folder') {
+                        findParentFolders([item], path, parentFolders);
+                    }
+                });
+            }
+        }
+    }
+    return parentFolders;
+}
+
+// Helper function to find document by slug in nested structure
+function findDocumentBySlug(documents, slug) {
+    for (const doc of documents) {
+        if (doc.type === 'folder') {
+            const found = findDocumentBySlug(doc.items, slug);
+            if (found) return found;
+        } else if (doc.slug === slug) {
+            return doc;
+        }
+    }
+    return null;
+}
+
 async function loadIndex() {
     try {
         const response = await fetch('index.json');
         const data = await response.json();
         const fileIndex = document.getElementById('file-index');
         
-        // Build file index
-        data.documents.forEach(doc => {
-            const link = document.createElement('a');
-            const fileName = doc.path.replace(/^docs\//, '')
-                               .replace(/\.md$/, '')
-                               .replace(/\s+/g, '-')
-                               .toLowerCase();
-            
-            link.href = `?${fileName}`;
-            link.textContent = doc.title;
-            link.dataset.path = doc.path; // Add path as data attribute for comparison
-            link.onclick = (e) => {
-                e.preventDefault();
-                loadDocument(doc.path);
-                history.pushState(null, '', link.href);
-            };
-            fileIndex.appendChild(link);
-        });
+        // Clear existing content
+        fileIndex.innerHTML = '';
+        
+        // Build file index with folder support
+        data.documents.forEach(doc => createFileIndexItem(doc, fileIndex));
 
         // Handle initial URL load or load index.md by default
         const queryString = window.location.search;
         if (queryString) {
-            const fileParam = queryString.substring(1); // Remove the leading '?'
-            console.log('Loading document for:', fileParam); // Debug log
+            const slug = queryString.substring(1); // Remove the leading '?'
+            console.log('Loading document for slug:', slug); // Debug log
             
-            const matchingDoc = data.documents.find(doc => {
-                const docFileName = doc.path.replace(/^docs\//, '')
-                                     .replace(/\.md$/, '')
-                                     .replace(/\s+/g, '-')
-                                     .toLowerCase();
-                return docFileName === fileParam;
-            });
+            const matchingDoc = findDocumentBySlug(data.documents, slug);
             
             if (matchingDoc) {
                 console.log('Found matching document:', matchingDoc); // Debug log
                 await loadDocument(matchingDoc.path);
             } else {
-                console.warn('No matching document found for:', fileParam); // Debug log
+                console.warn('No matching document found for slug:', slug); // Debug log
             }
         } else {
             // Load index.md by default when no document is specified
-            const defaultDoc = data.documents.find(doc => doc.path === 'docs/index.md');
+            const defaultDoc = findDocumentBySlug(data.documents, 'welcome');
             if (defaultDoc) {
                 await loadDocument(defaultDoc.path);
             }
@@ -85,18 +149,11 @@ async function loadIndex() {
 // Add popstate handler for browser back/forward buttons
 window.addEventListener('popstate', async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const fileParam = urlParams.toString().replace(/^=/, '').replace(/^\?/, '');
-    if (fileParam) {
+    const slug = urlParams.toString().replace(/^=/, '').replace(/^\?/, '');
+    if (slug) {
         const response = await fetch('index.json');
         const data = await response.json();
-        const matchingDoc = data.documents.find(doc => {
-            const docFileName = doc.path.replace(/^docs\//, '')
-                                 .replace(/\.md$/, '')
-                                 .replace(/\s+/g, '-')
-                                 .toLowerCase();
-            return docFileName === fileParam;
-        });
-        
+        const matchingDoc = findDocumentBySlug(data.documents, slug);
         if (matchingDoc) {
             await loadDocument(matchingDoc.path);
         }
@@ -142,9 +199,28 @@ function extractMetadata(content) {
 
 async function loadDocument(path) {
     try {
-        // Update active state in sidebar
+        // Update active state in sidebar and expand folders
         document.querySelectorAll('#file-index a').forEach(link => {
             link.classList.toggle('active', link.dataset.path === path);
+            
+            // If this is the active link, expand its parent folders
+            if (link.dataset.path === path) {
+                const response = fetch('index.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        const parentFolders = findParentFolders(data.documents, path);
+                        parentFolders.forEach(folder => {
+                            // Find and expand the corresponding folder div
+                            const folderDiv = document.querySelector(`.folder[data-path="${folder.title}"]`);
+                            if (folderDiv) {
+                                folderDiv.classList.add('open');
+                                const icon = folderDiv.querySelector('.folder-icon');
+                                icon.classList.remove('fa-folder-closed');
+                                icon.classList.add('fa-folder-open');
+                            }
+                        });
+                    });
+            }
         });
 
         const [response, marked] = await Promise.all([

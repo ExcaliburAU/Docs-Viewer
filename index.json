@@ -2,11 +2,19 @@
     "documents": [
         {
             "title": "Welcome",
-            "path": "docs/index.md"
+            "path": "docs/index.md",
+            "slug": "welcome"
         },
         {
-            "title": "Blueprint Depth Trace",
-            "path": "docs/Blueprint Penetration Trace.md"
+            "title": "Unreal Engine",
+            "type": "folder",
+            "items": [
+                {
+                    "title": "Blueprint Depth Trace",
+                    "path": "docs/Blueprint Penetration Trace.md",
+                    "slug": "blueprint-penetration-trace"
+                }
+            ]
         }
     ]
 }
