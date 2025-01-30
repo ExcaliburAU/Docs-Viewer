@@ -12,11 +12,13 @@ This is a `Blueprint Function Library` with a few functions that are callable in
 - Simple to implement into existing systems
 - Easy debug options
 
+
 ---
 
 ## How it works
 This node works by simulating depth using two line traces—one forward and one backward from the point of impact. These traces scan for objects in their paths and gather information about the hit results. The distance travelled through each material is multiplied by its density (defined in the material's physical properties), which determines how much the projectile is slowed down or whether it stops entirely. Finally, the node returns a list of hit results, including the total depth.
 
+Check out the example setup in `/All/Plugins/PenetrationTrace/Example/DEMO_GunRange`. Edit the `BP_GunTest` to explore how the traces and decal positioning work, along with some fun timeline-based animations! ;D
 ## Variants
 Depth Trace by Channel
 ![[DepthTraceByChannel.png]] 
