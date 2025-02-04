@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Spawn Codes & Engram Entries.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Spawn Codes & Engram Entries"
             }
           }
         ]
@@ -94,8 +94,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DeepImpact.md",
-                "collapseAll": false,
+                "file": "Spawn Codes & Engram Entries.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for DeepImpact"
+              "title": "Backlinks for Spawn Codes & Engram Entries"
             }
           },
           {
@@ -140,18 +140,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DeepImpact.md"
+                "file": "Spawn Codes & Engram Entries.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DeepImpact"
+              "title": "Outline of Spawn Codes & Engram Entries"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,11 +168,12 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
+    "index.md",
+    "Spawn Codes & Engram Entries.md",
+    "Untitled 1.md",
     "images/Screenshot.png",
-    "Untitled.md",
     "images",
     "New folder",
-    "index.md",
     "asdf",
     "DeepImpact.md",
     "Blueprint Penetration Trace.md"
