@@ -240,9 +240,12 @@ async function loadDocument(path) {
                             const folderDiv = document.querySelector(`.folder[data-path="${folder.title}"]`);
                             if (folderDiv) {
                                 folderDiv.classList.add('open');
-                                const icon = folderDiv.querySelector('.folder-icon');
-                                icon.classList.remove('fa-folder-closed');
-                                icon.classList.add('fa-folder-open');
+                                // Only update icon if it's not a custom one
+                                if (!folder.icon) {
+                                    const icon = folderDiv.querySelector('.folder-icon');
+                                    icon.classList.remove('fa-folder-closed');
+                                    icon.classList.add('fa-folder-open');
+                                }
                             }
                         });
                     });
