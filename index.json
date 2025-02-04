@@ -208,12 +208,12 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/eu/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-excalibur-utilities-spawn-codes-engram-entries"
+                                    "path": "docs/ase/excalibur-utilities/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-eu-spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/eu/GameUserSettings.md",
+                                    "path": "docs/ase/excalibur-utilities/GameUserSettings.md",
                                     "slug": "ase-eu-gameusersettings-ini"
                                 }
                             ]
@@ -223,23 +223,7 @@
                             "type": "folder",
                             "icon": "fa-solid fa-file-pen",
                             "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "12-16-24",
-                                    "path": "docs/ase/harvs-corner/patch-notes/2024/12-16-24.md",
-                                    "slug": "ase-harvs-corner-12-16-24"
-                                },
-                                {
-                                    "title": "12-17-24",
-                                    "path": "docs/ase/harvs-corner/patch-notes/2024/12-17-24.md",
-                                    "slug": "ase-harvs-corner-12-17-24"
-                                }
-                                ,{
-                                    "title": "01-12-25",
-                                    "path": "docs/ase/harvs-corner/patch-notes/2025/01-12-25.md",
-                                    "slug": "ase-harvs-corner-01-12-25"
-                                }
-                            ]
+                            "items": []
                         }
                     ]
                 }
