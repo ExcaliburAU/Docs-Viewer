@@ -90,7 +90,7 @@ Example in index.json:
         {
             "title": "Folder 1",
             "defaultOpen": true,
-            "icon": "fa-folder",
+            "icon": "fa-solid fa-folder",
             "documents": [
                 {
                     "title": "Document 1",
