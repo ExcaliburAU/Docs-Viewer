@@ -275,7 +275,7 @@ async function loadDocument(path) {
 
         processedContent = `# ${titleContent}\n\n${processedContent}`;
 
-        const finalContent = processedContent.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
+        let finalContent = processedContent.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
             const mediaPath = `${basePath}/images/${filename}`;
             
             if (filename.toLowerCase().endsWith('.mp4')) {
@@ -287,6 +287,9 @@ async function loadDocument(path) {
             
             return `\n![${filename}](${mediaPath})\n\n`;
         });
+
+        // Add Discord-style underline support: __text__ -> <u>text</u>
+        finalContent = finalContent.replace(/__(.*?)__/g, '<u>$1</u>');
 
         document.querySelector('.title-text .page-title').textContent = titleContent;
 
