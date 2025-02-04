@@ -92,13 +92,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                    "path": "docs/ase/excalibur-net-ammo/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-netammo-spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
-                                    "slug": "ase-crafter-gameusersettings-ini"
+                                    "path": "docs/ase/excalibur-net-ammo/GameUserSettings.md",
+                                    "slug": "ase-netammo-gameusersettings-ini"
                                 }
                             ]
                         },
@@ -124,13 +124,18 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                    "path": "docs/ase/excalibur-stacks/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-excalibur-stacks-spawn-codes-engram-entries"
+                                },
+                                {   
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/ase/excalibur-stacks/GameUserSettings.md",
+                                    "slug": "ase-excalibur-stacks-gameusersettings-ini"
                                 },
                                 {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
-                                    "slug": "ase-crafter-gameusersettings-ini"
+                                    "title": "Immersive Taming",
+                                    "path": "docs/ase/excalibur-stacks/ImmersiveTaming.md",
+                                    "slug": "ase-excalibur-stacks-immersivetaming-ini"
                                 }
                             ]
                         },
@@ -156,13 +161,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                    "path": "docs/ase/harvs-corner/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-harvs-corner-spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
-                                    "slug": "ase-crafter-gameusersettings-ini"
+                                    "path": "docs/ase/harvs-corner/GameUserSettings.md",
+                                    "slug": "ase-harvs-corner-gameusersettings-ini"
                                 }
                             ]
                         },
@@ -171,7 +176,23 @@
                             "type": "folder",
                             "icon": "fa-solid fa-file-pen",
                             "defaultOpen": false,
-                            "items": []
+                            "items": [
+                                {
+                                    "title": "12-16-24",
+                                    "path": "docs/ase/harvs-corner/patch-notes/2024/12-16-24.md",
+                                    "slug": "ase-harvs-corner-12-16-24"
+                                },
+                                {
+                                    "title": "12-17-24",
+                                    "path": "docs/ase/harvs-corner/patch-notes/2024/12-17-24.md",
+                                    "slug": "ase-harvs-corner-12-17-24"
+                                }
+                                ,{
+                                    "title": "01-12-25",
+                                    "path": "docs/ase/harvs-corner/patch-notes/2025/01-12-25.md",
+                                    "slug": "ase-harvs-corner-01-12-25"
+                                }
+                            ]
                         }
                     ]
                 }
