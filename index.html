@@ -5,51 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Documentation Viewer</title>
     
-    <meta name="description" content="Documentation for Litruv's tools and projects">
+    <meta name="description" content="Documentation for ExcaliburAU's tools and projects">
     <meta property="og:type" content="article">
-    <meta property="og:description" content="Documentation for Litruv's tools and projects">
+    <meta property="og:description" content="Documentation for ExcaliburAU's tools and projects">
     <meta property="og:url" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:description" content="Documentation for Litruv's tools and projects">
+    <meta name="twitter:description" content="Documentation for ExcaliburAU's tools and projects">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    
-    <script>
-        function getRandomString(length) {
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let result = '';
-            for (let i = 0; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * characters.length));
-            }
-            return result;
-        }
-
-        function addRandomMetaTags() {
-            const ogTitle = document.createElement('meta');
-            ogTitle.setAttribute('property', 'og:title');
-            ogTitle.content = getRandomString(10);
-            document.head.appendChild(ogTitle);
-
-            const ogImage = document.createElement('meta');
-            ogImage.setAttribute('property', 'og:image');
-            ogImage.content = `https://example.com/${getRandomString(10)}.jpg`;
-            document.head.appendChild(ogImage);
-
-            const twitterTitle = document.createElement('meta');
-            twitterTitle.setAttribute('name', 'twitter:title');
-            twitterTitle.content = getRandomString(10);
-            document.head.appendChild(twitterTitle);
-
-            const twitterImage = document.createElement('meta');
-            twitterImage.setAttribute('name', 'twitter:image');
-            twitterImage.content = `https://example.com/${getRandomString(10)}.jpg`;
-            document.head.appendChild(twitterImage);
-        }
-
-        document.addEventListener('DOMContentLoaded', addRandomMetaTags);
-    </script>
 </head>
 <body>
     <div class="container">
@@ -58,7 +23,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="title-text">
-                <img src="./img/logo.png" alt="Litruv" class="brand-logo">
+                <img src="./img/logo.png" alt="ExcaliburAU" class="brand-logo">
                 <span class="divider">/</span>
                 <span class="page-title">Documentation</span>
             </div>
@@ -68,24 +33,21 @@
             <nav class="sidebar left-sidebar">
                 <div id="file-index"></div>
                 <div class="subtitle">
-                    <span class="name">Litruv</span>
-                    <span class="role">Dev/Tech Artist @MatesMedia</span>
+                    <span class="name">ExcaliburAU</span>
+                    <span class="role">Dev @MatesMedia</span>
                 </div>
                 <div class="social-links">
-                    <a href="https://github.com/Litruv" target="_blank" title="GitHub - Litruv">
+                    <a href="https://github.com/ExcaliburAU" target="_blank" title="GitHub - ExcaliburAU">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.youtube.com/c/Litruv" target="_blank" title="YouTube - Litruv">
+                    <a href="https://www.youtube.com/c/ExcaliburAU" target="_blank" title="YouTube - ExcaliburAU">
                         <i class="fab fa-youtube"></i>
                     </a>
-                    <a href="https://steamcommunity.com/id/Litruv" target="_blank" title="Steam - Litruv">
+                    <a href="https://steamcommunity.com/id/ExcaliburAU" target="_blank" title="Steam - ExcaliburAU">
                         <i class="fab fa-steam"></i>
                     </a>
-                    <a href="https://discordapp.com/users/220772082055774210" target="_blank" title="Discord - @Litruv">
+                    <a href="https://discordapp.com/users/220772082055774210" target="_blank" title="Discord - @ExcaliburAU">
                         <i class="fab fa-discord"></i>
-                    </a>
-                    <a href="https://bsky.app/profile/lit.mates.dev" target="_blank" title="Bluesky - lit.mates.dev">
-                        <i class="fa-brands fa-bluesky"></i>
                     </a>
                 </div>
                 <div class="github-link">
