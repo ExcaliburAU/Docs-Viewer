@@ -277,7 +277,7 @@ async function loadDocument(path) {
             return `\n![${filename}](${mediaPath})\n\n`;
         });
 
-        document.title = `Litruv / ${titleContent}`;
+        document.title = `exau.dev / ${titleContent}`;
         document.querySelector('.title-text .page-title').textContent = titleContent;
 
 
