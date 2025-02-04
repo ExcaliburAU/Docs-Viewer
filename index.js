@@ -48,14 +48,14 @@ async function initializeMarked() {
 function createFileIndexItem(doc, container, level = 0) {
     if (doc.type === 'folder') {
         const folderDiv = document.createElement('div');
-        folderDiv.className = 'folder open';
+        folderDiv.className = 'folder' + (doc.defaultOpen !== false ? ' open' : '');
         folderDiv.dataset.path = doc.title;
         folderDiv.style.paddingLeft = `${level * 0.8}rem`;
 
         const folderHeader = document.createElement('div');
         folderHeader.className = 'folder-header';
         folderHeader.innerHTML = `
-            <i class="fas fa-folder-open folder-icon"></i>
+            <i class="fas fa-folder${doc.defaultOpen !== false ? '-open' : ''} folder-icon"></i>
             <span>${doc.title}</span>
         `;
         folderDiv.appendChild(folderHeader);
