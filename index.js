@@ -1,3 +1,5 @@
+let originalDocTitle = document.title;
+
 let markedPromise = new Promise((resolve) => {
     if (typeof marked !== 'undefined') {
         resolve(marked);
@@ -12,6 +14,18 @@ async function initializeMarked() {
     const renderer = new marked.Renderer();
     const originalLink = renderer.link.bind(renderer);
     
+    renderer.code = (code, language) => {
+        let highlighted;
+        if (language && hljs.getLanguage(language)) {
+            highlighted = hljs.highlight(code, { language }).value;
+            language = language;
+        } else {
+            highlighted = hljs.highlightAuto(code).value;
+            language = '';
+        }
+        return `<pre class="hljs ${language ? "language-" + language : ""}"><code>${highlighted}</code></pre>`;
+    };
+    
     renderer.link = (href, title, text) => {
         const isExternal = href.startsWith('http') || href.startsWith('https');
         const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
@@ -23,12 +37,6 @@ async function initializeMarked() {
     };
 
     marked.setOptions({
-        highlight: function(code, lang) {
-            if (Prism.languages[lang]) {
-                return Prism.highlight(code, Prism.languages[lang], lang);
-            }
-            return code;
-        },
         breaks: true,
         gfm: true,
         renderer: renderer
@@ -250,6 +258,9 @@ async function loadDocument(path) {
         
         const titleContent = metadata.title || (docEntry && docEntry.title) || path.split('/').pop().replace('.md', '');
         
+        document.title = `${originalDocTitle} / ${titleContent}`;
+        document.querySelector('.title-text .page-title').textContent = titleContent;
+
         let processedContent = content.replace(/\[\[(.*?)\]\]/g, (match, linkText) => {
             if (linkText.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
                 return match;
@@ -277,25 +288,11 @@ async function loadDocument(path) {
             return `\n![${filename}](${mediaPath})\n\n`;
         });
 
-        document.title = `Litruv / ${titleContent}`;
         document.querySelector('.title-text .page-title').textContent = titleContent;
-
-        // Update Twitter meta tags dynamically
-        document.querySelector('meta[name="twitter:title"]').setAttribute('content', titleContent);
-        document.querySelector('meta[name="twitter:description"]').setAttribute('content', metadata.description || `Documentation for ${titleContent}`);
-        if (metadata.image) {
-            const imageUrl = `${window.location.origin}${window.location.pathname}${basePath}/images/${metadata.image}`;
-            let twitterImageMeta = document.querySelector('meta[name="twitter:image"]');
-            if (!twitterImageMeta) {
-                twitterImageMeta = document.createElement('meta');
-                twitterImageMeta.setAttribute('name', 'twitter:image');
-                document.head.appendChild(twitterImageMeta);
-            }
-            twitterImageMeta.setAttribute('content', imageUrl);
-        }
 
         documentContent.className = 'markdown-content';
         documentContent.innerHTML = marked.parse(finalContent);
+        hljs.highlightAll();
 
         documentOutline.innerHTML = '';
         const headings = documentContent.querySelectorAll('h1, h2, h3, h4, h5, h6');

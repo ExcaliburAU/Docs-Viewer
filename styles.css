@@ -421,6 +421,112 @@ social-links a:hover {
     border-bottom: 1px solid var(--ifm-border-color);
 }
 
+.markdown-content pre {
+    background-color: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.markdown-content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: inherit;
+}
+
+/* Override Prism styles to match theme */
+pre[class*="language-"] {
+    background: var(--ifm-background-surface-color) !important;
+    margin: 1rem 0 !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+}
+
+code[class*="language-"] {
+    background: none !important;
+    text-shadow: none !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+/* Code block styles */
+.markdown-content pre[class*="language-"] {
+    background: var(--ifm-background-surface-color) !important;
+    border: 1px solid var(--ifm-border-color);
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.markdown-content code[class*="language-"] {
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    text-shadow: none;
+}
+
+/* Discord-like code block styles */
+pre[class*="language-"] {
+    background-color: #2f3136 !important;
+    color: #b9bbbe !important;
+    border: none;
+    padding: 1rem !important;
+    border-radius: 5px !important;
+    overflow-x: auto;
+    line-height: 1.5;
+}
+
+code[class*="language-"] {
+    background: none !important;
+    color: inherit !important;
+    font-family: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+/* Optionally, if you use Prism's toolbar, adjust its colors similar to Discord */
+div.code-toolbar > .toolbar > .toolbar-item > button {
+    background: #2f3136;
+    color: #b9bbbe;
+    border: none;
+}
+div.code-toolbar > .toolbar > .toolbar-item > button:hover {
+    background: #40444b;
+    color: #dcddde;
+}
+
+/* Toolbar styles */
+div.code-toolbar > .toolbar {
+    opacity: 0;
+    top: 0.5em;
+    right: 0.5em;
+    transition: opacity 0.3s;
+}
+
+div.code-toolbar:hover > .toolbar {
+    opacity: 1;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+    background: var(--ifm-background-surface-color);
+    color: var(--ifm-color-content);
+    border: 1px solid var(--ifm-border-color);
+    border-radius: 4px;
+    padding: 0.4em 0.8em;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button:hover {
+    background: var(--ifm-color-primary);
+    color: white;
+}
+
 .error {
     color: #ff6b6b;
     padding: 20px;

@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "DeepImpact"
             }
+          },
+          {
+            "id": "7899dc85e8880db2",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.4"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -40,7 +53,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -162,7 +176,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1eda716d35acafe8",
+  "active": "7899dc85e8880db2",
   "lastOpenFiles": [
     "index.md",
     "DeepImpact.md",
