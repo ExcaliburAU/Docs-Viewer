@@ -11,14 +11,10 @@
             "id": "1eda716d35acafe8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Spawn Codes & Engram Entries.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Spawn Codes & Engram Entries"
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spawn Codes & Engram Entries.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Spawn Codes & Engram Entries"
+              "title": "Backlinks"
             }
           },
           {
@@ -140,13 +135,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spawn Codes & Engram Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Spawn Codes & Engram Entries"
+              "title": "Outline"
             }
           }
         ],
@@ -168,8 +162,12 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "index.md",
     "Spawn Codes & Engram Entries.md",
+    "excalibur-tranqs/Spawn Codes & Engram Entries.md",
+    "excalibur-tranqs/GameUserSettings.md",
+    "excalibur-tranqs",
+    "GameUserSettings.md",
+    "index.md",
     "Untitled 1.md",
     "images/Screenshot.png",
     "images",

@@ -6,31 +6,26 @@
             "slug": "welcome"
         },
         {
-            "title": "Unreal Engine",
+            "title": "ARK Survival Evolved",
             "type": "folder",
             "items": [
                 {
-                    "title": "Unreal Engine",
+                    "title": "Excalibur Tranqs",
                     "type": "folder",
                     "items": [
                         {
-                            "title": "DeepImpact",
-                            "path": "docs/index.md",
-                            "slug": "deep-impact"
+                            "title": "Spawn Codes & Engram Entries",
+                            "path": "docs/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+                            "slug": "excalibur-tranqs-spawn-codes-engram-entries"
+                        },
+                        {
+                            "title": "GameUserSettings.ini",
+                            "path": "docs/excalibur-tranqs/GameUserSettings.md",
+                            "slug": "excalibur-tranqs-gameusersettings-ini"
                         }
                     ]
-                },
-                {
-                    "title": "DeepImpact",
-                    "path": "docs/index.md",
-                    "slug": "deep-impact"
                 }
             ]
-        },
-        {
-            "title": "DeepImpact",
-            "path": "docs/Untitled.md",
-            "slug": "deep-impact"
         }
     ]
 }
