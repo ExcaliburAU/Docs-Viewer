@@ -11,10 +11,15 @@
             "items": [
                 {
                     "title": "DeepImpact",
-                    "path": "docs/DeepImpact.md",
+                    "path": "docs/index.md",
                     "slug": "deep-impact"
                 }
             ]
+        },
+        {
+            "title": "DeepImpact",
+            "path": "docs/Untitled.md",
+            "slug": "deep-impact"
         }
     ]
 }
