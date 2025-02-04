@@ -298,7 +298,7 @@ async function loadDocument(path) {
         hljs.highlightAll();
 
         documentOutline.innerHTML = '';
-        const headings = documentContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        const headings = documentContent.querySelectorAll('h2, h3, h4, h5, h6');
         const headingLinks = new Map();
         
         headings.forEach(heading => {
@@ -330,6 +330,30 @@ async function loadDocument(path) {
             };
             
             documentOutline.appendChild(link);
+            
+            /* Add header folding toggle */
+            const toggleBtn = document.createElement('span');
+            toggleBtn.innerHTML = `<svg width="10" height="10" viewBox="0 0 10 10" style="transform: rotate(90deg); transition: transform 0.2s;">
+                <path d="M3 2L7 5L3 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>`;
+            toggleBtn.style.cursor = 'pointer';
+            toggleBtn.style.userSelect = 'none';
+            toggleBtn.style.marginLeft = '0.5em';
+            toggleBtn.style.display = 'inline-flex';
+            toggleBtn.style.alignItems = 'center';
+            heading.appendChild(toggleBtn);
+            
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const svg = toggleBtn.querySelector('svg');
+                const isFolded = svg.style.transform === 'rotate(90deg)';
+                svg.style.transform = isFolded ? 'rotate(0deg)' : 'rotate(90deg)';
+                let next = heading.nextElementSibling;
+                while (next && !/^H[1-6]$/.test(next.tagName)) {
+                    next.style.display = isFolded ? 'none' : '';
+                    next = next.nextElementSibling;
+                }
+            });
         });
 
         const observer = new IntersectionObserver((entries) => {
