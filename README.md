@@ -79,10 +79,34 @@ styles.css         # Custom styling
 }
 ```
 
+## Configuring Folders
+You can control whether a folder is expanded by default using `defaultOpen`. You can also specify a Font Awesome `icon`. 
+Both properties (`defaultOpen` and `icon`) are optional — if you omit them, the folder will use default behavior.
+
+Example in index.json:
+```json
+{
+    "folders": [
+        {
+            "title": "Folder 1",
+            "defaultOpen": true,
+            "icon": "fa-folder",
+            "documents": [
+                {
+                    "title": "Document 1",
+                    "path": "docs/Document1.md"
+                }
+            ]
+        }
+    ]
+}
+```
+
 ## Acknowledgements
 
 - [marked](https://github.com/markedjs/marked) for Markdown parsing.
-- [Prism](https://prismjs.com/) for syntax highlighting.
+- [highlight.js](https://highlightjs.org/) for syntax highlighting.
+- [Font Awesome](https://fontawesome.com/) for icons
 
 ## License
 

@@ -54,8 +54,11 @@ function createFileIndexItem(doc, container, level = 0) {
 
         const folderHeader = document.createElement('div');
         folderHeader.className = 'folder-header';
+        
+        // Use custom icon if provided, otherwise use default folder icon
+        const iconClass = doc.icon || `fas fa-folder${doc.defaultOpen !== false ? '-open' : ''}`;
         folderHeader.innerHTML = `
-            <i class="fas fa-folder${doc.defaultOpen !== false ? '-open' : ''} folder-icon"></i>
+            <i class="${iconClass} folder-icon"></i>
             <span>${doc.title}</span>
         `;
         folderDiv.appendChild(folderHeader);
@@ -67,8 +70,10 @@ function createFileIndexItem(doc, container, level = 0) {
 
         folderHeader.addEventListener('click', () => {
             folderDiv.classList.toggle('open');
-            folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-closed');
-            folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-open');
+            if (!doc.icon) {  // Only toggle folder icon if using default
+                folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-closed');
+                folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-open');
+            }
         });
 
         container.appendChild(folderDiv);
@@ -348,10 +353,20 @@ async function loadDocument(path) {
                 const svg = toggleBtn.querySelector('svg');
                 const isFolded = svg.style.transform === 'rotate(90deg)';
                 svg.style.transform = isFolded ? 'rotate(0deg)' : 'rotate(90deg)';
+                const currentLevel = parseInt(heading.tagName[1]);
                 let next = heading.nextElementSibling;
-                while (next && !/^H[1-6]$/.test(next.tagName)) {
-                    next.style.display = isFolded ? 'none' : '';
-                    next = next.nextElementSibling;
+                while (next) {
+                    if (!/^H[1-6]$/.test(next.tagName)) {
+                        next.style.display = isFolded ? 'none' : '';
+                        next = next.nextElementSibling;
+                    } else {
+                        const nextLevel = parseInt(next.tagName[1]);
+                        if (nextLevel <= currentLevel) {
+                            break;
+                        }
+                        next.style.display = isFolded ? 'none' : '';
+                        next = next.nextElementSibling;
+                    }
                 }
             });
         });
