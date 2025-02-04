@@ -1,3 +1,5 @@
+let originalDocTitle = document.title;
+
 let markedPromise = new Promise((resolve) => {
     if (typeof marked !== 'undefined') {
         resolve(marked);
@@ -12,6 +14,18 @@ async function initializeMarked() {
     const renderer = new marked.Renderer();
     const originalLink = renderer.link.bind(renderer);
     
+    renderer.code = (code, language) => {
+        let highlighted;
+        if (language && hljs.getLanguage(language)) {
+            highlighted = hljs.highlight(code, { language }).value;
+            language = language;
+        } else {
+            highlighted = hljs.highlightAuto(code).value;
+            language = '';
+        }
+        return `<pre class="hljs ${language ? "language-" + language : ""}"><code>${highlighted}</code></pre>`;
+    };
+    
     renderer.link = (href, title, text) => {
         const isExternal = href.startsWith('http') || href.startsWith('https');
         const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : '';
@@ -23,12 +37,6 @@ async function initializeMarked() {
     };
 
     marked.setOptions({
-        highlight: function(code, lang) {
-            if (Prism.languages[lang]) {
-                return Prism.highlight(code, Prism.languages[lang], lang);
-            }
-            return code;
-        },
         breaks: true,
         gfm: true,
         renderer: renderer
@@ -40,14 +48,17 @@ async function initializeMarked() {
 function createFileIndexItem(doc, container, level = 0) {
     if (doc.type === 'folder') {
         const folderDiv = document.createElement('div');
-        folderDiv.className = 'folder open';
+        folderDiv.className = 'folder' + (doc.defaultOpen !== false ? ' open' : '');
         folderDiv.dataset.path = doc.title;
         folderDiv.style.paddingLeft = `${level * 0.8}rem`;
 
         const folderHeader = document.createElement('div');
         folderHeader.className = 'folder-header';
+        
+        // Use custom icon if provided, otherwise use default folder icon
+        const iconClass = doc.icon || `fas fa-folder${doc.defaultOpen !== false ? '-open' : ''}`;
         folderHeader.innerHTML = `
-            <i class="fas fa-folder-open folder-icon"></i>
+            <i class="${iconClass} folder-icon"></i>
             <span>${doc.title}</span>
         `;
         folderDiv.appendChild(folderHeader);
@@ -59,8 +70,10 @@ function createFileIndexItem(doc, container, level = 0) {
 
         folderHeader.addEventListener('click', () => {
             folderDiv.classList.toggle('open');
-            folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-closed');
-            folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-open');
+            if (!doc.icon) {  // Only toggle folder icon if using default
+                folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-closed');
+                folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-open');
+            }
         });
 
         container.appendChild(folderDiv);
@@ -250,6 +263,9 @@ async function loadDocument(path) {
         
         const titleContent = metadata.title || (docEntry && docEntry.title) || path.split('/').pop().replace('.md', '');
         
+        document.title = `${originalDocTitle} / ${titleContent}`;
+        document.querySelector('.title-text .page-title').textContent = titleContent;
+
         let processedContent = content.replace(/\[\[(.*?)\]\]/g, (match, linkText) => {
             if (linkText.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
                 return match;
@@ -264,7 +280,7 @@ async function loadDocument(path) {
 
         processedContent = `# ${titleContent}\n\n${processedContent}`;
 
-        const finalContent = processedContent.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
+        let finalContent = processedContent.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
             const mediaPath = `${basePath}/images/${filename}`;
             
             if (filename.toLowerCase().endsWith('.mp4')) {
@@ -277,15 +293,17 @@ async function loadDocument(path) {
             return `\n![${filename}](${mediaPath})\n\n`;
         });
 
-        document.title = `exau.dev / ${titleContent}`;
-        document.querySelector('.title-text .page-title').textContent = titleContent;
+        // Add Discord-style underline support: __text__ -> <u>text</u>
+        finalContent = finalContent.replace(/__(.*?)__/g, '<u>$1</u>');
 
+        document.querySelector('.title-text .page-title').textContent = titleContent;
 
         documentContent.className = 'markdown-content';
         documentContent.innerHTML = marked.parse(finalContent);
+        hljs.highlightAll();
 
         documentOutline.innerHTML = '';
-        const headings = documentContent.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        const headings = documentContent.querySelectorAll('h2, h3, h4, h5, h6');
         const headingLinks = new Map();
         
         headings.forEach(heading => {
@@ -317,6 +335,40 @@ async function loadDocument(path) {
             };
             
             documentOutline.appendChild(link);
+            
+            /* Add header folding toggle */
+            const toggleBtn = document.createElement('span');
+            toggleBtn.innerHTML = `<svg width="10" height="10" viewBox="0 0 10 10" style="transform: rotate(90deg); transition: transform 0.2s;">
+                <path d="M3 2L7 5L3 8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>`;
+            toggleBtn.style.cursor = 'pointer';
+            toggleBtn.style.userSelect = 'none';
+            toggleBtn.style.marginLeft = '0.5em';
+            toggleBtn.style.display = 'inline-flex';
+            toggleBtn.style.alignItems = 'center';
+            heading.appendChild(toggleBtn);
+            
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const svg = toggleBtn.querySelector('svg');
+                const isFolded = svg.style.transform === 'rotate(90deg)';
+                svg.style.transform = isFolded ? 'rotate(0deg)' : 'rotate(90deg)';
+                const currentLevel = parseInt(heading.tagName[1]);
+                let next = heading.nextElementSibling;
+                while (next) {
+                    if (!/^H[1-6]$/.test(next.tagName)) {
+                        next.style.display = isFolded ? 'none' : '';
+                        next = next.nextElementSibling;
+                    } else {
+                        const nextLevel = parseInt(next.tagName[1]);
+                        if (nextLevel <= currentLevel) {
+                            break;
+                        }
+                        next.style.display = isFolded ? 'none' : '';
+                        next = next.nextElementSibling;
+                    }
+                }
+            });
         });
 
         const observer = new IntersectionObserver((entries) => {

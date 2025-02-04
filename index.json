@@ -1,27 +1,96 @@
 {
     "documents": [
         {
-            "title": "Welcome",
-            "path": "docs/index.md",
+            "title": "Home",
+            "path": "docs/home.md",
             "slug": "welcome"
         },
         {
             "title": "ARK Survival Evolved",
             "type": "folder",
+            "defaultOpen": false,
             "items": [
                 {
-                    "title": "Excalibur Tranqs",
+                    "title": "Announcements",
                     "type": "folder",
+                    "icon": "fa-solid fa-bullhorn",
+                    "defaultOpen": false,
                     "items": [
                         {
-                            "title": "Spawn Codes & Engram Entries",
-                            "path": "docs/excalibur-tranqs/Spawn Codes & Engram Entries.md",
-                            "slug": "excalibur-tranqs-spawn-codes-engram-entries"
+                            "title": "01-04-25 | Exciting Updates",
+                            "path": "docs/ase/announcements/4-1-25-exciting-updates.md",
+                            "slug": "ase-4-1-25-exciting-updates"
+                        }
+                    ]
+                },
+                {
+
+                    "title": "Excalibur Tranqs",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-tranqs-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/ase/excalibur-tranqs/GameUserSettings.md",
+                                    "slug": "ase-tranqs-gameusersettings-ini"
+                                }
+                            ]
                         },
                         {
-                            "title": "GameUserSettings.ini",
-                            "path": "docs/excalibur-tranqs/GameUserSettings.md",
-                            "slug": "excalibur-tranqs-gameusersettings-ini"
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "01-04-25 | Mod Integration",
+                                    "path": "docs/ase/excalibur-tranqs/patch-notes/12-11-24.md",
+                                    "slug": "ase-tranqs-12-11-24"
+                                }
+                            ]
+                        }
+                    ]
+                },{
+
+                    "title": "Excalibur Crafter",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
+                                    "slug": "ase-crafter-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": [
+                            ]
                         }
                     ]
                 }

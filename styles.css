@@ -421,13 +421,26 @@ social-links a:hover {
     border-bottom: 1px solid var(--ifm-border-color);
 }
 
-.error {
-    color: #ff6b6b;
-    padding: 20px;
-    border: 1px solid #ff6b6b;
-    border-radius: 4px;
-    margin: 20px 0;
+.markdown-content pre {
+    background-color: var(--ifm-background-surface-color);
+    border: 1px solid var(--ifm-border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    overflow-x: auto;
 }
+
+.markdown-content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: inherit;
+}
+
+/* Keep existing scrollbar styles, animations, and other used styles */
+/* ...existing code... */
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -494,7 +507,7 @@ social-links a:hover {
 }
 
 .title-text .divider {
-    padding: 0 0 0 0;
+    padding: 0 0 0 10px;
 }
 
 .title-text .divider,

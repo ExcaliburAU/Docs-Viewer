@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Documentation Viewer</title>
+    <title>exau.dev</title>
     
     <meta name="description" content="Documentation for ExcaliburAU's tools and projects">
     <meta property="og:type" content="article">
@@ -11,11 +11,10 @@
     <meta property="og:url" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:description" content="Documentation for ExcaliburAU's tools and projects">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://excaliburau.com/uploads/excaliburpanda_2b63fe8521.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
    
 </head>
 <body>
@@ -48,7 +47,7 @@
                     <a href="https://steamcommunity.com/id/ExcaliburAU" target="_blank" title="Steam - ExcaliburAU">
                         <i class="fab fa-steam"></i>
                     </a>
-                    <a href="https://discordapp.com/users/220772082055774210" target="_blank" title="Discord - @ExcaliburAU">
+                    <a href="https://exau.dev/discord" target="_blank" title="Discord - @ExcaliburAU">
                         <i class="fab fa-discord"></i>
                     </a>
                 </div>
@@ -67,17 +66,10 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script>
-        window.addEventListener('error', function(e) {
-            if (e.target.src && e.target.src.includes('marked.min.js')) {
-                const script = document.createElement('script');
-                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js';
-                document.body.appendChild(script);
-            }
-        }, true);
+      hljs.highlightAll();
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
