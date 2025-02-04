@@ -1,0 +1,349 @@
+{
+    "documents": [
+        {
+            "title": "Home",
+            "path": "docs/home.md",
+            "slug": "welcome"
+        },
+        {
+            "title": "ARK Survival Evolved",
+            "type": "folder",
+            "defaultOpen": true,
+            "items": [
+                {
+                    "title": "Excalibur Tranqs",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-tranqs-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings",
+                                    "path": "docs/ase/excalibur-tranqs/GameUserSettings.md",
+                                    "slug": "ase-tranqs-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "01-04-25 | Mod Integration",
+                                    "path": "docs/ase/excalibur-tranqs/patch-notes/12-11-24.md",
+                                    "slug": "ase-tranqs-12-11-24"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Excalibur Crafter",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
+                                    "slug": "ase-crafter-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "title": "Excalibur Net Ammo",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
+                                    "slug": "ase-crafter-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "title": "Excalibur Stacks",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
+                                    "slug": "ase-crafter-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "title": "Harvs Corner",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
+                                    "slug": "ase-crafter-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "ARK Survival Ascended",
+            "type": "folder",
+            "defaultOpen": true,
+            "items": [
+                {
+                    "title": "Excalibur Tranqs",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/asa/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+                                    "slug": "asa-tranqs-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings",
+                                    "path": "docs/asa/excalibur-tranqs/GameUserSettings.md",
+                                    "slug": "asa-tranqs-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "title": "Excalibur Crafter",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/asa/excalibur-crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "asa-crafter-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/asa/excalibur-crafter/GameUserSettings.md",
+                                    "slug": "asa-crafter-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "title": "Excalibur Cropplots",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/asa/excalibur-cropplots/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase-cropplots-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/asa/excalibur-crafter/GameUserSettings.md",
+                                    "slug": "ase-cropplots-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                },
+                {
+                    "title": "Excalibur Trashcan",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/asa/excalibur-trashcan/Spawn Codes & Engram Entries.md",
+                                    "slug": "asa-trashcan-spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/asa/excalibur-trashcan/GameUserSettings.md",
+                                    "slug": "asa-trashcan-gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Minecraft",
+            "type": "folder",
+            "defaultOpen": true,
+            "items": [
+                {
+                    "title": "Extensions",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Permissions",
+                                    "path": "docs/minecraft/paper/extensions/permissions.md",
+                                    "slug": "papermc-extensions-permissions"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
