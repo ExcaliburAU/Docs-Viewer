@@ -13,6 +13,11 @@
                     "title": "DeepImpact",
                     "path": "docs/DeepImpact.md",
                     "slug": "deep-impact"
+                },
+                {
+                    "title": "WIP: Objective Marker System",
+                    "path": "docs/objective-marker-system.md",
+                    "slug": "objective-markers"
                 }
             ]
         }
