@@ -1,5 +1,4 @@
 # This plugin is WIP
-
 ## Overview
 
 The **Objective Marker System** provides a set of features to display, manage, and interact with in-game objective markers. This document details each feature, available options, and how they can be configured.
@@ -28,7 +27,7 @@ The **Objective Marker System** provides a set of features to display, manage, a
 
 ### **Icon Stacking Prevention**
 
-Prevents multiple markers from overlapping in screen space by slightly offsetting their positions.
+<span class="highlight" style="color:#56B4D3">Prevents multiple markers from overlapping in screen space by slightly offsetting their positions.</span>
 
 ### **Off-Screen Markers**
 
