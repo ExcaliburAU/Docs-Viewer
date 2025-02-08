@@ -85,7 +85,11 @@ function createFileIndexItem(doc, container, level = 0) {
             if (e.target.closest('.folder-link')) {
                 e.preventDefault();
                 loadDocument(doc.path);
-                history.pushState(null, '', `?${doc.slug}`);
+                history.pushState({ 
+                    slug: doc.slug,
+                    path: doc.path,
+                    type: doc.type
+                }, '', `?${doc.slug}`);
                 if (window.innerWidth <= 1000) {
                     document.querySelector('.left-sidebar').classList.remove('show');
                 }
@@ -111,7 +115,11 @@ function createFileIndexItem(doc, container, level = 0) {
         link.onclick = (e) => {
             e.preventDefault();
             loadDocument(doc.path);
-            history.pushState(null, '', link.href);
+            history.pushState({ 
+                slug: doc.slug,
+                path: doc.path,
+                type: doc.type
+            }, '', link.href);
             const leftSidebar = document.querySelector('.left-sidebar');
             if (window.innerWidth <= 1000) {
                 leftSidebar.classList.remove('show');
@@ -175,6 +183,12 @@ async function loadIndex() {
             const matchingDoc = findDocumentBySlug(data.documents, slug);
 
             if (matchingDoc) {
+                history.replaceState({ 
+                    slug,
+                    path: matchingDoc.path,
+                    type: matchingDoc.type
+                }, '', window.location.href);
+                
                 if (matchingDoc.type === 'folder') {
                     // If the folder has a path, load that document. Otherwise, load the first item.
                     if (matchingDoc.path) {
@@ -198,6 +212,11 @@ async function loadIndex() {
             const defaultDoc = findDocumentBySlug(data.documents, 'welcome');
             if (defaultDoc) {
                 await loadDocument(defaultDoc.path);
+                history.replaceState({ 
+                    slug: 'welcome',
+                    path: defaultDoc.path,
+                    type: defaultDoc.type
+                }, '', '?welcome');
             }
         }
     } catch (error) {
@@ -207,8 +226,15 @@ async function loadIndex() {
 }
 
 window.addEventListener('popstate', async (event) => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const slug = urlParams.toString().replace(/^=/, '').replace(/^\?/, '');
+    let slug;
+    
+    // First try to get slug from state
+    if (event.state && event.state.slug) {
+        slug = event.state.slug;
+    } else {
+        // Fall back to URL parsing if no state
+        slug = window.location.search.replace(/^\?/, '');
+    }
     
     if (!slug) {
         const defaultDoc = findDocumentBySlug(window._indexData.documents, 'welcome');
@@ -218,11 +244,7 @@ window.addEventListener('popstate', async (event) => {
         return;
     }
 
-    const response = await fetch('index.json');
-    const data = await response.json();
-    window._indexData = data; // Cache the index data
-    
-    const matchingDoc = findDocumentBySlug(data.documents, slug);
+    const matchingDoc = findDocumentBySlug(window._indexData.documents, slug);
     if (matchingDoc) {
         if (matchingDoc.type === 'folder') {
             if (matchingDoc.path) {
@@ -517,7 +539,11 @@ document.addEventListener('click', async (e) => {
         const matchingDoc = findDocumentBySlug(window._indexData.documents, slug);
         if (matchingDoc) {
             await loadDocument(matchingDoc.path);
-            history.pushState({ slug }, '', target.href);
+            history.pushState({ 
+                slug,
+                path: matchingDoc.path,
+                type: matchingDoc.type
+            }, '', target.href);
         }
     }
 });
