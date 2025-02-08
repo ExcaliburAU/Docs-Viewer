@@ -188,19 +188,39 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.4rem 1.2rem;
+    padding: 0.4rem 0rem;
     cursor: pointer;
     user-select: none;
     font-size: 0.875rem;
 }
 
-.folder-header:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+.folder-link {
+    display: flex;
+    align-items: center;
+    color: var(--ifm-color-content-secondary);
+    opacity: 0.6;
+    font-size: 0.8em;
+    padding: 2px;
+    border-radius: 3px;
+    margin-left: 0.25rem; /* Add spacing between file and folder icons */
 }
 
-.folder-icon {
-    width: 1.2em;
+.folder-header:hover .folder-link {
+    opacity: 0.8;
+}
+
+.folder-link:hover {
+    opacity: 1 !important;
+    color: var(--ifm-color-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.folder-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
     color: var(--ifm-color-content-secondary);
+    min-width: 2.5em; /* Ensure consistent spacing */
 }
 
 .folder-content {

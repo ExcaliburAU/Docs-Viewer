@@ -55,12 +55,23 @@ function createFileIndexItem(doc, container, level = 0) {
         const folderHeader = document.createElement('div');
         folderHeader.className = 'folder-header';
         
-        // Use custom icon if provided, otherwise use default folder icon
         const iconClass = doc.icon || `fas fa-folder${doc.defaultOpen !== false ? '-open' : ''}`;
-        folderHeader.innerHTML = `
-            <i class="${iconClass} folder-icon"></i>
-            <span>${doc.title}</span>
-        `;
+        
+        // Put file icon before folder icon
+        const headerContent = doc.path ? 
+            `<div class="folder-icons">
+                <a href="?${doc.slug}" class="folder-link" title="View folder page">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+                 <i class="${iconClass} folder-icon"></i>
+            </div>
+            <span>${doc.title}</span>` :
+            `<div class="folder-icons">
+                <i class="${iconClass} folder-icon"></i>
+            </div>
+            <span>${doc.title}</span>`;
+             
+        folderHeader.innerHTML = headerContent;
         folderDiv.appendChild(folderHeader);
 
         const folderContent = document.createElement('div');
@@ -68,9 +79,21 @@ function createFileIndexItem(doc, container, level = 0) {
         doc.items.forEach(item => createFileIndexItem(item, folderContent, level + 1));
         folderDiv.appendChild(folderContent);
 
-        folderHeader.addEventListener('click', () => {
+        // Make entire header toggle folder
+        folderHeader.addEventListener('click', (e) => {
+            // Don't toggle if clicking the folder link
+            if (e.target.closest('.folder-link')) {
+                e.preventDefault();
+                loadDocument(doc.path);
+                history.pushState(null, '', `?${doc.slug}`);
+                if (window.innerWidth <= 1000) {
+                    document.querySelector('.left-sidebar').classList.remove('show');
+                }
+                return;
+            }
+            
             folderDiv.classList.toggle('open');
-            if (!doc.icon) {  // Only toggle folder icon if using default
+            if (!doc.icon) {
                 folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-closed');
                 folderHeader.querySelector('.folder-icon').classList.toggle('fa-folder-open');
             }

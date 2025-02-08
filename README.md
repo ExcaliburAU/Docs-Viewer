@@ -1,100 +1,79 @@
 # Documentation Viewer
 
-A lightweight, static documentation viewer that renders Markdown files with syntax highlighting. Built as a single-page application with no backend requirements.
+A robust, modern documentation viewer built for rendering Markdown files with advanced syntax highlighting capabilities. This zero-dependency static application enables seamless documentation hosting without backend requirements.
 
 ## Features
 
-- 📝 Renders Markdown documents with syntax highlighting
-- 📑 Document outline/table of contents
-- 📱 Responsive design with mobile support
-- 🚀 Zero backend requirements - deploy anywhere
-- ⚡ Fast client-side rendering
+- 🚀 **High-Performance Rendering** - Lightning-fast Markdown processing with optimized syntax highlighting
+- 📑 **Dynamic Navigation** - Auto-generated document outline with interactive table of contents
+- 📱 **Responsive Design** - Optimized viewing experience across all device sizes
+- 🔒 **Zero Backend** - Fully static implementation for maximum security and deployability
+- 🎨 **Modern UI/UX** - Clean, intuitive interface with customizable theming
 
-## Getting Started
+## Quick Start
 
-### Prerequisites
+### Development Setup
 
-- Node.js and npm (only needed for development)
-
-### Installation
-
-1. Clone the repository:
-
-    ```sh
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
-
-2. Install dependencies (only needed for development):
-
-    ```sh
-    npm install
-    ```
+```sh
+git clone https://github.com/litruv/Docs-Viewer
+cd Docs-Viewer
+```
 
 ### Deployment
 
-This is a static website that can be hosted on any web server or static hosting service. Simply upload all files to your hosting provider.
+Deploy anywhere that serves static files. For local development:
 
-For local testing, you can use any static file server. For example:
 ```sh
 npx live-server
 ```
 
-### Usage
-
-- The file index is displayed on the left sidebar.
-- Click on a file to load its content.
-- The document outline is displayed on the right sidebar.
-- Use the menu button to toggle the sidebar on mobile devices.
-
-### Directory Structure
+## Project Structure
 
 ```
-docs/               # Your markdown documents go here
-├── images/         # Images referenced in documents
-├── doc1.md
-└── doc2.md
-index.html         # Main entry point
-config.json        # Document index configuration
-styles.css         # Custom styling
+.
+├── docs/           # Documentation source files
+│   ├── images/     # Document assets
+│   └── *.md        # Markdown documents
+├── index.html      # Application entry point
+├── config.json     # Document configuration
+└── styles.css      # Theme customization
 ```
 
-### Adding New Documents
+## Configuration
 
-1. Add your Markdown file to the `docs` directory.
-2. Update  to include the new document:
+### Document Index
+
+Configure your documentation structure in `index.json`:
 
 ```json
 {
     "documents": [
         {
-            "title": "Blueprint Depth Trace",
-            "path": "docs/Blueprint Penetration Trace.md"
-        },
-        {
-            "title": "New Document Title",
-            "path": "docs/NewDocument.md"
+            "title": "Getting Started",
+            "path": "docs/getting-started.md"
         }
     ]
 }
 ```
 
-## Configuring Folders
-You can control whether a folder is expanded by default using `defaultOpen`. You can also specify a Font Awesome `icon`. 
-Both properties (`defaultOpen` and `icon`) are optional — if you omit them, the folder will use default behavior.
+### Folder Organization
 
-Example in index.json:
+Create hierarchical documentation structures with nested folders:
+
 ```json
 {
-    "folders": [
+    "documents": [
         {
-            "title": "Folder 1",
+            "title": "Core Concepts",
+            "type": "folder",
             "defaultOpen": true,
-            "icon": "fa-solid fa-folder",
-            "documents": [
+            "icon": "fa-solid fa-book",
+            "path": "docs/core-concepts/index.md",
+            "slug": "core-concepts",
+            "items": [
                 {
-                    "title": "Document 1",
-                    "path": "docs/Document1.md"
+                    "title": "Architecture",
+                    "path": "docs/core-concepts/architecture.md"
                 }
             ]
         }
@@ -102,12 +81,30 @@ Example in index.json:
 }
 ```
 
-## Acknowledgements
+#### Folder Configuration Options
 
-- [marked](https://github.com/markedjs/marked) for Markdown parsing.
-- [highlight.js](https://highlightjs.org/) for syntax highlighting.
-- [Font Awesome](https://fontawesome.com/) for icons
+| Option | Type | Description |
+|--------|------|-------------|
+| `type` | string | Set to `"folder"` for directory nodes |
+| `title` | string | Display name |
+| `path` | string? | Optional content file path |
+| `slug` | string | URL-friendly identifier (required with `path`) |
+| `items` | array | Nested documents or folders |
+| `defaultOpen` | boolean? | Auto-expand folder |
+| `icon` | string? | Custom Font Awesome class |
+
+## Technology Stack
+
+Built with modern web technologies and carefully selected dependencies:
+
+- [marked](https://github.com/markedjs/marked) - Markdown processing
+- [highlight.js](https://highlightjs.org/) - Syntax highlighting
+- [Font Awesome](https://fontawesome.com/) - UI iconography
 
 ## License
 
-This project is licensed under the MIT License.
+Released under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.

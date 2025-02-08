@@ -8,6 +8,8 @@
         {
             "title": "Unreal Engine",
             "type": "folder",
+            "path": "docs/unreal-engine.md",
+            "slug": "unreal-engine",
             "items": [
                 {
                     "title": "DeepImpact",
