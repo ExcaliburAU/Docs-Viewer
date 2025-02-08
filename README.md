@@ -18,7 +18,8 @@ A robust, modern documentation viewer built for rendering Markdown files with ad
 git clone https://github.com/litruv/Docs-Viewer
 cd Docs-Viewer
 
-adding better upstream method, uno momento
+git fetch upstream
+git merge upstream/HEAD --no-ff
 ```
 
 ### Deployment
