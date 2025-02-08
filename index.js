@@ -82,8 +82,10 @@ class DOMService {
             fileIndex: document.getElementById('file-index'),
             titleText: document.querySelector('.title-text .page-title'),
             leftSidebar: document.querySelector('.left-sidebar'),
-            menuButton: document.querySelector('.menu-button')
+            menuButton: document.querySelector('.menu-button'),
+            header: document.querySelector('title-bar') // Add header element
         };
+        this.headerOffset = 60; // Fixed header heightfsetHeight || 0; // Get header height
     }
 
     setupMobileMenu() {
@@ -222,6 +224,18 @@ class DOMService {
         });
     }
 
+    scrollToElement(element) {
+        if (!element) return;
+        const rect = element.getBoundingClientRect();
+        const absoluteElementTop = rect.top + window.scrollY;
+        const middle = absoluteElementTop - (this.headerOffset + 20); // Add extra padding
+        
+        window.scrollTo({
+            top: middle,
+            behavior: 'smooth'
+        });
+    }
+
     createOutlineLink(heading) {
         const link = document.createElement('a');
         link.href = `${window.location.pathname}${window.location.search}#${heading.id}`;
@@ -231,7 +245,7 @@ class DOMService {
         link.onclick = (e) => {
             e.preventDefault();
             history.pushState(null, '', link.href);
-            heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            this.scrollToElement(heading);
             heading.classList.remove('highlight');
             void heading.offsetWidth;
             heading.classList.add('highlight');
@@ -444,7 +458,8 @@ class NavigationService {
         window.addEventListener('popstate', async () => {
             const slug = new URLSearchParams(window.location.search).toString()
                 .replace(/^=/, '').replace(/^\?/, '');
-            this.eventBus.emit('navigation:requested', { slug });
+            const hash = window.location.hash;
+            this.eventBus.emit('navigation:requested', { slug, hash });
         });
 
         document.addEventListener('click', async (e) => {
@@ -510,9 +525,30 @@ class Documentation {
             this.indexData.documents.forEach(doc => 
                 this.domService.createFileIndexItem(doc, this.domService.elements.fileIndex));
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const slug = urlParams.get('') || urlParams.get('page') || 'welcome';
+            // Use defaultPage from index.json
+            const params = new URLSearchParams(window.location.search);
+            let slug = '';
+            if (params.has('')) {
+                slug = params.get('');
+            } else {
+                for (const [key] of params) {
+                    slug = key;
+                    break;
+                }
+            }
+            slug = slug || this.indexData.defaultPage;
+            
             await this.loadDocumentBySlug(slug);
+
+            // Handle hash after load using DOMService's scrollToElement
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const element = document.getElementById(window.location.hash.slice(1));
+                    if (element) {
+                        this.domService.scrollToElement(element);
+                    }
+                }, 100);
+            }
         } catch (error) {
             this.domService.setError(`Failed to load documentation index: ${error.message}`);
         }
@@ -555,7 +591,17 @@ class Documentation {
             
             window._currentPath = path;
 
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // Handle hash scrolling after content is loaded
+            if (window.location.hash) {
+                const element = document.getElementById(window.location.hash.slice(1));
+                if (element) {
+                    setTimeout(() => {
+                        this.domService.scrollToElement(element);
+                    }, 100);
+                }
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         } catch (error) {
             this.domService.setError('Error loading document. Please try again.');
         }
