@@ -147,11 +147,12 @@ function findParentFolders(documents, path, parentFolders = []) {
 
 function findDocumentBySlug(documents, slug) {
     for (const doc of documents) {
+        if (doc.slug === slug) {
+            return doc;
+        }
         if (doc.type === 'folder') {
             const found = findDocumentBySlug(doc.items, slug);
             if (found) return found;
-        } else if (doc.slug === slug) {
-            return doc;
         }
     }
     return null;
@@ -162,18 +163,35 @@ async function loadIndex() {
         const response = await fetch('index.json');
         const data = await response.json();
         const fileIndex = document.getElementById('file-index');
-        
+
         fileIndex.innerHTML = '';
-        
+
         data.documents.forEach(doc => createFileIndexItem(doc, fileIndex));
 
         const queryString = window.location.search;
         if (queryString) {
             const slug = queryString.substring(1);
             const matchingDoc = findDocumentBySlug(data.documents, slug);
-            
+
             if (matchingDoc) {
-                await loadDocument(matchingDoc.path);
+                if (matchingDoc.type === 'folder') {
+                    // If the folder has a path, load that document. Otherwise, load the first item.
+                    if (matchingDoc.path) {
+                        await loadDocument(matchingDoc.path);
+                    } else if (matchingDoc.items && matchingDoc.items.length > 0) {
+                        await loadDocument(matchingDoc.items[0].path);
+                    } else {
+                        // If the folder has no items, display a default message.
+                        document.getElementById('document-content').innerHTML =
+                            '<div class="error">This folder is empty.</div>';
+                    }
+                } else {
+                    await loadDocument(matchingDoc.path);
+                }
+            } else {
+                // If no matching doc is found, display an error message.
+                document.getElementById('document-content').innerHTML =
+                    '<div class="error">Document not found.</div>';
             }
         } else {
             const defaultDoc = findDocumentBySlug(data.documents, 'welcome');
@@ -182,7 +200,7 @@ async function loadIndex() {
             }
         }
     } catch (error) {
-        document.getElementById('document-content').innerHTML = 
+        document.getElementById('document-content').innerHTML =
             '<div class="error">Failed to load documentation index.</div>';
     }
 }
@@ -238,8 +256,14 @@ function findDocumentByTitle(documents, title) {
         if (doc.type === 'folder') {
             const found = findDocumentByTitle(doc.items, title);
             if (found) return found;
-        } else if (doc.title === title || doc.path.endsWith(title + '.md')) {
-            return doc;
+        } else {
+            if (doc.title === title) {
+                return doc;
+            } else if (doc.path.endsWith(title + '.md')) {
+                return doc;
+            } else if (doc.slug === title.toLowerCase().replace(/ /g, '-')) {
+                return doc;
+            }
         }
     }
     return null;
@@ -290,15 +314,17 @@ async function loadDocument(path) {
         document.querySelector('.title-text .page-title').textContent = titleContent;
 
         let processedContent = content.replace(/\[\[(.*?)\]\]/g, (match, linkText) => {
-            if (linkText.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
+            const [targetTitle, displayText] = linkText.split('|').map(s => s.trim());
+            if (targetTitle.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
                 return match;
             }
-            
-            const doc = findDocumentByTitle(indexData.documents, linkText);
+
+            const doc = findDocumentByTitle(indexData.documents, targetTitle);
             if (doc) {
-                return `[${doc.title}](?${doc.slug})`;
+                return `[${displayText || doc.title}](?${doc.slug})`;
+            } else {
+                return match;
             }
-            return match;
         });
 
         processedContent = `# ${titleContent}\n\n${processedContent}`;
