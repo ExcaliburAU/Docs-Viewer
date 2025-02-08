@@ -162,6 +162,7 @@ async function loadIndex() {
     try {
         const response = await fetch('index.json');
         const data = await response.json();
+        window._indexData = data; // Cache the index data
         const fileIndex = document.getElementById('file-index');
 
         fileIndex.innerHTML = '';
@@ -205,14 +206,31 @@ async function loadIndex() {
     }
 }
 
-window.addEventListener('popstate', async () => {
+window.addEventListener('popstate', async (event) => {
     const urlParams = new URLSearchParams(window.location.search);
     const slug = urlParams.toString().replace(/^=/, '').replace(/^\?/, '');
-    if (slug) {
-        const response = await fetch('index.json');
-        const data = await response.json();
-        const matchingDoc = findDocumentBySlug(data.documents, slug);
-        if (matchingDoc) {
+    
+    if (!slug) {
+        const defaultDoc = findDocumentBySlug(window._indexData.documents, 'welcome');
+        if (defaultDoc) {
+            await loadDocument(defaultDoc.path);
+        }
+        return;
+    }
+
+    const response = await fetch('index.json');
+    const data = await response.json();
+    window._indexData = data; // Cache the index data
+    
+    const matchingDoc = findDocumentBySlug(data.documents, slug);
+    if (matchingDoc) {
+        if (matchingDoc.type === 'folder') {
+            if (matchingDoc.path) {
+                await loadDocument(matchingDoc.path);
+            } else if (matchingDoc.items && matchingDoc.items.length > 0) {
+                await loadDocument(matchingDoc.items[0].path);
+            }
+        } else {
             await loadDocument(matchingDoc.path);
         }
     }
@@ -341,6 +359,9 @@ async function loadDocument(path) {
             
             return `\n![${filename}](${mediaPath})\n\n`;
         });
+
+        // Track current page for navigation
+        window._currentPath = path;
 
         // Add Discord-style underline support: __text__ -> <u>text</u>
         finalContent = finalContent.replace(/__(.*?)__/g, '<u>$1</u>');
@@ -493,11 +514,10 @@ document.addEventListener('click', async (e) => {
     if (target) {
         e.preventDefault();
         const slug = target.href.split('?').pop();
-        const indexData = await fetch('index.json').then(res => res.json());
-        const matchingDoc = findDocumentBySlug(indexData.documents, slug);
+        const matchingDoc = findDocumentBySlug(window._indexData.documents, slug);
         if (matchingDoc) {
             await loadDocument(matchingDoc.path);
-            history.pushState(null, '', target.href);
+            history.pushState({ slug }, '', target.href);
         }
     }
 });
