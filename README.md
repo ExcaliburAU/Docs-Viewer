@@ -17,6 +17,9 @@ A robust, modern documentation viewer built for rendering Markdown files with ad
 ```sh
 git clone https://github.com/litruv/Docs-Viewer
 cd Docs-Viewer
+git remote add origin https://github.com/litruv/docstesting.git
+git remote rename origin upstream
+git push -u origin master
 
 git fetch upstream
 git merge upstream/HEAD --no-ff
@@ -30,7 +33,7 @@ Deploy anywhere that serves static files. For local development:
 npx live-server
 ```
 
-### Cloudflare Pages
+#### Cloudflare Pages
 
 1.  Create a new repository on GitHub.
 2.  Push your code to the repository.
@@ -41,7 +44,7 @@ npx live-server
     *   **Build output directory:** `/` (root)
 5.  Save and deploy.
 
-### Optional: Cloudflare Worker for OG/Twitter Tags
+##### Optional: Cloudflare Worker for OG/Twitter Tags
 
 For improved SEO and social sharing, you can use a Cloudflare Worker to dynamically generate OG/Twitter tags.
 
