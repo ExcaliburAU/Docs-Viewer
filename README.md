@@ -25,7 +25,8 @@ git push -u origin master
 And then to update from this repo
 ```sh
 git fetch upstream
-git merge upstream/HEAD --no-ff
+git merge upstream/master --no-commit
+
 ```
 
 ### Deployment
