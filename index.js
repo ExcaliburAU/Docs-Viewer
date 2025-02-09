@@ -1,3 +1,13 @@
+fetch('index.json')
+    .then(response => response.json())
+    .then(data => {
+        document.title = data.title || 'Documentation';
+    })
+    .catch(error => {
+        console.error('Error loading title:', error);
+        document.title = 'Documentation';
+    });
+
 class EventBus {
     constructor() {
         this.events = {};

@@ -1,4 +1,6 @@
 {
+    "title": "Litruv",
+    "defaultPage": "welcome",
     "documents": [
         {
             "title": "Welcome",
