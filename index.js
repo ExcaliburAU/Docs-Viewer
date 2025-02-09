@@ -1,7 +1,7 @@
 fetch('index.json')
     .then(response => response.json())
     .then(data => {
-        document.title = data.title || 'Documentation';
+        document.title = data.metadata.title || 'Documentation';
     })
     .catch(error => {
         console.error('Error loading title:', error);
