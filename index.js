@@ -534,7 +534,7 @@ class Documentation {
             // Add this line to populate author info
             this.populateAuthorInfo(data.author);
             
-            window.originalDocTitle = data.title || 'Documentation';
+            window.originalDocTitle = data.metadata.site_name || 'Documentation';
             document.title = window.originalDocTitle;
 
             this.domService.elements.fileIndex.innerHTML = '';
