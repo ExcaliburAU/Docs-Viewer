@@ -565,6 +565,30 @@ class Documentation {
         }
     }
 
+    populateAuthorInfo(author) {
+        const subtitleName = document.querySelector('.name');
+        const subtitleRole = document.querySelector('.role');
+        if (!subtitleName || !subtitleRole) return;
+
+        subtitleName.textContent = author.name || '';
+        subtitleRole.textContent = author.role || '';
+
+        const socials = document.querySelector('.social-links');
+        if (socials) {
+            socials.innerHTML = '';
+            if (author.socials) {
+                author.socials.forEach(s => {
+                    const link = document.createElement('a');
+                    link.href = s.url;
+                    link.target = '_blank';
+                    link.title = s.title;
+                    link.innerHTML = `<i class="${s.icon}"></i>`;
+                    socials.appendChild(link);
+                });
+            }
+        }
+    }
+
     async loadDocumentBySlug(slug) {
         const doc = this.indexService.findDocumentBySlug(this.indexData.documents, slug);
         
