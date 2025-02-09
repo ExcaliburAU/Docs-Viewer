@@ -33,9 +33,14 @@ git merge upstream/master --no-commit
 
 Deploy anywhere that serves static files. For local development:
 
+VSCode:
+[LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and hit start server in the docs-viewer directory
+
+Rawdogging it with notepad:
 ```sh
 npx live-server
 ```
+
 
 #### Cloudflare Pages
 
