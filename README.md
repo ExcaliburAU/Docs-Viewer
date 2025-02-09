@@ -20,7 +20,10 @@ cd Docs-Viewer
 git remote add origin https://github.com/litruv/docstesting.git
 git remote rename origin upstream
 git push -u origin master
+```
 
+And then to update from this repo
+```sh
 git fetch upstream
 git merge upstream/HEAD --no-ff
 ```
