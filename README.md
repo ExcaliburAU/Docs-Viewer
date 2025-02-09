@@ -50,6 +50,8 @@ Configure your documentation structure in `index.json`:
 
 ```json
 {
+    "title": "Your Documentation Title",
+    "defaultPage": "welcome",
     "documents": [
         {
             "title": "Getting Started",
@@ -58,6 +60,14 @@ Configure your documentation structure in `index.json`:
     ]
 }
 ```
+
+#### Root Configuration Options
+
+| Option | Type | Description |
+|--------|------|-------------|
+| `title` | string | The title of your documentation site |
+| `defaultPage` | string | The slug of the page to show when no page is specified |
+| `documents` | array | Array of document and folder objects |
 
 ### Folder Organization
 
