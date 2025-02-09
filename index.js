@@ -616,9 +616,9 @@ class Documentation {
 
     async loadDocument(path) {
         try {
-            const { content, metadata, marked, title } = await this.documentService.loadDocument(path);
+            const { content, metadata, marked } = await this.documentService.loadDocument(path);
             
-            this.domService.setTitle(title);
+            this.domService.setTitle(metadata.site_name);
             this.domService.setContent(marked.parse(content));
             this.domService.updateActiveDocument(path);
             
