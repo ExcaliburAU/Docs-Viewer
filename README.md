@@ -44,37 +44,52 @@ npx live-server
 
 ## Configuration
 
-### Document Index
-
-Configure your documentation structure in `index.json`:
+Configure your documentation site with a top-level index file named `index.json`. At minimum, include a `title`, a `defaultPage`, and a list of `documents`:
 
 ```json
 {
-    "title": "Your Documentation Title",
+    "title": "My Documentation Site",
     "defaultPage": "welcome",
     "documents": [
         {
-            "title": "Getting Started",
-            "path": "docs/getting-started.md"
+            "title": "Welcome",
+            "path": "docs/welcome.md",
+            "slug": "welcome"
         }
     ]
 }
 ```
 
-#### Root Configuration Options
+> If you want to quickly get started, copy `example.index.json` to `index.json` in the project root of your own repository:
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `title` | string | The title of your documentation site |
-| `defaultPage` | string | The slug of the page to show when no page is specified |
-| `documents` | array | Array of document and folder objects |
+```sh
+cp example.index.json index.json
+```
+
+Then adjust the `title`, `defaultPage`, and `documents` array to match your needs.
+
+After placing your `index.json` in the project root, the application will:
+
+1. Apply your site `title` to the browser tab and page header.
+2. Load the `defaultPage` when no slug is specified in the URL.
+3. Generate a navigation tree from the array of `documents`.
+
+### Root Configuration Options
+
+| Option        | Type   | Description                                              |
+|---------------|--------|----------------------------------------------------------|
+| `title`       | string | Title of your documentation site                         |
+| `defaultPage` | string | Slug of the page to show when no page is specified       |
+| `documents`   | array  | Array of document or folder entries (see below)          |
 
 ### Folder Organization
 
-Create hierarchical documentation structures with nested folders:
+Folders can contain nested documents or subfolders. Mark a folder by setting `"type": "folder"`. Example:
 
 ```json
 {
+    "title": "My Documentation Site",
+    "defaultPage": "welcome",
     "documents": [
         {
             "title": "Core Concepts",
@@ -85,8 +100,9 @@ Create hierarchical documentation structures with nested folders:
             "slug": "core-concepts",
             "items": [
                 {
-                    "title": "Architecture",
-                    "path": "docs/core-concepts/architecture.md"
+                    "title": "Getting Started",
+                    "path": "docs/guides/getting-started.md",
+                    "slug": "getting-started"
                 }
             ]
         }
@@ -96,15 +112,15 @@ Create hierarchical documentation structures with nested folders:
 
 #### Folder Configuration Options
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `type` | string | Set to `"folder"` for directory nodes |
-| `title` | string | Display name |
-| `path` | string? | Optional content file path |
-| `slug` | string | URL-friendly identifier (required with `path`) |
-| `items` | array | Nested documents or folders |
-| `defaultOpen` | boolean? | Auto-expand folder |
-| `icon` | string? | Custom Font Awesome class |
+| Option          | Type     | Description                                        |
+|-----------------|----------|----------------------------------------------------|
+| `type`          | string   | Set to `"folder"` for a directory node            |
+| `title`         | string   | Display name of the folder                        |
+| `path`          | string?  | Optional content file path                        |
+| `slug`          | string   | URL-friendly identifier; required if `path` exists|
+| `items`         | array    | Nested documents or folders                       |
+| `defaultOpen`   | boolean? | Automatically expand this folder in the sidebar   |
+| `icon`          | string?  | Custom Font Awesome classes                       |
 
 ## Technology Stack
 
