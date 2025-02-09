@@ -122,6 +122,29 @@ Folders can contain nested documents or subfolders. Mark a folder by setting `"t
 | `defaultOpen`   | boolean? | Automatically expand this folder in the sidebar   |
 | `icon`          | string?  | Custom Font Awesome classes                       |
 
+## Additional Author Info
+
+You can add an "author" object in your `index.json` to display your name, role, and social links:
+
+```json
+"author": {
+    "name": "Litruv",
+    "role": "Dev/Tech Artist @MatesMedia",
+    "socials": [
+        {
+            "icon": "fab fa-github",
+            "url": "https://github.com/Litruv",
+            "title": "GitHub - Litruv"
+        },
+        {
+            "icon": "fab fa-youtube",
+            "url": "https://www.youtube.com/c/Litruv",
+            "title": "YouTube - Litruv"
+        }
+    ]
+}
+```
+
 ## Technology Stack
 
 Built with modern web technologies and carefully selected dependencies:
