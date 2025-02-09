@@ -122,6 +122,32 @@ Folders can contain nested documents or subfolders. Mark a folder by setting `"t
 | `defaultOpen`   | boolean? | Automatically expand this folder in the sidebar   |
 | `icon`          | string?  | Custom Font Awesome classes                       |
 
+## Metadata Configuration
+
+You can include a "metadata" object in `index.json` to provide:
+- Site-wide title and short description
+- Thumbnail for social sharing
+- Display name for your site
+
+```json
+"metadata": {
+    "title": "Litruv / Documentation",
+    "description": "Documentation for Litruv's plugins",
+    "thumbnail": "img/og-image.png",
+    "site_name": "Litruv"
+}
+```
+
+#### Metadata Configuration Options
+
+| Option        | Type   | Description                                              |
+|---------------|--------|----------------------------------------------------------|
+| `title`       | string | Title of your documentation site                         |
+| `description` | string | Description of your documentation site                   |
+| `thumbnail`   | string | URL to a thumbnail image for social sharing             |
+| `site_name`  | string | Display name for your site                              |
+
+
 ## Additional Author Info
 
 You can add an "author" object in your `index.json` to display your name, role, and social links:

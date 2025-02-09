@@ -1,6 +1,11 @@
 {
-    "title": "Litruv",
     "defaultPage": "welcome",
+    "metadata": {
+        "title": "Litruv / Documentation",
+        "description": "Documentation for Litruv's plugins",
+        "thumbnail": "img/og-image.png",
+        "site_name": "Litruv"
+    },
     "documents": [
         {
             "title": "Welcome",
@@ -21,7 +26,8 @@
                 {
                     "title": "WIP: Objective Marker System",
                     "path": "docs/objective-marker-system.md",
-                    "slug": "objective-markers"
+                    "slug": "objective-markers",
+                    "thumbnail": "images/docThumb.png"
                 }
             ]
         }
@@ -39,6 +45,21 @@
                 "icon": "fab fa-youtube",
                 "url": "https://www.youtube.com/c/Litruv",
                 "title": "YouTube - Litruv"
+            },
+            {
+                "icon": "fab fa-steam",
+                "url": "https://steamcommunity.com/id/Litruv",
+                "title": "Steam - Litruv"
+            },
+            {
+                "icon": "fab fa-discord",
+                "url": "https://discordapp.com/users/220772082055774210",
+                "title": "Discord - @Litruv"
+            },
+            {
+                "icon": "fa-brands fa-bluesky",
+                "url": "https://bsky.app/profile/lit.mates.dev",
+                "title": "Bluesky - lit.mates.dev"
             }
         ]
     }
