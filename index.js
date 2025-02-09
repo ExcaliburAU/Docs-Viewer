@@ -530,12 +530,14 @@ class Documentation {
             const data = await response.json();
             this.indexData = data;
             window._indexData = data;
+            
+            window.originalDocTitle = data.title || 'Documentation';
+            document.title = window.originalDocTitle;
 
             this.domService.elements.fileIndex.innerHTML = '';
             this.indexData.documents.forEach(doc => 
                 this.domService.createFileIndexItem(doc, this.domService.elements.fileIndex));
 
-            // Use defaultPage from index.json
             const params = new URLSearchParams(window.location.search);
             let slug = '';
             if (params.has('')) {
@@ -550,7 +552,6 @@ class Documentation {
             
             await this.loadDocumentBySlug(slug);
 
-            // Handle hash after load using DOMService's scrollToElement
             if (window.location.hash) {
                 setTimeout(() => {
                     const element = document.getElementById(window.location.hash.slice(1));
@@ -601,7 +602,6 @@ class Documentation {
             
             window._currentPath = path;
 
-            // Handle hash scrolling after content is loaded
             if (window.location.hash) {
                 const element = document.getElementById(window.location.hash.slice(1));
                 if (element) {
