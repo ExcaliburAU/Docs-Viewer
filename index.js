@@ -531,6 +531,9 @@ class Documentation {
             this.indexData = data;
             window._indexData = data;
             
+            // Add this line to populate author info
+            this.populateAuthorInfo(data.author);
+            
             window.originalDocTitle = data.title || 'Documentation';
             document.title = window.originalDocTitle;
 
