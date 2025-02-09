@@ -534,7 +534,7 @@ class Documentation {
             // Add this line to populate author info
             this.populateAuthorInfo(data.author);
             
-            window.originalDocTitle = data.title || 'Documentation';
+            window.originalDocTitle = data.metadata.site_name || 'Documentation';
             document.title = window.originalDocTitle;
 
             this.domService.elements.fileIndex.innerHTML = '';
@@ -618,7 +618,7 @@ class Documentation {
         try {
             const { content, metadata, marked } = await this.documentService.loadDocument(path);
             
-            this.domService.setTitle(metadata.site_name);
+            this.domService.setTitle(title);
             this.domService.setContent(marked.parse(content));
             this.domService.updateActiveDocument(path);
             
