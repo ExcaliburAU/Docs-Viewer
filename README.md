@@ -30,6 +30,26 @@ Deploy anywhere that serves static files. For local development:
 npx live-server
 ```
 
+### Cloudflare Pages
+
+1.  Create a new repository on GitHub.
+2.  Push your code to the repository.
+3.  Go to [Cloudflare Pages](https://pages.cloudflare.com/) and connect your GitHub repository.
+4.  Configure the build settings:
+    *   **Production branch:** `main` (or your main branch name)
+    *   **Build command:** Leave empty
+    *   **Build output directory:** `/` (root)
+5.  Save and deploy.
+
+### Optional: Cloudflare Worker for OG/Twitter Tags
+
+For improved SEO and social sharing, you can use a Cloudflare Worker to dynamically generate OG/Twitter tags.
+
+1.  Create a new Cloudflare Worker using the code in `cloudflare-worker.js`.
+2.  Set the `SITE_URL` environment variable to where your site will be located, eg. `https://lit.ruv.wtf/docs/`
+3.  Set the `DOCS_URL` environment variable to the URL where your documentation files are hosted (usually your Cloudflare Pages URL).
+4.  Configure a route in your Cloudflare account to route all requests to your Cloudflare Pages site through the worker.
+
 ## Project Structure
 
 ```
