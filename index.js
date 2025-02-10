@@ -429,7 +429,7 @@ class DocumentService {
     processWikiLinks(content) {
         return content.replace(/\[\[(.*?)\]\]/g, (match, linkText) => {
             const [targetTitle, displayText] = linkText.split('|').map(s => s.trim());
-            if (targetTitle.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
+            if (targetTitle.match(/\.(png|jpg|jpeg|webp|gif|mp4|webm)$/i)) {
                 return match;
             }
 
