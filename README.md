@@ -122,7 +122,7 @@ Folders can contain nested documents or subfolders. Mark a folder by setting `"t
     "slug": "core-concepts",
     "defaultOpen": true,
     "icon": "fa-solid fa-book",
-    "color": "#01beef
+    "color": "#01beef",
     "items": [
         {
             "title": "Getting Started",
