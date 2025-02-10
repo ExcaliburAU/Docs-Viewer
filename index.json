@@ -1,4 +1,5 @@
 {
+    "title": "exau",
     "defaultPage": "welcome",
     "documents": [
         {
@@ -10,7 +11,7 @@
             "title": "ARK Survival Evolved",
             "type": "folder",
             "path": "docs/ase/arksurvivalevolved.md",
-            "slug": "ase",
+            "slug": "ark-survival-evolved",
             "defaultOpen": true,
             "items": [
                 {
@@ -31,7 +32,7 @@
                                 {
                                     "title": "GameUserSettings",
                                     "path": "docs/ase/excalibur-tranqs/GameUserSettings.md",
-                                    "slug": "ase-tranqs-gameusersettings-ini"
+                                    "slug": "ase/tranqs/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -44,7 +45,7 @@
                                 {
                                     "title": "01-04-25 | Mod Integration",
                                     "path": "docs/ase/excalibur-tranqs/patch-notes/12-11-24.md",
-                                    "slug": "ase-tranqs-12-11-24"
+                                    "slug": "ase/tranqs/patch-notes/12-11-24"
                                 }
                             ]
                         }
@@ -64,12 +65,12 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-crafter-spawn-codes-engram-entries"
+                                    "slug": "ase/crafter/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
                                     "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
-                                    "slug": "ase-crafter-gameusersettings-ini"
+                                    "slug": "ase/crafter/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -96,12 +97,12 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/ase/excalibur-net-ammo/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-netammo-spawn-codes-engram-entries"
+                                    "slug": "ase/netammo/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
                                     "path": "docs/ase/excalibur-net-ammo/GameUserSettings.md",
-                                    "slug": "ase-netammo-gameusersettings-ini"
+                                    "slug": "ase/netammo/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -128,17 +129,17 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/ase/excalibur-stacks/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-excalibur-stacks-spawn-codes-engram-entries"
+                                    "slug": "ase/excalibur-stacks/spawn-codes-engram-entries"
                                 },
-                                {   
+                                {
                                     "title": "GameUserSettings.ini",
                                     "path": "docs/ase/excalibur-stacks/GameUserSettings.md",
-                                    "slug": "ase-excalibur-stacks-gameusersettings-ini"
+                                    "slug": "ase/excalibur-stacks/gameusersettings-ini"
                                 },
                                 {
                                     "title": "Immersive Taming",
                                     "path": "docs/ase/excalibur-stacks/ImmersiveTaming.md",
-                                    "slug": "ase-excalibur-stacks-immersivetaming-ini"
+                                    "slug": "ase/excalibur-stacks/immersivetaming-ini"
                                 }
                             ]
                         },
@@ -165,12 +166,12 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/ase/harvs-corner/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-harvs-corner-spawn-codes-engram-entries"
+                                    "slug": "ase/harvs-corner/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
                                     "path": "docs/ase/harvs-corner/GameUserSettings.md",
-                                    "slug": "ase-harvs-corner-gameusersettings-ini"
+                                    "slug": "ase/harvs-corner/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -183,22 +184,23 @@
                                 {
                                     "title": "12-16-24",
                                     "path": "docs/ase/harvs-corner/patch-notes/2024/12-16-24.md",
-                                    "slug": "ase-harvs-corner-12-16-24"
+                                    "slug": "ase/harvs-corner/patch-notes/12-16-24"
                                 },
                                 {
                                     "title": "12-17-24",
                                     "path": "docs/ase/harvs-corner/patch-notes/2024/12-17-24.md",
-                                    "slug": "ase-harvs-corner-12-17-24"
-                                }
-                                ,{
+                                    "slug": "ase/harvs/corner/patch-notes/12-17-24"
+                                },
+                                {
                                     "title": "01-12-25",
                                     "path": "docs/ase/harvs-corner/patch-notes/2025/01-12-25.md",
-                                    "slug": "ase-harvs-corner-01-12-25"
+                                    "slug": "ase/harvs/corner/patch-notes/01-12-25"
                                 }
                             ]
                         }
                     ]
-                },{
+                },
+                {
                     "title": "Excalibur Utilities",
                     "type": "folder",
                     "defaultOpen": false,
@@ -212,12 +214,12 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/ase/excalibur-utilities/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-eu-spawn-codes-engram-entries"
+                                    "slug": "ase/excalibur-utilities/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
                                     "path": "docs/ase/excalibur-utilities/GameUserSettings.md",
-                                    "slug": "ase-eu-gameusersettings-ini"
+                                    "slug": "ase/excalibur-utilities/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -250,12 +252,12 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/asa/excalibur-tranqs/Spawn Codes & Engram Entries.md",
-                                    "slug": "asa-tranqs-spawn-codes-engram-entries"
+                                    "slug": "asa/tranqs/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings",
                                     "path": "docs/asa/excalibur-tranqs/GameUserSettings.md",
-                                    "slug": "asa-tranqs-gameusersettings-ini"
+                                    "slug": "asa/tranqs/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -282,12 +284,12 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/asa/excalibur-crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "asa-crafter-spawn-codes-engram-entries"
+                                    "slug": "asa/crafter/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
                                     "path": "docs/asa/excalibur-crafter/GameUserSettings.md",
-                                    "slug": "asa-crafter-gameusersettings-ini"
+                                    "slug": "asa/crafter/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -314,78 +316,12 @@
                                 {
                                     "title": "Spawn Codes & Engram Entries",
                                     "path": "docs/asa/excalibur-cropplots/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase-cropplots-spawn-codes-engram-entries"
+                                    "slug": "ase/cropplots/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
                                     "path": "docs/asa/excalibur-crafter/GameUserSettings.md",
-                                    "slug": "ase-cropplots-gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Trashcan",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/excalibur-trashcan/Spawn Codes & Engram Entries.md",
-                                    "slug": "asa-trashcan-spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/asa/excalibur-trashcan/GameUserSettings.md",
-                                    "slug": "asa-trashcan-gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "Minecraft",
-            "type": "folder",
-            "defaultOpen": true,
-            "items": [
-                {
-                    "title": "Extensions",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Permissions",
-                                    "path": "docs/minecraft/paper/extensions/permissions.md",
-                                    "slug": "papermc-extensions-permissions"
+                                    "slug": "ase/cropplots/gameusersettings-ini"
                                 }
                             ]
                         },
