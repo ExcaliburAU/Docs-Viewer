@@ -373,7 +373,7 @@
             "defaultOpen": true,
             "items": [
                 {
-                    "title": "Excalibur Tranqs",
+                    "title": "Extensions",
                     "type": "folder",
                     "defaultOpen": false,
                     "items": [
@@ -384,7 +384,7 @@
                             "items": [
                                 {
                                     "title": "Permissions",
-                                    "path": "docs/mc/paper/extensions.md",
+                                    "path": "docs/mc/paper/permissions.md",
                                     "slug": "mc/paper/extensions/permissions"
                                 }
                             ]
