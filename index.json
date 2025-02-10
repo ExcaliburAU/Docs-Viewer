@@ -384,7 +384,7 @@
                             "items": [
                                 {
                                     "title": "Permissions",
-                                    "path": "docs/mc/paper/permissions.md",
+                                    "path": "docs/mc/paper/extensions/permissions.md",
                                     "slug": "mc/paper/extensions/permissions"
                                 }
                             ]
