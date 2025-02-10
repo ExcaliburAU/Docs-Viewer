@@ -430,7 +430,7 @@
     },
     "metadata": {
         "description": "Explore detailed documentation for EXAU's projects, including guides, APIs, and best practices.",
-        "thumbnail": "images/logo.png",
+        "thumbnail": "img/logo.png",
         "site_name": "EXAU.dev"
     }
 }
