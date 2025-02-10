@@ -197,9 +197,10 @@ class DOMService {
     }
 
     createFolderHeaderWithFile(iconClass, doc) {
+        const iconStyle = doc.color ? `color: ${doc.color};` : '';
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon"></i>
+                <i class="${iconClass} folder-icon" style="${iconStyle}"></i>
             </div>
             <span>${doc.title}</span>
             <a href="?${doc.slug}" class="folder-link" title="View folder page">
@@ -208,9 +209,10 @@ class DOMService {
     }
 
     createFolderHeaderBasic(iconClass, doc) {
+        const iconStyle = doc.color ? `color: ${doc.color};` : '';
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon"></i>
+                <i class="${iconClass} folder-icon" style="${iconStyle}"></i>
             </div>
             <span>${doc.title}</span>`;
     }
