@@ -56,8 +56,8 @@ body {
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--ifm-border-color);
-    transform: none; /* Remove initial transform */
-    transition: none; /* Remove initial transition */
+    transform: none;
+    transition: none;
     z-index: 999;
 }
 
@@ -67,9 +67,9 @@ body {
     right: 0;
     bottom: 0;
     width: var(--doc-outline-width);
-    background: var(--ifm-background-color);  /* Change to match main content */
+    background: var(--ifm-background-color);
     overflow-y: auto;
-    border-left: none;  /* Explicitly remove border */
+    border-left: none;
 }
 
 .content {
@@ -87,18 +87,18 @@ body {
 
 @media (max-width: 1000px) {
     .menu-button {
-        display: flex !important;  /* Force display on mobile */
+        display: flex !important;
     }
 
     .left-sidebar {
         left: -100%;
-        width: min(var(--doc-sidebar-width), 80vw);  /* Limit width on mobile */
-        transition: left 0.3s ease; /* Change to left transition */
+        width: min(var(--doc-sidebar-width), 80vw);
+        transition: left 0.3s ease;
         box-shadow: none;
     }
 
     .left-sidebar.show {
-        left: 0; /* Change to left positioning */
+        left: 0;
         box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
     }
 
@@ -117,7 +117,7 @@ body {
     }
 
     #file-index {
-        padding-top: 0.75rem;  /* Add top padding to menu */
+        padding-top: 0.75rem;
     }
 }
 
@@ -132,7 +132,7 @@ body {
 }
 
 .menu-button {
-    display: none;  /* Initially hidden */
+    display: none;
     background: none;
     border: none;
     color: var(--ifm-color-content);
@@ -163,7 +163,7 @@ body {
     color: var(--ifm-color-content);
     text-decoration: none;
     display: block;
-    padding: 0.6rem 1.2rem;  /* Increased vertical padding */
+    padding: 0.4rem 1.2rem;
     font-size: 0.875rem;
     border-left: 2px solid transparent;
 }
@@ -182,16 +182,33 @@ body {
 
 .folder {
     color: var(--ifm-color-content);
+    padding-right: 0;
 }
 
 .folder-header {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0rem;
+    padding: 0.4rem 1.2rem;
     cursor: pointer;
     user-select: none;
     font-size: 0.875rem;
+    width: calc(100% - 2.4rem);
+    position: relative;
+}
+
+.folder-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--ifm-color-content-secondary);
+    min-width: 1.5em;
+    margin-right: 0.5rem;
+    order: 1;
+}
+
+.folder-header span {
+    order: 2;
+    margin-right: auto;
 }
 
 .folder-link {
@@ -200,9 +217,12 @@ body {
     color: var(--ifm-color-content-secondary);
     opacity: 0.6;
     font-size: 0.8em;
-    padding: 2px;
+    padding: 2px 8px;
     border-radius: 3px;
-    margin-left: 0.25rem; /* Add spacing between file and folder icons */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .folder-header:hover .folder-link {
@@ -215,16 +235,9 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
 }
 
-.folder-icons {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: var(--ifm-color-content-secondary);
-    min-width: 2.5em; /* Ensure consistent spacing */
-}
-
 .folder-content {
     display: none;
+    padding-left: 0.8rem;
 }
 
 .folder.open > .folder-content {
@@ -255,7 +268,7 @@ social-links a:hover {
 }
 
 .subtitle {
-    margin-top: auto;  /* Push to bottom of flex container */
+    margin-top: auto;
     text-align: center;
     padding: 0.5rem 1rem;
     font-size: 0.8rem;
@@ -277,7 +290,7 @@ social-links a:hover {
 .content {
     flex: 1;
     background-color: var(--ifm-background-color);
-    min-width: 0;  /* Fix flexbox content overflow */
+    min-width: 0;
     color: var(--ifm-color-content);
     height: 100%;
     padding-bottom: calc(2rem + env(safe-area-inset-bottom));
@@ -304,7 +317,7 @@ social-links a:hover {
     color: var(--ifm-color-content-secondary);
     border-left: 2px solid transparent;
     margin: 2px 0;
-    padding: 0.25em 1rem;  /* Adjust padding to match */
+    padding: 0.25em 1rem;
     transition: all 0.2s ease;
 }
 
@@ -325,7 +338,7 @@ social-links a:hover {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    text-align: left;  /* Explicitly set left alignment */
+    text-align: left;
 }
 
 .markdown-content h2 {
@@ -371,11 +384,11 @@ social-links a:hover {
 }
 
 .markdown-content th {
-    background-color: rgba(255, 255, 255, 0.15);  /* Change header background to 15% white */
+    background-color: rgba(255, 255, 255, 0.15);
     font-weight: 600;
     border: none;
     border-bottom: 1px solid var(--ifm-border-color);
-    text-align: left;  /* Add this line to left-align table headers */
+    text-align: left;
     padding: 0.75rem;
 }
 
@@ -391,7 +404,7 @@ social-links a:hover {
     border: none;
     border-bottom: 1px solid var(--ifm-border-color);
     padding: 0.75rem;
-    background-color: rgba(255, 255, 255, 0.03);  /* Lighter background for cells */
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .markdown-content tr:last-child td {
@@ -459,10 +472,6 @@ social-links a:hover {
     color: inherit;
 }
 
-/* Keep existing scrollbar styles, animations, and other used styles */
-/* ...existing code... */
-
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
@@ -481,7 +490,6 @@ social-links a:hover {
     background-color: #606060;
 }
 
-/* Completely remove scrollbar buttons */
 ::-webkit-scrollbar-button {
     display: none !important;
     width: 0 !important;
@@ -493,13 +501,11 @@ social-links a:hover {
     background-color: transparent;
 }
 
-/* Firefox scrollbar - hide buttons */
 * {
     scrollbar-width: thin;
     scrollbar-color: #505050 var(--ifm-background-color);
 }
 
-/* Highlight animation */
 @keyframes highlight {
     0% { background-color: rgba(33, 150, 243, 0.2); }
     100% { background-color: transparent; }
@@ -536,7 +542,6 @@ social-links a:hover {
 }
 
 #document-outline a.active {
-    /* Remove any forced padding-left: 0; here */
     color: var(--ifm-color-primary);
     border-left-color: var(--ifm-color-primary);
     background: rgba(33, 150, 243, 0.1);
