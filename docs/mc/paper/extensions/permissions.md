@@ -1,17 +1,3 @@
-## Vault System
-  - `extensions.vault` - Base permission to use /vault command
-  - `extensions.vault.1` - Access to 1 vault (default: op)
-  - `extensions.vault.2` - Access to 2 vaults (default: op)
-  - `extensions.vault.3` - Access to 3 vaults (default: op)
-  - `extensions.vault.4` - Access to 4 vaults (default: op)
-  - `extensions.vault.5` - Access to 5 vaults (default: op)
-  - `extensions.vault.size.54` - Double chest size (default: op)
-  - `extensions.vault.size.45` - 45 slots (default: op)
-  - `extensions.vault.size.36` - 36 slots (default: op)
-  - `extensions.vault.size.27` - Single chest size (default: false)
-  - `extensions.vault.size.18` - 18 slots (default: false)
-  - `extensions.vault.size.9` - 9 slots (default: false)
-
   ## General Commands
 - `extensions.back` - Use /back command
 - `extensions.cartographytable` - Use /cartographytable command

@@ -25,10 +25,14 @@
             "id": "49f9845ef22fff90",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "mc/paper/extensions/permissions.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "permissions"
             }
           }
         ],
@@ -150,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "mc/paper/extensions/permissions.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of permissions"
             }
           }
         ],
