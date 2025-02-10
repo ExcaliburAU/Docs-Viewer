@@ -468,10 +468,16 @@ class NavigationService {
 
     setupEventListeners() {
         window.addEventListener('popstate', async () => {
-            // Get slug without equal sign and question mark
-            const slug = window.location.search.replace(/^\?=?/, '').replace(/^=/, '');
-            const hash = window.location.hash;
-            this.eventBus.emit('navigation:requested', { slug, hash });
+            const search = window.location.search;
+            // If no search params or just '?', use default page
+            const slug = (search === '' || search === '?') ? 
+                window._indexData.defaultPage : 
+                search.replace(/^\?/, '');
+            
+            this.eventBus.emit('navigation:requested', { 
+                slug,
+                hash: window.location.hash 
+            });
         });
 
         document.addEventListener('click', async (e) => {
@@ -527,16 +533,13 @@ class Documentation {
     async initialize() {
         try {
             const response = await fetch('index.json');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            
             const data = await response.json();
             this.indexData = data;
             window._indexData = data;
             
-            // Add this line to populate author info
             this.populateAuthorInfo(data.author);
-            
             window.originalDocTitle = data.metadata.site_name || 'Documentation';
             document.title = window.originalDocTitle;
 
@@ -544,26 +547,18 @@ class Documentation {
             this.indexData.documents.forEach(doc => 
                 this.domService.createFileIndexItem(doc, this.domService.elements.fileIndex));
 
-            const params = new URLSearchParams(window.location.search);
-            let slug = '';
-            if (params.has('')) {
-                slug = params.get('');
-            } else {
-                for (const [key] of params) {
-                    slug = key;
-                    break;
-                }
-            }
-            slug = slug || this.indexData.defaultPage;
+            // Simplified URL parameter handling
+            const search = window.location.search;
+            const slug = search === '' || search === '?' 
+                ? this.indexData.defaultPage 
+                : search.replace(/^\?/, '');
             
             await this.loadDocumentBySlug(slug);
-
+            
             if (window.location.hash) {
                 setTimeout(() => {
                     const element = document.getElementById(window.location.hash.slice(1));
-                    if (element) {
-                        this.domService.scrollToElement(element);
-                    }
+                    if (element) this.domService.scrollToElement(element);
                 }, 100);
             }
         } catch (error) {
