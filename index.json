@@ -1,5 +1,4 @@
 {
-    "title": "exau",
     "defaultPage": "welcome",
     "documents": [
         {
@@ -10,8 +9,8 @@
         {
             "title": "ARK Survival Evolved",
             "type": "folder",
-            "path": "docs/ase/excalibur-tranqs/index.md",
-            "slug": "welcomhe",
+            "path": "docs/ase/arksurvivalevolved.md",
+            "slug": "ase",
             "defaultOpen": true,
             "items": [
                 {
