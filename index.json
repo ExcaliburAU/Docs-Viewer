@@ -367,6 +367,38 @@
                     ]
                 }
             ]
+        },{
+            "title": "Minecraft",
+            "type": "folder",
+            "defaultOpen": true,
+            "items": [
+                {
+                    "title": "Excalibur Tranqs",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "items": [
+                                {
+                                    "title": "Permissions",
+                                    "path": "docs/mc/paper/extensions.md",
+                                    "slug": "mc/paper/extensions/permissions"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "author": {

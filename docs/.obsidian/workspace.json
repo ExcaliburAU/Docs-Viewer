@@ -177,6 +177,10 @@
   },
   "active": "49f9845ef22fff90",
   "lastOpenFiles": [
+    "mc/paper/extensions/permissions.md",
+    "mc/paper/extensions",
+    "mc/paper",
+    "mc",
     "asa/trashcan/Spawn Codes & Engram Entries.md",
     "asa/trashcan/patch-notes",
     "asa/trashcan/GameUserSettings.md",
@@ -192,12 +196,9 @@
     "asa/crafter/Spawn Codes & Engram Entries.md",
     "asa/crafter/patch-notes",
     "asa/crafter/GameUserSettings.md",
-    "asa/crafter",
     "ase/utilities/Spawn Codes & Engram Entries.md",
     "ase/utilities/GameUserSettings.md",
-    "ase/utilities",
     "ase/stacks/Spawn Codes & Engram Entries.md",
-    "ase/stacks/patch-notes",
     "ase/stacks/ImmersiveTaming.md",
     "ase/stacks/GameUserSettings.md",
     "ase/net-ammo/Spawn Codes & Engram Entries.md",
@@ -212,7 +213,6 @@
     "ase/excalibur-tranqs/GameUserSettings.md",
     "ase/excalibur-tranqs/patch-notes/12-11-24.md",
     "ase/excalibur-tranqs/index.md",
-    "ase/excalibur-tranqs/Excalibur Tranqs (ARK Survival Evolved).md",
     "images/Screenshot.png"
   ]
 }
