@@ -14,8 +14,18 @@ A robust, modern documentation viewer built for rendering Markdown files with ad
 
 ### Development Setup
 [Fork this Repo](https://github.com/litruv/Docs-Viewer/fork)
-updating: 
-Click Sync fork
+
+#### Updating
+##### From GitHub
+On your own repo,
+1. Click Sync fork
+2. Update branch
+##### From CLI
+```sh
+git fetch upstream
+git merge upstream/master
+git push
+```
 
 ### Deployment
 
