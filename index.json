@@ -427,6 +427,11 @@
                 "icon": "fab fa-discord",
                 "url": "https://exau.dev/discord",
                 "title": "Discord - exau.dev"
+            },
+            {
+                "icon": "fab fa-twitch",
+                "url": "https://www.twitch.tv/ExcaliburAU_",
+                "title": "Twitch - ExcaliburAU"
             }
         ]
     },
