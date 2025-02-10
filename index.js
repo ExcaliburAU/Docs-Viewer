@@ -468,8 +468,8 @@ class NavigationService {
 
     setupEventListeners() {
         window.addEventListener('popstate', async () => {
-            const slug = new URLSearchParams(window.location.search).toString()
-                .replace(/^=/, '').replace(/^\?/, '');
+            // Get slug without equal sign and question mark
+            const slug = window.location.search.replace(/^\?=?/, '').replace(/^=/, '');
             const hash = window.location.hash;
             this.eventBus.emit('navigation:requested', { slug, hash });
         });
@@ -479,7 +479,8 @@ class NavigationService {
             if (target) {
                 e.preventDefault();
                 const slug = target.href.split('?').pop();
-                history.pushState({ slug }, '', target.href);
+                // Use clean URL format without equal sign
+                history.pushState(null, '', `?${slug}`);
                 this.eventBus.emit('navigation:requested', { slug });
             }
         });
