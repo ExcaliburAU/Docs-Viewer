@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mc/paper/extensions/permissions.md",
+                "file": "ase/tranqs/index.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "permissions"
+              "title": "index"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mc/paper/extensions/permissions.md",
+                "file": "ase/tranqs/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of permissions"
+              "title": "Outline of index"
             }
           }
         ],
@@ -182,6 +182,10 @@
   },
   "active": "49f9845ef22fff90",
   "lastOpenFiles": [
+    "ase/tranqs/GameUserSettings.md",
+    "ase/excalibur-tranqs/GameUserSettings.md",
+    "ase/tranqs/index.md",
+    "ase/excalibur-tranqs",
     "mc/paper/extensions/permissions.md",
     "mc/paper/extensions",
     "mc/paper",
@@ -199,7 +203,6 @@
     "asa/cropplots/GameUserSettings.md",
     "asa/cropplots",
     "asa/crafter/Spawn Codes & Engram Entries.md",
-    "asa/crafter/patch-notes",
     "asa/crafter/GameUserSettings.md",
     "ase/utilities/Spawn Codes & Engram Entries.md",
     "ase/utilities/GameUserSettings.md",
@@ -213,11 +216,7 @@
     "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
     "ase/tranqs/patch-notes/12-11-24.md",
     "ase/tranqs/Spawn Codes & Engram Entries.md",
-    "ase/tranqs/index.md",
-    "ase/tranqs/GameUserSettings.md",
-    "ase/excalibur-tranqs/GameUserSettings.md",
     "ase/excalibur-tranqs/patch-notes/12-11-24.md",
-    "ase/excalibur-tranqs/index.md",
     "images/Screenshot.png"
   ]
 }
