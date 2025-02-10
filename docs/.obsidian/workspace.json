@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ase/tranqs/index.md",
+                "file": "mc/paper/SwiftChop/SwiftChop.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "SwiftChop"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ase/tranqs/index.md",
+                "file": "mc/paper/SwiftChop/SwiftChop.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of SwiftChop"
             }
           }
         ],
@@ -180,14 +180,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49f9845ef22fff90",
+  "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
+    "mc/paper/SwiftChop",
+    "ase/tranqs/index.md",
+    "mc/paper/SwiftChop/SwiftChop.md",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
     "ase/tranqs/GameUserSettings.md",
     "ase/excalibur-tranqs/GameUserSettings.md",
-    "ase/tranqs/index.md",
     "ase/excalibur-tranqs",
     "mc/paper/extensions/permissions.md",
     "mc/paper/extensions",
@@ -219,7 +221,6 @@
     "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
     "ase/tranqs/patch-notes/12-11-24.md",
     "ase/tranqs/Spawn Codes & Engram Entries.md",
-    "ase/excalibur-tranqs/patch-notes/12-11-24.md",
     "images/Screenshot.png"
   ]
 }

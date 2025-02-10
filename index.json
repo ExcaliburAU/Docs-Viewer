@@ -400,6 +400,31 @@
                             "items": []
                         }
                     ]
+                },{
+                    "title": "SwiftChop",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "items": [
+                                {
+                                    "title": "Information",
+                                    "path": "docs/mc/paper/SwiftChop/SwiftChop.md",
+                                    "slug": "mc/paper/swiftchop/information"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
                 }
             ]
         }
