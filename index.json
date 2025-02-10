@@ -9,13 +9,14 @@
         {
             "title": "ARK Survival Evolved",
             "type": "folder",
-            "path": "docs/ase/arksurvivalevolved.md",
             "slug": "ase",
             "defaultOpen": true,
             "items": [
                 {
                     "title": "Excalibur Tranqs",
                     "type": "folder",
+                    "path": "docs/ase/arksurvivalevolved.md",
+                    "slug": "ase/tranqs",
                     "defaultOpen": false,
                     "items": [
                         {

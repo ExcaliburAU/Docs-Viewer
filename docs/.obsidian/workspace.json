@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ase/arksurvivalevolved.md",
-                "mode": "preview",
+                "file": "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "arksurvivalevolved"
+              "title": "Spawn Codes & Engram Entries"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ase/arksurvivalevolved.md",
+                "file": "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of arksurvivalevolved"
+              "title": "Outline of Spawn Codes & Engram Entries"
             }
           }
         ],
@@ -197,6 +197,7 @@
   "active": "3409c131c9defef3",
   "lastOpenFiles": [
     "ase/excalibur-tranqs/GameUserSettings.md",
+    "ase/excalibur-tranqs/patch-notes/12-11-24.md",
     "ase/excalibur-tranqs/index.md",
     "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
     "ase/excalibur-tranqs/Excalibur Tranqs (ARK Survival Evolved).md",
@@ -210,7 +211,6 @@
     "asa/excalibur-tranqs/GameUserSettings.md",
     "ase/excalibur-stacks/GameUserSettings.md",
     "ase/harvs-corner/patch-notes/2025/01-12-25.md",
-    "ase/excalibur-tranqs/patch-notes/12-11-24.md",
     "ase/excalibur-stacks/ImmersiveTaming.md",
     "ase/harvs-corner/patch-notes/2025/12-01-25.md",
     "ase/harvs-corner/patch-notes/2025",
