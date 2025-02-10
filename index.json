@@ -15,7 +15,7 @@
                 {
                     "title": "Excalibur Tranqs",
                     "type": "folder",
-                    "path": "docs/ase/excalibur-tranqs/index.md",
+                    "path": "docs/ase/tranqs/index.md",
                     "slug": "ase/tranqs",
                     "defaultOpen": false,
                     "items": [
@@ -26,12 +26,12 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+                                    "path": "docs/ase/tranqs/Spawn Codes & Engram Entries.md",
                                     "slug": "ase/tranqs/spawn-codes"
                                 },
                                 {
                                     "title": "GameUserSettings",
-                                    "path": "docs/ase/excalibur-tranqs/GameUserSettings.md",
+                                    "path": "docs/ase/tranqs/GameUserSettings.md",
                                     "slug": "ase/tranqs/gameusersettings-ini"
                                 }
                             ]

@@ -25,32 +25,14 @@
             "id": "49f9845ef22fff90",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ase/excalibur-tranqs/GameUserSettings.md",
-                "mode": "source",
-                "source": true
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "GameUserSettings"
-            }
-          },
-          {
-            "id": "3409c131c9defef3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Spawn Codes & Engram Entries"
+              "title": "New tab"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,13 +150,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Spawn Codes & Engram Entries"
+              "title": "Outline"
             }
           }
         ],
@@ -194,12 +175,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3409c131c9defef3",
+  "active": "49f9845ef22fff90",
   "lastOpenFiles": [
+    "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+    "ase/tranqs/patch-notes/12-11-24.md",
+    "ase/tranqs/Spawn Codes & Engram Entries.md",
+    "ase/tranqs/patch-notes",
+    "ase/tranqs/index.md",
+    "ase/tranqs/GameUserSettings.md",
+    "ase/tranqs",
     "ase/excalibur-tranqs/GameUserSettings.md",
     "ase/excalibur-tranqs/patch-notes/12-11-24.md",
     "ase/excalibur-tranqs/index.md",
-    "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
     "ase/excalibur-tranqs/Excalibur Tranqs (ARK Survival Evolved).md",
     "ase/excalibur-tranqs/excaliburtranqs.md",
     "ase/ark-survival-evolved.md",
@@ -221,17 +208,11 @@
     "ase/harvs-corner/patch-notes/12-17-24 copy.md",
     "ase/harvs-corner/patch-notes/12-17-24.md",
     "ase/harvs-corner/patch-notes/12-16-24 copy.md",
-    "ase/harvs-corner/patch-notes/12-16-24.md",
-    "ase/harvs-corner/patch-notes/12-11-24.md",
-    "ase/harvs-corner/Spawn Codes & Engram Entries.md",
-    "ase/harvs-corner/GameUserSettings.md",
     "ase/harvs-corner/patch-notes",
     "ase/harvs-corner",
     "ase/excalibur-stacks/patch-notes",
     "ase/excalibur-stacks copy",
     "ase/excalibur-stacks",
-    "ase/excalibur-net-ammo/patch-notes",
-    "ase/Untitled 1",
     "images/Screenshot.png"
   ]
 }
