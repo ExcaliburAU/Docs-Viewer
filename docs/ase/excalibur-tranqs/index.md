@@ -1,4 +1,4 @@
-## Excalibur Tranqs
+### Config
 [[ase/excalibur-tranqs/GameUserSettings|Settings]]
 [[ase/excalibur-tranqs/Spawn Codes & Engram Entries|Spawn Codes & Engram Entries]]
 ### Patch notes
