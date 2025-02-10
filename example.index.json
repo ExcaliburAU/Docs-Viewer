@@ -1,7 +1,6 @@
 {
     "defaultPage": "welcome",
     "metadata": {
-        "title": "Litruv / Documentation",
         "description": "Documentation for Litruv's plugins",
         "thumbnail": "img/og-image.png",
         "site_name": "Litruv"
