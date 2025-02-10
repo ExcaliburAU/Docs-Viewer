@@ -333,6 +333,38 @@
                             "items": []
                         }
                     ]
+                },
+                {
+                    "title": "Excalibur Trashcan",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/asa/cropplots/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase/cropplots/spawn-codes"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/asa/cropplots/GameUserSettings.md",
+                                    "slug": "ase/cropplots/gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
                 }
             ]
         }
