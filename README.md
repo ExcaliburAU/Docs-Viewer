@@ -42,7 +42,7 @@ npx live-server
 ```
 
 
-#### Cloudflare Pages
+#### Cloudflare Pages 
 
 1.  Create a new repository on GitHub.
 2.  Push your code to the repository.
