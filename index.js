@@ -197,20 +197,22 @@ class DOMService {
     }
 
     createFolderHeaderWithFile(iconClass, doc) {
-        return `<div class="folder-icons">
+        return `
+            <div class="folder-icons">
+                <i class="${iconClass} folder-icon"></i>
+            </div>
+            <span>${doc.title}</span>
             <a href="?${doc.slug}" class="folder-link" title="View folder page">
                 <i class="fas fa-file-alt"></i>
-            </a>
-            <i class="${iconClass} folder-icon"></i>
-        </div>
-        <span>${doc.title}</span>`;
+            </a>`;
     }
 
     createFolderHeaderBasic(iconClass, doc) {
-        return `<div class="folder-icons">
-            <i class="${iconClass} folder-icon"></i>
-        </div>
-        <span>${doc.title}</span>`;
+        return `
+            <div class="folder-icons">
+                <i class="${iconClass} folder-icon"></i>
+            </div>
+            <span>${doc.title}</span>`;
     }
 
     setupFolderListeners(folderDiv, folderHeader, doc) {
@@ -429,7 +431,7 @@ class DocumentService {
     processWikiLinks(content) {
         return content.replace(/\[\[(.*?)\]\]/g, (match, linkText) => {
             const [targetTitle, displayText] = linkText.split('|').map(s => s.trim());
-            if (targetTitle.match(/\.(png|jpg|jpeg|webp|gif|mp4|webm)$/i)) {
+            if (targetTitle.match(/\.(png|jpg|jpeg|gif|mp4|webm)$/i)) {
                 return match;
             }
 
