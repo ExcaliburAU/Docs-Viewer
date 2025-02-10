@@ -1,0 +1,4 @@
+```ini
+[NetEverything]
+PreventUseOnDinos=
+```
