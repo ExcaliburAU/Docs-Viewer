@@ -9,7 +9,7 @@
         {
             "title": "ARK Survival Evolved",
             "type": "folder",
-            "color": "#FF000",
+            "color": "#FF0000",
             "slug": "ase",
             "defaultOpen": true,
             "items": [
