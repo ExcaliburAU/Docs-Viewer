@@ -44,7 +44,7 @@
                             "items": [
                                 {
                                     "title": "01-04-25 | Mod Integration",
-                                    "path": "docs/ase/excalibur-tranqs/patch-notes/12-11-24.md",
+                                    "path": "docs/ase/tranqs/patch-notes/12-11-24.md",
                                     "slug": "ase/tranqs/patch-notes/12-11-24"
                                 }
                             ]
@@ -64,12 +64,12 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/crafter/spawn-codes-engram-entries"
+                                    "path": "docs/ase/crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase/crafter/spawn-codes"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/excalibur-crafter/GameUserSettings.md",
+                                    "path": "docs/ase/crafter/GameUserSettings.md",
                                     "slug": "ase/crafter/gameusersettings-ini"
                                 }
                             ]
@@ -96,12 +96,12 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-net-ammo/Spawn Codes & Engram Entries.md",
+                                    "path": "docs/ase/net-ammo/Spawn Codes & Engram Entries.md",
                                     "slug": "ase/netammo/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/excalibur-net-ammo/GameUserSettings.md",
+                                    "path": "docs/ase/net-ammo/GameUserSettings.md",
                                     "slug": "ase/netammo/gameusersettings-ini"
                                 }
                             ]
@@ -128,18 +128,18 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-stacks/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/excalibur-stacks/spawn-codes-engram-entries"
+                                    "path": "docs/ase/stacks/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase/stacks/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/excalibur-stacks/GameUserSettings.md",
-                                    "slug": "ase/excalibur-stacks/gameusersettings-ini"
+                                    "path": "docs/ase/stacks/GameUserSettings.md",
+                                    "slug": "ase/stacks/gameusersettings-ini"
                                 },
                                 {
                                     "title": "Immersive Taming",
-                                    "path": "docs/ase/excalibur-stacks/ImmersiveTaming.md",
-                                    "slug": "ase/excalibur-stacks/immersivetaming-ini"
+                                    "path": "docs/ase/stacks/ImmersiveTaming.md",
+                                    "slug": "ase/stacks/immersivetaming-ini"
                                 }
                             ]
                         },
@@ -213,13 +213,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/excalibur-utilities/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/excalibur-utilities/spawn-codes-engram-entries"
+                                    "path": "docs/ase/utilities/Spawn Codes & Engram Entries.md",
+                                    "slug": "ase/utilities/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/excalibur-utilities/GameUserSettings.md",
-                                    "slug": "ase/excalibur-utilities/gameusersettings-ini"
+                                    "path": "docs/ase/utilities/GameUserSettings.md",
+                                    "slug": "ase/utilities/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -251,12 +251,12 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/excalibur-tranqs/Spawn Codes & Engram Entries.md",
+                                    "path": "docs/asa/tranqs/Spawn Codes & Engram Entries.md",
                                     "slug": "asa/tranqs/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings",
-                                    "path": "docs/asa/excalibur-tranqs/GameUserSettings.md",
+                                    "path": "docs/asa/tranqs/GameUserSettings.md",
                                     "slug": "asa/tranqs/gameusersettings-ini"
                                 }
                             ]
@@ -283,12 +283,12 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/excalibur-crafter/Spawn Codes & Engram Entries.md",
+                                    "path": "docs/asa/crafter/Spawn Codes & Engram Entries.md",
                                     "slug": "asa/crafter/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/asa/excalibur-crafter/GameUserSettings.md",
+                                    "path": "docs/asa/crafter/GameUserSettings.md",
                                     "slug": "asa/crafter/gameusersettings-ini"
                                 }
                             ]
@@ -315,12 +315,12 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/excalibur-cropplots/Spawn Codes & Engram Entries.md",
+                                    "path": "docs/asa/cropplots/Spawn Codes & Engram Entries.md",
                                     "slug": "ase/cropplots/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/asa/excalibur-crafter/GameUserSettings.md",
+                                    "path": "docs/asa/crafter/GameUserSettings.md",
                                     "slug": "ase/cropplots/gameusersettings-ini"
                                 }
                             ]
