@@ -156,7 +156,7 @@ class DOMService {
         link.href = `?${doc.slug}`;
         link.textContent = doc.title || doc.path.split('/').pop().replace('.md', '');
         link.dataset.path = doc.path;
-        link.style.paddingLeft = `${level * 0.8 + 1.2}rem`;
+        link.style.paddingLeft = `${level * 0.6}rem`;  // Reduced from 0.8 + 1.2 to just 0.6
         
         link.onclick = (e) => {
             e.preventDefault();
