@@ -10,7 +10,7 @@
             "title": "ARK Survival Evolved",
             "type": "folder",
             "path": "docs/ase/arksurvivalevolved.md",
-            "slug": "ark-survival-evolved",
+            "slug": "ase",
             "defaultOpen": true,
             "items": [
                 {
