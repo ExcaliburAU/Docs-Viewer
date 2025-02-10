@@ -1,60 +1,61 @@
 {
-    "defaultPage": "welcome",
+    "defaultPage": "home",
+    "customCSS": "custom/theme.css",
     "metadata": {
-        "description": "Documentation for Litruv's plugins",
-        "thumbnail": "img/og-image.png",
-        "site_name": "Litruv"
+        "title": "Project Documentation",
+        "description": "Comprehensive documentation for various projects.",
+        "thumbnail": "img/default-thumbnail.png",
+        "site_name": "DocsHub"
     },
     "documents": [
         {
-            "title": "Welcome",
+            "title": "Home",
             "path": "docs/index.md",
-            "slug": "welcome"
+            "slug": "home"
         },
         {
-            "title": "Unreal Engine",
+            "title": "Category One",
             "type": "folder",
+            "path": "docs/category-one.md",
             "color": "#2196f3",
-            "path": "docs/unreal-engine.md",
-            "slug": "unreal-engine",
             "items": [
                 {
-                    "title": "DeepImpact",
-                    "path": "docs/DeepImpact.md",
-                    "slug": "deep-impact"
+                    "title": "Feature A",
+                    "path": "docs/feature-a.md",
+                    "slug": "feature-a"
                 },
                 {
-                    "title": "WIP: Objective Marker System",
-                    "path": "docs/objective-marker-system.md",
-                    "slug": "objective-markers",
+                    "title": "Feature B",
+                    "path": "docs/feature-b.md",
+                    "slug": "feature-b",
                     "thumbnail": "images/docThumb.png"
                 }
             ]
         }
     ],
     "author": {
-        "name": "Litruv",
-        "role": "Dev/Tech Artist @MatesMedia",
+        "name": "John Doe",
+        "role": "Software Engineer",
         "socials": [
             {
                 "icon": "fab fa-github",
-                "url": "https://github.com/Litruv",
-                "title": "GitHub - Litruv"
+                "url": "https://github.com/johndoe",
+                "title": "GitHub - JohnDoe"
             },
             {
                 "icon": "fab fa-youtube",
-                "url": "https://www.youtube.com/c/Litruv",
-                "title": "YouTube - Litruv"
+                "url": "https://youtube.com/c/JohnDoe",
+                "title": "YouTube - JohnDoe"
             },
             {
                 "icon": "fab fa-discord",
-                "url": "https://discordapp.com/users/220772082055774210",
-                "title": "Discord - @Litruv"
+                "url": "https://discordapp.com/users/1234567890",
+                "title": "Discord - @JohnDoe"
             },
             {
                 "icon": "fa-brands fa-bluesky",
-                "url": "https://bsky.app/profile/lit.mates.dev",
-                "title": "Bluesky - lit.mates.dev"
+                "url": "https://bsky.app/profile/john.doe.dev",
+                "title": "Bluesky - john.doe.dev"
             }
         ]
     }
