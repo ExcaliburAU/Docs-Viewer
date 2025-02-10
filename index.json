@@ -9,7 +9,7 @@
         {
             "title": "ARK Survival Evolved",
             "type": "folder",
-            "color": "#FF0000",
+            "color": "#a94ffb",
             "slug": "ase",
             "defaultOpen": true,
             "items": [
@@ -238,6 +238,7 @@
         {
             "title": "ARK Survival Ascended",
             "type": "folder",
+            "color": "#a94ffb",
             "defaultOpen": true,
             "items": [
                 {
@@ -371,6 +372,7 @@
         },{
             "title": "Minecraft",
             "type": "folder",
+            "color": "#a94ffb",
             "defaultOpen": true,
             "items": [
                 {
