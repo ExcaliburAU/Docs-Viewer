@@ -40,7 +40,7 @@ async function generateOGTags(url, SITE_URL, DOCS_URL) {
                 console.log(metadataMatch);
                 const thumbnailMatch = metadataStr.match(/thumbnail:\s*(.*)/);
                 if (thumbnailMatch) {
-                    thumbnail = thumbnailMatch[1].trim();
+                    thumbnail = "docs/" + thumbnailMatch[1].trim();
                 }
                 const descriptionMatch = metadataStr.match(/description:\s*(.*)/);
                 if (descriptionMatch) {
@@ -118,10 +118,64 @@ async function handleRequest(request, SITE_URL, DOCS_URL) {
     return new Response(response.body, response);
 }
 
+async function generateSitemap(DOCS_URL, SITE_URL) {
+    const indexResponse = await fetch(`${DOCS_URL}/index.json`);
+    const indexData = await indexResponse.json();
+    
+    function collectUrls(documents) {
+        let urls = [];
+        for (const doc of documents) {
+            if (doc.slug) {
+                const url = new URL(SITE_URL);
+                // Fix: Directly append the slug to search without using searchParams
+                url.search = `?${doc.slug}`;  // This creates clean URLs without =
+                urls.push({
+                    loc: url.href,
+                    lastmod: doc.lastModified || new Date().toISOString().split('T')[0],
+                    priority: doc.type === 'folder' ? '0.8' : '0.6'
+                });
+            }
+            if (doc.type === 'folder' && doc.items) {
+                urls = urls.concat(collectUrls(doc.items));
+            }
+        }
+        return urls;
+    }
+    
+    const urls = collectUrls(indexData.documents);
+    
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        ${urls.map(url => `
+        <url>
+            <loc>${url.loc}</loc>
+            <lastmod>${url.lastmod}</lastmod>
+            <priority>${url.priority}</priority>
+        </url>`).join('')}
+    </urlset>`;
+    
+    return new Response(sitemap.trim(), {
+        headers: {
+            'Content-Type': 'application/xml',
+            'Cache-Control': 'public, max-age=3600'
+        }
+    });
+}
+
 export default {
     async fetch(request, env, ctx) {
         const SITE_URL = env.SITE_URL;
         const DOCS_URL = env.DOCS_URL;
+        const url = new URL(request.url);
+        
+        // Fix: Check if path ends with sitemap.xml regardless of base path
+        if (url.pathname === '/sitemap.xml' || url.pathname.endsWith('/sitemap.xml')) {
+            return generateSitemap(DOCS_URL, SITE_URL);
+        }
+
         return handleRequest(request, SITE_URL, DOCS_URL);
     }
 };
