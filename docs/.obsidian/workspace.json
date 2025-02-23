@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ase/excalibur-tranqs/patch-notes/12-11-24.md",
-                "mode": "source",
-                "source": false
+                "file": "asa/spyglass/Spawn Codes & Engram Entries.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "12-11-24"
+              "title": "Spawn Codes & Engram Entries"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "SwiftChop"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -154,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "mc/paper/SwiftChop/SwiftChop.md",
+                "file": "asa/spyglass/Spawn Codes & Engram Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SwiftChop"
+              "title": "Outline of Spawn Codes & Engram Entries"
             }
           }
         ],
@@ -180,11 +179,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba3b4ab7076efb70",
+  "active": "1eda716d35acafe8",
   "lastOpenFiles": [
+    "ase/excalutils/Spawn Codes & Engram Entries.md",
+    "asa/spyglass/Spawn Codes & Engram Entries.md",
+    "asa/spyglass/GameUserSettings.md",
+    "asa/tranqs/patch-notes/02-23-25.md",
+    "asa/spyglass",
+    "ase/excalutils/GameUserSetting.md",
+    "ase/tranqs/patch-notes/12-11-24.md",
+    "home.md",
+    "ase/excalutils/Untitled",
+    "ase/excalutils",
+    "mc/paper/SwiftChop/SwiftChop.md",
     "mc/paper/SwiftChop",
     "ase/tranqs/index.md",
-    "mc/paper/SwiftChop/SwiftChop.md",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
@@ -199,14 +208,10 @@
     "asa/trashcan/patch-notes",
     "asa/trashcan/GameUserSettings.md",
     "asa/trashcan",
-    "asa/tranqs/patch-notes",
     "asa/tranqs/Spawn Codes & Engram Entries.md",
     "asa/tranqs/GameUserSettings.md",
-    "asa/tranqs",
     "asa/cropplots/Spawn Codes & Engram Entries.md",
-    "asa/cropplots/patch-notes",
     "asa/cropplots/GameUserSettings.md",
-    "asa/cropplots",
     "asa/crafter/Spawn Codes & Engram Entries.md",
     "asa/crafter/GameUserSettings.md",
     "ase/utilities/Spawn Codes & Engram Entries.md",
@@ -215,12 +220,6 @@
     "ase/stacks/ImmersiveTaming.md",
     "ase/stacks/GameUserSettings.md",
     "ase/net-ammo/Spawn Codes & Engram Entries.md",
-    "ase/net-ammo/GameUserSettings.md",
-    "ase/crafter/GameUserSettings.md",
-    "ase/crafter/Spawn Codes & Engram Entries.md",
-    "ase/excalibur-tranqs/Spawn Codes & Engram Entries.md",
-    "ase/tranqs/patch-notes/12-11-24.md",
-    "ase/tranqs/Spawn Codes & Engram Entries.md",
     "images/Screenshot.png"
   ]
 }

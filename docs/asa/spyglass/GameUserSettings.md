@@ -1,0 +1,17 @@
+```ini
+[ExcaliburSpyglass]
+DisableNightVision=false
+DisablePredatorVision=false
+DisableOutlineMode=false
+DisableSupplyDropInfo=false
+DisableItembagInfo=false
+DisableStructureInfo=false
+DisableBuffInfo=false
+DisableTameFoodInfo=false
+DisableEggInfo=false
+DisableTheSpyglassOnEnemyTribes=false
+OnlyShowStatsForTames=false
+DisableGPS=false
+DisableCrosshair=false
+OnlyHPonEnemyTribeDinos=false
+```

@@ -303,6 +303,37 @@
                             "items": []
                         }
                     ]
+                },                {
+                    "title": "Excalibur Spyglass",
+                    "type": "folder",
+                    "defaultOpen": false,
+                    "items": [
+                        {
+                            "title": "Config",
+                            "type": "folder",
+                            "icon": "fa-solid fa-gear",
+                            "defaultOpen": false,
+                            "items": [
+                                {
+                                    "title": "Spawn Codes & Engram Entries",
+                                    "path": "docs/asa/spyglass/Spawn Codes & Engram Entries.md",
+                                    "slug": "asa/spyglass/spawn-codes-engram-entries"
+                                },
+                                {
+                                    "title": "GameUserSettings.ini",
+                                    "path": "docs/asa/spyglass/GameUserSettings.md",
+                                    "slug": "asa/spyglass/gameusersettings-ini"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Patch Notes",
+                            "type": "folder",
+                            "icon": "fa-solid fa-file-pen",
+                            "defaultOpen": false,
+                            "items": []
+                        }
+                    ]
                 },
                 {
                     "title": "Excalibur Cropplots",
