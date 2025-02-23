@@ -261,9 +261,10 @@ body {
     color: var(--ifm-color-content-secondary);
     font-size: 1.2rem;
     transition: color 0.2s;
+    padding: 0.5rem;
 }
 
-social-links a:hover {
+.social-links a:hover {
     color: var(--ifm-color-primary);
 }
 

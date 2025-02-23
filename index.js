@@ -540,6 +540,17 @@ class Documentation {
             const data = await response.json();
             this.indexData = data;
             window._indexData = data;
+
+            // Load custom CSS files if specified
+            if (data.customCSS) {
+                const cssFiles = Array.isArray(data.customCSS) ? data.customCSS : [data.customCSS];
+                cssFiles.forEach(cssFile => {
+                    const link = document.createElement('link');
+                    link.rel = 'stylesheet';
+                    link.href = cssFile;
+                    document.head.appendChild(link);
+                });
+            }
             
             this.populateAuthorInfo(data.author);
             window.originalDocTitle = data.metadata.site_name || 'Documentation';
