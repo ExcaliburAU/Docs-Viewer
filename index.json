@@ -243,6 +243,8 @@
             "items": [
                 {
                     "title": "Excalibur Tranqs",
+                    "path": "docs/arksurvivalascended/tranqs/index.md",
+                    "slug": "arksurvivalascended/tranqs",
                     "type": "folder",
                     "defaultOpen": false,
                     "items": [

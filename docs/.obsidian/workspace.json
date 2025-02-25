@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/tranqs/Excalibur Tranqs.md",
-                "mode": "preview",
+                "file": "arksurvivalascended/spyglass/to do.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Excalibur Tranqs"
+              "title": "to do"
             }
           },
           {
@@ -181,6 +181,7 @@
   },
   "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
+    "arksurvivalascended/tranqs/index.md",
     "arksurvivalascended/spyglass/to do.md",
     "arksurvivalascended/tranqs/Excalibur Tranqs.md",
     "asa/tranqs/tranqs-sniper",
@@ -219,7 +220,6 @@
     "arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/utilities/GameUserSettings.md",
     "arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md",
-    "arksurvivalevolved/stacks/ImmersiveTaming.md",
     "images/Screenshot.png"
   ]
 }
