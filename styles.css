@@ -1,13 +1,13 @@
 :root {
     --doc-sidebar-width: 300px;
     --doc-outline-width: 240px;
-    --ifm-color-primary: #b121f3;
-    --ifm-color-primary-dark: #b121f3;
+    --ifm-color-primary: #a94ffb;
+    --ifm-color-primary-dark: #a94ffb;
     --ifm-background-color: #1a1a1a;
     --ifm-background-surface-color: #252526;
     --ifm-color-content: #e0e0e0;
     --ifm-color-content-secondary: #a0a0a0;
-    --ifm-link-color: #b121f3;
+    --ifm-link-color: #a94ffb;
     --ifm-border-color: #404040;
     --title-bar-height: 48px;
     --sidebar-transition: transform 0.3s ease;

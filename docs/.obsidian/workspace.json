@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/spyglass/to do.md",
+                "file": "arksurvivalascended/tranqs/index.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "to do"
+              "title": "index"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalascended/tranqs/Excalibur Tranqs.md",
+                "file": "arksurvivalascended/tranqs/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Excalibur Tranqs"
+              "title": "Outline of index"
             }
           }
         ],
@@ -179,11 +179,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba3b4ab7076efb70",
+  "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "arksurvivalascended/tranqs/index.md",
     "arksurvivalascended/spyglass/to do.md",
     "arksurvivalascended/tranqs/Excalibur Tranqs.md",
+    "arksurvivalascended/tranqs/index.md",
     "asa/tranqs/tranqs-sniper",
     "arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
