@@ -10,14 +10,14 @@
             "title": "ARK Survival Evolved",
             "type": "folder",
             "color": "#a94ffb",
-            "slug": "ase",
+            "slug": "arksurvivalevolved",
             "defaultOpen": true,
             "items": [
                 {
                     "title": "Excalibur Tranqs",
                     "type": "folder",
-                    "path": "docs/ase/tranqs/index.md",
-                    "slug": "ase/tranqs",
+                    "path": "docs/arksurvivalevolved/tranqs/index.md",
+                    "slug": "arksurvivalevolved/tranqs",
                     "defaultOpen": false,
                     "items": [
                         {
@@ -27,13 +27,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/tranqs/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/tranqs/spawn-codes"
+                                    "path": "docs/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/tranqs/spawn-codes"
                                 },
                                 {
                                     "title": "GameUserSettings",
-                                    "path": "docs/ase/tranqs/GameUserSettings.md",
-                                    "slug": "ase/tranqs/gameusersettings-ini"
+                                    "path": "docs/arksurvivalevolved/tranqs/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/tranqs/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -45,8 +45,8 @@
                             "items": [
                                 {
                                     "title": "01-04-25 | Mod Integration",
-                                    "path": "docs/ase/tranqs/patch-notes/12-11-24.md",
-                                    "slug": "ase/tranqs/patch-notes/12-11-24"
+                                    "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md",
+                                    "slug": "arksurvivalevolved/tranqs/patch-notes/12-11-24"
                                 }
                             ]
                         }
@@ -65,13 +65,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/crafter/spawn-codes"
+                                    "path": "docs/arksurvivalevolved/crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/crafter/spawn-codes"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/crafter/GameUserSettings.md",
-                                    "slug": "ase/crafter/gameusersettings-ini"
+                                    "path": "docs/arksurvivalevolved/crafter/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/crafter/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -97,13 +97,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/net-ammo/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/netammo/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalevolved/net-ammo/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/netammo/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/net-ammo/GameUserSettings.md",
-                                    "slug": "ase/netammo/gameusersettings-ini"
+                                    "path": "docs/arksurvivalevolved/net-ammo/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/netammo/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -129,18 +129,18 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/stacks/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/stacks/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/stacks/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/stacks/GameUserSettings.md",
-                                    "slug": "ase/stacks/gameusersettings-ini"
+                                    "path": "docs/arksurvivalevolved/stacks/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/stacks/gameusersettings-ini"
                                 },
                                 {
                                     "title": "Immersive Taming",
-                                    "path": "docs/ase/stacks/ImmersiveTaming.md",
-                                    "slug": "ase/stacks/immersivetaming-ini"
+                                    "path": "docs/arksurvivalevolved/stacks/ImmersiveTaming.md",
+                                    "slug": "arksurvivalevolved/stacks/immersivetaming-ini"
                                 }
                             ]
                         },
@@ -166,13 +166,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/harvs-corner/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/harvs-corner/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/harvs-corner/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/harvs-corner/GameUserSettings.md",
-                                    "slug": "ase/harvs-corner/gameusersettings-ini"
+                                    "path": "docs/arksurvivalevolved/harvs-corner/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/harvs-corner/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -184,18 +184,18 @@
                             "items": [
                                 {
                                     "title": "12-16-24",
-                                    "path": "docs/ase/harvs-corner/patch-notes/2024/12-16-24.md",
-                                    "slug": "ase/harvs-corner/patch-notes/12-16-24"
+                                    "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24.md",
+                                    "slug": "arksurvivalevolved/harvs-corner/patch-notes/12-16-24"
                                 },
                                 {
                                     "title": "12-17-24",
-                                    "path": "docs/ase/harvs-corner/patch-notes/2024/12-17-24.md",
-                                    "slug": "ase/harvs/corner/patch-notes/12-17-24"
+                                    "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24.md",
+                                    "slug": "arksurvivalevolved/harvs/corner/patch-notes/12-17-24"
                                 },
                                 {
                                     "title": "01-12-25",
-                                    "path": "docs/ase/harvs-corner/patch-notes/2025/01-12-25.md",
-                                    "slug": "ase/harvs/corner/patch-notes/01-12-25"
+                                    "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25.md",
+                                    "slug": "arksurvivalevolved/harvs/corner/patch-notes/01-12-25"
                                 }
                             ]
                         }
@@ -214,13 +214,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/ase/utilities/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/utilities/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/utilities/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/ase/utilities/GameUserSettings.md",
-                                    "slug": "ase/utilities/gameusersettings-ini"
+                                    "path": "docs/arksurvivalevolved/utilities/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/utilities/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -253,13 +253,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/tranqs/Spawn Codes & Engram Entries.md",
-                                    "slug": "asa/tranqs/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalascended/tranqs/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings",
-                                    "path": "docs/asa/tranqs/GameUserSettings.md",
-                                    "slug": "asa/tranqs/gameusersettings-ini"
+                                    "path": "docs/arksurvivalascended/tranqs/GameUserSettings.md",
+                                    "slug": "arksurvivalascended/tranqs/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -285,13 +285,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "asa/crafter/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalascended/crafter/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalascended/crafter/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/asa/crafter/GameUserSettings.md",
-                                    "slug": "asa/crafter/gameusersettings-ini"
+                                    "path": "docs/arksurvivalascended/crafter/GameUserSettings.md",
+                                    "slug": "arksurvivalascended/crafter/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -316,13 +316,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/spyglass/Spawn Codes & Engram Entries.md",
-                                    "slug": "asa/spyglass/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalascended/spyglass/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/asa/spyglass/GameUserSettings.md",
-                                    "slug": "asa/spyglass/gameusersettings-ini"
+                                    "path": "docs/arksurvivalascended/spyglass/GameUserSettings.md",
+                                    "slug": "arksurvivalascended/spyglass/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -348,13 +348,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/cropplots/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/cropplots/spawn-codes-engram-entries"
+                                    "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/cropplots/spawn-codes-engram-entries"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/asa/crafter/GameUserSettings.md",
-                                    "slug": "ase/cropplots/gameusersettings-ini"
+                                    "path": "docs/arksurvivalascended/crafter/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/cropplots/gameusersettings-ini"
                                 }
                             ]
                         },
@@ -380,13 +380,13 @@
                             "items": [
                                 {
                                     "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/asa/cropplots/Spawn Codes & Engram Entries.md",
-                                    "slug": "ase/cropplots/spawn-codes"
+                                    "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md",
+                                    "slug": "arksurvivalevolved/cropplots/spawn-codes"
                                 },
                                 {
                                     "title": "GameUserSettings.ini",
-                                    "path": "docs/asa/cropplots/GameUserSettings.md",
-                                    "slug": "ase/cropplots/gameusersettings-ini"
+                                    "path": "docs/arksurvivalascended/cropplots/GameUserSettings.md",
+                                    "slug": "arksurvivalevolved/cropplots/gameusersettings-ini"
                                 }
                             ]
                         },
