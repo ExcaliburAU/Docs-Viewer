@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/tranqs/index.md",
+                "file": "arksurvivalascended/tranqs/GameUserSettings.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "GameUserSettings"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalascended/tranqs/index.md",
+                "file": "arksurvivalascended/tranqs/GameUserSettings.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of GameUserSettings"
             }
           }
         ],
@@ -181,9 +181,9 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
+    "arksurvivalascended/tranqs/index.md",
     "arksurvivalascended/spyglass/to do.md",
     "arksurvivalascended/tranqs/Excalibur Tranqs.md",
-    "arksurvivalascended/tranqs/index.md",
     "asa/tranqs/tranqs-sniper",
     "arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",

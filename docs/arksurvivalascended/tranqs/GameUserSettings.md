@@ -1,5 +1,5 @@
 ```ini
-[SkyweaverTranqs]
+[ExcaliburTranqs]
 FoundationRequired=true
 WorkbenchCraftingSpeed=1.0
 WorkbenchSlotCount=100
