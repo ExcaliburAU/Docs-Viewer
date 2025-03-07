@@ -26,9 +26,7 @@ Experience Tranqs with enhanced potency, scaled from the vanilla versions at:
 ### **Modular Addons**
 
 Expand functionality with additional tranq mods:
-
-- **Sniper Tranq Addon:** High-powered tranquilizer rounds for precision taming.
-    
+[**Sniper Tranq Addon:**](https://legacy.curseforge.com/ark-survival-ascended/mods/excaliburtranqs-sniper-addon)
 - _(More addons coming soon!)_
     
 

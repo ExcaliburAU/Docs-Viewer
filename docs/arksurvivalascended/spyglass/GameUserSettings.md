@@ -12,6 +12,5 @@ DisableEggInfo=false
 DisableTheSpyglassOnEnemyTribes=false
 OnlyShowStatsForTames=false
 DisableGPS=false
-DisableCrosshair=false
 OnlyHPonEnemyTribeDinos=false
 ```

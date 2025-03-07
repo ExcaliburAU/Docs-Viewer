@@ -201,7 +201,7 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_PureBoomerang_ExTranq_C
 admincheat GiveItem "Blueprint'/Game/BP/Items/Weapon/Boomerang/PrimalItem_PureBoomerang_ExTranq.PrimalItem_PureBoomerang_ExTranq'" 1 1 0
 ```
 ## Items
-### Tame Helper
+### Food Remover
 ```ini
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_TamingPotion_ExTranq_C",EngramHidden=true)
 

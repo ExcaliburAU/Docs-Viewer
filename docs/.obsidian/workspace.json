@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/tranqs/GameUserSettings.md",
+                "file": "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "GameUserSettings"
+              "title": "Spawn Codes & Engram Entries"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalascended/tranqs/GameUserSettings.md",
+                "file": "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of GameUserSettings"
+              "title": "Outline of Spawn Codes & Engram Entries"
             }
           }
         ],
@@ -181,13 +181,20 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "arksurvivalascended/tranqs/index.md",
+    "arksurvivalascended/tranqs/GameUserSettings.md",
+    "arksurvivalascended/spyglass/GameUserSettings.md",
     "arksurvivalascended/spyglass/to do.md",
+    "arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
+    "arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md",
+    "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
+    "arksurvivalevolved/UtilitiesRemaster/Config",
+    "arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md",
+    "arksurvivalevolved/UtilitiesRemaster",
+    "arksurvivalascended/tranqs/index.md",
+    "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/Excalibur Tranqs.md",
     "asa/tranqs/tranqs-sniper",
-    "arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
-    "arksurvivalascended/spyglass/GameUserSettings.md",
     "arksurvivalascended/tranqs/patch-notes/02-23-25.md",
     "arksurvivalascended/spyglass",
     "arksurvivalevolved/excalutils/GameUserSetting.md",
@@ -206,20 +213,12 @@
     "arksurvivalevolved/excalibur-tranqs",
     "minecraft/paper/extensions/permissions.md",
     "minecraft/paper/extensions",
-    "minecraft/paper",
-    "minecraft",
     "arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md",
-    "arksurvivalascended/trashcan/patch-notes",
     "arksurvivalascended/trashcan/GameUserSettings.md",
-    "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
-    "arksurvivalascended/tranqs/GameUserSettings.md",
     "arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/cropplots/GameUserSettings.md",
     "arksurvivalascended/crafter/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/crafter/GameUserSettings.md",
-    "arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md",
-    "arksurvivalevolved/utilities/GameUserSettings.md",
-    "arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md",
     "images/Screenshot.png"
   ]
 }
