@@ -197,10 +197,9 @@ class DOMService {
     }
 
     createFolderHeaderWithFile(iconClass, doc) {
-        const iconStyle = doc.color ? `color: ${doc.color};` : '';
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon" style="${iconStyle}"></i>
+                <i class="${iconClass} folder-icon"></i>
             </div>
             <span>${doc.title}</span>
             <a href="?${doc.slug}" class="folder-link" title="View folder page">
@@ -209,10 +208,9 @@ class DOMService {
     }
 
     createFolderHeaderBasic(iconClass, doc) {
-        const iconStyle = doc.color ? `color: ${doc.color};` : '';
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon" style="${iconStyle}"></i>
+                <i class="${iconClass} folder-icon"></i>
             </div>
             <span>${doc.title}</span>`;
     }
@@ -345,6 +343,20 @@ class DocumentService {
                 return link.replace(/^<a /, '<a data-internal="true" ');
             }
             return link.replace(/^<a /, `<a${attrs} `);
+        };
+        
+        // Add custom heading renderer to make headers clickable - without link icon
+        const originalHeading = renderer.heading.bind(renderer);
+        renderer.heading = (text, level) => {
+            const escapedText = text.toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-');
+                
+            const id = escapedText;
+            
+            return `<h${level} id="${id}" class="clickable-header">
+                ${text}
+            </h${level}>`;
         };
     }
 
@@ -540,17 +552,6 @@ class Documentation {
             const data = await response.json();
             this.indexData = data;
             window._indexData = data;
-
-            // Load custom CSS files if specified
-            if (data.customCSS) {
-                const cssFiles = Array.isArray(data.customCSS) ? data.customCSS : [data.customCSS];
-                cssFiles.forEach(cssFile => {
-                    const link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.href = cssFile;
-                    document.head.appendChild(link);
-                });
-            }
             
             this.populateAuthorInfo(data.author);
             window.originalDocTitle = data.metadata.site_name || 'Documentation';
@@ -635,6 +636,23 @@ class Documentation {
             
             const headings = document.querySelectorAll('h2, h3, h4, h5, h6');
             const headingLinks = this.domService.createOutline(headings);
+            
+            // Add click handlers to all headers
+            headings.forEach(heading => {
+                heading.addEventListener('click', (e) => {
+                    // Don't trigger if clicking on fold toggle
+                    if (e.target.closest('svg') || e.target.closest('.header-anchor')) return;
+                    
+                    const id = heading.id;
+                    if (id) {
+                        history.pushState(null, '', `${window.location.pathname}${window.location.search}#${id}`);
+                        this.domService.scrollToElement(heading);
+                        heading.classList.remove('highlight');
+                        void heading.offsetWidth;
+                        heading.classList.add('highlight');
+                    }
+                });
+            });
             
             this.setupScrollObserver(headings, headingLinks);
             

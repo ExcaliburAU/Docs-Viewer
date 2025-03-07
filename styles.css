@@ -261,10 +261,9 @@ body {
     color: var(--ifm-color-content-secondary);
     font-size: 1.2rem;
     transition: color 0.2s;
-    padding: 0.5rem;
 }
 
-.social-links a:hover {
+social-links a:hover {
     color: var(--ifm-color-primary);
 }
 
@@ -567,4 +566,19 @@ body {
 
 .github-link a:hover {
     color: var(--ifm-color-primary);
+}
+
+.clickable-header {
+    cursor: pointer;
+    position: relative;
+}
+.clickable-header:hover {
+    color: #3498db;
+}
+.clickable-header.highlight {
+    animation: highlight-fade 1.5s;
+}
+@keyframes highlight-fade {
+    0% { background-color: rgba(52, 152, 219, 0.2); }
+    100% { background-color: transparent; }
 }
