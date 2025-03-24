@@ -2,16 +2,12 @@ name: Build Documentation Index
 
 on:
   push:
-    paths:
-      - 'docs/**'
     branches:
-      - main
-  repository_dispatch:
-    types: [build_docs]
-
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
     permissions:
       contents: write
     steps:
@@ -21,6 +17,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build docs
         run: node build-docs.js
