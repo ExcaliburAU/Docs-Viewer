@@ -614,9 +614,13 @@
       "path": "docs/arksurvivalascended/arksurvivalascended.md"
     },
     {
-      "title": "minecraft",
-      "type": "folder",
+      "title": "Minecraft",
+      "icon": "",
+      "defaultOpen": "true",
+      "showfolderpage": "false",
+      "sort": "4",
       "slug": "minecraft",
+      "type": "folder",
       "items": [
         {
           "title": "paper",
@@ -661,7 +665,8 @@
             }
           ]
         }
-      ]
+      ],
+      "path": "docs/minecraft/minecraft.md"
     }
   ]
 }
