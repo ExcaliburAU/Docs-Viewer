@@ -12,7 +12,7 @@ class EventBus {
     constructor() {
         this.events = {};
     }
-    
+
     on(event, callback) {
         if (!this.events[event]) {
             this.events[event] = [];
@@ -20,12 +20,12 @@ class EventBus {
         this.events[event].push(callback);
         return () => this.off(event, callback);
     }
-    
+
     off(event, callback) {
         if (!this.events[event]) return;
         this.events[event] = this.events[event].filter(cb => cb !== callback);
     }
-    
+
     emit(event, data) {
         if (!this.events[event]) return;
         this.events[event].forEach(callback => callback(data));
@@ -49,13 +49,27 @@ class SearchService {
             if (doc.type === 'folder') {
                 const currentPath = parentPath ? `${parentPath} / ${doc.title}` : doc.title;
                 if (doc.path) {
-                    this.searchIndex.push({
-                        title: doc.title,
-                        path: doc.path,
-                        slug: doc.slug,
-                        location: currentPath,
-                        type: 'folder'
-                    });
+                    if (doc.showfolderpage !== 'false') {
+                        this.searchIndex.push({
+                            title: doc.title,
+                            path: doc.path,
+                            slug: doc.slug,
+                            location: currentPath,
+                            type: 'folder'
+                        });
+                    }
+
+                    if (doc.headers) {
+                        doc.headers.forEach(header => {
+                            this.searchIndex.push({
+                                title: header,
+                                path: doc.path,
+                                slug: `${doc.slug}#${header.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`,
+                                location: `${currentPath} / ${doc.title}`,
+                                type: 'header'
+                            });
+                        });
+                    }
                 }
                 if (doc.items) {
                     this.processDocuments(doc.items, currentPath);
@@ -68,6 +82,18 @@ class SearchService {
                     location: parentPath,
                     type: 'file'
                 });
+
+                if (doc.headers) {
+                    doc.headers.forEach(header => {
+                        this.searchIndex.push({
+                            title: header,
+                            path: doc.path,
+                            slug: `${doc.slug}#${header.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-')}`,
+                            location: `${parentPath} / ${doc.title}`,
+                            type: 'header'
+                        });
+                    });
+                }
             }
         });
     }
@@ -75,23 +101,25 @@ class SearchService {
     search(query) {
         if (!query) return [];
         query = query.toLowerCase();
-        
+
         return this.searchIndex
-            .filter(item => {
-                const titleMatch = item.title.toLowerCase().includes(query);
-                const pathMatch = item.path.toLowerCase().includes(query);
-                const locationMatch = item.location.toLowerCase().includes(query);
-                return titleMatch || pathMatch || locationMatch;
+            .map(item => {
+                const titleLower = item.title.toLowerCase();
+                let score = 0;
+
+                if (titleLower === query) score = 100;
+                else if (titleLower.startsWith(query)) score = 80;
+                else if (titleLower.includes(query)) score = 60;
+                else if (item.path.toLowerCase().includes(query)) score = 40;
+                else if (item.location.toLowerCase().includes(query)) score = 20;
+
+                if (item.type === 'header') score += 5;
+
+                return { ...item, score };
             })
-            .sort((a, b) => {
-                // Prioritize exact matches in title
-                const aTitle = a.title.toLowerCase();
-                const bTitle = b.title.toLowerCase();
-                if (aTitle === query) return -1;
-                if (bTitle === query) return 1;
-                return aTitle.localeCompare(bTitle);
-            })
-            .slice(0, 10); // Limit to 10 results
+            .filter(item => item.score > 0)
+            .sort((a, b) => b.score - a.score)
+            .slice(0, 10);
     }
 }
 
@@ -112,9 +140,9 @@ class IndexService {
             if (doc.type === 'folder') {
                 const found = this.findDocumentByTitle(doc.items, title);
                 if (found) return found;
-            } else if (doc.title === title || 
-                      doc.path.endsWith(title + '.md') || 
-                      doc.slug === title.toLowerCase().replace(/ /g, '-')) {
+            } else if (doc.title === title ||
+                doc.path.endsWith(title + '.md') ||
+                doc.slug === title.toLowerCase().replace(/ /g, '-')) {
                 return doc;
             }
         }
@@ -131,7 +159,7 @@ class IndexService {
                     }
                     return false;
                 });
-                
+
                 if (found) {
                     parentFolders.push(doc);
                     doc.items.forEach(item => {
@@ -156,19 +184,19 @@ class DOMService {
             titleText: document.querySelector('.title-text .page-title'),
             leftSidebar: document.querySelector('.left-sidebar'),
             menuButton: document.querySelector('.menu-button'),
-            header: document.querySelector('title-bar'), // Add header element
+            header: document.querySelector('title-bar'),
             searchInput: document.getElementById('search-input'),
             searchResults: document.getElementById('search-results'),
             clearSearch: document.getElementById('clear-search')
         };
-        this.headerOffset = 60; // Fixed header heightfsetHeight || 0; // Get header height
+        this.headerOffset = 60;
     }
 
     setupMobileMenu() {
-        this.elements.menuButton.addEventListener('click', () => 
+        this.elements.menuButton.addEventListener('click', () =>
             this.elements.leftSidebar.classList.toggle('show'));
-            
-        this.elements.content.addEventListener('click', () => 
+
+        this.elements.content.addEventListener('click', () =>
             this.elements.leftSidebar.classList.remove('show'));
     }
 
@@ -196,19 +224,29 @@ class DOMService {
 
             const folderHeader = document.createElement('div');
             folderHeader.className = 'folder-header';
-            
             const iconClass = doc.icon || `fas fa-folder${doc.defaultOpen !== false ? '-open' : ''}`;
-            
-            folderHeader.innerHTML = doc.path ? 
-                this.createFolderHeaderWithFile(iconClass, doc) :
-                this.createFolderHeaderBasic(iconClass, doc);
 
-            this.setupFolderListeners(folderDiv, folderHeader, doc);
-            
+            // Only add folder click handler if showfolderpage is not false
+            if (doc.path && doc.metadata?.showfolderpage !== false) {
+                folderHeader.innerHTML = this.createFolderHeaderWithFile(iconClass, doc);
+                this.setupFolderListeners(folderDiv, folderHeader, doc);
+            } else {
+                folderHeader.innerHTML = this.createFolderHeaderBasic(iconClass, doc);
+                // Only setup the folder open/close functionality
+                folderHeader.addEventListener('click', () => {
+                    folderDiv.classList.toggle('open');
+                    if (!doc.icon) {
+                        const icon = folderHeader.querySelector('.folder-icon');
+                        icon.classList.toggle('fa-folder-closed');
+                        icon.classList.toggle('fa-folder-open');
+                    }
+                });
+            }
+
             const folderContent = document.createElement('div');
             folderContent.className = 'folder-content';
             doc.items.forEach(item => this.createFileIndexItem(item, folderContent, level + 1));
-            
+
             folderDiv.appendChild(folderHeader);
             folderDiv.appendChild(folderContent);
             container.appendChild(folderDiv);
@@ -223,7 +261,7 @@ class DOMService {
         link.textContent = doc.title || doc.path.split('/').pop().replace('.md', '');
         link.dataset.path = doc.path;
         link.style.paddingLeft = `${(level * 0.6) + 0.8}rem`;  // Add base padding of 0.8rem
-        
+
         link.onclick = (e) => {
             e.preventDefault();
             this.eventBus.emit('navigation:requested', { slug: doc.slug });
@@ -232,7 +270,7 @@ class DOMService {
                 this.elements.leftSidebar.classList.remove('show');
             }
         };
-        
+
         container.appendChild(link);
     }
 
@@ -245,14 +283,14 @@ class DOMService {
     createOutline(headings) {
         this.elements.outline.innerHTML = '';
         const headingLinks = new Map();
-        
+
         headings.forEach(heading => {
             if (!heading.id) {
                 heading.id = heading.textContent.toLowerCase()
                     .replace(/[^\w\s-]/g, '')
                     .replace(/\s+/g, '-');
             }
-            
+
             const link = this.createOutlineLink(heading);
             headingLinks.set(heading, link);
             this.elements.outline.appendChild(link);
@@ -263,14 +301,16 @@ class DOMService {
     }
 
     createFolderHeaderWithFile(iconClass, doc) {
+        const showFolderPage = doc.showfolderpage !== 'false';
         return `
             <div class="folder-icons">
                 <i class="${iconClass} folder-icon"></i>
             </div>
-            <span>${doc.title}</span>
-            <a href="?${doc.slug}" class="folder-link" title="View folder page">
-                <i class="fas fa-file-alt"></i>
-            </a>`;
+            <span>${doc.title}</pan>
+            ${showFolderPage ? `
+                <a href="?${doc.slug}" class="folder-link" title="View folder page">
+                    <i class="fas fa-file-alt"></i>
+                </a>` : ''}`;
     }
 
     createFolderHeaderBasic(iconClass, doc) {
@@ -292,7 +332,7 @@ class DOMService {
                 }
                 return;
             }
-            
+
             folderDiv.classList.toggle('open');
             if (!doc.icon) {
                 const icon = folderHeader.querySelector('.folder-icon');
@@ -307,7 +347,7 @@ class DOMService {
         const rect = element.getBoundingClientRect();
         const absoluteElementTop = rect.top + window.scrollY;
         const middle = absoluteElementTop - (this.headerOffset + 20); // Add extra padding
-        
+
         window.scrollTo({
             top: middle,
             behavior: 'smooth'
@@ -319,7 +359,7 @@ class DOMService {
         link.href = `${window.location.pathname}${window.location.search}#${heading.id}`;
         link.textContent = heading.textContent;
         link.style.paddingLeft = (heading.tagName[1] * 15) + 'px';
-        
+
         link.onclick = (e) => {
             e.preventDefault();
             history.pushState(null, '', link.href);
@@ -328,7 +368,7 @@ class DOMService {
             void heading.offsetWidth;
             heading.classList.add('highlight');
         };
-        
+
         return link;
     }
 
@@ -342,16 +382,16 @@ class DOMService {
         toggleBtn.style.marginLeft = '0.5em';
         toggleBtn.style.display = 'inline-flex';
         toggleBtn.style.alignItems = 'center';
-        
+
         toggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             const svg = toggleBtn.querySelector('svg');
             const isFolded = svg.style.transform === 'rotate(90deg)';
             svg.style.transform = isFolded ? 'rotate(0deg)' : 'rotate(90deg)';
-            
+
             let next = heading.nextElementSibling;
             const currentLevel = parseInt(heading.tagName[1]);
-            
+
             while (next) {
                 if (!/^H[1-6]$/.test(next.tagName)) {
                     next.style.display = isFolded ? 'none' : '';
@@ -364,17 +404,17 @@ class DOMService {
                 }
             }
         });
-        
+
         heading.appendChild(toggleBtn);
     }
 
     setupSearch(searchService) {
         let searchTimeout;
-        
+
         this.elements.searchInput.addEventListener('input', (e) => {
             clearTimeout(searchTimeout);
             const query = e.target.value;
-            
+
             searchTimeout = setTimeout(() => {
                 const results = searchService.search(query);
                 this.renderSearchResults(results);
@@ -391,7 +431,7 @@ class DOMService {
     renderSearchResults(results) {
         const container = this.elements.searchResults;
         container.innerHTML = '';
-        
+
         if (results.length === 0 || !this.elements.searchInput.value) {
             container.style.display = 'none';
             return;
@@ -400,10 +440,12 @@ class DOMService {
         results.forEach(result => {
             const div = document.createElement('div');
             div.className = 'search-result';
-            
+
             const icon = document.createElement('i');
-            icon.className = result.type === 'folder' ? 'fas fa-folder' : 'fas fa-file-alt';
-            
+            icon.className = result.type === 'folder' ? 'fas fa-folder' :
+                result.type === 'header' ? 'fas fa-hashtag' :
+                    'fas fa-file-alt';
+
             const link = document.createElement('a');
             link.href = `?${result.slug}`;
             link.innerHTML = `
@@ -413,19 +455,24 @@ class DOMService {
                     <div class="search-result-path">${result.location}</div>
                 </div>
             `;
-            
+
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.elements.searchInput.value = '';
                 container.style.display = 'none';
+                const [baseSlug, hash] = result.slug.split('#');
                 history.pushState(null, '', link.href);
-                this.eventBus.emit('navigation:requested', { slug: result.slug });
+                this.eventBus.emit('navigation:requested', {
+                    slug: baseSlug,
+                    hash: hash ? `#${hash}` : '',
+                    fromSearch: true  // Add this flag
+                });
             });
-            
+
             div.appendChild(link);
             container.appendChild(div);
         });
-        
+
         container.style.display = 'block';
     }
 }
@@ -448,7 +495,7 @@ class DocumentService {
 
         const renderer = new marked.Renderer();
         this.setupRenderer(renderer);
-        
+
         marked.setOptions({
             breaks: true,
             gfm: true,
@@ -460,7 +507,7 @@ class DocumentService {
 
     setupRenderer(renderer) {
         const originalLink = renderer.link.bind(renderer);
-        
+
         renderer.code = this.renderCode;
         renderer.link = (href, title, text) => {
             const isExternal = href.startsWith('http');
@@ -471,16 +518,15 @@ class DocumentService {
             }
             return link.replace(/^<a /, `<a${attrs} `);
         };
-        
-        // Add custom heading renderer to make headers clickable - without link icon
+
         const originalHeading = renderer.heading.bind(renderer);
         renderer.heading = (text, level) => {
             const escapedText = text.toLowerCase()
                 .replace(/[^\w\s-]/g, '')
                 .replace(/\s+/g, '-');
-                
+
             const id = escapedText;
-            
+
             return `<h${level} id="${id}" class="clickable-header">
                 ${text}
             </h${level}>`;
@@ -528,17 +574,17 @@ class DocumentService {
                 fetch(path),
                 this.markedPromise
             ]);
-            
+
             let rawContent = await response.text();
             const { metadata, content } = this.extractMetadata(rawContent);
             const basePath = path.substring(0, path.lastIndexOf('/'));
             const indexDoc = this.findDocInIndex(path);
-            
+
             let processedContent = this.processWikiLinks(content);
             processedContent = this.processImages(processedContent, basePath);
             const titleContent = metadata.title || indexDoc?.title || path.split('/').pop().replace('.md', '');
             processedContent = this.ensureTitle(processedContent, titleContent);
-            
+
             return {
                 content: processedContent,
                 metadata,
@@ -552,7 +598,7 @@ class DocumentService {
 
     findDocInIndex(path) {
         let doc = window._indexData.documents.find(d => d.path === path);
-        
+
         if (!doc) {
             for (const d of window._indexData.documents) {
                 if (d.type === 'folder' && d.items) {
@@ -577,7 +623,7 @@ class DocumentService {
             }
 
             const doc = this.indexService.findDocumentByTitle(
-                window._indexData.documents, 
+                window._indexData.documents,
                 targetTitle
             );
             return doc ? `[${displayText || doc.title}](?${doc.slug})` : match;
@@ -587,14 +633,14 @@ class DocumentService {
     processImages(content, basePath) {
         return content.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
             const mediaPath = `./docs/images/${filename}`;
-            
+
             if (filename.toLowerCase().endsWith('.mp4')) {
                 return `\n<video controls width="100%">
                     <source src="${mediaPath}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>\n\n`;
             }
-            
+
             return `\n![${filename}](${mediaPath})\n\n`;
         });
     }
@@ -610,15 +656,12 @@ class NavigationService {
     setupEventListeners() {
         window.addEventListener('popstate', async () => {
             const search = window.location.search;
-            // If no search params or just '?', use default page
-            const slug = (search === '' || search === '?') ? 
-                window._indexData.defaultPage : 
-                search.replace(/^\?/, '');
-            
-            this.eventBus.emit('navigation:requested', { 
-                slug,
-                hash: window.location.hash 
-            });
+            const hash = window.location.hash;
+            const slug = (search === '' || search === '?') ?
+                window._indexData.defaultPage :
+                search.replace(/^\?/, '').split('#')[0];
+
+            this.eventBus.emit('navigation:requested', { slug, hash });
         });
 
         document.addEventListener('click', async (e) => {
@@ -626,7 +669,6 @@ class NavigationService {
             if (target) {
                 e.preventDefault();
                 const slug = target.href.split('?').pop();
-                // Use clean URL format without equal sign
                 history.pushState(null, '', `?${slug}`);
                 this.eventBus.emit('navigation:requested', { slug });
             }
@@ -642,14 +684,14 @@ class Documentation {
         this.domService = new DOMService(this.eventBus);
         this.documentService = new DocumentService(this.eventBus, this.indexService);
         this.navigationService = new NavigationService(this.eventBus, this.documentService);
-        
+
         this.setupEventListeners();
     }
 
     setupEventListeners() {
-        this.eventBus.on('navigation:requested', async ({ slug }) => {
+        this.eventBus.on('navigation:requested', async ({ slug, hash }) => {
             slug = slug.replace(/^[?=]/, '');
-            await this.loadDocumentBySlug(slug);
+            await this.loadDocumentBySlug(slug, hash);
         });
 
         this.eventBus.on('document:load', async ({ path }) => {
@@ -676,30 +718,29 @@ class Documentation {
         try {
             const response = await fetch('index.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
+
             const data = await response.json();
             this.indexData = data;
             window._indexData = data;
-            
+
             this.searchService.buildSearchIndex(this.indexData.documents);
             this.domService.setupSearch(this.searchService);
-            
+
             this.populateAuthorInfo(data.author);
             window.originalDocTitle = data.metadata.site_name || 'Documentation';
             document.title = window.originalDocTitle;
 
             this.domService.elements.fileIndex.innerHTML = '';
-            this.indexData.documents.forEach(doc => 
+            this.indexData.documents.forEach(doc =>
                 this.domService.createFileIndexItem(doc, this.domService.elements.fileIndex));
 
-            // Simplified URL parameter handling
             const search = window.location.search;
-            const slug = search === '' || search === '?' 
-                ? this.indexData.defaultPage 
+            const slug = search === '' || search === '?'
+                ? this.indexData.defaultPage
                 : search.replace(/^\?/, '');
-            
+
             await this.loadDocumentBySlug(slug);
-            
+
             if (window.location.hash) {
                 setTimeout(() => {
                     const element = document.getElementById(window.location.hash.slice(1));
@@ -735,45 +776,44 @@ class Documentation {
         }
     }
 
-    async loadDocumentBySlug(slug) {
-        const doc = this.indexService.findDocumentBySlug(this.indexData.documents, slug);
-        
+    async loadDocumentBySlug(slug, hash) {
+        const [baseSlug] = slug.split('#');
+        const doc = this.indexService.findDocumentBySlug(this.indexData.documents, baseSlug);
+
         if (!doc) {
-            this.domService.setError(`Document not found: ${slug}`);
+            this.domService.setError(`Document not found: ${baseSlug}`);
             return;
         }
 
         if (doc.type === 'folder') {
             if (doc.path) {
-                await this.loadDocument(doc.path);
+                await this.loadDocument(doc.path, hash);
             } else if (doc.items?.length > 0) {
-                await this.loadDocument(doc.items[0].path);
+                await this.loadDocument(doc.items[0].path, hash);
             } else {
                 this.domService.setError('This folder is empty.');
             }
             return;
         }
 
-        await this.loadDocument(doc.path);
+        await this.loadDocument(doc.path, hash);
     }
 
-    async loadDocument(path) {
+    async loadDocument(path, hash, fromSearch = false) {
         try {
             const { content, metadata, marked, title } = await this.documentService.loadDocument(path);
-            
+
             this.domService.setTitle(title);
             this.domService.setContent(marked.parse(content));
             this.domService.updateActiveDocument(path);
-            
+
             const headings = document.querySelectorAll('h2, h3, h4, h5, h6');
             const headingLinks = this.domService.createOutline(headings);
-            
-            // Add click handlers to all headers
+
             headings.forEach(heading => {
                 heading.addEventListener('click', (e) => {
-                    // Don't trigger if clicking on fold toggle
                     if (e.target.closest('svg') || e.target.closest('.header-anchor')) return;
-                    
+
                     const id = heading.id;
                     if (id) {
                         history.pushState(null, '', `${window.location.pathname}${window.location.search}#${id}`);
@@ -784,17 +824,21 @@ class Documentation {
                     }
                 });
             });
-            
+
             this.setupScrollObserver(headings, headingLinks);
-            
+
             window._currentPath = path;
 
-            if (window.location.hash) {
-                const element = document.getElementById(window.location.hash.slice(1));
+            if (hash) {
+                const element = document.getElementById(hash.slice(1));
                 if (element) {
+                    const delay = fromSearch ? 300 : 100;
                     setTimeout(() => {
                         this.domService.scrollToElement(element);
-                    }, 100);
+                        element.classList.remove('highlight');
+                        void element.offsetWidth;
+                        element.classList.add('highlight');
+                    }, delay);
                 }
             } else {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -815,7 +859,7 @@ class Documentation {
                     this.domService.elements.outline
                         .querySelectorAll('a')
                         .forEach(a => a.classList.remove('active'));
-                    
+
                     const link = headingLinks.get(visibleHeadings[0].target);
                     if (link) link.classList.add('active');
                 }

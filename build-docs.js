@@ -1,6 +1,20 @@
-//get all *.md files in ./docs, reccursively, and store them in an array, with their properties in the first block, they're from obsidian
 const fs = require('fs');
 const path = require('path');
+
+function extractHeaders(content) {
+    const headerRegex = /^(#{1,6})\s+(.+)$/gm;
+    const headers = [];
+    let match;
+    
+    while ((match = headerRegex.exec(content)) !== null) {
+        // Don't include h1 headers as they're typically the title
+        if (match[1].length > 1) {
+            headers.push(match[2].trim());
+        }
+    }
+    
+    return headers;
+}
 
 function parseFrontMatter(content) {
     const lines = content.trim().split('\n');
@@ -20,9 +34,15 @@ function parseFrontMatter(content) {
         }
     }
 
+    const contentText = lines.slice(contentStart).join('\n').trim();
+    const headers = extractHeaders(contentText);
+    if (headers.length > 0) {
+        metadata.headers = headers;
+    }
+
     return {
         metadata,
-        content: lines.slice(contentStart).join('\n').trim()
+        content: contentText
     };
 }
 
@@ -124,7 +144,6 @@ function loadIndexTemplate() {
   const indexPath = path.join(__dirname, 'index.json');
   try {
     const indexData = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
-    // Strip out documents array, keeping all other properties
     delete indexData.documents;
     return indexData;
   } catch (error) {
@@ -156,12 +175,10 @@ function combineIndexes(dir) {
   const indexData = loadIndexTemplate();
   const documents = readAllMarkdownFiles(dir);
   
-  // Add the documents array with new content
   indexData.documents = documents;
   writeIndexFile(indexData);
 }
 
-// Replace console.log with combineIndexes call
 combineIndexes(path.join(__dirname, 'docs'));
 
 module.exports = readAllMarkdownFiles;
