@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/arksurvivalascended.md",
+                "file": "welcome.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "arksurvivalascended"
+              "title": "welcome"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalascended/arksurvivalascended.md",
+                "file": "welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of arksurvivalascended"
+              "title": "Outline of welcome"
             }
           }
         ],
@@ -179,10 +179,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1eda716d35acafe8",
+  "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
-    "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/arksurvivalascended.md",
+    "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/GameUserSettings.md",
     "arksurvivalascended/spyglass/GameUserSettings.md",
     "arksurvivalascended/spyglass/to do.md",
@@ -200,7 +200,7 @@
     "arksurvivalascended/spyglass",
     "arksurvivalevolved/excalutils/GameUserSetting.md",
     "arksurvivalevolved/tranqs/patch-notes/12-11-24.md",
-    "home.md",
+    "welcome.md",
     "ase/excalutils/Untitled",
     "arksurvivalevolved/excalutils",
     "minecraft/paper/SwiftChop/SwiftChop.md",
