@@ -42,6 +42,7 @@
       "icon": "",
       "defaultOpen": "true",
       "showfolderpage": "false",
+      "sort": "\"3\"",
       "slug": "ark-survival-ascended",
       "type": "folder",
       "items": [
@@ -226,6 +227,20 @@
         }
       ],
       "path": "docs/arksurvivalascended/arksurvivalascended.md"
+    },
+    {
+      "title": "Welcome to EXAU Documentation",
+      "slug": "welcome",
+      "sort": "\"0\"",
+      "headers": [
+        "Available Documentation",
+        "ARK: Survival Evolved Mods",
+        "ARK: Survival Ascended Mods",
+        "Minecraft",
+        "Getting Started",
+        "Need Help?"
+      ],
+      "path": "docs/welcome.md"
     },
     {
       "title": "arksurvivalevolved",
@@ -642,19 +657,6 @@
           ]
         }
       ]
-    },
-    {
-      "title": "Welcome to EXAU Documentation",
-      "slug": "welcome",
-      "headers": [
-        "Available Documentation",
-        "ARK: Survival Evolved Mods",
-        "ARK: Survival Ascended Mods",
-        "Minecraft",
-        "Getting Started",
-        "Need Help?"
-      ],
-      "path": "docs/welcome.md"
     }
   ]
 }
