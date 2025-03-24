@@ -41,6 +41,7 @@
       "title": "ARK Survival Ascended",
       "icon": "",
       "defaultOpen": "true",
+      "showfolderpage": "false",
       "slug": "ark-survival-ascended",
       "type": "folder",
       "items": [
