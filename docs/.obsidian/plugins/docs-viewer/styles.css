@@ -75,3 +75,33 @@
     color: var(--color-yellow);
     margin-left: 4px;
 }
+
+/* Fix conflicting rules for title and sort display */
+.has-title::after {
+    content: attr(data-title);
+    color: var(--color-orange);
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+/* Sort value styling when sort value is alone */
+.has-sort-value:not(.has-title)::after {
+    content: attr(data-sort-value);
+    color: var(--color-yellow);
+    margin-left: 4px;
+}
+
+/* Handle case when both title and sort are present */
+.has-title.has-sort-value::after {
+    content: attr(data-title);
+    color: var(--color-orange);
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+/* Style for the sort suffix span */
+.sort-suffix {
+    color: var(--color-yellow);
+    margin-left: 4px;
+    font-size: 0.85em;
+}
