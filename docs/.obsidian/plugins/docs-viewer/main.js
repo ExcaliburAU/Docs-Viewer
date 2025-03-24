@@ -4,15 +4,6 @@ class TitleAppenderPlugin extends obsidian.Plugin {
     async onload() {
         console.log('Loading TitleAppender plugin');
         
-        // Create stylesheet element only once during initialization
-        try {
-            this.styleEl = document.head.createEl('style');
-            this.styleEl.id = 'title-appender-styles';
-        } catch (error) {
-            console.error('Error creating style element:', error);
-            return;
-        }
-        
         // Wait for layout to be ready
         this.app.workspace.onLayoutReady(() => {
             this.registerEvents();
@@ -47,36 +38,44 @@ class TitleAppenderPlugin extends obsidian.Plugin {
         try {
             // Get all markdown files
             const files = this.app.vault.getMarkdownFiles();
-            let cssRules = [];
             
-            // Create CSS rules for each file with a frontmatter title
+            // First, reset all previously set classes and attributes
+            document.querySelectorAll('.has-sort-value, .has-title').forEach(el => {
+                el.classList.remove('has-sort-value', 'has-title');
+                el.removeAttribute('data-sort-value');
+                el.removeAttribute('data-title');
+            });
+            
+            // Apply classes and attributes for each file with frontmatter
             files.forEach(file => {
                 try {
                     const metadata = this.app.metadataCache.getFileCache(file);
-                    const title = metadata?.frontmatter?.title;
+                    const frontmatter = metadata?.frontmatter;
+                    const title = frontmatter?.title;
+                    const sortValue = frontmatter?.sort;
                     
-                    if (title) {
+                    if (title || sortValue) {
                         const escapedPath = CSS.escape(file.path);
-                        const escapedTitle = title.replace(/"/g, '\\"');
+                        const fileElement = document.querySelector(`.nav-file-title[data-path="${escapedPath}"] .nav-file-title-content`);
                         
-                        cssRules.push(`
-                            .nav-file-title[data-path="${escapedPath}"] .nav-file-title-content::after {
-                                content: " (${escapedTitle})";
-                                color: var(--color-orange);
-                                font-size: 0.85em;
-                                opacity: 0.8;
+                        if (fileElement) {
+                            // Add sort value if available
+                            if (sortValue !== undefined) {
+                                fileElement.classList.add('has-sort-value');
+                                fileElement.setAttribute('data-sort-value', `[${sortValue}] `);
                             }
-                        `);
+                            
+                            // Add title if available
+                            if (title) {
+                                fileElement.classList.add('has-title');
+                                fileElement.setAttribute('data-title', ` (${title})`);
+                            }
+                        }
                     }
                 } catch (e) {
                     console.error('Error processing file:', file?.path, e);
                 }
             });
-            
-            // Update stylesheet content
-            if (this.styleEl) {
-                this.styleEl.textContent = cssRules.join("\n");
-            }
         } catch (error) {
             console.error('Error updating titles:', error);
         }
@@ -84,9 +83,13 @@ class TitleAppenderPlugin extends obsidian.Plugin {
     
     onunload() {
         console.log('Unloading TitleAppender plugin');
-        if (this.styleEl) {
-            this.styleEl.remove();
-        }
+        
+        // Clean up any added classes when unloading
+        document.querySelectorAll('.has-sort-value, .has-title').forEach(el => {
+            el.classList.remove('has-sort-value', 'has-title');
+            el.removeAttribute('data-sort-value');
+            el.removeAttribute('data-title');
+        });
     }
 }
 

@@ -10,20 +10,10 @@
     margin-left: 0;
 }
 
-/* Icon and title styling */
-.title-icon {
-    margin-right: 5px;
-    font-size: 0.9em;
-    color: var(--color-orange);
-    flex-shrink: 0;
+/* Sort value styling */
+.nav-file-title-content::before {
+    margin-right: 4px;
 }
-
-.has-icon {
-    display: flex;
-    align-items: center;
-}
-
-
 
 .nav-file-title-content {
     padding: 0;
@@ -37,4 +27,19 @@
 .nav-folder .nav-folder .nav-file-title, 
 .nav-folder .nav-folder .nav-folder-title {
     padding-left: 12px !important;
+}
+
+/* Sort value styling */
+.has-sort-value::before {
+    content: attr(data-sort-value);
+    color: var(--color-yellow);
+    margin-right: 2px;
+}
+
+/* Title styling */
+.has-title::after {
+    content: attr(data-title);
+    color: var(--color-orange);
+    font-size: 0.85em;
+    opacity: 0.8;
 }
