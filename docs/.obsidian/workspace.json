@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "minecraft/minecraft.md",
+                "file": "arksurvivalascended/arksurvivalascended.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "minecraft"
+              "title": "arksurvivalascended"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "minecraft/minecraft.md",
+                "file": "arksurvivalascended/arksurvivalascended.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of minecraft"
+              "title": "Outline of arksurvivalascended"
             }
           }
         ],
@@ -181,9 +181,9 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "arksurvivalascended/arksurvivalascended.md",
-    "minecraft/minecraft.md",
     "arksurvivalevolved/arksurvivalevolved.md",
+    "minecraft/minecraft.md",
+    "arksurvivalascended/arksurvivalascended.md",
     "welcome.md",
     "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/GameUserSettings.md",
