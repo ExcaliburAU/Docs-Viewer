@@ -38,22 +38,23 @@
   },
   "documents": [
     {
-      "title": "arksurvivalascended",
+      "title": "\"ARK: Survival Ascended\"",
+      "icon": "",
+      "slug": "ark-survival-ascended",
       "type": "folder",
-      "slug": "arksurvivalascended",
       "items": [
         {
           "title": "crafter",
           "type": "folder",
-          "slug": "arksurvivalascended/crafter",
+          "slug": "ark-survival-ascended/crafter",
           "items": [
             {
-              "slug": "arksurvivalascended/crafter/gameusersettings",
+              "slug": "ark-survival-ascended/crafter/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/crafter/GameUserSettings.md"
             },
             {
-              "slug": "arksurvivalascended/crafter/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/crafter/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/crafter/Spawn Codes & Engram Entries.md"
             }
@@ -62,15 +63,15 @@
         {
           "title": "cropplots",
           "type": "folder",
-          "slug": "arksurvivalascended/cropplots",
+          "slug": "ark-survival-ascended/cropplots",
           "items": [
             {
-              "slug": "arksurvivalascended/cropplots/gameusersettings",
+              "slug": "ark-survival-ascended/cropplots/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/cropplots/GameUserSettings.md"
             },
             {
-              "slug": "arksurvivalascended/cropplots/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/cropplots/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md"
             }
@@ -79,20 +80,20 @@
         {
           "title": "spyglass",
           "type": "folder",
-          "slug": "arksurvivalascended/spyglass",
+          "slug": "ark-survival-ascended/spyglass",
           "items": [
             {
-              "slug": "arksurvivalascended/spyglass/gameusersettings",
+              "slug": "ark-survival-ascended/spyglass/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/spyglass/GameUserSettings.md"
             },
             {
-              "slug": "arksurvivalascended/spyglass/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/spyglass/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md"
             },
             {
-              "slug": "arksurvivalascended/spyglass/to-do",
+              "slug": "ark-survival-ascended/spyglass/to-do",
               "title": "to do",
               "path": "docs/arksurvivalascended/spyglass/to do.md"
             }
@@ -101,30 +102,30 @@
         {
           "title": "tranqs",
           "type": "folder",
-          "slug": "arksurvivalascended/tranqs",
+          "slug": "ark-survival-ascended/tranqs",
           "items": [
             {
-              "slug": "arksurvivalascended/tranqs/gameusersettings",
+              "slug": "ark-survival-ascended/tranqs/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/tranqs/GameUserSettings.md"
             },
             {
-              "slug": "arksurvivalascended/tranqs/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/tranqs/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md"
             },
             {
-              "slug": "arksurvivalascended/tranqs/index",
+              "slug": "ark-survival-ascended/tranqs/index",
               "title": "index",
               "path": "docs/arksurvivalascended/tranqs/index.md"
             },
             {
               "title": "patch-notes",
               "type": "folder",
-              "slug": "arksurvivalascended/tranqs/patch-notes",
+              "slug": "ark-survival-ascended/tranqs/patch-notes",
               "items": [
                 {
-                  "slug": "arksurvivalascended/tranqs/patch-notes/02-23-25",
+                  "slug": "ark-survival-ascended/tranqs/patch-notes/02-23-25",
                   "title": "02-23-25",
                   "path": "docs/arksurvivalascended/tranqs/patch-notes/02-23-25.md"
                 }
@@ -135,21 +136,22 @@
         {
           "title": "trashcan",
           "type": "folder",
-          "slug": "arksurvivalascended/trashcan",
+          "slug": "ark-survival-ascended/trashcan",
           "items": [
             {
-              "slug": "arksurvivalascended/trashcan/gameusersettings",
+              "slug": "ark-survival-ascended/trashcan/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/trashcan/GameUserSettings.md"
             },
             {
-              "slug": "arksurvivalascended/trashcan/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/trashcan/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md"
             }
           ]
         }
-      ]
+      ],
+      "path": "docs/arksurvivalascended/arksurvivalascended.md"
     },
     {
       "title": "arksurvivalevolved",
