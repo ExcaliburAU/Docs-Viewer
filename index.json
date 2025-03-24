@@ -55,6 +55,9 @@
               "path": "docs/arksurvivalascended/crafter/GameUserSettings.md"
             },
             {
+              "headers": [
+                "ExcaliburCrafter"
+              ],
               "slug": "ark-survival-ascended/crafter/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/crafter/Spawn Codes & Engram Entries.md"
@@ -72,6 +75,10 @@
               "path": "docs/arksurvivalascended/cropplots/GameUserSettings.md"
             },
             {
+              "headers": [
+                "Excalibur Crop Plot",
+                "Excalibur Grow Lamp"
+              ],
               "slug": "ark-survival-ascended/cropplots/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md"
@@ -89,6 +96,9 @@
               "path": "docs/arksurvivalascended/spyglass/GameUserSettings.md"
             },
             {
+              "headers": [
+                "Spyglass"
+              ],
               "slug": "ark-survival-ascended/spyglass/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md"
@@ -111,11 +121,65 @@
               "path": "docs/arksurvivalascended/tranqs/GameUserSettings.md"
             },
             {
+              "headers": [
+                "Narcotics",
+                "Potent Narcotic",
+                "Concentrated Narcotic",
+                "Distilled Narcotic",
+                "Pure Narcotic",
+                "Stimulants",
+                "Potent Stimulant",
+                "Concentrated Stimulant",
+                "Distilled Stimulant",
+                "Pure Stimulant",
+                "Arrows",
+                "Potent Tranq Arrow",
+                "Concentrated Tranq Arrow",
+                "Distilled Tranq Arrow",
+                "Pure Tranq Arrow",
+                "Darts",
+                "Potent Tranq Dart",
+                "Concentrated Tranq Dart",
+                "Distilled Tranq Dart",
+                "Pure Tranq Dart",
+                "Spear Bolts",
+                "Potent Tranq Spear Bolt",
+                "Concentrated Tranq Spear Bolt",
+                "Distilled Tranq Spear Bolt",
+                "Pure Tranq Spear Bolt",
+                "Shock Darts",
+                "Potent Shock Dart",
+                "Concentrated Shock Dart",
+                "Distilled Shock Dart",
+                "Pure Shock Dart",
+                "Fabricated Sniper Rifle",
+                "Potent Tranq Sniper Bullet",
+                "Concentrated Tranq Sniper Bullet",
+                "Distilled Tranq Sniper Bullet",
+                "Pure Tranq Sniper Bullet",
+                "Boomerang",
+                "Potent Boomerang",
+                "Concentrated Boomerang",
+                "Distilled Boomerang",
+                "Pure Boomerang",
+                "Items",
+                "Food Remover",
+                "Structures",
+                "Workbench/CharcoalBaker/Meat Spoiler"
+              ],
               "slug": "ark-survival-ascended/tranqs/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md"
             },
             {
+              "headers": [
+                "**Tranq Tiers**",
+                "**Features**",
+                "**Modular Addons**",
+                "**Documentation**",
+                "**Support**",
+                "**Note**"
+              ],
               "slug": "ark-survival-ascended/tranqs/index",
               "title": "index",
               "path": "docs/arksurvivalascended/tranqs/index.md"
@@ -126,6 +190,11 @@
               "slug": "ark-survival-ascended/tranqs/patch-notes",
               "items": [
                 {
+                  "headers": [
+                    "Added",
+                    "Changes",
+                    "Removal"
+                  ],
                   "slug": "ark-survival-ascended/tranqs/patch-notes/02-23-25",
                   "title": "02-23-25",
                   "path": "docs/arksurvivalascended/tranqs/patch-notes/02-23-25.md"
@@ -145,6 +214,9 @@
               "path": "docs/arksurvivalascended/trashcan/GameUserSettings.md"
             },
             {
+              "headers": [
+                "ExcaliburTrashcan"
+              ],
               "slug": "ark-survival-ascended/trashcan/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md"
@@ -170,6 +242,10 @@
               "slug": "arksurvivalevolved/utilitiesremaster/config",
               "items": [
                 {
+                  "headers": [
+                    "Structure Settings",
+                    "Raft Settings"
+                  ],
                   "slug": "arksurvivalevolved/utilitiesremaster/config/gameusersettings",
                   "title": "GameUserSettings",
                   "path": "docs/arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md"
@@ -189,6 +265,9 @@
               "path": "docs/arksurvivalevolved/crafter/GameUserSettings.md"
             },
             {
+              "headers": [
+                "ExcaliburCrafter"
+              ],
               "slug": "arksurvivalevolved/crafter/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/crafter/Spawn Codes & Engram Entries.md"
@@ -213,11 +292,29 @@
           "slug": "arksurvivalevolved/excalutils",
           "items": [
             {
+              "headers": [
+                "Item Settings",
+                "Structure Settings",
+                "Raft Settings",
+                "Spyglass Settings"
+              ],
               "slug": "arksurvivalevolved/excalutils/gameusersetting",
               "title": "GameUserSetting",
               "path": "docs/arksurvivalevolved/excalutils/GameUserSetting.md"
             },
             {
+              "headers": [
+                "Items",
+                "Color Brush",
+                "Net Gun Ammo",
+                "Reusable Bola",
+                "Grappling Crossbow",
+                "Structures",
+                "Potent Stimulant",
+                "Concentrated Stimulant",
+                "Distilled Stimulant",
+                "Pure Stimulant"
+              ],
               "slug": "arksurvivalevolved/excalutils/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md"
@@ -235,6 +332,10 @@
               "path": "docs/arksurvivalevolved/harvs-corner/GameUserSettings.md"
             },
             {
+              "headers": [
+                "Items",
+                "Structures"
+              ],
               "slug": "arksurvivalevolved/harvs-corner/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md"
@@ -250,11 +351,18 @@
                   "slug": "arksurvivalevolved/harvs-corner/patch-notes/2024",
                   "items": [
                     {
+                      "headers": [
+                        "Update 16/12 - 1",
+                        "Update 16/12 - 2"
+                      ],
                       "slug": "arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24",
                       "title": "12-16-24",
                       "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24.md"
                     },
                     {
+                      "headers": [
+                        "Update 17/12"
+                      ],
                       "slug": "arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24",
                       "title": "12-17-24",
                       "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24.md"
@@ -267,6 +375,9 @@
                   "slug": "arksurvivalevolved/harvs-corner/patch-notes/2025",
                   "items": [
                     {
+                      "headers": [
+                        "Update 01/12"
+                      ],
                       "slug": "arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25",
                       "title": "01-12-25",
                       "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25.md"
@@ -288,6 +399,9 @@
               "path": "docs/arksurvivalevolved/net-ammo/GameUserSettings.md"
             },
             {
+              "headers": [
+                "Net Everything Ammo"
+              ],
               "slug": "arksurvivalevolved/net-ammo/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/net-ammo/Spawn Codes & Engram Entries.md"
@@ -300,6 +414,16 @@
           "slug": "arksurvivalevolved/stacks",
           "items": [
             {
+              "headers": [
+                "Key Features of Excalibur Stacks",
+                "Important Notes",
+                "Mod Priority",
+                "Post-Installation Steps",
+                "Known Behaviours",
+                "Configuration Settings",
+                "Modifying `GameUserSettings.ini`",
+                "Example: Blacklisting Items"
+              ],
               "slug": "arksurvivalevolved/stacks/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalevolved/stacks/GameUserSettings.md"
@@ -310,6 +434,17 @@
               "path": "docs/arksurvivalevolved/stacks/ImmersiveTaming.md"
             },
             {
+              "headers": [
+                "Stacks 10000-90",
+                "Stryder Box",
+                "Travel Terminal",
+                "Stacks 5000-50",
+                "Stryder Box",
+                "Travel Terminal",
+                "Stacks 1000-50",
+                "Stryder Box",
+                "Travel Terminal"
+              ],
               "slug": "arksurvivalevolved/stacks/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md"
@@ -327,11 +462,62 @@
               "path": "docs/arksurvivalevolved/tranqs/GameUserSettings.md"
             },
             {
+              "headers": [
+                "Narcotics",
+                "Potent Narcotic",
+                "Concentrated Narcotic",
+                "Distilled Narcotic",
+                "Pure Narcotic",
+                "Stimulants",
+                "Potent Stimulant",
+                "Concentrated Stimulant",
+                "Distilled Stimulant",
+                "Pure Stimulant",
+                "Arrows",
+                "Potent Tranq Arrow",
+                "Concentrated Tranq Arrow",
+                "Distilled Tranq Arrow",
+                "Pure Tranq Arrow",
+                "Darts",
+                "Potent Tranq Dart",
+                "Concentrated Tranq Dart",
+                "Distilled Tranq Dart",
+                "Pure Tranq Dart",
+                "Spear Bolts",
+                "Potent Tranq Spear Bolt",
+                "Concentrated Tranq Spear Bolt",
+                "Distilled Tranq Spear Bolt",
+                "Pure Tranq Spear Bolt",
+                "Shock Darts",
+                "Potent Shock Dart",
+                "Concentrated Shock Dart",
+                "Distilled Shock Dart",
+                "Pure Shock Dart",
+                "Fabricated Sniper Rifle",
+                "Potent Tranq Sniper Bullet",
+                "Concentrated Tranq Sniper Bullet",
+                "Distilled Tranq Sniper Bullet",
+                "Pure Tranq Sniper Bullet",
+                "Boomerang",
+                "Potent Boomerang",
+                "Concentrated Boomerang",
+                "Distilled Boomerang",
+                "Pure Boomerang",
+                "Items",
+                "Tame Helper",
+                "Structures",
+                "Charcoal Baker",
+                "Meat Spoiler"
+              ],
               "slug": "arksurvivalevolved/tranqs/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md"
             },
             {
+              "headers": [
+                "Config",
+                "Patch Notes"
+              ],
               "slug": "arksurvivalevolved/tranqs/index",
               "title": "index",
               "path": "docs/arksurvivalevolved/tranqs/index.md"
@@ -342,6 +528,13 @@
               "slug": "arksurvivalevolved/tranqs/patch-notes",
               "items": [
                 {
+                  "headers": [
+                    "Player Inventory",
+                    "Vanilla",
+                    "Structures Plus (Including Forks)",
+                    "Vanilla Creatures",
+                    "Kraken Better Dinos"
+                  ],
                   "slug": "arksurvivalevolved/tranqs/patch-notes/12-11-24",
                   "title": "12-11-24",
                   "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md"
@@ -361,6 +554,36 @@
               "path": "docs/arksurvivalevolved/utilities/GameUserSettings.md"
             },
             {
+              "headers": [
+                "Items",
+                "Dino Color Brush",
+                "Rare Flower Seed",
+                "Rare Mushroom Seed",
+                "Mutagen Seed",
+                "Tree Sap Seed",
+                "Rename Token",
+                "Reusable Bola",
+                "Reusable Grapple Crossbow",
+                "Reusable Parachute",
+                "Reusable Scissors",
+                "Reusable Spear",
+                "Reusable Tent",
+                "Spyglass",
+                "Starter Kit",
+                "Baby Care Kibble",
+                "Structures",
+                "Collector",
+                "Compost Bin",
+                "Control Unit",
+                "Fertilizer Silo",
+                "Cauldron",
+                "Industrial Grill",
+                "Industrial Forge",
+                "Industrial Grinder",
+                "TEK Replicator",
+                "Scrap Forge",
+                "Workbench"
+              ],
               "slug": "arksurvivalevolved/utilities/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md"
@@ -380,6 +603,13 @@
           "slug": "minecraft/paper",
           "items": [
             {
+              "headers": [
+                "Features",
+                "Configuration",
+                "Commands and Permissions",
+                "Authors",
+                "License"
+              ],
               "slug": "minecraft/paper/swiftchop",
               "title": "SwiftChop",
               "type": "folder",
@@ -392,6 +622,16 @@
               "slug": "minecraft/paper/extensions",
               "items": [
                 {
+                  "headers": [
+                    "General Commands",
+                    "Teleport System",
+                    "Home System",
+                    "Warp System",
+                    "Kit System",
+                    "Admin Commands",
+                    "Special Permissions",
+                    "Default Permissions"
+                  ],
                   "slug": "minecraft/paper/extensions/permissions",
                   "title": "permissions",
                   "path": "docs/minecraft/paper/extensions/permissions.md"
@@ -405,6 +645,14 @@
     {
       "title": "Welcome to EXAU Documentation",
       "slug": "welcome",
+      "headers": [
+        "Available Documentation",
+        "ARK: Survival Evolved Mods",
+        "ARK: Survival Ascended Mods",
+        "Minecraft",
+        "Getting Started",
+        "Need Help?"
+      ],
       "path": "docs/welcome.md"
     }
   ]
