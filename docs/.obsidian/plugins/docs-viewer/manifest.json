@@ -1,0 +1,12 @@
+{
+  "id": "docs-viewer",
+  "name": "docs-viewer",
+  "version": "2.9.2",
+  "minAppVersion": "1.1.6",
+  "description": "An Obsidian plugin to edit and view Docs-Viewer metadata",
+  "author": "Litruv",
+  "authorUrl": "https://lit.ruv.wtf",
+  "fundingUrl": "https://ko-fi.com/zsolt",
+  "helpUrl": "https://github.com/zsviczian/obsidian-excalidraw-plugin#readme",
+  "isDesktopOnly": false
+}

@@ -1,0 +1,40 @@
+.title-appended {
+    color: var(--text-normal);
+    display: inline;
+}
+
+.title-metadata {
+    color: var(--color-orange);
+    font-size: 0.85em;
+    opacity: 0.8;
+    margin-left: 0;
+}
+
+/* Icon and title styling */
+.title-icon {
+    margin-right: 5px;
+    font-size: 0.9em;
+    color: var(--color-orange);
+    flex-shrink: 0;
+}
+
+.has-icon {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav-file-title-content {
+    padding: 0;
+    line-height: 1.1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Reduce indent for child items */
+.nav-folder .nav-folder .nav-file-title, 
+.nav-folder .nav-folder .nav-folder-title {
+    padding-left: 12px !important;
+}
