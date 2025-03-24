@@ -1,5 +1,6 @@
 ---
 title: Welcome to EXAU Documentation
+slug: welcome
 ---
 
 Welcome to the official documentation site for EXAU Development. Here you'll find comprehensive guides, configurations, and documentation for our game modifications.
