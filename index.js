@@ -459,7 +459,7 @@ class DocumentService {
 
     processImages(content, basePath) {
         return content.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
-            const mediaPath = `${basePath}/images/${filename}`;
+            const mediaPath = `./docs/images/${filename}`;
             
             if (filename.toLowerCase().endsWith('.mp4')) {
                 return `\n<video controls width="100%">
