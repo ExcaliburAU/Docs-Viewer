@@ -3,6 +3,7 @@
     "aliases": "aliases",
     "cssclasses": "multitext",
     "tags": "tags",
-    "showfolderpage:": "checkbox"
+    "showfolderpage:": "checkbox",
+    "sort": "number"
   }
 }
