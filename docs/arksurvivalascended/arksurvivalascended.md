@@ -1,5 +1,5 @@
 ---
-title: "ARK: Survival Ascended"
+title: ARK: Survival Ascended
 icon:
 ---
 gheee
