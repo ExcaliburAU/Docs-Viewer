@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/arksurvivalascended.md",
-                "mode": "preview",
-                "source": true
+                "file": "welcome.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "arksurvivalascended"
+              "title": "welcome"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalascended/arksurvivalascended.md",
+                "file": "welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of arksurvivalascended"
+              "title": "Outline of welcome"
             }
           }
         ],
@@ -181,8 +181,8 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "welcome.md",
     "arksurvivalascended/arksurvivalascended.md",
+    "welcome.md",
     "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/GameUserSettings.md",
     "arksurvivalascended/spyglass/GameUserSettings.md",
