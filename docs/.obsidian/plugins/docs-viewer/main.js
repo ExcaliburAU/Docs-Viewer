@@ -4,11 +4,23 @@ class TitleAppenderPlugin extends obsidian.Plugin {
     async onload() {
         console.log('Loading TitleAppender plugin');
         
-        // Wait for layout to be ready
+        // Initial update attempt
+        this.updateAllTitles();
+        
+        // Wait for layout to be ready before registering events
         this.app.workspace.onLayoutReady(() => {
             this.registerEvents();
-            this.updateAllTitles();
+            
+            // Force another update after layout is ready
+            setTimeout(() => {
+                this.updateAllTitles();
+            }, 500);
         });
+
+        // Schedule periodic updates to catch any missed files
+        this.registerInterval(
+            window.setInterval(() => this.updateAllTitles(), 5000)
+        );
     }
     
     registerEvents() {
@@ -39,16 +51,8 @@ class TitleAppenderPlugin extends obsidian.Plugin {
             // Get all markdown files
             const files = this.app.vault.getMarkdownFiles();
             
-            // First, reset all previously set classes and attributes
-            document.querySelectorAll('.has-sort-value, .has-title').forEach(el => {
-                el.classList.remove('has-sort-value', 'has-title');
-                el.removeAttribute('data-sort-value');
-                el.removeAttribute('data-title');
-                
-                // Also remove any added elements
-                const sortSuffix = el.querySelector('.sort-suffix');
-                if (sortSuffix) sortSuffix.remove();
-            });
+            // First, clean up any existing elements
+            this.cleanupExistingElements();
             
             // Apply classes and attributes for each file with frontmatter
             files.forEach(file => {
@@ -60,32 +64,34 @@ class TitleAppenderPlugin extends obsidian.Plugin {
                     
                     if (title || sortValue) {
                         const escapedPath = CSS.escape(file.path);
-                        const fileElement = document.querySelector(`.nav-file-title[data-path="${escapedPath}"] .nav-file-title-content`);
+                        const fileElements = document.querySelectorAll(`.nav-file-title[data-path="${escapedPath}"] .nav-file-title-content`);
                         
-                        if (fileElement) {
-                            // Add title if available
-                            if (title) {
-                                fileElement.classList.add('has-title');
-                                fileElement.setAttribute('data-title', ` (${title})`);
-                            }
-                            
-                            // Add sort value if available
-                            if (sortValue !== undefined) {
-                                fileElement.classList.add('has-sort-value');
-                                
-                                // If both title and sort exist, create a span for the sort value
+                        fileElements.forEach(fileElement => {
+                            if (fileElement) {
+                                // Add title if available
                                 if (title) {
-                                    // Create a span for the sort value to apply different color
-                                    const sortSpan = document.createElement('span');
-                                    sortSpan.className = 'sort-suffix';
-                                    sortSpan.textContent = `[${sortValue}]`;
-                                    fileElement.appendChild(sortSpan);
-                                } else {
-                                    // If only sort exists, use the attribute
-                                    fileElement.setAttribute('data-sort-value', `[${sortValue}]`);
+                                    fileElement.classList.add('has-title');
+                                    fileElement.setAttribute('data-title', ` (${title})`);
+                                }
+                                
+                                // Add sort value if available
+                                if (sortValue !== undefined) {
+                                    fileElement.classList.add('has-sort-value');
+                                    
+                                    // If both title and sort exist, create a span for the sort value
+                                    if (title) {
+                                        // Create a span for the sort value to apply different color
+                                        const sortSpan = document.createElement('span');
+                                        sortSpan.className = 'sort-suffix';
+                                        sortSpan.textContent = `[${sortValue}]`;
+                                        fileElement.appendChild(sortSpan);
+                                    } else {
+                                        // If only sort exists, use the attribute
+                                        fileElement.setAttribute('data-sort-value', `[${sortValue}]`);
+                                    }
                                 }
                             }
-                        }
+                        });
                     }
                 } catch (e) {
                     console.error('Error processing file:', file?.path, e);
@@ -96,15 +102,22 @@ class TitleAppenderPlugin extends obsidian.Plugin {
         }
     }
     
-    onunload() {
-        console.log('Unloading TitleAppender plugin');
-        
-        // Clean up any added classes when unloading
+    cleanupExistingElements() {
+        // Remove all classes and attributes
         document.querySelectorAll('.has-sort-value, .has-title').forEach(el => {
             el.classList.remove('has-sort-value', 'has-title');
             el.removeAttribute('data-sort-value');
             el.removeAttribute('data-title');
+            
+            // Remove any added elements
+            const sortSuffix = el.querySelector('.sort-suffix');
+            if (sortSuffix) sortSuffix.remove();
         });
+    }
+    
+    onunload() {
+        console.log('Unloading TitleAppender plugin');
+        this.cleanupExistingElements();
     }
 }
 
