@@ -44,6 +44,10 @@ class TitleAppenderPlugin extends obsidian.Plugin {
                 el.classList.remove('has-sort-value', 'has-title');
                 el.removeAttribute('data-sort-value');
                 el.removeAttribute('data-title');
+                
+                // Also remove any added elements
+                const sortSuffix = el.querySelector('.sort-suffix');
+                if (sortSuffix) sortSuffix.remove();
             });
             
             // Apply classes and attributes for each file with frontmatter
@@ -59,16 +63,27 @@ class TitleAppenderPlugin extends obsidian.Plugin {
                         const fileElement = document.querySelector(`.nav-file-title[data-path="${escapedPath}"] .nav-file-title-content`);
                         
                         if (fileElement) {
-                            // Add sort value if available
-                            if (sortValue !== undefined) {
-                                fileElement.classList.add('has-sort-value');
-                                fileElement.setAttribute('data-sort-value', `[${sortValue}] `);
-                            }
-                            
                             // Add title if available
                             if (title) {
                                 fileElement.classList.add('has-title');
                                 fileElement.setAttribute('data-title', ` (${title})`);
+                            }
+                            
+                            // Add sort value if available
+                            if (sortValue !== undefined) {
+                                fileElement.classList.add('has-sort-value');
+                                
+                                // If both title and sort exist, create a span for the sort value
+                                if (title) {
+                                    // Create a span for the sort value to apply different color
+                                    const sortSpan = document.createElement('span');
+                                    sortSpan.className = 'sort-suffix';
+                                    sortSpan.textContent = `[${sortValue}]`;
+                                    fileElement.appendChild(sortSpan);
+                                } else {
+                                    // If only sort exists, use the attribute
+                                    fileElement.setAttribute('data-sort-value', `[${sortValue}]`);
+                                }
                             }
                         }
                     }
