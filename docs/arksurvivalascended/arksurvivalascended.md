@@ -1,6 +1,6 @@
 ---
-title: ARK: Survival Ascended
-icon:
+title: ARK Survival Ascended
+icon: 
 defaultOpen: true
+"showfolderpage:": false
 ---
-gheee
