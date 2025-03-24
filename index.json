@@ -41,6 +41,7 @@
       "title": "ARK Survival Ascended",
       "icon": "",
       "defaultOpen": "true",
+      "showfolderpage": "false",
       "slug": "ark-survival-ascended",
       "type": "folder",
       "items": [
@@ -122,6 +123,36 @@
             },
             {
               "headers": [
+                "**Tranq Tiers**",
+                "**Features**",
+                "**Modular Addons**",
+                "**Documentation**",
+                "**Support**",
+                "**Note**"
+              ],
+              "slug": "ark-survival-ascended/tranqs/index",
+              "title": "index",
+              "path": "docs/arksurvivalascended/tranqs/index.md"
+            },
+            {
+              "title": "patch-notes",
+              "type": "folder",
+              "slug": "ark-survival-ascended/tranqs/patch-notes",
+              "items": [
+                {
+                  "headers": [
+                    "Added",
+                    "Changes",
+                    "Removal"
+                  ],
+                  "slug": "ark-survival-ascended/tranqs/patch-notes/02-23-25",
+                  "title": "02-23-25",
+                  "path": "docs/arksurvivalascended/tranqs/patch-notes/02-23-25.md"
+                }
+              ]
+            },
+            {
+              "headers": [
                 "Narcotics",
                 "Potent Narcotic",
                 "Concentrated Narcotic",
@@ -170,36 +201,6 @@
               "slug": "ark-survival-ascended/tranqs/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md"
-            },
-            {
-              "headers": [
-                "**Tranq Tiers**",
-                "**Features**",
-                "**Modular Addons**",
-                "**Documentation**",
-                "**Support**",
-                "**Note**"
-              ],
-              "slug": "ark-survival-ascended/tranqs/index",
-              "title": "index",
-              "path": "docs/arksurvivalascended/tranqs/index.md"
-            },
-            {
-              "title": "patch-notes",
-              "type": "folder",
-              "slug": "ark-survival-ascended/tranqs/patch-notes",
-              "items": [
-                {
-                  "headers": [
-                    "Added",
-                    "Changes",
-                    "Removal"
-                  ],
-                  "slug": "ark-survival-ascended/tranqs/patch-notes/02-23-25",
-                  "title": "02-23-25",
-                  "path": "docs/arksurvivalascended/tranqs/patch-notes/02-23-25.md"
-                }
-              ]
             }
           ]
         },
@@ -231,29 +232,6 @@
       "type": "folder",
       "slug": "arksurvivalevolved",
       "items": [
-        {
-          "title": "UtilitiesRemaster",
-          "type": "folder",
-          "slug": "arksurvivalevolved/utilitiesremaster",
-          "items": [
-            {
-              "title": "Config",
-              "type": "folder",
-              "slug": "arksurvivalevolved/utilitiesremaster/config",
-              "items": [
-                {
-                  "headers": [
-                    "Structure Settings",
-                    "Raft Settings"
-                  ],
-                  "slug": "arksurvivalevolved/utilitiesremaster/config/gameusersettings",
-                  "title": "GameUserSettings",
-                  "path": "docs/arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md"
-                }
-              ]
-            }
-          ]
-        },
         {
           "title": "crafter",
           "type": "folder",
@@ -332,15 +310,6 @@
               "path": "docs/arksurvivalevolved/harvs-corner/GameUserSettings.md"
             },
             {
-              "headers": [
-                "Items",
-                "Structures"
-              ],
-              "slug": "arksurvivalevolved/harvs-corner/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md"
-            },
-            {
               "title": "patch-notes",
               "type": "folder",
               "slug": "arksurvivalevolved/harvs-corner/patch-notes",
@@ -385,6 +354,15 @@
                   ]
                 }
               ]
+            },
+            {
+              "headers": [
+                "Items",
+                "Structures"
+              ],
+              "slug": "arksurvivalevolved/harvs-corner/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md"
             }
           ]
         },
@@ -463,6 +441,34 @@
             },
             {
               "headers": [
+                "Config",
+                "Patch Notes"
+              ],
+              "slug": "arksurvivalevolved/tranqs/index",
+              "title": "index",
+              "path": "docs/arksurvivalevolved/tranqs/index.md"
+            },
+            {
+              "title": "patch-notes",
+              "type": "folder",
+              "slug": "arksurvivalevolved/tranqs/patch-notes",
+              "items": [
+                {
+                  "headers": [
+                    "Player Inventory",
+                    "Vanilla",
+                    "Structures Plus (Including Forks)",
+                    "Vanilla Creatures",
+                    "Kraken Better Dinos"
+                  ],
+                  "slug": "arksurvivalevolved/tranqs/patch-notes/12-11-24",
+                  "title": "12-11-24",
+                  "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md"
+                }
+              ]
+            },
+            {
+              "headers": [
                 "Narcotics",
                 "Potent Narcotic",
                 "Concentrated Narcotic",
@@ -512,34 +518,6 @@
               "slug": "arksurvivalevolved/tranqs/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md"
-            },
-            {
-              "headers": [
-                "Config",
-                "Patch Notes"
-              ],
-              "slug": "arksurvivalevolved/tranqs/index",
-              "title": "index",
-              "path": "docs/arksurvivalevolved/tranqs/index.md"
-            },
-            {
-              "title": "patch-notes",
-              "type": "folder",
-              "slug": "arksurvivalevolved/tranqs/patch-notes",
-              "items": [
-                {
-                  "headers": [
-                    "Player Inventory",
-                    "Vanilla",
-                    "Structures Plus (Including Forks)",
-                    "Vanilla Creatures",
-                    "Kraken Better Dinos"
-                  ],
-                  "slug": "arksurvivalevolved/tranqs/patch-notes/12-11-24",
-                  "title": "12-11-24",
-                  "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md"
-                }
-              ]
             }
           ]
         },
@@ -589,6 +567,29 @@
               "path": "docs/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md"
             }
           ]
+        },
+        {
+          "title": "UtilitiesRemaster",
+          "type": "folder",
+          "slug": "arksurvivalevolved/utilitiesremaster",
+          "items": [
+            {
+              "title": "Config",
+              "type": "folder",
+              "slug": "arksurvivalevolved/utilitiesremaster/config",
+              "items": [
+                {
+                  "headers": [
+                    "Structure Settings",
+                    "Raft Settings"
+                  ],
+                  "slug": "arksurvivalevolved/utilitiesremaster/config/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -602,20 +603,6 @@
           "type": "folder",
           "slug": "minecraft/paper",
           "items": [
-            {
-              "headers": [
-                "Features",
-                "Configuration",
-                "Commands and Permissions",
-                "Authors",
-                "License"
-              ],
-              "slug": "minecraft/paper/swiftchop",
-              "title": "SwiftChop",
-              "type": "folder",
-              "items": [],
-              "path": "docs/minecraft/paper/SwiftChop/SwiftChop.md"
-            },
             {
               "title": "extensions",
               "type": "folder",
@@ -637,6 +624,20 @@
                   "path": "docs/minecraft/paper/extensions/permissions.md"
                 }
               ]
+            },
+            {
+              "headers": [
+                "Features",
+                "Configuration",
+                "Commands and Permissions",
+                "Authors",
+                "License"
+              ],
+              "slug": "minecraft/paper/swiftchop",
+              "title": "SwiftChop",
+              "type": "folder",
+              "items": [],
+              "path": "docs/minecraft/paper/SwiftChop/SwiftChop.md"
             }
           ]
         }

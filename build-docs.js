@@ -120,6 +120,30 @@ function processFolder(folder, parentSlug = '') {
     }
   });
 
+  // Sort items
+  items.sort((a, b) => {
+    // Get sort values, default to Infinity for items without sort value
+    const aHasSort = 'sort' in a;
+    const bHasSort = 'sort' in b;
+
+    // If one has sort and the other doesn't, sorted items come first
+    if (aHasSort !== bHasSort) {
+      return aHasSort ? -1 : 1;
+    }
+
+    // If both have sort values or both don't
+    if (aHasSort && bHasSort) {
+      const aSort = parseInt(a.sort);
+      const bSort = parseInt(b.sort);
+      if (aSort !== bSort) {
+        return aSort - bSort;
+      }
+    }
+
+    // Finally sort alphabetically by title
+    return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+  });
+
   let result = {
     ...folderMetadata,
     title: folderMetadata.title || folderName,
