@@ -38,17 +38,40 @@
     max-width: calc(100% - 10px);
 }
 
-/* Sort value styling */
-.has-sort-value::before {
-    content: attr(data-sort-value);
-    color: var(--color-yellow);
-    margin-right: 2px;
-}
-
 /* Title styling */
 .has-title::after {
     content: attr(data-title);
     color: var(--color-orange);
     font-size: 0.85em;
     opacity: 0.8;
+}
+
+/* Sort value styling - moved to appear last (after title) */
+.has-sort-value::after {
+    content: attr(data-sort-value);
+    color: var(--color-yellow);
+    margin-left: 4px;
+}
+
+/* Handle case when both title and sort are present - REPLACE THIS */
+.has-title.has-sort-value::after {
+    content: none; /* Remove the combined content */
+}
+
+/* Add separate pseudo-elements for title and sort when both exist */
+.has-title.has-sort-value::after {
+    content: attr(data-title);
+    color: var(--color-orange);
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.has-title.has-sort-value::before {
+    content: none; /* Ensure no content shows before */
+}
+
+/* Add sort value after the title with proper color */
+.has-title.has-sort-value .sort-suffix {
+    color: var(--color-yellow);
+    margin-left: 4px;
 }
