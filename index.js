@@ -32,6 +32,69 @@ class EventBus {
     }
 }
 
+class SearchService {
+    constructor(eventBus, indexService) {
+        this.eventBus = eventBus;
+        this.indexService = indexService;
+        this.searchIndex = [];
+    }
+
+    buildSearchIndex(documents) {
+        this.searchIndex = [];
+        this.processDocuments(documents);
+    }
+
+    processDocuments(documents, parentPath = '') {
+        documents.forEach(doc => {
+            if (doc.type === 'folder') {
+                const currentPath = parentPath ? `${parentPath} / ${doc.title}` : doc.title;
+                if (doc.path) {
+                    this.searchIndex.push({
+                        title: doc.title,
+                        path: doc.path,
+                        slug: doc.slug,
+                        location: currentPath,
+                        type: 'folder'
+                    });
+                }
+                if (doc.items) {
+                    this.processDocuments(doc.items, currentPath);
+                }
+            } else {
+                this.searchIndex.push({
+                    title: doc.title,
+                    path: doc.path,
+                    slug: doc.slug,
+                    location: parentPath,
+                    type: 'file'
+                });
+            }
+        });
+    }
+
+    search(query) {
+        if (!query) return [];
+        query = query.toLowerCase();
+        
+        return this.searchIndex
+            .filter(item => {
+                const titleMatch = item.title.toLowerCase().includes(query);
+                const pathMatch = item.path.toLowerCase().includes(query);
+                const locationMatch = item.location.toLowerCase().includes(query);
+                return titleMatch || pathMatch || locationMatch;
+            })
+            .sort((a, b) => {
+                // Prioritize exact matches in title
+                const aTitle = a.title.toLowerCase();
+                const bTitle = b.title.toLowerCase();
+                if (aTitle === query) return -1;
+                if (bTitle === query) return 1;
+                return aTitle.localeCompare(bTitle);
+            })
+            .slice(0, 10); // Limit to 10 results
+    }
+}
+
 class IndexService {
     findDocumentBySlug(documents, slug) {
         for (const doc of documents) {
@@ -93,7 +156,10 @@ class DOMService {
             titleText: document.querySelector('.title-text .page-title'),
             leftSidebar: document.querySelector('.left-sidebar'),
             menuButton: document.querySelector('.menu-button'),
-            header: document.querySelector('title-bar') // Add header element
+            header: document.querySelector('title-bar'), // Add header element
+            searchInput: document.getElementById('search-input'),
+            searchResults: document.getElementById('search-results'),
+            clearSearch: document.getElementById('clear-search')
         };
         this.headerOffset = 60; // Fixed header heightfsetHeight || 0; // Get header height
     }
@@ -197,10 +263,9 @@ class DOMService {
     }
 
     createFolderHeaderWithFile(iconClass, doc) {
-        const iconStyle = doc.color ? `color: ${doc.color};` : '';
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon" style="${iconStyle}"></i>
+                <i class="${iconClass} folder-icon"></i>
             </div>
             <span>${doc.title}</span>
             <a href="?${doc.slug}" class="folder-link" title="View folder page">
@@ -209,10 +274,9 @@ class DOMService {
     }
 
     createFolderHeaderBasic(iconClass, doc) {
-        const iconStyle = doc.color ? `color: ${doc.color};` : '';
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon" style="${iconStyle}"></i>
+                <i class="${iconClass} folder-icon"></i>
             </div>
             <span>${doc.title}</span>`;
     }
@@ -303,6 +367,67 @@ class DOMService {
         
         heading.appendChild(toggleBtn);
     }
+
+    setupSearch(searchService) {
+        let searchTimeout;
+        
+        this.elements.searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            const query = e.target.value;
+            
+            searchTimeout = setTimeout(() => {
+                const results = searchService.search(query);
+                this.renderSearchResults(results);
+            }, 200);
+        });
+
+        this.elements.clearSearch.addEventListener('click', () => {
+            this.elements.searchInput.value = '';
+            this.elements.searchResults.innerHTML = '';
+            this.elements.searchResults.style.display = 'none';
+        });
+    }
+
+    renderSearchResults(results) {
+        const container = this.elements.searchResults;
+        container.innerHTML = '';
+        
+        if (results.length === 0 || !this.elements.searchInput.value) {
+            container.style.display = 'none';
+            return;
+        }
+
+        results.forEach(result => {
+            const div = document.createElement('div');
+            div.className = 'search-result';
+            
+            const icon = document.createElement('i');
+            icon.className = result.type === 'folder' ? 'fas fa-folder' : 'fas fa-file-alt';
+            
+            const link = document.createElement('a');
+            link.href = `?${result.slug}`;
+            link.innerHTML = `
+                ${icon.outerHTML}
+                <div class="search-result-content">
+                    <div class="search-result-title">${result.title}</div>
+                    <div class="search-result-path">${result.location}</div>
+                </div>
+            `;
+            
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.elements.searchInput.value = '';
+                container.style.display = 'none';
+                history.pushState(null, '', link.href);
+                this.eventBus.emit('navigation:requested', { slug: result.slug });
+            });
+            
+            div.appendChild(link);
+            container.appendChild(div);
+        });
+        
+        container.style.display = 'block';
+    }
 }
 
 class DocumentService {
@@ -345,6 +470,20 @@ class DocumentService {
                 return link.replace(/^<a /, '<a data-internal="true" ');
             }
             return link.replace(/^<a /, `<a${attrs} `);
+        };
+        
+        // Add custom heading renderer to make headers clickable - without link icon
+        const originalHeading = renderer.heading.bind(renderer);
+        renderer.heading = (text, level) => {
+            const escapedText = text.toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-');
+                
+            const id = escapedText;
+            
+            return `<h${level} id="${id}" class="clickable-header">
+                ${text}
+            </h${level}>`;
         };
     }
 
@@ -447,7 +586,7 @@ class DocumentService {
 
     processImages(content, basePath) {
         return content.replace(/!\[\[(.*?)\]\]/g, (match, filename) => {
-            const mediaPath = `${basePath}/images/${filename}`;
+            const mediaPath = `./docs/images/${filename}`;
             
             if (filename.toLowerCase().endsWith('.mp4')) {
                 return `\n<video controls width="100%">
@@ -499,6 +638,7 @@ class Documentation {
     constructor() {
         this.eventBus = new EventBus();
         this.indexService = new IndexService();
+        this.searchService = new SearchService(this.eventBus, this.indexService);
         this.domService = new DOMService(this.eventBus);
         this.documentService = new DocumentService(this.eventBus, this.indexService);
         this.navigationService = new NavigationService(this.eventBus, this.documentService);
@@ -540,17 +680,9 @@ class Documentation {
             const data = await response.json();
             this.indexData = data;
             window._indexData = data;
-
-            // Load custom CSS files if specified
-            if (data.customCSS) {
-                const cssFiles = Array.isArray(data.customCSS) ? data.customCSS : [data.customCSS];
-                cssFiles.forEach(cssFile => {
-                    const link = document.createElement('link');
-                    link.rel = 'stylesheet';
-                    link.href = cssFile;
-                    document.head.appendChild(link);
-                });
-            }
+            
+            this.searchService.buildSearchIndex(this.indexData.documents);
+            this.domService.setupSearch(this.searchService);
             
             this.populateAuthorInfo(data.author);
             window.originalDocTitle = data.metadata.site_name || 'Documentation';
@@ -635,6 +767,23 @@ class Documentation {
             
             const headings = document.querySelectorAll('h2, h3, h4, h5, h6');
             const headingLinks = this.domService.createOutline(headings);
+            
+            // Add click handlers to all headers
+            headings.forEach(heading => {
+                heading.addEventListener('click', (e) => {
+                    // Don't trigger if clicking on fold toggle
+                    if (e.target.closest('svg') || e.target.closest('.header-anchor')) return;
+                    
+                    const id = heading.id;
+                    if (id) {
+                        history.pushState(null, '', `${window.location.pathname}${window.location.search}#${id}`);
+                        this.domService.scrollToElement(heading);
+                        heading.classList.remove('highlight');
+                        void heading.offsetWidth;
+                        heading.classList.add('highlight');
+                    }
+                });
+            });
             
             this.setupScrollObserver(headings, headingLinks);
             

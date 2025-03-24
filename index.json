@@ -1,501 +1,408 @@
 {
-    "defaultPage": "welcome",
-    "documents": [
+  "defaultPage": "welcome",
+  "author": {
+    "name": "ExcaliburAU",
+    "role": "Developer @MatesMedia",
+    "socials": [
+      {
+        "icon": "fab fa-github",
+        "url": "https://github.com/ExcaliburAU",
+        "title": "GitHub - ExcaliburAU"
+      },
+      {
+        "icon": "fab fa-youtube",
+        "url": "https://www.youtube.com/@ExcaliburAU",
+        "title": "YouTube - ExcaliburAU"
+      },
+      {
+        "icon": "fab fa-steam",
+        "url": "https://steamcommunity.com/id/ExcaliburAU",
+        "title": "Steam - ExcaliburAU"
+      },
+      {
+        "icon": "fab fa-discord",
+        "url": "https://exau.dev/discord",
+        "title": "Discord - exau.dev"
+      },
+      {
+        "icon": "fab fa-twitch",
+        "url": "https://www.twitch.tv/ExcaliburAU_",
+        "title": "Twitch - ExcaliburAU"
+      }
+    ]
+  },
+  "metadata": {
+    "description": "Explore detailed documentation for EXAU's projects, including guides, APIs, and best practices.",
+    "thumbnail": "img/logo.png",
+    "site_name": "EXAU.dev"
+  },
+  "documents": [
+    {
+      "title": "arksurvivalascended",
+      "type": "folder",
+      "slug": "arksurvivalascended",
+      "items": [
         {
-            "title": "Home",
-            "path": "docs/home.md",
-            "slug": "welcome"
-        },
-        {
-            "title": "ARK Survival Evolved",
-            "type": "folder",
-            "color": "#a94ffb",
-            "slug": "arksurvivalevolved",
-            "defaultOpen": true,
-            "items": [
-                {
-                    "title": "Excalibur Tranqs",
-                    "type": "folder",
-                    "path": "docs/arksurvivalevolved/tranqs/index.md",
-                    "slug": "arksurvivalevolved/tranqs",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/tranqs/spawn-codes"
-                                },
-                                {
-                                    "title": "GameUserSettings",
-                                    "path": "docs/arksurvivalevolved/tranqs/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/tranqs/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "01-04-25 | Mod Integration",
-                                    "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md",
-                                    "slug": "arksurvivalevolved/tranqs/patch-notes/12-11-24"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Crafter",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalevolved/crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/crafter/spawn-codes"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalevolved/crafter/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/crafter/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Net Ammo",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalevolved/net-ammo/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/netammo/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalevolved/net-ammo/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/netammo/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Stacks",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/stacks/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalevolved/stacks/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/stacks/gameusersettings-ini"
-                                },
-                                {
-                                    "title": "Immersive Taming",
-                                    "path": "docs/arksurvivalevolved/stacks/ImmersiveTaming.md",
-                                    "slug": "arksurvivalevolved/stacks/immersivetaming-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },
-                {
-                    "title": "Harvs Corner",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/harvs-corner/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalevolved/harvs-corner/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/harvs-corner/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "12-16-24",
-                                    "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24.md",
-                                    "slug": "arksurvivalevolved/harvs-corner/patch-notes/12-16-24"
-                                },
-                                {
-                                    "title": "12-17-24",
-                                    "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24.md",
-                                    "slug": "arksurvivalevolved/harvs/corner/patch-notes/12-17-24"
-                                },
-                                {
-                                    "title": "01-12-25",
-                                    "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25.md",
-                                    "slug": "arksurvivalevolved/harvs/corner/patch-notes/01-12-25"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Utilities",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/utilities/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalevolved/utilities/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/utilities/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "ARK Survival Ascended",
-            "type": "folder",
-            "color": "#a94ffb",
-            "defaultOpen": true,
-            "items": [
-                {
-                    "title": "Excalibur Tranqs",
-                    "path": "docs/arksurvivalascended/tranqs/index.md",
-                    "slug": "arksurvivalascended/tranqs",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalascended/tranqs/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings",
-                                    "path": "docs/arksurvivalascended/tranqs/GameUserSettings.md",
-                                    "slug": "arksurvivalascended/tranqs/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Crafter",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalascended/crafter/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalascended/crafter/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalascended/crafter/GameUserSettings.md",
-                                    "slug": "arksurvivalascended/crafter/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },                {
-                    "title": "Excalibur Spyglass",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalascended/spyglass/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalascended/spyglass/GameUserSettings.md",
-                                    "slug": "arksurvivalascended/spyglass/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Cropplots",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/cropplots/spawn-codes-engram-entries"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalascended/crafter/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/cropplots/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },
-                {
-                    "title": "Excalibur Trashcan",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "defaultOpen": false,
-                            "items": [
-                                {
-                                    "title": "Spawn Codes & Engram Entries",
-                                    "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md",
-                                    "slug": "arksurvivalevolved/cropplots/spawn-codes"
-                                },
-                                {
-                                    "title": "GameUserSettings.ini",
-                                    "path": "docs/arksurvivalascended/cropplots/GameUserSettings.md",
-                                    "slug": "arksurvivalevolved/cropplots/gameusersettings-ini"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                }
-            ]
-        },{
-            "title": "Minecraft",
-            "type": "folder",
-            "color": "#a94ffb",
-            "defaultOpen": true,
-            "items": [
-                {
-                    "title": "Extensions",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "items": [
-                                {
-                                    "title": "Permissions",
-                                    "path": "docs/mc/paper/extensions/permissions.md",
-                                    "slug": "mc/paper/extensions/permissions"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                },{
-                    "title": "SwiftChop",
-                    "type": "folder",
-                    "defaultOpen": false,
-                    "items": [
-                        {
-                            "title": "Config",
-                            "type": "folder",
-                            "icon": "fa-solid fa-gear",
-                            "items": [
-                                {
-                                    "title": "Information",
-                                    "path": "docs/mc/paper/SwiftChop/SwiftChop.md",
-                                    "slug": "mc/paper/swiftchop/information"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Patch Notes",
-                            "type": "folder",
-                            "icon": "fa-solid fa-file-pen",
-                            "defaultOpen": false,
-                            "items": []
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "author": {
-        "name": "ExcaliburAU",
-        "role": "Developer @MatesMedia",
-        "socials": [
+          "title": "crafter",
+          "type": "folder",
+          "slug": "arksurvivalascended/crafter",
+          "items": [
             {
-                "icon": "fab fa-github",
-                "url": "https://github.com/ExcaliburAU",
-                "title": "GitHub - ExcaliburAU"
+              "slug": "arksurvivalascended/crafter/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalascended/crafter/GameUserSettings.md"
             },
             {
-                "icon": "fab fa-youtube",
-                "url": "https://www.youtube.com/@ExcaliburAU",
-                "title": "YouTube - ExcaliburAU"
-            },
-            {
-                "icon": "fab fa-steam",
-                "url": "https://steamcommunity.com/id/ExcaliburAU",
-                "title": "Steam - ExcaliburAU"
-            },
-            {
-                "icon": "fab fa-discord",
-                "url": "https://exau.dev/discord",
-                "title": "Discord - exau.dev"
-            },
-            {
-                "icon": "fab fa-twitch",
-                "url": "https://www.twitch.tv/ExcaliburAU_",
-                "title": "Twitch - ExcaliburAU"
+              "slug": "arksurvivalascended/crafter/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalascended/crafter/Spawn Codes & Engram Entries.md"
             }
-        ]
+          ]
+        },
+        {
+          "title": "cropplots",
+          "type": "folder",
+          "slug": "arksurvivalascended/cropplots",
+          "items": [
+            {
+              "slug": "arksurvivalascended/cropplots/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalascended/cropplots/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalascended/cropplots/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md"
+            }
+          ]
+        },
+        {
+          "title": "spyglass",
+          "type": "folder",
+          "slug": "arksurvivalascended/spyglass",
+          "items": [
+            {
+              "slug": "arksurvivalascended/spyglass/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalascended/spyglass/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalascended/spyglass/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md"
+            },
+            {
+              "slug": "arksurvivalascended/spyglass/to-do",
+              "title": "to do",
+              "path": "docs/arksurvivalascended/spyglass/to do.md"
+            }
+          ]
+        },
+        {
+          "title": "tranqs",
+          "type": "folder",
+          "slug": "arksurvivalascended/tranqs",
+          "items": [
+            {
+              "slug": "arksurvivalascended/tranqs/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalascended/tranqs/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalascended/tranqs/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md"
+            },
+            {
+              "slug": "arksurvivalascended/tranqs/index",
+              "title": "index",
+              "path": "docs/arksurvivalascended/tranqs/index.md"
+            },
+            {
+              "title": "patch-notes",
+              "type": "folder",
+              "slug": "arksurvivalascended/tranqs/patch-notes",
+              "items": [
+                {
+                  "slug": "arksurvivalascended/tranqs/patch-notes/02-23-25",
+                  "title": "02-23-25",
+                  "path": "docs/arksurvivalascended/tranqs/patch-notes/02-23-25.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "trashcan",
+          "type": "folder",
+          "slug": "arksurvivalascended/trashcan",
+          "items": [
+            {
+              "slug": "arksurvivalascended/trashcan/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalascended/trashcan/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalascended/trashcan/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md"
+            }
+          ]
+        }
+      ]
     },
-    "metadata": {
-        "description": "Explore detailed documentation for EXAU's projects, including guides, APIs, and best practices.",
-        "thumbnail": "img/logo.png",
-        "site_name": "EXAU.dev"
+    {
+      "title": "arksurvivalevolved",
+      "type": "folder",
+      "slug": "arksurvivalevolved",
+      "items": [
+        {
+          "title": "UtilitiesRemaster",
+          "type": "folder",
+          "slug": "arksurvivalevolved/utilitiesremaster",
+          "items": [
+            {
+              "title": "Config",
+              "type": "folder",
+              "slug": "arksurvivalevolved/utilitiesremaster/config",
+              "items": [
+                {
+                  "slug": "arksurvivalevolved/utilitiesremaster/config/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "crafter",
+          "type": "folder",
+          "slug": "arksurvivalevolved/crafter",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/crafter/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/crafter/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalevolved/crafter/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/crafter/Spawn Codes & Engram Entries.md"
+            }
+          ]
+        },
+        {
+          "title": "excalibur-tranqs",
+          "type": "folder",
+          "slug": "arksurvivalevolved/excalibur-tranqs",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/excalibur-tranqs/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/excalibur-tranqs/GameUserSettings.md"
+            }
+          ]
+        },
+        {
+          "title": "excalutils",
+          "type": "folder",
+          "slug": "arksurvivalevolved/excalutils",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/excalutils/gameusersetting",
+              "title": "GameUserSetting",
+              "path": "docs/arksurvivalevolved/excalutils/GameUserSetting.md"
+            },
+            {
+              "slug": "arksurvivalevolved/excalutils/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md"
+            }
+          ]
+        },
+        {
+          "title": "harvs-corner",
+          "type": "folder",
+          "slug": "arksurvivalevolved/harvs-corner",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/harvs-corner/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/harvs-corner/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalevolved/harvs-corner/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md"
+            },
+            {
+              "title": "patch-notes",
+              "type": "folder",
+              "slug": "arksurvivalevolved/harvs-corner/patch-notes",
+              "items": [
+                {
+                  "title": "2024",
+                  "type": "folder",
+                  "slug": "arksurvivalevolved/harvs-corner/patch-notes/2024",
+                  "items": [
+                    {
+                      "slug": "arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24",
+                      "title": "12-16-24",
+                      "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24.md"
+                    },
+                    {
+                      "slug": "arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24",
+                      "title": "12-17-24",
+                      "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24.md"
+                    }
+                  ]
+                },
+                {
+                  "title": "2025",
+                  "type": "folder",
+                  "slug": "arksurvivalevolved/harvs-corner/patch-notes/2025",
+                  "items": [
+                    {
+                      "slug": "arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25",
+                      "title": "01-12-25",
+                      "path": "docs/arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25.md"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "net-ammo",
+          "type": "folder",
+          "slug": "arksurvivalevolved/net-ammo",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/net-ammo/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/net-ammo/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalevolved/net-ammo/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/net-ammo/Spawn Codes & Engram Entries.md"
+            }
+          ]
+        },
+        {
+          "title": "stacks",
+          "type": "folder",
+          "slug": "arksurvivalevolved/stacks",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/stacks/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/stacks/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalevolved/stacks/immersivetaming",
+              "title": "ImmersiveTaming",
+              "path": "docs/arksurvivalevolved/stacks/ImmersiveTaming.md"
+            },
+            {
+              "slug": "arksurvivalevolved/stacks/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md"
+            }
+          ]
+        },
+        {
+          "title": "tranqs",
+          "type": "folder",
+          "slug": "arksurvivalevolved/tranqs",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/tranqs/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/tranqs/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalevolved/tranqs/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md"
+            },
+            {
+              "slug": "arksurvivalevolved/tranqs/index",
+              "title": "index",
+              "path": "docs/arksurvivalevolved/tranqs/index.md"
+            },
+            {
+              "title": "patch-notes",
+              "type": "folder",
+              "slug": "arksurvivalevolved/tranqs/patch-notes",
+              "items": [
+                {
+                  "slug": "arksurvivalevolved/tranqs/patch-notes/12-11-24",
+                  "title": "12-11-24",
+                  "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "utilities",
+          "type": "folder",
+          "slug": "arksurvivalevolved/utilities",
+          "items": [
+            {
+              "slug": "arksurvivalevolved/utilities/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/utilities/GameUserSettings.md"
+            },
+            {
+              "slug": "arksurvivalevolved/utilities/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Welcome to EXAU Documentation",
+      "slug": "welcome-to-exau-documentation",
+      "path": "docs/home.md"
+    },
+    {
+      "title": "minecraft",
+      "type": "folder",
+      "slug": "minecraft",
+      "items": [
+        {
+          "title": "paper",
+          "type": "folder",
+          "slug": "minecraft/paper",
+          "items": [
+            {
+              "slug": "minecraft/paper/swiftchop",
+              "title": "SwiftChop",
+              "type": "folder",
+              "items": [],
+              "path": "docs/minecraft/paper/SwiftChop/SwiftChop.md"
+            },
+            {
+              "title": "extensions",
+              "type": "folder",
+              "slug": "minecraft/paper/extensions",
+              "items": [
+                {
+                  "slug": "minecraft/paper/extensions/permissions",
+                  "title": "permissions",
+                  "path": "docs/minecraft/paper/extensions/permissions.md"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
+  ]
 }
