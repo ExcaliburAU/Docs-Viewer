@@ -21,12 +21,21 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    vertical-align: middle;
 }
 
-/* Reduce indent for child items */
+/* Reduce indent for child items - improved spacing */
 .nav-folder .nav-folder .nav-file-title, 
 .nav-folder .nav-folder .nav-folder-title {
-    padding-left: 12px !important;
+    padding-left: 15px !important;
+}
+
+/* Ensure proper alignment with sort values and titles */
+.nav-file-title-content.has-sort-value,
+.nav-file-title-content.has-title {
+    padding-right: 5px;
+    display: inline-block;
+    max-width: calc(100% - 10px);
 }
 
 /* Sort value styling */
