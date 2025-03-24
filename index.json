@@ -40,6 +40,7 @@
     {
       "title": "ARK: Survival Ascended",
       "icon": "",
+      "defaultOpen": "true",
       "slug": "ark-survival-ascended",
       "type": "folder",
       "items": [
@@ -369,11 +370,6 @@
       ]
     },
     {
-      "title": "Welcome to EXAU Documentation",
-      "slug": "welcome-to-exau-documentation",
-      "path": "docs/home.md"
-    },
-    {
       "title": "minecraft",
       "type": "folder",
       "slug": "minecraft",
@@ -405,6 +401,11 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Welcome to EXAU Documentation",
+      "slug": "welcome-to-exau-documentation",
+      "path": "docs/welcome.md"
     }
   ]
 }
