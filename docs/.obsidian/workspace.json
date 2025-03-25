@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/arksurvivalascended.md",
+                "file": "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "arksurvivalascended"
+              "title": "GameUserSettings"
             }
           },
           {
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 377.5
   },
   "right": {
     "id": "642d5319f1f437db",
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalascended/arksurvivalascended.md",
+                "file": "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of arksurvivalascended"
+              "title": "Outline of GameUserSettings"
             }
           }
         ],
@@ -181,10 +181,14 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "arksurvivalevolved/arksurvivalevolved.md",
+    "arksurvivalevolved/tranqs/GameUserSettings.md",
+    "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
     "minecraft/minecraft.md",
-    "arksurvivalascended/arksurvivalascended.md",
     "welcome.md",
+    "minecraft/paper/extensions/permissions.md",
+    "minecraft/paper/SwiftChop/SwiftChop.md",
+    "arksurvivalascended/arksurvivalascended.md",
+    "arksurvivalevolved/arksurvivalevolved.md",
     "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/GameUserSettings.md",
     "arksurvivalascended/spyglass/GameUserSettings.md",
@@ -205,16 +209,12 @@
     "arksurvivalevolved/tranqs/patch-notes/12-11-24.md",
     "ase/excalutils/Untitled",
     "arksurvivalevolved/excalutils",
-    "minecraft/paper/SwiftChop/SwiftChop.md",
     "minecraft/paper/SwiftChop",
     "arksurvivalevolved/tranqs/index.md",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
-    "arksurvivalevolved/tranqs/GameUserSettings.md",
-    "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
     "arksurvivalevolved/excalibur-tranqs",
-    "minecraft/paper/extensions/permissions.md",
     "minecraft/paper/extensions",
     "arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/trashcan/GameUserSettings.md",
