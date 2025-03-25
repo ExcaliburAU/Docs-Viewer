@@ -7,32 +7,6 @@
         "thumbnail": "img/default-thumbnail.png",
         "site_name": "DocsHub"
     },
-    "documents": [
-        {
-            "title": "Home",
-            "path": "docs/index.md",
-            "slug": "home"
-        },
-        {
-            "title": "Category One",
-            "type": "folder",
-            "path": "docs/category-one.md",
-            "color": "#2196f3",
-            "items": [
-                {
-                    "title": "Feature A",
-                    "path": "docs/feature-a.md",
-                    "slug": "feature-a"
-                },
-                {
-                    "title": "Feature B",
-                    "path": "docs/feature-b.md",
-                    "slug": "feature-b",
-                    "thumbnail": "images/docThumb.png"
-                }
-            ]
-        }
-    ],
     "author": {
         "name": "John Doe",
         "role": "Software Engineer",

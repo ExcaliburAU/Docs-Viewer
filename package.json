@@ -1,0 +1,12 @@
+{
+  "name": "docs-viewer",
+  "version": "1.0.0",
+  "description": "Documentation viewer application",
+  "scripts": {
+    "start": "live-server --port=8080 --no-browser",
+    "build": "node build-docs.js"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
