@@ -1,44 +1,50 @@
 const obsidian = require('obsidian');
 
-class TitleAppenderPlugin extends obsidian.Plugin {
+/**
+ * @class DocsViewerPlugin
+ * @description An Obsidian plugin that enhances document viewing by adding titles from frontmatter to file and folder elements
+ * @extends {obsidian.Plugin}
+ */
+class DocsViewerPlugin extends obsidian.Plugin {
+    /**
+     * @description Plugin initialization method called when the plugin is loaded
+     * @returns {Promise<void>}
+     */
     async onload() {
-        console.log('Loading TitleAppender plugin');
+        console.log('Loading DocsViewer plugin');
         
-        // Initial update attempt
         this.updateAllTitles();
         
-        // Wait for layout to be ready before registering events
         this.app.workspace.onLayoutReady(() => {
             this.registerEvents();
             
-            // Force another update after layout is ready
             setTimeout(() => {
                 this.updateAllTitles();
             }, 500);
         });
 
-        // Schedule periodic updates to catch any missed files
         this.registerInterval(
             window.setInterval(() => this.updateAllTitles(), 5000)
         );
     }
     
+    /**
+     * @description Registers event listeners for file and layout changes
+     * @returns {void}
+     */
     registerEvents() {
-        // Update styles when files change
         this.registerEvent(
             this.app.metadataCache.on('changed', () => {
                 this.updateAllTitles();
             })
         );
         
-        // Update on file explorer changes
         this.registerEvent(
             this.app.workspace.on('file-menu', () => {
                 this.updateAllTitles();
             })
         );
         
-        // Update when layout changes
         this.registerEvent(
             this.app.workspace.on('layout-change', () => {
                 this.updateAllTitles();
@@ -46,79 +52,168 @@ class TitleAppenderPlugin extends obsidian.Plugin {
         );
     }
     
+    /**
+     * @description Updates display titles for files and folders based on frontmatter data
+     * @details Processes all markdown files to extract frontmatter and update the UI with proper titles and sorting
+     * @returns {void}
+     */
     updateAllTitles() {
         try {
-            // Get all markdown files
             const files = this.app.vault.getMarkdownFiles();
-            
-            // First, clean up any existing elements
             this.cleanupExistingElements();
-            
-            // Apply classes and attributes for each file with frontmatter
-            files.forEach(file => {
-                try {
-                    const metadata = this.app.metadataCache.getFileCache(file);
-                    const frontmatter = metadata?.frontmatter;
-                    const title = frontmatter?.title;
-                    const sortValue = frontmatter?.sort;
-                    
-                    if (title || sortValue) {
-                        const escapedPath = CSS.escape(file.path);
-                        const fileElements = document.querySelectorAll(`.nav-file-title[data-path="${escapedPath}"] .nav-file-title-content`);
-                        
-                        fileElements.forEach(fileElement => {
-                            if (fileElement) {
-                                // Add title if available
-                                if (title) {
-                                    fileElement.classList.add('has-title');
-                                    fileElement.setAttribute('data-title', ` (${title})`);
-                                }
-                                
-                                // Add sort value if available
-                                if (sortValue !== undefined) {
-                                    fileElement.classList.add('has-sort-value');
-                                    
-                                    // If both title and sort exist, create a span for the sort value
-                                    if (title) {
-                                        // Create a span for the sort value to apply different color
-                                        const sortSpan = document.createElement('span');
-                                        sortSpan.className = 'sort-suffix';
-                                        sortSpan.textContent = `[${sortValue}]`;
-                                        fileElement.appendChild(sortSpan);
-                                    } else {
-                                        // If only sort exists, use the attribute
-                                        fileElement.setAttribute('data-sort-value', `[${sortValue}]`);
-                                    }
-                                }
-                            }
-                        });
+
+            this.ensureCustomStyles();
+
+            document.querySelectorAll('.tree-item.nav-file, .nav-file, .tree-item.nav-folder, .nav-folder').forEach(item => {
+                let path, isFolder;
+                
+                const folderTitleEl = item.querySelector('.tree-item-self[data-path]');
+                if (folderTitleEl && item.classList.contains('nav-folder')) {
+                    path = folderTitleEl.getAttribute('data-path');
+                    isFolder = true;
+                } else {
+                    const fileEl = item.querySelector('.tree-item-self, .nav-file-title');
+                    if (fileEl) {
+                        path = fileEl.getAttribute('data-path');
+                        isFolder = false;
+                    } else {
+                        return;
                     }
-                } catch (e) {
-                    console.error('Error processing file:', file?.path, e);
+                }
+                
+                if (!path) return;
+                
+                let file;
+                if (isFolder) {
+                    const folderName = path.split('/').pop();
+                    file = files.find(f => f.path === `${path}/${folderName}.md`);
+                    
+                    if (!file) return;
+                } else {
+                    file = files.find(f => f.path === path);
+                }
+                
+                if (!file) return;
+                
+                const frontmatter = this.app.metadataCache.getFileCache(file)?.frontmatter;
+                
+                const parentContainer = item.parentElement;
+                if (parentContainer) {
+                    parentContainer.classList.add('docs-viewer-flex-container');
+                    
+                    let sortValue;
+                    
+                    if (!isFolder) {
+                        const filePath = file.path;
+                        const folderName = filePath.substring(0, filePath.lastIndexOf('/')).split('/').pop();
+                        if (folderName && file.basename === folderName) {
+                            sortValue = -9999999;
+                        } else {
+                            sortValue = frontmatter?.sort !== undefined ? parseInt(frontmatter.sort) : 9999;
+                        }
+                    } else {
+                        sortValue = frontmatter?.sort !== undefined ? parseInt(frontmatter.sort) : 9999;
+                    }
+                    
+                    item.style.order = sortValue;
+                }
+                
+                if (!isFolder) {
+                    const titleEl = item.querySelector('.tree-item-inner, .nav-file-title-content');
+                    if (titleEl) {
+                        const frontTitle = frontmatter?.title;
+                        if (frontTitle && frontTitle !== file.basename) {
+                            const frontSort = frontmatter?.sort;
+                            let displayTitle = frontTitle;
+                            if (frontSort !== undefined) {
+                                titleEl.setAttribute('data-sort', frontSort);
+                            }
+                            
+                            titleEl.classList.add('has-title');
+                            titleEl.setAttribute('data-title', ` (${displayTitle})`);
+                        }
+                    }
+                } 
+                else {
+                    const folderTitleEl = item.querySelector('.tree-item-inner') || 
+                                         item.querySelector('.nav-folder-title-content');
+                    
+                    if (folderTitleEl && frontmatter && frontmatter.title) {
+                        const frontTitle = frontmatter.title;
+                        const frontSort = frontmatter.sort;
+                        
+                        folderTitleEl.classList.add('has-title');
+                        folderTitleEl.setAttribute('data-title', ` (${frontTitle})`);
+                        
+                        if (frontSort !== undefined) {
+                            folderTitleEl.setAttribute('data-sort', frontSort);
+                        }
+                    }
                 }
             });
+
         } catch (error) {
             console.error('Error updating titles:', error);
         }
     }
-    
+
+    /**
+     * @description Ensures the plugin's custom CSS styles are loaded in the document
+     * @returns {void}
+     */
+    ensureCustomStyles() {
+        const styleId = 'docs-viewer-style';
+        // Check if our stylesheet is already in the document
+        if (!document.getElementById(styleId)) {
+            const link = document.createElement('link');
+            link.id = styleId;
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'obsidian://css-theme-plugins/docs-viewer/styles.css';
+            document.head.appendChild(link);
+        }
+    }
+
+    /**
+     * @description Removes all custom classes and attributes added by this plugin
+     * @details Called during cleanup and before applying new changes to prevent duplication
+     * @returns {void}
+     */
     cleanupExistingElements() {
-        // Remove all classes and attributes
-        document.querySelectorAll('.has-sort-value, .has-title').forEach(el => {
-            el.classList.remove('has-sort-value', 'has-title');
-            el.removeAttribute('data-sort-value');
+        // Remove custom classes and attributes from elements
+        document.querySelectorAll('.has-title, .folder-has-title').forEach(el => {
+            el.classList.remove('has-title', 'folder-has-title');
             el.removeAttribute('data-title');
-            
-            // Remove any added elements
-            const sortSuffix = el.querySelector('.sort-suffix');
-            if (sortSuffix) sortSuffix.remove();
+            el.removeAttribute('data-sort');
+            el.removeAttribute('data-folder-title');
+        });
+        
+        // Reset order styles on tree items and files
+        document.querySelectorAll('.tree-item, .nav-file').forEach(el => {
+            el.style.order = '';
         });
     }
     
+    /**
+     * @description Plugin lifecycle method called when the plugin is disabled or Obsidian is closed
+     * @details Performs cleanup to remove all plugin-added elements and styles
+     * @returns {void}
+     */
     onunload() {
-        console.log('Unloading TitleAppender plugin');
+        console.log('Unloading DocsViewer plugin');
+        // Remove all custom attributes and classes
         this.cleanupExistingElements();
+        
+        // Remove flex container class from parent elements
+        document.querySelectorAll('.docs-viewer-flex-container').forEach(el => {
+            el.classList.remove('docs-viewer-flex-container');
+        });
+        
+        // Ensure order styles are cleared from navigation elements
+        document.querySelectorAll('.nav-file, .nav-file-title').forEach(el => {
+            el.style.order = '';
+        });
     }
 }
 
-module.exports = TitleAppenderPlugin;
+module.exports = DocsViewerPlugin;
