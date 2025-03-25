@@ -193,8 +193,10 @@ class DOMService {
     }
 
     setupMobileMenu() {
-        this.elements.menuButton.addEventListener('click', () =>
-            this.elements.leftSidebar.classList.toggle('show'));
+        this.elements.menuButton.addEventListener('click', () => {
+            const isExpanded = this.elements.leftSidebar.classList.toggle('show');
+            this.elements.menuButton.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        });
 
         this.elements.content.addEventListener('click', () =>
             this.elements.leftSidebar.classList.remove('show'));
@@ -224,6 +226,9 @@ class DOMService {
 
             const folderHeader = document.createElement('div');
             folderHeader.className = 'folder-header';
+            folderHeader.setAttribute('role', 'treeitem');
+            folderHeader.setAttribute('aria-expanded', doc.defaultOpen !== false ? 'true' : 'false');
+            folderHeader.setAttribute('tabindex', '0');
             const iconClass = doc.icon || `fas fa-folder${doc.defaultOpen !== false ? '-open' : ''}`;
 
             // Only add folder click handler if showfolderpage is not false
@@ -235,10 +240,20 @@ class DOMService {
                 // Only setup the folder open/close functionality
                 folderHeader.addEventListener('click', () => {
                     folderDiv.classList.toggle('open');
+                    const isExpanded = folderDiv.classList.contains('open');
+                    folderHeader.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
                     if (!doc.icon) {
                         const icon = folderHeader.querySelector('.folder-icon');
                         icon.classList.toggle('fa-folder-closed');
                         icon.classList.toggle('fa-folder-open');
+                    }
+                });
+                
+                // Add keyboard accessibility
+                folderHeader.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        folderHeader.click();
                     }
                 });
             }
@@ -261,6 +276,7 @@ class DOMService {
         link.textContent = doc.title || doc.path.split('/').pop().replace('.md', '');
         link.dataset.path = doc.path;
         link.style.paddingLeft = `${(level * 0.6) + 0.8}rem`;  // Add base padding of 0.8rem
+        link.setAttribute('role', 'treeitem');
 
         link.onclick = (e) => {
             e.preventDefault();
@@ -304,19 +320,19 @@ class DOMService {
         const showFolderPage = doc.showfolderpage !== 'false';
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon"></i>
+                <i class="${iconClass} folder-icon" aria-hidden="true"></i>
             </div>
-            <span>${doc.title}</pan>
+            <span>${doc.title}</span>
             ${showFolderPage ? `
-                <a href="?${doc.slug}" class="folder-link" title="View folder page">
-                    <i class="fas fa-file-alt"></i>
+                <a href="?${doc.slug}" class="folder-link" title="View folder page" aria-label="View ${doc.title} folder page">
+                    <i class="fas fa-file-alt" aria-hidden="true"></i>
                 </a>` : ''}`;
     }
 
     createFolderHeaderBasic(iconClass, doc) {
         return `
             <div class="folder-icons">
-                <i class="${iconClass} folder-icon"></i>
+                <i class="${iconClass} folder-icon" aria-hidden="true"></i>
             </div>
             <span>${doc.title}</span>`;
     }
@@ -334,10 +350,24 @@ class DOMService {
             }
 
             folderDiv.classList.toggle('open');
+            const isExpanded = folderDiv.classList.contains('open');
+            folderHeader.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
             if (!doc.icon) {
                 const icon = folderHeader.querySelector('.folder-icon');
                 icon.classList.toggle('fa-folder-closed');
                 icon.classList.toggle('fa-folder-open');
+            }
+        });
+        
+        // Add keyboard support
+        folderHeader.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                if (e.target.closest('.folder-link')) {
+                    e.target.closest('.folder-link').click();
+                } else {
+                    folderHeader.click();
+                }
             }
         });
     }
@@ -425,6 +455,8 @@ class DOMService {
             this.elements.searchInput.value = '';
             this.elements.searchResults.innerHTML = '';
             this.elements.searchResults.style.display = 'none';
+            // Announce to screen readers
+            this.elements.searchResults.setAttribute('aria-hidden', 'true');
         });
     }
 
@@ -434,7 +466,16 @@ class DOMService {
 
         if (results.length === 0 || !this.elements.searchInput.value) {
             container.style.display = 'none';
+            container.setAttribute('aria-hidden', 'true');
             return;
+        }
+
+        // Update for screen readers
+        container.setAttribute('aria-hidden', 'false');
+        if (results.length === 1) {
+            container.setAttribute('aria-label', '1 search result found');
+        } else {
+            container.setAttribute('aria-label', `${results.length} search results found`);
         }
 
         results.forEach(result => {
@@ -686,6 +727,7 @@ class Documentation {
         this.navigationService = new NavigationService(this.eventBus, this.documentService);
 
         this.setupEventListeners();
+        this.setupKeyboardShortcuts();
     }
 
     setupEventListeners() {
@@ -710,6 +752,79 @@ class Documentation {
                 const slug = target.href.split('?').pop();
                 history.pushState(null, '', target.href);
                 await this.loadDocumentBySlug(slug);
+            }
+        });
+    }
+    
+    setupKeyboardShortcuts() {
+        // Add keyboard shortcut for search (S key)
+        document.addEventListener('keydown', (e) => {
+            // Only trigger if user is not typing in an input, textarea, or contenteditable element
+            const isTyping = ['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName) || 
+                           document.activeElement.isContentEditable;
+            
+            // Search shortcut (S key or Alt+S)                   
+            if (((e.key === 's' || e.key === 'S') && !e.ctrlKey && !e.metaKey && 
+                (!e.altKey || (e.altKey && (e.key === 's' || e.key === 'S')))) && 
+                !isTyping) {
+                e.preventDefault();
+                
+                // Focus the search input
+                const searchInput = document.getElementById('search-input');
+                if (searchInput) {
+                    searchInput.focus();
+                    
+                    // If sidebar is closed on mobile, open it
+                    const leftSidebar = document.querySelector('.left-sidebar');
+                    const menuButton = document.querySelector('.menu-button');
+                    if (window.innerWidth <= 1000 && leftSidebar && 
+                        !leftSidebar.classList.contains('show')) {
+                        leftSidebar.classList.add('show');
+                        if (menuButton) {
+                            menuButton.setAttribute('aria-expanded', 'true');
+                        }
+                    }
+                }
+            }
+            
+            // Navigation with Alt+Up/Down to move between pages
+            if ((e.key === 'ArrowUp' || e.key === 'ArrowDown') && e.altKey && !isTyping) {
+                e.preventDefault();
+                
+                // Get all links from the file index
+                const fileLinks = Array.from(document.querySelectorAll('#file-index a'));
+                if (fileLinks.length === 0) return;
+                
+                // Find the current active link
+                const activeLink = document.querySelector('#file-index a.active');
+                if (!activeLink) return;
+                
+                // Find the index of the active link
+                const activeIndex = fileLinks.indexOf(activeLink);
+                if (activeIndex === -1) return;
+                
+                // Determine the target link based on direction
+                let targetLink;
+                if (e.key === 'ArrowDown') {
+                    // Go to next link (or first if at the end)
+                    targetLink = activeIndex < fileLinks.length - 1 ? 
+                        fileLinks[activeIndex + 1] : 
+                        fileLinks[0];
+                } else {
+                    // Go to previous link (or last if at the beginning)
+                    targetLink = activeIndex > 0 ? 
+                        fileLinks[activeIndex - 1] : 
+                        fileLinks[fileLinks.length - 1];
+                }
+                
+                // Navigate to the target page
+                if (targetLink) {
+                    // Simulate a click on the link
+                    targetLink.click();
+                    
+                    // Ensure the target link is visible in the sidebar
+                    targetLink.scrollIntoView({ block: 'nearest' });
+                }
             }
         });
     }
