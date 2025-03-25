@@ -90,6 +90,7 @@ body {
     cursor: pointer;
     opacity: 0.6;
     transition: opacity 0.2s;
+    margin-left: 0;
 }
 
 .search-box .fa-times:hover {
@@ -691,4 +692,437 @@ social-links a:hover {
 @keyframes highlight-fade {
     0% { background-color: rgba(52, 152, 219, 0.2); }
     100% { background-color: transparent; }
+}
+
+/* Add a skip link for keyboard navigation */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 8px;
+    z-index: 2000;
+    background: var(--ifm-color-primary);
+    color: white;
+    font-weight: bold;
+    transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+    top: 0;
+    outline: 2px solid white;
+}
+
+/* Improve focus styles for better keyboard navigation */
+/* Remove the conflicting focus style rules */
+/* Remove these conflicting rules */
+*:focus {
+    outline: none !important;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--ifm-color-primary) !important;
+    outline-offset: 2px !important;
+}
+
+a:focus,
+button:focus,
+input:focus,
+.folder-header:focus,
+.clickable-header:focus {
+    outline: none !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.folder-header:focus-visible,
+.clickable-header:focus-visible {
+    outline: none !important;
+}
+
+/* Add clean focus style rules */
+/* This allows keyboard focus to be visible but hides it for mouse clicks */
+:focus {
+    outline: none !important;
+}
+
+/* Only show focus styles for keyboard navigation */
+:focus-visible {
+    outline: 2px solid var(--ifm-color-primary) !important;
+    outline-offset: 2px !important;
+}
+
+/* Force focus visible off for mouse interaction */
+:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+/* Ensure contrast for links and interactive elements */
+.folder-header:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Keep the skip link visible when it gets focus */
+.skip-to-content:focus {
+    top: 0;
+    outline: 2px solid white !important;
+}
+
+/* Don't hide keyboard focus styles on mobile */
+@media (max-width: 1000px) {
+    :focus-visible {
+        outline: 2px solid var(--ifm-color-primary) !important;
+    }
+    
+    .menu-button {
+        display: flex !important;
+    }
+
+    .left-sidebar {
+        left: -100%;
+        width: min(var(--doc-sidebar-width), 80vw);
+        transition: left 0.3s ease;
+        box-shadow: none;
+    }
+
+    .left-sidebar.show {
+        left: 0;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    .markdown-content {
+        padding: 0 0.5rem;
+    }
+
+    #file-index {
+        padding-top: 0.75rem;
+    }
+}
+
+/* Make sure aria-hidden elements aren't focusable */
+[aria-hidden="true"] {
+    pointer-events: none;
+}
+
+/* Don't hide focus-visible on mobile */
+@media (max-width: 1000px) {
+    *:focus-visible {
+        outline: 2px solid var(--ifm-color-primary) !important;
+    }
+    
+    .menu-button {
+        display: flex !important;
+    }
+
+    .left-sidebar {
+        left: -100%;
+        width: min(var(--doc-sidebar-width), 80vw);
+        transition: left 0.3s ease;
+        box-shadow: none;
+    }
+
+    .left-sidebar.show {
+        left: 0;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem;
+    }
+
+    .markdown-content {
+        padding: 0 0.5rem;
+    }
+
+    #file-index {
+        padding-top: 0.75rem;
+    }
+}
+
+/* Style the keyboard shortcut indicator */
+.keyboard-shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--ifm-color-content-secondary);
+    border-radius: 3px;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+    color: var(--ifm-color-content-secondary);
+    opacity: 0.7;
+    user-select: none;
+}
+
+/* Style the Alt+S keyboard shortcut */
+.keyboard-shortcut-alt {
+    width: auto;
+    padding: 0 4px;
+    font-size: 0.7rem;
+}
+
+/* Hide keyboard shortcut on mobile */
+@media (max-width: 768px) {
+    .keyboard-shortcut {
+        display: none;
+    }
+}
+
+/* Print styles... */
+@media print {
+    .title-bar,
+    .left-sidebar,
+    .right-sidebar,
+    .menu-button,
+    .social-links,
+    .github-link,
+    .subtitle {
+        display: none !important;
+    }
+
+    .content {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .content-container {
+        margin: 0 !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+        margin: 0.25in !important; /* Reduced margins */
+    }
+
+    /* Remove the logo and redundant breadcrumb display */
+    .content-container::before,
+    .content-container::after {
+        display: none !important;
+    }
+    
+    /* Simple print header */
+    .print-header {
+        display: block !important;
+        margin-bottom: 15pt;
+        border-bottom: 1pt solid #ddd;
+        padding-bottom: 8pt;
+    }
+    
+    .print-header .site-name {
+        font-weight: bold;
+        font-size: 14pt;
+    }
+    
+    .print-header .page-title {
+        font-size: 12pt;
+        color: #555;
+    }
+
+    .markdown-content {
+        padding: 0 !important;
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+        max-width: none !important;
+    }
+
+    .markdown-content a {
+        color: #000 !important;
+        text-decoration: underline !important;
+        word-wrap: break-word !important;
+    }
+
+    .markdown-content a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #555;
+    }
+
+    .markdown-content pre,
+    .markdown-content code {
+        white-space: pre-wrap !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid !important;
+        background-color: #f5f5f5 !important;
+        color: #000 !important;
+    }
+
+    .markdown-content img {
+        max-width: 100% !important;
+        page-break-inside: avoid !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .markdown-content h1,
+    .markdown-content h2,
+    .markdown-content h3,
+    .markdown-content h4,
+    .markdown-content h5,
+    .markdown-content h6 {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+        color: #000 !important;
+    }
+
+    .markdown-content p,
+    .markdown-content ul,
+    .markdown-content ol,
+    .markdown-content table {
+        page-break-inside: avoid !important;
+    }
+
+    .markdown-content h1 {
+        font-size: 20pt !important;
+        margin: 20pt 0 15pt 0 !important;
+    }
+
+    .markdown-content h2 {
+        font-size: 16pt !important;
+        margin: 16pt 0 10pt 0 !important;
+    }
+
+    .markdown-content h3 {
+        font-size: 14pt !important;
+        margin: 14pt 0 8pt 0 !important;
+    }
+
+    .markdown-content p,
+    .markdown-content ul,
+    .markdown-content ol {
+        margin: 6pt 0 !important;
+    }
+
+    .markdown-content pre,
+    .markdown-content blockquote {
+        margin: 10pt 0 !important;
+        padding: 8pt 10pt !important;
+        border-left: 4pt solid #ddd !important;
+        background-color: #f8f8f8 !important;
+    }
+
+    .markdown-content table {
+        margin: 10pt 0 !important;
+        font-size: 10pt !important;
+        border-collapse: collapse !important;
+        width: 100% !important;
+        border: 1px solid #ddd !important;
+    }
+
+    .markdown-content td,
+    .markdown-content th {
+        padding: 6pt 8pt !important;
+        border: 1px solid #ddd !important;
+        background-color: #fff !important;
+    }
+    
+    .markdown-content th {
+        background-color: #f0f0f0 !important;
+        font-weight: bold !important;
+    }
+    
+    /* Fix clickable header styles for print */
+    .clickable-header:hover {
+        color: inherit !important;
+    }
+    
+    /* Add page breaks before major sections */
+    .markdown-content h1 {
+        page-break-before: always !important;
+    }
+    
+    /* First h1 shouldn't have a page break before it */
+    .markdown-content h1:first-child {
+        page-break-before: avoid !important;
+    }
+    
+    /* Hide interactive elements */
+    .markdown-content video,
+    .markdown-content .header-anchor,
+    .markdown-content svg {
+        display: none !important;
+    }
+    
+    /* Make URLs for links visible */
+    @page {
+        margin: 0.5in !important;
+    }
+
+    /* Simple print header with logo */
+    .print-header {
+        display: flex !important;
+        align-items: center;
+        margin-bottom: 15pt;
+        border-bottom: 1pt solid #ddd;
+        padding-bottom: 8pt;
+    }
+    
+    /* Style the logo in print mode */
+    .print-header .brand-logo {
+        height: 30px;
+        width: auto;
+        display: block;
+        filter: brightness(0); /* Make logo black */
+        border-radius: 0 !important; /* Remove any border radius */
+    }
+    
+    /* Style the title text section */
+    .print-header .print-title-text {
+        display: flex;
+        align-items: center;
+    }
+    
+    .print-header .divider {
+        padding: 0 5px;
+        font-size: 14pt;
+        color: #555;
+    }
+    
+    .print-header .page-title {
+        font-size: 14pt;
+        color: #333;
+    }
+    
+    /* Remove the old print title elements */
+    .print-title, 
+    .content-container::before,
+    .content-container::after {
+        display: none !important;
+    }
+}
+
+/* Add this rule to specifically remove the outline from the document content area when clicked */
+#document-content:focus {
+    outline: none !important;
+}
+
+/* But keep it for keyboard navigation */
+#document-content:focus-visible {
+    outline: 2px solid var(--ifm-color-primary) !important;
+    outline-offset: 2px !important;
+}
+
+/* Also make sure any other clickable elements in the document content don't get outlines */
+#document-content *:focus:not(:focus-visible) {
+    outline: none !important;
 }

@@ -13,45 +13,49 @@
     
 </head>
 <body>
+    <!-- Add skip to content link -->
+    <a href="#document-content" class="skip-to-content">Skip to content</a>
+    
     <div class="container">
-        <div class="title-bar">
-            <button class="menu-button" aria-label="Toggle Menu">
-                <i class="fas fa-bars"></i>
+        <div class="title-bar" role="banner">
+            <button class="menu-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="left-sidebar">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             <div class="title-text">
                 <img src="./img/logo.png" alt="Litruv" class="brand-logo">
-                <span class="divider">/</span>
+                <span class="divider" aria-hidden="true">/</span>
                 <span class="page-title">Documentation</span>
             </div>
             <span style="width: 24px;"></span>
         </div>
         <div class="content-container">
-            <nav class="sidebar left-sidebar">
+            <nav class="sidebar left-sidebar" id="left-sidebar" role="navigation" aria-label="Main Navigation">
                 <div class="search-container">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="search-input" placeholder="Search docs...">
-                        <i class="fas fa-times" id="clear-search"></i>
+                    <div class="search-box" role="search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input type="text" id="search-input" placeholder="Search docs..." aria-label="Search documentation">
+                        <div class="keyboard-shortcut keyboard-shortcut-alt" aria-hidden="true">Alt+S</div>
+                        <i class="fas fa-times" id="clear-search" aria-label="Clear search"></i>
                     </div>
-                    <div id="search-results"></div>
+                    <div id="search-results" role="region" aria-label="Search results" aria-live="polite"></div>
                 </div>
-                <div id="file-index"></div>
-                <div class="subtitle">
+                <div id="file-index" role="tree" aria-label="Documentation files"></div>
+                <div class="subtitle" aria-label="Author information">
                     <span class="name"></span>
                     <span class="role"></span>
                 </div>
-                <div class="social-links"></div>
+                <div class="social-links" aria-label="Social media links"></div>
                 <div class="github-link">
-                    <a href="https://github.com/litruv/docs" target="_blank" title="Docs Viewer GitHub">
-                        <i class="fab fa-github"></i> Docs Viewer
+                    <a href="https://github.com/litruv/docs" target="_blank" title="Docs Viewer GitHub" aria-label="GitHub repository for Docs Viewer">
+                        <i class="fab fa-github" aria-hidden="true"></i> Docs Viewer
                     </a>
                 </div>
             </nav>
-            <main class="content">
-                <div id="document-content"></div>
+            <main class="content" role="main" aria-label="Document Content">
+                <div id="document-content" tabindex="-1"></div>
             </main>
-            <nav class="sidebar right-sidebar">
-                <div id="document-outline"></div>
+            <nav class="sidebar right-sidebar" role="navigation" aria-label="Table of Contents">
+                <div id="document-outline" role="tree" aria-label="Document outline"></div>
             </nav>
         </div>
     </div>
@@ -61,5 +65,115 @@
       hljs.highlightAll();
     </script>
     <script src="index.js"></script>
+    
+    <!-- Print title capture script -->
+    <script>
+        // Capture page title for printing
+        window.addEventListener('beforeprint', function() {
+            // Get the current page title
+            const pageTitle = document.querySelector('.title-text .page-title').textContent;
+            const brandLogo = document.querySelector('.brand-logo').cloneNode(true);
+            
+            // Create print header with logo
+            const printHeader = document.createElement('div');
+            printHeader.className = 'print-header';
+            
+            // Add the logo image
+            printHeader.appendChild(brandLogo);
+            
+            // Add the divider and page title
+            const titleText = document.createElement('div');
+            titleText.className = 'print-title-text';
+            titleText.innerHTML = `<span class="divider">/</span> <span class="page-title">${pageTitle}</span>`;
+            printHeader.appendChild(titleText);
+            
+            // Insert at the beginning of content
+            const content = document.getElementById('document-content');
+            if (content.firstChild) {
+                content.insertBefore(printHeader, content.firstChild);
+            } else {
+                content.appendChild(printHeader);
+            }
+            
+            // Remove any existing print elements to avoid duplication
+            const existingTitle = document.querySelector('.print-title');
+            if (existingTitle) existingTitle.remove();
+            
+            // Make sure the print header is accessible
+            brandLogo.setAttribute('alt', 'Litruv logo');
+            printHeader.setAttribute('aria-hidden', 'true'); // Hide from screen readers when printing
+        });
+        
+        // Clean up after printing
+        window.addEventListener('afterprint', function() {
+            const printHeader = document.querySelector('.print-header');
+            if (printHeader) {
+                printHeader.remove();
+            }
+        });
+    </script>
+    
+    <!-- Add accessibility enhancements script -->
+    <script>
+        // Enhance keyboard navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make folders and navigation keyboard accessible
+            function enhanceTreeKeyboardNavigation() {
+                const folders = document.querySelectorAll('.folder-header');
+                const links = document.querySelectorAll('#file-index a, #document-outline a');
+                
+                folders.forEach(folder => {
+                    // Add ARIA attributes
+                    const folderDiv = folder.closest('.folder');
+                    const isOpen = folderDiv.classList.contains('open');
+                    folder.setAttribute('role', 'treeitem');
+                    folder.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    
+                    // Handle keyboard events
+                    folder.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            folder.click();
+                            folder.setAttribute('aria-expanded', 
+                                folderDiv.classList.contains('open') ? 'true' : 'false');
+                        }
+                    });
+                    
+                    folder.setAttribute('tabindex', '0');
+                });
+                
+                links.forEach(link => {
+                    link.setAttribute('role', 'treeitem');
+                });
+            }
+            
+            // Handle menu button accessibility
+            const menuButton = document.querySelector('.menu-button');
+            if (menuButton) {
+                menuButton.addEventListener('click', function() {
+                    const expanded = document.querySelector('.left-sidebar').classList.contains('show');
+                    menuButton.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+                });
+            }
+            
+            // If using a MutationObserver to watch for DOM changes, call enhanceTreeKeyboardNavigation
+            // after the navigation tree is populated
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length) {
+                        enhanceTreeKeyboardNavigation();
+                    }
+                });
+            });
+            
+            observer.observe(document.getElementById('file-index'), { 
+                childList: true, 
+                subtree: true 
+            });
+            
+            // Initially enhance any existing navigation
+            enhanceTreeKeyboardNavigation();
+        });
+    </script>
 </body>
 </html>
