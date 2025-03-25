@@ -104,9 +104,9 @@
                 "Raft Settings",
                 "Spyglass Settings"
               ],
-              "slug": "ark-survival-evolved/excalutils/gameusersetting",
-              "title": "GameUserSetting",
-              "path": "docs/arksurvivalevolved/excalutils/GameUserSetting.md"
+              "slug": "ark-survival-evolved/excalutils/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/excalutils/GameUserSettings.md"
             },
             {
               "headers": [
