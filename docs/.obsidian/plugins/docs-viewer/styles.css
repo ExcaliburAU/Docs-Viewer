@@ -1,105 +1,66 @@
-.title-appended {
-    color: var(--text-normal);
-    display: inline;
-}
-
-.title-metadata {
-    color: var(--color-orange);
-    font-size: 0.85em;
-    opacity: 0.8;
-    margin-left: 0;
-}
-
-/* Sort value styling */
-.nav-file-title-content::before {
-    margin-right: 4px;
-}
-
+/* Basic styling */
 .nav-file-title-content {
     padding: 0;
     line-height: 1.1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    vertical-align: middle;
-}
-
-/* Reduce indent for child items - improved spacing */
-.nav-folder .nav-folder .nav-file-title, 
-.nav-folder .nav-folder .nav-folder-title {
-    padding-left: 15px !important;
-}
-
-/* Ensure proper alignment with sort values and titles */
-.nav-file-title-content.has-sort-value,
-.nav-file-title-content.has-title {
-    padding-right: 5px;
-    display: inline-block;
-    max-width: calc(100% - 10px);
 }
 
 /* Title styling */
-.has-title::after {
+.has-title::after,
+.tree-item-inner.has-title::after,
+.nav-folder-title-content.has-title::after,
+.nav-file-title-content.has-title::after {
     content: attr(data-title);
     color: var(--color-orange);
     font-size: 0.85em;
     opacity: 0.8;
 }
 
-/* Sort value styling - moved to appear last (after title) */
-.has-sort-value::after {
-    content: attr(data-sort-value);
+/* Sort number display */
+.has-title[data-sort]::before,
+.tree-item-inner.has-title[data-sort]::before,
+.nav-folder-title-content.has-title[data-sort]::before,
+.nav-file-title-content.has-title[data-sort]::before {
+    content: attr(data-sort);
     color: var(--color-yellow);
-    margin-left: 4px;
-}
-
-/* Handle case when both title and sort are present - REPLACE THIS */
-.has-title.has-sort-value::after {
-    content: none; /* Remove the combined content */
-}
-
-/* Add separate pseudo-elements for title and sort when both exist */
-.has-title.has-sort-value::after {
-    content: attr(data-title);
-    color: var(--color-orange);
+    margin-right: 4px;
     font-size: 0.85em;
-    opacity: 0.8;
 }
 
-.has-title.has-sort-value::before {
-    content: none; /* Ensure no content shows before */
+/* Container styling for flex ordering */
+.title-appender-flex-container {
+    display: flex !important;
+    flex-direction: column !important;
+}
+.nav-folder-children {
+    display: flex !important;
+    flex-direction: column !important;
+}
+.nav-files-container {
+    display: flex !important;
+    flex-direction: column !important;
 }
 
-/* Add sort value after the title with proper color */
-.has-title.has-sort-value .sort-suffix {
-    color: var(--color-yellow);
-    margin-left: 4px;
+/* Folder title styling */
+.folder-has-title {
+    position: relative;
+}
+.folder-has-title::after {
+    content: attr(data-folder-title);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
-/* Fix conflicting rules for title and sort display */
-.has-title::after {
-    content: attr(data-title);
-    color: var(--color-orange);
-    font-size: 0.85em;
-    opacity: 0.8;
-}
-
-/* Sort value styling when sort value is alone */
-.has-sort-value:not(.has-title)::after {
-    content: attr(data-sort-value);
-    color: var(--color-yellow);
-    margin-left: 4px;
-}
-
-/* Handle case when both title and sort are present */
-.has-title.has-sort-value::after {
-    content: attr(data-title);
-    color: var(--color-orange);
-    font-size: 0.85em;
-    opacity: 0.8;
-}
-
-/* Style for the sort suffix span */
+/* Sort value styling */
 .sort-suffix {
     color: var(--color-yellow);
     margin-left: 4px;
