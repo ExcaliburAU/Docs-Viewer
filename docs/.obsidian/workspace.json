@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
+                "file": "arksurvivalevolved/excalutils/GameUserSettings.md",
                 "mode": "source",
                 "source": false
               },
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
+                "file": "arksurvivalevolved/excalutils/GameUserSettings.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -179,10 +179,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1eda716d35acafe8",
+  "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
-    "arksurvivalevolved/tranqs/GameUserSettings.md",
     "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
+    "arksurvivalevolved/tranqs/GameUserSettings.md",
     "minecraft/minecraft.md",
     "welcome.md",
     "minecraft/paper/extensions/permissions.md",
@@ -205,7 +205,7 @@
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/patch-notes/02-23-25.md",
     "arksurvivalascended/spyglass",
-    "arksurvivalevolved/excalutils/GameUserSetting.md",
+    "arksurvivalevolved/excalutils/GameUserSettings.md",
     "arksurvivalevolved/tranqs/patch-notes/12-11-24.md",
     "ase/excalutils/Untitled",
     "arksurvivalevolved/excalutils",
