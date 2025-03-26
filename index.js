@@ -756,6 +756,20 @@ class Documentation {
         this.setupKeyboardShortcuts();
     }
 
+    /**
+     * Loads a custom CSS file if specified in the index.json
+     * @param {string} customCSSPath - Path to the custom CSS file relative to document root
+     */
+    loadCustomCSS(customCSSPath) {
+        if (!customCSSPath) return;
+        
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = customCSSPath; // Path is relative to document root
+        document.head.appendChild(link);
+    }
+
     setupEventListeners() {
         this.eventBus.on('navigation:requested', async ({ slug, hash }) => {
             slug = slug.replace(/^[?=]/, '');
@@ -863,6 +877,11 @@ class Documentation {
             const data = await response.json();
             this.indexData = data;
             window._indexData = data;
+
+            // Load custom CSS if provided in index.json
+            if (data.customCSS) {
+                this.loadCustomCSS(data.customCSS);
+            }
 
             this.searchService.buildSearchIndex(this.indexData.documents);
             this.domService.setupSearch(this.searchService);
