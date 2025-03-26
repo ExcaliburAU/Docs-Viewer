@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "minecraft/minecraft.md",
+                "file": "arksurvivalevolved/utilities/utilities.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "minecraft"
+              "title": "utilities"
             }
           }
         ]
@@ -139,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "minecraft/minecraft.md",
+                "file": "arksurvivalevolved/utilities/utilities.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of minecraft"
+              "title": "Outline of utilities"
             }
           }
         ],
@@ -169,6 +169,8 @@
   "active": "49f9845ef22fff90",
   "lastOpenFiles": [
     "welcome.md",
+    "arksurvivalevolved/utilities/utilities.md",
+    "minecraft/minecraft.md",
     "arksurvivalevolved/arksurvivalevolved.md",
     "arksurvivalascended/arksurvivalascended.md",
     "arksurvivalevolved/crafter/crafter.md",
@@ -191,12 +193,10 @@
     "minecraft/paper/extensions/permissions.md",
     "arksurvivalevolved/dropstoragebox",
     "minecraft/paper/SwiftChop/SwiftChop.md",
-    "minecraft/minecraft.md",
     "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/GameUserSettings.md",
     "arksurvivalascended/spyglass/GameUserSettings.md",
     "arksurvivalascended/spyglass/to do.md",
-    "arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
     "arksurvivalevolved/UtilitiesRemaster",
