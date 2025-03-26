@@ -92,6 +92,54 @@
           "path": "docs/arksurvivalevolved/crafter/crafter.md"
         },
         {
+          "title": "Excalibur Stacks",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 1,
+          "slug": "ark-survival-evolved/excalibur-stacks",
+          "type": "folder",
+          "items": [
+            {
+              "headers": [
+                "Key Features of Excalibur Stacks",
+                "Important Notes",
+                "Mod Priority",
+                "Post-Installation Steps",
+                "Known Behaviours",
+                "Configuration Settings",
+                "Modifying `GameUserSettings.ini`",
+                "Example: Blacklisting Items"
+              ],
+              "slug": "ark-survival-evolved/excalibur-stacks/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/stacks/GameUserSettings.md"
+            },
+            {
+              "slug": "ark-survival-evolved/excalibur-stacks/immersivetaming",
+              "title": "ImmersiveTaming",
+              "path": "docs/arksurvivalevolved/stacks/ImmersiveTaming.md"
+            },
+            {
+              "headers": [
+                "Stacks 10000-90",
+                "Stryder Box",
+                "Travel Terminal",
+                "Stacks 5000-50",
+                "Stryder Box",
+                "Travel Terminal",
+                "Stacks 1000-50",
+                "Stryder Box",
+                "Travel Terminal"
+              ],
+              "slug": "ark-survival-evolved/excalibur-stacks/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md"
+            }
+          ],
+          "path": "docs/arksurvivalevolved/stacks/stacks.md"
+        },
+        {
           "title": "Excalibur Tranqs",
           "icon": "",
           "defaultOpen": false,
@@ -261,6 +309,31 @@
           "path": "docs/arksurvivalevolved/harvs-corner/harvs-corner.md"
         },
         {
+          "title": "Excalibur Net Ammo",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 4,
+          "slug": "ark-survival-evolved/excalibur-net-ammo",
+          "type": "folder",
+          "items": [
+            {
+              "slug": "ark-survival-evolved/excalibur-net-ammo/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/net-ammo/GameUserSettings.md"
+            },
+            {
+              "headers": [
+                "Net Everything Ammo"
+              ],
+              "slug": "ark-survival-evolved/excalibur-net-ammo/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/net-ammo/Spawn Codes & Engram Entries.md"
+            }
+          ],
+          "path": "docs/arksurvivalevolved/net-ammo/net-ammo.md"
+        },
+        {
           "title": "DropStoragebox",
           "type": "folder",
           "slug": "ark-survival-evolved/dropstoragebox",
@@ -272,69 +345,6 @@
               "sort": 1,
               "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
               "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
-            }
-          ]
-        },
-        {
-          "title": "net-ammo",
-          "type": "folder",
-          "slug": "ark-survival-evolved/net-ammo",
-          "items": [
-            {
-              "slug": "ark-survival-evolved/net-ammo/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalevolved/net-ammo/GameUserSettings.md"
-            },
-            {
-              "headers": [
-                "Net Everything Ammo"
-              ],
-              "slug": "ark-survival-evolved/net-ammo/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalevolved/net-ammo/Spawn Codes & Engram Entries.md"
-            }
-          ]
-        },
-        {
-          "title": "stacks",
-          "type": "folder",
-          "slug": "ark-survival-evolved/stacks",
-          "items": [
-            {
-              "headers": [
-                "Key Features of Excalibur Stacks",
-                "Important Notes",
-                "Mod Priority",
-                "Post-Installation Steps",
-                "Known Behaviours",
-                "Configuration Settings",
-                "Modifying `GameUserSettings.ini`",
-                "Example: Blacklisting Items"
-              ],
-              "slug": "ark-survival-evolved/stacks/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalevolved/stacks/GameUserSettings.md"
-            },
-            {
-              "slug": "ark-survival-evolved/stacks/immersivetaming",
-              "title": "ImmersiveTaming",
-              "path": "docs/arksurvivalevolved/stacks/ImmersiveTaming.md"
-            },
-            {
-              "headers": [
-                "Stacks 10000-90",
-                "Stryder Box",
-                "Travel Terminal",
-                "Stacks 5000-50",
-                "Stryder Box",
-                "Travel Terminal",
-                "Stacks 1000-50",
-                "Stryder Box",
-                "Travel Terminal"
-              ],
-              "slug": "ark-survival-evolved/stacks/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md"
             }
           ]
         },
