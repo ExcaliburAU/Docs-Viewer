@@ -1,4 +1,5 @@
 {
+  "customCSS": "theme.css",
   "defaultPage": "welcome",
   "author": {
     "name": "ExcaliburAU",

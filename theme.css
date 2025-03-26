@@ -1,0 +1,8 @@
+:root {
+    --ifm-color-primary: #a94ffb;
+    --ifm-color-primary-dark: #a94ffb;
+    --ifm-link-color: #a94ffb;
+}
+.clickable-header:hover {
+    color: #a94ffb;
+  }
