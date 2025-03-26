@@ -1,4 +1,55 @@
 const obsidian = require('obsidian');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+
+const execPromise = promisify(exec);
+
+/**
+ * Modal for Git commit messages
+ */
+class GitCommitModal extends obsidian.Modal {
+    constructor(app, plugin) {
+        super(app);
+        this.plugin = plugin;
+    }
+
+    onOpen() {
+        const { contentEl } = this;
+        contentEl.createEl('h2', { text: 'Git Commit & Push' });
+        
+        const commitMsgContainer = contentEl.createDiv();
+        commitMsgContainer.createEl('label', { text: 'Commit Message:' });
+        
+        const inputEl = commitMsgContainer.createEl('textarea');
+        inputEl.style.width = '100%';
+        inputEl.style.height = '100px';
+        inputEl.style.marginBottom = '10px';
+        
+        const buttonContainer = contentEl.createDiv();
+        buttonContainer.style.display = 'flex';
+        buttonContainer.style.justifyContent = 'flex-end';
+        
+        const cancelButton = buttonContainer.createEl('button', { text: 'Cancel' });
+        cancelButton.addEventListener('click', () => this.close());
+        
+        const commitButton = buttonContainer.createEl('button', { text: 'Commit & Push' });
+        commitButton.style.marginLeft = '10px';
+        commitButton.addEventListener('click', async () => {
+            const message = inputEl.value.trim();
+            if (message) {
+                await this.plugin.commitAndPush(message);
+                this.close();
+            } else {
+                new obsidian.Notice('Please enter a commit message');
+            }
+        });
+    }
+
+    onClose() {
+        const { contentEl } = this;
+        contentEl.empty();
+    }
+}
 
 /**
  * @class DocsViewerPlugin
@@ -13,6 +64,10 @@ class DocsViewerPlugin extends obsidian.Plugin {
     async onload() {
         console.log('Loading DocsViewer plugin');
         
+        // Store Git status and ribbon icon reference
+        this.hasUncommittedChanges = false;
+        this.gitRibbonIcon = null;
+        
         this.updateAllTitles();
         
         this.app.workspace.onLayoutReady(() => {
@@ -20,12 +75,105 @@ class DocsViewerPlugin extends obsidian.Plugin {
             
             setTimeout(() => {
                 this.updateAllTitles();
+                this.updateGitStatus();
             }, 500);
         });
 
         this.registerInterval(
             window.setInterval(() => this.updateAllTitles(), 5000)
         );
+        
+        // Add Git commit button to the left ribbon
+        this.gitRibbonIcon = this.addRibbonIcon('git-pull-request', 'Git Commit & Push', async () => {
+            try {
+                const hasChanges = await this.hasGitChanges();
+                
+                if (hasChanges) {
+                    new GitCommitModal(this.app, this).open();
+                } else {
+                    new obsidian.Notice('No changes to commit');
+                }
+            } catch (error) {
+                console.error('Git error:', error);
+                new obsidian.Notice(`Git error: ${error.message}`);
+            }
+        });
+        
+        // Add periodic Git status check
+        this.registerInterval(
+            window.setInterval(() => this.updateGitStatus(), 30000) // Check every 30 seconds
+        );
+        
+        // Initial Git status check
+        this.updateGitStatus();
+    }
+    
+    /**
+     * @description Updates the Git status indicator based on uncommitted changes
+     * @returns {Promise<void>}
+     */
+    async updateGitStatus() {
+        try {
+            const hasChanges = await this.hasGitChanges();
+            
+            if (hasChanges && !this.hasUncommittedChanges) {
+                // Add notification indicator
+                this.gitRibbonIcon.addClass('git-notification-indicator');
+                this.hasUncommittedChanges = true;
+            } else if (!hasChanges && this.hasUncommittedChanges) {
+                // Remove notification indicator
+                this.gitRibbonIcon.removeClass('git-notification-indicator');
+                this.hasUncommittedChanges = false;
+            }
+        } catch (error) {
+            console.error('Error updating Git status:', error);
+        }
+    }
+    
+    /**
+     * @description Check if there are uncommitted changes in the repository
+     * @returns {Promise<boolean>} True if there are changes to commit
+     */
+    async hasGitChanges() {
+        try {
+            const vaultPath = this.app.vault.adapter.basePath;
+            const { stdout } = await execPromise('git status --porcelain', { cwd: vaultPath });
+            return stdout.trim().length > 0;
+        } catch (error) {
+            console.error('Error checking git status:', error);
+            throw error;
+        }
+    }
+    
+    /**
+     * @description Commit and push changes to the Git repository
+     * @param {string} message - The commit message
+     * @returns {Promise<void>}
+     */
+    async commitAndPush(message) {
+        try {
+            const vaultPath = this.app.vault.adapter.basePath;
+            
+            // Add all changes
+            await execPromise('git add .', { cwd: vaultPath });
+            
+            // Commit with the provided message
+            await execPromise(`git commit -m "${message.replace(/"/g, '\\"')}"`, { cwd: vaultPath });
+            
+            // Push to remote
+            new obsidian.Notice('Committing changes...');
+            const { stdout } = await execPromise('git push', { cwd: vaultPath });
+            
+            // Update Git status after commit
+            this.updateGitStatus();
+            
+            new obsidian.Notice('Successfully committed and pushed changes');
+            console.log('Git push result:', stdout);
+        } catch (error) {
+            console.error('Error in git operations:', error);
+            new obsidian.Notice(`Git error: ${error.message}`);
+            throw error;
+        }
     }
     
     /**
@@ -213,6 +361,11 @@ class DocsViewerPlugin extends obsidian.Plugin {
         document.querySelectorAll('.nav-file, .nav-file-title').forEach(el => {
             el.style.order = '';
         });
+        
+        // Clean up Git notification indicator if it exists
+        if (this.gitRibbonIcon) {
+            this.gitRibbonIcon.removeClass('git-notification-indicator');
+        }
     }
 }
 
