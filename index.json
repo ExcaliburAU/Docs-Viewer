@@ -81,6 +81,21 @@
           ]
         },
         {
+          "title": "DropStoragebox",
+          "type": "folder",
+          "slug": "ark-survival-evolved/dropstoragebox",
+          "items": [
+            {
+              "title": "Game User Settings",
+              "icon": "",
+              "defaultOpen": "false",
+              "sort": "1",
+              "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
+              "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
+            }
+          ]
+        },
+        {
           "title": "excalibur-tranqs",
           "type": "folder",
           "slug": "ark-survival-evolved/excalibur-tranqs",
