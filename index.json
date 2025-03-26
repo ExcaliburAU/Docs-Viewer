@@ -92,11 +92,108 @@
           "path": "docs/arksurvivalevolved/crafter/crafter.md"
         },
         {
+          "title": "Excalibur Tranqs",
+          "icon": "",
+          "defaultOpen": "false",
+          "showfolderpage": "false",
+          "sort": "2",
+          "slug": "ark-survival-evolved/excalibur-tranqs",
+          "type": "folder",
+          "items": [
+            {
+              "slug": "ark-survival-evolved/excalibur-tranqs/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/tranqs/GameUserSettings.md"
+            },
+            {
+              "headers": [
+                "Config",
+                "Patch Notes"
+              ],
+              "slug": "ark-survival-evolved/excalibur-tranqs/index",
+              "title": "index",
+              "path": "docs/arksurvivalevolved/tranqs/index.md"
+            },
+            {
+              "title": "patch-notes",
+              "type": "folder",
+              "slug": "ark-survival-evolved/excalibur-tranqs/patch-notes",
+              "items": [
+                {
+                  "headers": [
+                    "Player Inventory",
+                    "Vanilla",
+                    "Structures Plus (Including Forks)",
+                    "Vanilla Creatures",
+                    "Kraken Better Dinos"
+                  ],
+                  "slug": "ark-survival-evolved/excalibur-tranqs/patch-notes/12-11-24",
+                  "title": "12-11-24",
+                  "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md"
+                }
+              ]
+            },
+            {
+              "headers": [
+                "Narcotics",
+                "Potent Narcotic",
+                "Concentrated Narcotic",
+                "Distilled Narcotic",
+                "Pure Narcotic",
+                "Stimulants",
+                "Potent Stimulant",
+                "Concentrated Stimulant",
+                "Distilled Stimulant",
+                "Pure Stimulant",
+                "Arrows",
+                "Potent Tranq Arrow",
+                "Concentrated Tranq Arrow",
+                "Distilled Tranq Arrow",
+                "Pure Tranq Arrow",
+                "Darts",
+                "Potent Tranq Dart",
+                "Concentrated Tranq Dart",
+                "Distilled Tranq Dart",
+                "Pure Tranq Dart",
+                "Spear Bolts",
+                "Potent Tranq Spear Bolt",
+                "Concentrated Tranq Spear Bolt",
+                "Distilled Tranq Spear Bolt",
+                "Pure Tranq Spear Bolt",
+                "Shock Darts",
+                "Potent Shock Dart",
+                "Concentrated Shock Dart",
+                "Distilled Shock Dart",
+                "Pure Shock Dart",
+                "Fabricated Sniper Rifle",
+                "Potent Tranq Sniper Bullet",
+                "Concentrated Tranq Sniper Bullet",
+                "Distilled Tranq Sniper Bullet",
+                "Pure Tranq Sniper Bullet",
+                "Boomerang",
+                "Potent Boomerang",
+                "Concentrated Boomerang",
+                "Distilled Boomerang",
+                "Pure Boomerang",
+                "Items",
+                "Tame Helper",
+                "Structures",
+                "Charcoal Baker",
+                "Meat Spoiler"
+              ],
+              "slug": "ark-survival-evolved/excalibur-tranqs/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md"
+            }
+          ],
+          "path": "docs/arksurvivalevolved/tranqs/tranqs.md"
+        },
+        {
           "title": "Harvs Corner",
           "icon": "",
           "defaultOpen": "false",
           "showfolderpage": "false",
-          "sort": "1",
+          "sort": "3",
           "slug": "ark-survival-evolved/harvs-corner",
           "type": "folder",
           "items": [
@@ -289,98 +386,6 @@
           ]
         },
         {
-          "title": "tranqs",
-          "type": "folder",
-          "slug": "ark-survival-evolved/tranqs",
-          "items": [
-            {
-              "slug": "ark-survival-evolved/tranqs/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalevolved/tranqs/GameUserSettings.md"
-            },
-            {
-              "headers": [
-                "Config",
-                "Patch Notes"
-              ],
-              "slug": "ark-survival-evolved/tranqs/index",
-              "title": "index",
-              "path": "docs/arksurvivalevolved/tranqs/index.md"
-            },
-            {
-              "title": "patch-notes",
-              "type": "folder",
-              "slug": "ark-survival-evolved/tranqs/patch-notes",
-              "items": [
-                {
-                  "headers": [
-                    "Player Inventory",
-                    "Vanilla",
-                    "Structures Plus (Including Forks)",
-                    "Vanilla Creatures",
-                    "Kraken Better Dinos"
-                  ],
-                  "slug": "ark-survival-evolved/tranqs/patch-notes/12-11-24",
-                  "title": "12-11-24",
-                  "path": "docs/arksurvivalevolved/tranqs/patch-notes/12-11-24.md"
-                }
-              ]
-            },
-            {
-              "headers": [
-                "Narcotics",
-                "Potent Narcotic",
-                "Concentrated Narcotic",
-                "Distilled Narcotic",
-                "Pure Narcotic",
-                "Stimulants",
-                "Potent Stimulant",
-                "Concentrated Stimulant",
-                "Distilled Stimulant",
-                "Pure Stimulant",
-                "Arrows",
-                "Potent Tranq Arrow",
-                "Concentrated Tranq Arrow",
-                "Distilled Tranq Arrow",
-                "Pure Tranq Arrow",
-                "Darts",
-                "Potent Tranq Dart",
-                "Concentrated Tranq Dart",
-                "Distilled Tranq Dart",
-                "Pure Tranq Dart",
-                "Spear Bolts",
-                "Potent Tranq Spear Bolt",
-                "Concentrated Tranq Spear Bolt",
-                "Distilled Tranq Spear Bolt",
-                "Pure Tranq Spear Bolt",
-                "Shock Darts",
-                "Potent Shock Dart",
-                "Concentrated Shock Dart",
-                "Distilled Shock Dart",
-                "Pure Shock Dart",
-                "Fabricated Sniper Rifle",
-                "Potent Tranq Sniper Bullet",
-                "Concentrated Tranq Sniper Bullet",
-                "Distilled Tranq Sniper Bullet",
-                "Pure Tranq Sniper Bullet",
-                "Boomerang",
-                "Potent Boomerang",
-                "Concentrated Boomerang",
-                "Distilled Boomerang",
-                "Pure Boomerang",
-                "Items",
-                "Tame Helper",
-                "Structures",
-                "Charcoal Baker",
-                "Meat Spoiler"
-              ],
-              "slug": "ark-survival-evolved/tranqs/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md"
-            }
-          ]
-        },
-        {
           "title": "utilities",
           "type": "folder",
           "slug": "ark-survival-evolved/utilities",
@@ -424,29 +429,6 @@
               "slug": "ark-survival-evolved/utilities/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md"
-            }
-          ]
-        },
-        {
-          "title": "UtilitiesRemaster",
-          "type": "folder",
-          "slug": "ark-survival-evolved/utilitiesremaster",
-          "items": [
-            {
-              "title": "Config",
-              "type": "folder",
-              "slug": "ark-survival-evolved/utilitiesremaster/config",
-              "items": [
-                {
-                  "headers": [
-                    "Structure Settings",
-                    "Raft Settings"
-                  ],
-                  "slug": "ark-survival-evolved/utilitiesremaster/config/gameusersettings",
-                  "title": "GameUserSettings",
-                  "path": "docs/arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md"
-                }
-              ]
             }
           ]
         }
