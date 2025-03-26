@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/crafter/Codes&Entries.md",
+                "file": "arksurvivalevolved/Crafter/Codes&Entries.md",
                 "mode": "source",
                 "source": false
               },
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/crafter/Codes&Entries.md",
+                "file": "arksurvivalevolved/Crafter/Codes&Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -180,9 +180,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1eda716d35acafe8",
+  "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
-    "arksurvivalevolved/crafter/GameUserSettings.md",
+    "arksurvivalevolved/Crafter/GameUserSettings.md",
     "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
