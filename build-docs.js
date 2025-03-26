@@ -24,12 +24,24 @@ function parseFrontMatter(content) {
     if (lines[0].trim() === '---') {
         let endMetadata = lines.findIndex((line, index) => index > 0 && line.trim() === '---');
         if (endMetadata !== -1) {
-            metadata = Object.fromEntries(
-                lines.slice(1, endMetadata)
-                    .map(line => line.match(/^([\w-]+):\s*(.*)$/))
-                    .filter(Boolean)
-                    .map(([, key, value]) => [key, value.trim()])
-            );
+            // Extract key-value pairs from frontmatter
+            const frontmatterEntries = lines.slice(1, endMetadata)
+                .map(line => line.match(/^([\w-]+):\s*(.*)$/))
+                .filter(Boolean)
+                .map(([, key, value]) => {
+                    // Convert specific properties to their proper types
+                    if (key === 'defaultOpen') {
+                        return [key, value.trim().toLowerCase() === 'true'];
+                    } 
+                    else if (key === 'sort') {
+                        return [key, parseInt(value.trim(), 10)];
+                    }
+                    else {
+                        return [key, value.trim()];
+                    }
+                });
+            
+            metadata = Object.fromEntries(frontmatterEntries);
             contentStart = endMetadata + 1;
         }
     }
@@ -123,20 +135,18 @@ function processFolder(folder, parentSlug = '') {
   // Sort items
   items.sort((a, b) => {
     // Get sort values, default to Infinity for items without sort value
-    const aHasSort = 'sort' in a;
-    const bHasSort = 'sort' in b;
+    const aHasSort = typeof a.sort === 'number';
+    const bHasSort = typeof b.sort === 'number';
 
     // If one has sort and the other doesn't, sorted items come first
     if (aHasSort !== bHasSort) {
       return aHasSort ? -1 : 1;
     }
 
-    // If both have sort values or both don't
+    // If both have sort values
     if (aHasSort && bHasSort) {
-      const aSort = parseInt(a.sort);
-      const bSort = parseInt(b.sort);
-      if (aSort !== bSort) {
-        return aSort - bSort;
+      if (a.sort !== b.sort) {
+        return a.sort - b.sort;
       }
     }
 

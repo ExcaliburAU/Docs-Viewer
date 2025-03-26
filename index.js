@@ -220,16 +220,20 @@ class DOMService {
     createFileIndexItem(doc, container, level = 0) {
         if (doc.type === 'folder') {
             const folderDiv = document.createElement('div');
-            folderDiv.className = 'folder' + (doc.defaultOpen !== false ? ' open' : '');
+            // Ensure defaultOpen is handled as a boolean
+            const isOpen = doc.defaultOpen === true;
+            folderDiv.className = 'folder' + (isOpen ? ' open' : '');
             folderDiv.dataset.path = doc.title;
             folderDiv.style.paddingLeft = `${level * 0.8}rem`;
 
             const folderHeader = document.createElement('div');
             folderHeader.className = 'folder-header';
             folderHeader.setAttribute('role', 'treeitem');
-            folderHeader.setAttribute('aria-expanded', doc.defaultOpen !== false ? 'true' : 'false');
+            // Update aria-expanded to match the new isOpen state
+            folderHeader.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             folderHeader.setAttribute('tabindex', '0');
-            const iconClass = doc.icon || `fas fa-folder${doc.defaultOpen !== false ? '-open' : ''}`;
+            // Update icon class to match the folded state
+            const iconClass = doc.icon || `fas fa-folder${isOpen ? '-open' : ''}`;
 
             // Only add folder click handler if showfolderpage is not false
             if (doc.path && doc.metadata?.showfolderpage !== false) {
@@ -593,12 +597,24 @@ class DocumentService {
         if (lines[0].trim() === '---') {
             let endMetadata = lines.findIndex((line, index) => index > 0 && line.trim() === '---');
             if (endMetadata !== -1) {
-                metadata = Object.fromEntries(
-                    lines.slice(1, endMetadata)
-                        .map(line => line.match(/^([\w-]+):\s*(.*)$/))
-                        .filter(Boolean)
-                        .map(([, key, value]) => [key, value.trim()])
-                );
+                // Extract and convert frontmatter types
+                const frontmatterEntries = lines.slice(1, endMetadata)
+                    .map(line => line.match(/^([\w-]+):\s*(.*)$/))
+                    .filter(Boolean)
+                    .map(([, key, value]) => {
+                        // Convert specific properties to their proper types
+                        if (key === 'defaultOpen') {
+                            return [key, value.trim().toLowerCase() === 'true'];
+                        } 
+                        else if (key === 'sort') {
+                            return [key, parseInt(value.trim(), 10)];
+                        }
+                        else {
+                            return [key, value.trim()];
+                        }
+                    });
+                
+                metadata = Object.fromEntries(frontmatterEntries);
                 contentStart = endMetadata + 1;
             }
         }
@@ -618,6 +634,16 @@ class DocumentService {
 
             let rawContent = await response.text();
             const { metadata, content } = this.extractMetadata(rawContent);
+            
+            // Ensure proper types for metadata properties
+            if (metadata.defaultOpen !== undefined) {
+                metadata.defaultOpen = metadata.defaultOpen === true || metadata.defaultOpen === 'true';
+            }
+            
+            if (metadata.sort !== undefined) {
+                metadata.sort = typeof metadata.sort === 'number' ? metadata.sort : parseInt(metadata.sort, 10);
+            }
+            
             const basePath = path.substring(0, path.lastIndexOf('/'));
             const indexDoc = this.findDocInIndex(path);
 
