@@ -40,7 +40,7 @@
     {
       "title": "Welcome to EXAU Documentation",
       "slug": "welcome",
-      "sort": "0",
+      "sort": 0,
       "headers": [
         "Available Documentation",
         "ARK: Survival Evolved Mods",
@@ -54,34 +54,34 @@
     {
       "title": "ARK Survival Evolved",
       "icon": "",
-      "defaultOpen": "false",
+      "defaultOpen": false,
       "showfolderpage": "false",
-      "sort": "2",
+      "sort": 2,
       "slug": "ark-survival-evolved",
       "type": "folder",
       "items": [
         {
           "title": "Excalibur Crafter",
           "icon": "",
-          "defaultOpen": "false",
+          "defaultOpen": false,
           "showfolderpage": "false",
-          "sort": "1",
+          "sort": 1,
           "slug": "ark-survival-evolved/excalibur-crafter",
           "type": "folder",
           "items": [
             {
               "title": "Game User Settings",
               "icon": "",
-              "defaultOpen": "false",
-              "sort": "1",
+              "defaultOpen": false,
+              "sort": 1,
               "slug": "ark-survival-evolved/excalibur-crafter/game-user-settings",
               "path": "docs/arksurvivalevolved/crafter/GameUserSettings.md"
             },
             {
               "title": "Spawn Codes & Engram Entries",
               "icon": "",
-              "defaultOpen": "false",
-              "sort": "2",
+              "defaultOpen": false,
+              "sort": 2,
               "headers": [
                 "ExcaliburCrafter"
               ],
@@ -94,9 +94,9 @@
         {
           "title": "Excalibur Tranqs",
           "icon": "",
-          "defaultOpen": "false",
+          "defaultOpen": false,
           "showfolderpage": "false",
-          "sort": "2",
+          "sort": 2,
           "slug": "ark-survival-evolved/excalibur-tranqs",
           "type": "folder",
           "items": [
@@ -191,9 +191,9 @@
         {
           "title": "Harvs Corner",
           "icon": "",
-          "defaultOpen": "false",
+          "defaultOpen": false,
           "showfolderpage": "false",
-          "sort": "3",
+          "sort": 3,
           "slug": "ark-survival-evolved/harvs-corner",
           "type": "folder",
           "items": [
@@ -268,8 +268,8 @@
             {
               "title": "Game User Settings",
               "icon": "",
-              "defaultOpen": "false",
-              "sort": "1",
+              "defaultOpen": false,
+              "sort": 1,
               "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
               "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
             }
@@ -391,9 +391,9 @@
     {
       "title": "ARK Survival Ascended",
       "icon": "",
-      "defaultOpen": "false",
+      "defaultOpen": false,
       "showfolderpage": "false",
-      "sort": "3",
+      "sort": 3,
       "slug": "ark-survival-ascended",
       "type": "folder",
       "items": [
@@ -582,9 +582,9 @@
     {
       "title": "Minecraft",
       "icon": "",
-      "defaultOpen": "false",
+      "defaultOpen": false,
       "showfolderpage": "false",
-      "sort": "4",
+      "sort": 4,
       "slug": "minecraft",
       "type": "folder",
       "items": [
