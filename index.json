@@ -335,27 +335,16 @@
           "path": "docs/arksurvivalevolved/net-ammo/net-ammo.md"
         },
         {
-          "title": "DropStoragebox",
+          "title": "Excalibur Utilities",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 6,
+          "slug": "ark-survival-evolved/excalibur-utilities",
           "type": "folder",
-          "slug": "ark-survival-evolved/dropstoragebox",
           "items": [
             {
-              "title": "Game User Settings",
-              "icon": "",
-              "defaultOpen": false,
-              "sort": 1,
-              "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
-              "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
-            }
-          ]
-        },
-        {
-          "title": "utilities",
-          "type": "folder",
-          "slug": "ark-survival-evolved/utilities",
-          "items": [
-            {
-              "slug": "ark-survival-evolved/utilities/gameusersettings",
+              "slug": "ark-survival-evolved/excalibur-utilities/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalevolved/utilities/GameUserSettings.md"
             },
@@ -390,9 +379,25 @@
                 "Scrap Forge",
                 "Workbench"
               ],
-              "slug": "ark-survival-evolved/utilities/spawn-codes-engram-entries",
+              "slug": "ark-survival-evolved/excalibur-utilities/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md"
+            }
+          ],
+          "path": "docs/arksurvivalevolved/utilities/utilities.md"
+        },
+        {
+          "title": "DropStoragebox",
+          "type": "folder",
+          "slug": "ark-survival-evolved/dropstoragebox",
+          "items": [
+            {
+              "title": "Game User Settings",
+              "icon": "",
+              "defaultOpen": false,
+              "sort": 1,
+              "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
+              "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
             }
           ]
         }
