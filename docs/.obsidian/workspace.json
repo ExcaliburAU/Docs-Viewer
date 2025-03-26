@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/crafter/crafter.md",
+                "file": "minecraft/minecraft.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "crafter"
+              "title": "minecraft"
             }
           }
         ]
@@ -139,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/crafter/crafter.md",
+                "file": "minecraft/minecraft.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of crafter"
+              "title": "Outline of minecraft"
             }
           }
         ],
@@ -168,12 +168,14 @@
   },
   "active": "49f9845ef22fff90",
   "lastOpenFiles": [
-    "arksurvivalevolved/stacks/stacks.md",
+    "welcome.md",
+    "arksurvivalevolved/arksurvivalevolved.md",
+    "arksurvivalascended/arksurvivalascended.md",
     "arksurvivalevolved/crafter/crafter.md",
+    "arksurvivalevolved/stacks/stacks.md",
     "arksurvivalevolved/net-ammo/net-ammo.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
-    "welcome.md",
     "arksurvivalevolved/tranqs/GameUserSettings.md",
     "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
     "arksurvivalevolved/harvs-corner/harvs-corner.md",
@@ -181,13 +183,11 @@
     "arksurvivalevolved/harvs-corner/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox/dropstoragebox.md",
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
-    "arksurvivalascended/arksurvivalascended.md",
     "arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md",
     "arksurvivalevolved/tranqs/tranqs.md",
     "arksurvivalevolved/crafter/Codes&Entries.md",
     "arksurvivalevolved/crafter/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox/GameUserSettings.md",
-    "arksurvivalevolved/arksurvivalevolved.md",
     "minecraft/paper/extensions/permissions.md",
     "arksurvivalevolved/dropstoragebox",
     "minecraft/paper/SwiftChop/SwiftChop.md",

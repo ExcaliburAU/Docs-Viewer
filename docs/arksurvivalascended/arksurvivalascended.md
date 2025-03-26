@@ -1,7 +1,7 @@
 ---
 title: ARK Survival Ascended
 icon: 
-defaultOpen: false
+defaultOpen: true
 showfolderpage: false
 sort: 3
 ---
