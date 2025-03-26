@@ -154,6 +154,14 @@ class DocsViewerPlugin extends obsidian.Plugin {
         try {
             const vaultPath = this.app.vault.adapter.basePath;
             
+            // Fetch from remote
+            new obsidian.Notice('Fetching latest changes...');
+            await execPromise('git fetch', { cwd: vaultPath });
+            
+            // Pull from remote
+            new obsidian.Notice('Pulling latest changes...');
+            await execPromise('git pull', { cwd: vaultPath });
+            
             // Add all changes
             await execPromise('git add .', { cwd: vaultPath });
             
