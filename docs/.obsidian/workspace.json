@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
+                "file": "arksurvivalevolved/tranqs/GameUserSettings.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Spawn Codes & Engram Entries"
+              "title": "GameUserSettings"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
+                "file": "arksurvivalevolved/tranqs/GameUserSettings.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Spawn Codes & Engram Entries"
+              "title": "Outline of GameUserSettings"
             }
           }
         ],
@@ -182,25 +182,26 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
+    "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
+    "arksurvivalevolved/harvs-corner/harvs-corner.md",
     "arksurvivalevolved/excalutils/GameUserSettings.md",
+    "arksurvivalevolved/harvs-corner/GameUserSettings.md",
+    "arksurvivalevolved/dropstoragebox/dropstoragebox.md",
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/arksurvivalascended.md",
-    "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
     "arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md",
     "arksurvivalevolved/tranqs/tranqs.md",
-    "arksurvivalevolved/harvs-corner/harvs-corner.md",
-    "arksurvivalevolved/harvs-corner/GameUserSettings.md",
     "arksurvivalevolved/tranqs/GameUserSettings.md",
     "arksurvivalevolved/crafter/crafter.md",
     "welcome.md",
     "arksurvivalevolved/crafter/Codes&Entries.md",
     "arksurvivalevolved/crafter/GameUserSettings.md",
-    "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
+    "arksurvivalevolved/dropstoragebox/GameUserSettings.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
     "arksurvivalevolved/arksurvivalevolved.md",
     "minecraft/paper/extensions/permissions.md",
-    "arksurvivalevolved/DropStoragebox",
+    "arksurvivalevolved/dropstoragebox",
     "minecraft/paper/SwiftChop/SwiftChop.md",
     "minecraft/minecraft.md",
     "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
@@ -213,7 +214,6 @@
     "arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/UtilitiesRemaster",
     "arksurvivalascended/tranqs/index.md",
-    "arksurvivalascended/tranqs/Excalibur Tranqs.md",
     "asa/tranqs/tranqs-sniper",
     "arksurvivalascended/spyglass",
     "ase/excalutils/Untitled",
