@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/excalutils/GameUserSettings.md",
+                "file": "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
                 "mode": "source",
                 "source": false
               },
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/excalutils/GameUserSettings.md",
+                "file": "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -171,6 +171,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "docs-viewer:Git Commit & Push": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -179,16 +180,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba3b4ab7076efb70",
+  "active": "1eda716d35acafe8",
   "lastOpenFiles": [
+    "Pasted image 20250326200750.png",
+    "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
+    "arksurvivalevolved/arksurvivalevolved.md",
     "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
+    "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
+    "minecraft/paper/extensions/permissions.md",
+    "arksurvivalevolved/DropStoragebox",
+    "minecraft/paper/SwiftChop/SwiftChop.md",
+    "arksurvivalevolved/excalutils/GameUserSettings.md",
     "arksurvivalevolved/tranqs/GameUserSettings.md",
     "minecraft/minecraft.md",
     "welcome.md",
-    "minecraft/paper/extensions/permissions.md",
-    "minecraft/paper/SwiftChop/SwiftChop.md",
     "arksurvivalascended/arksurvivalascended.md",
-    "arksurvivalevolved/arksurvivalevolved.md",
     "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/GameUserSettings.md",
     "arksurvivalascended/spyglass/GameUserSettings.md",
@@ -205,7 +211,6 @@
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/patch-notes/02-23-25.md",
     "arksurvivalascended/spyglass",
-    "arksurvivalevolved/excalutils/GameUserSettings.md",
     "arksurvivalevolved/tranqs/patch-notes/12-11-24.md",
     "ase/excalutils/Untitled",
     "arksurvivalevolved/excalutils",
@@ -215,11 +220,8 @@
     "logo2.png",
     "logo.png",
     "arksurvivalevolved/excalibur-tranqs",
-    "minecraft/paper/extensions",
     "arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/trashcan/GameUserSettings.md",
-    "arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md",
-    "arksurvivalascended/cropplots/GameUserSettings.md",
     "images/Screenshot.png"
   ]
 }
