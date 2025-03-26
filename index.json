@@ -276,53 +276,6 @@
           ]
         },
         {
-          "title": "excalibur-tranqs",
-          "type": "folder",
-          "slug": "ark-survival-evolved/excalibur-tranqs",
-          "items": [
-            {
-              "slug": "ark-survival-evolved/excalibur-tranqs/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalevolved/excalibur-tranqs/GameUserSettings.md"
-            }
-          ]
-        },
-        {
-          "title": "excalutils",
-          "type": "folder",
-          "slug": "ark-survival-evolved/excalutils",
-          "items": [
-            {
-              "headers": [
-                "Item Settings",
-                "Structure Settings",
-                "Raft Settings",
-                "Spyglass Settings"
-              ],
-              "slug": "ark-survival-evolved/excalutils/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalevolved/excalutils/GameUserSettings.md"
-            },
-            {
-              "headers": [
-                "Items",
-                "Color Brush",
-                "Net Gun Ammo",
-                "Reusable Bola",
-                "Grappling Crossbow",
-                "Structures",
-                "Potent Stimulant",
-                "Concentrated Stimulant",
-                "Distilled Stimulant",
-                "Pure Stimulant"
-              ],
-              "slug": "ark-survival-evolved/excalutils/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md"
-            }
-          ]
-        },
-        {
           "title": "net-ammo",
           "type": "folder",
           "slug": "ark-survival-evolved/net-ammo",
