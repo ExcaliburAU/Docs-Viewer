@@ -66,3 +66,20 @@
     margin-left: 4px;
     font-size: 0.85em;
 }
+
+/* Git notification indicator */
+.git-notification-indicator {
+    position: relative;
+}
+
+.git-notification-indicator::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 8px;
+    height: 8px;
+    background-color: #f44336;
+    border-radius: 50%;
+    border: 1px solid var(--background-primary);
+}

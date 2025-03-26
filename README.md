@@ -1,52 +1,153 @@
-# Documentation Viewer
+# Docs Viewer
 
-A robust, modern documentation viewer built for rendering Markdown files with advanced syntax highlighting capabilities. This zero-dependency static application enables seamless documentation hosting without backend requirements.
+A modern, accessible documentation viewer for Markdown files with live search, navigation, and mobile support.
 
 ## Features
 
-- 🚀 **High-Performance Rendering** - Lightning-fast Markdown processing with optimized syntax highlighting
-- 📑 **Dynamic Navigation** - Auto-generated document outline with interactive table of contents
-- 📱 **Responsive Design** - Optimized viewing experience across all device sizes
-- 🔒 **Zero Backend** - Fully static implementation for maximum security and deployability
-- 🎨 **Modern UI/UX** - Clean, intuitive interface with customizable theming
+- 🔍 Live search with keyboard shortcuts (Alt+S)
+- 📱 Mobile-friendly responsive design
+- 🎯 Keyboard navigation support
+- 📑 Auto-generated document outline
+- 🔗 Wiki-style internal linking
+- 🖨️ Print-friendly styling
+- ♿ ARIA-compliant accessibility
+- 🌙 Dark theme
 
 ## Quick Start
 
-### Development Setup
-
-[Fork this Repo](https://github.com/example/Docs-Viewer/fork)
-
-#### Updating
-
-##### From GitHub
-
-On your own repo,
-
-1. Click Sync fork
-2. Update branch
-
-##### From CLI
-
-```sh
-git fetch upstream
-git merge upstream/master
-git push
+1. Install dependencies:
+```bash
+npm install
 ```
 
-### Deployment
+2. Copy the example configuration:
+```bash
+cp example.index.json index.json
+```
+Then modify `index.json` with your site's metadata, author info, and social links.
 
-Deploy anywhere that serves static files. For local development:
-
-VSCode:
-[LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) and hit start server in the docs-viewer directory
-
-Command Line:
-
-```sh
-npx live-server
+3. Create your documentation structure:
+```
+docs/
+  ├── images/        # Place images here
+  ├── index.md      # Main landing page
+  └── ... other .md files
 ```
 
-#### Cloudflare Pages
+4. Build the documentation index:
+```bash
+npm run build
+```
+This will scan your docs folder and update `index.json` with the document structure.
+
+5. Start the development server:
+```bash
+npm start
+```
+
+## Documentation Structure
+
+### File Organization
+
+- Place all documentation files in the `docs/` directory
+- Store images and video in `docs/images/`
+- Use `.md` extension for Markdown files
+
+### Markdown Files
+
+Each Markdown file can include YAML frontmatter:
+
+```markdown
+---
+title: Page Title
+description: Page description
+sort: 1           # Optional: controls sidebar order
+thumbnail: images/thumb.png  # Optional: for OG images
+---
+
+# Content starts here
+```
+
+### Folder Structure
+
+To create sections, make a folder and add a matching Markdown file:
+
+```
+docs/
+  ├── getting-started/
+  │   ├── getting-started.md  # Folder index
+  │   ├── installation.md
+  │   └── configuration.md
+  └── index.md
+```
+
+## Special Features
+
+### Wiki Links
+
+Use double brackets for internal links:
+```markdown
+[[Page Title]]
+[[Page Title|Custom Text]]
+```
+
+### Images
+
+Store images in `docs/images/` and reference them:
+```markdown
+![Alt text](./docs/images/picture.png)
+# or
+![[picture.png]]
+```
+
+### Headers
+
+Headers are automatically added to the right sidebar outline and are collapsible.
+
+## Development
+
+### Recommended Editor
+
+We recommend using [Obsidian.md](https://obsidian.md) as your editor for the documentation files. The `docs/.obsidian` directory includes a custom plugin that provides enhanced editing features:
+
+- Displays page titles in the file explorer instead of filenames
+- Shows frontmatter-defined sort order in the file list
+- Automatically updates file ordering based on the `sort` property
+- Makes folder and document organization more intuitive
+
+To use the plugin:
+1. Open the `docs` folder as an Obsidian vault
+2. The plugin will be automatically loaded
+3. The file explorer will now show your document titles and sorting order
+
+### Project Structure
+
+```
+.
+├── docs/           # Documentation files
+├── build-docs.js   # Documentation builder
+├── index.html      # Main viewer
+├── index.js        # Application logic
+└── styles.css      # Styling
+```
+
+### Building
+
+The build process:
+1. Scans the `docs/` directory
+2. Edits `index.json` with document metadata
+
+A GitHub Actions workflow is included that automatically:
+- Runs on every push to the master branch
+- Executes the build process
+- Commits and pushes any changes to `index.json`
+- Ensures your documentation index stays in sync with your content
+
+This means you can edit your documentation directly on GitHub, and the index will be automatically updated.
+
+If you don't want to use Github actions, you can use npm run build
+
+### Cloudflare Pages
 
 1. Create a new repository on GitHub.
 2. Push your code to the repository.
@@ -57,7 +158,7 @@ npx live-server
    - **Build output directory:** `/` (root)
 5. Save and deploy.
 
-##### Optional: Cloudflare Worker for OG/Twitter Tags
+#### Optional: Cloudflare Worker for OG/Twitter Tags
 
 For improved SEO and social sharing, you can use a Cloudflare Worker to dynamically generate OG/Twitter tags.
 
@@ -66,116 +167,41 @@ For improved SEO and social sharing, you can use a Cloudflare Worker to dynamica
 3. Set the `DOCS_URL` environment variable to the URL where your documentation files are hosted (usually your Cloudflare Pages URL).
 4. Configure a route in your Cloudflare account to route all requests to your Cloudflare Pages site through the worker.
 
-## Project Structure
-
-```
-.
-├── docs/           # Documentation source files
-│   ├── images/     # Document assets
-│   └── *.md        # Markdown documents
-├── index.html      # Application entry point
-├── config.json     # Document configuration
-└── styles.css      # Theme customization
-```
-
 ## Configuration
 
-Configure your documentation site with a top-level index file named `index.json`. At minimum, include a `title`, a `defaultPage`, and a list of `documents`:
+### index.json
+
 
 ```json
 {
-    "defaultPage": "welcome",
-    "documents": [
-        {
-            "title": "Welcome",
-            "path": "docs/welcome.md",
-            "slug": "welcome"
-        }
+  "defaultPage": "home",
+  "metadata": {
+    "title": "Site Title",
+    "description": "Site description",
+    "site_name": "Documentation"
+  },
+  "author": {
+    "name": "Author Name",
+    "role": "Role",
+    "socials": [
+      {
+        "icon": "fab fa-github",
+        "url": "https://github.com/username",
+        "title": "GitHub"
+      }
     ]
+  }
 }
 ```
 
-> If you want to quickly get started, copy `example.index.json` to `index.json` in the project root:
+The build process generates the documents part for `index.json`
+## Contributing
 
-```sh
-cp example.index.json index.json
-```
-
-Then adjust the `title`, `defaultPage`, and `documents` array to match your needs.
-
-### Root Configuration Options
-
-| Option        | Type   | Description                                        |   |
-| ------------- | ------ | -------------------------------------------------- | - |
-| `defaultPage` | string | Slug of the page to show when no page is specified |   |
-| `documents`   | array  | Array of document or folder entries (see below)    |   |
-
-### Folder Organization
-
-Folders can contain nested documents or subfolders. Mark a folder by setting `"type": "folder"`. Example:
-
-```json
-{
-    "title": "Core Concepts",
-    "type": "folder",
-    "path": "docs/core-concepts/index.md",
-    "slug": "core-concepts",
-    "defaultOpen": true,
-    "icon": "fa-solid fa-book",
-    "color": "#01beef",
-    "items": [
-        {
-            "title": "Getting Started",
-            "path": "docs/guides/getting-started.md",
-            "slug": "getting-started"
-        }
-    ]
-}
-```
-
-#### Folder Configuration Options
-
-| Option        | Type     | Description                                        |
-| ------------- | -------- | -------------------------------------------------- |
-| `title`       | string   | Display name of the folder                         |
-| `type`        | string   | Set to `"folder"` for a directory node             |
-| `path`        | string?  | Optional content file path                         |
-| `slug`        | string   | URL-friendly identifier; required if `path` exists |
-| `defaultOpen` | boolean? | Automatically expand this folder in the sidebar    |
-| `icon`        | string?  | Custom Font Awesome classes                        |
-| `items`       | array    | Nested documents or folders                        |
-
-## Metadata Configuration
-
-> To be used with the cloudflare-worker.js
-
-You can include a "metadata" object in `index.json` to provide:
-
-- Site-wide title and short description
-- Thumbnail for social sharing
-- Display name for your site
-
-```json
-"metadata": {
-    "site_name": "MyDocs"
-    "description": "Documentation for my project",
-    "thumbnail": "img/og-image.png",
-}
-```
-
-#### Metadata Configuration Options
-
-| Option        | Type   | Description                                 |
-| ------------- | ------ | ------------------------------------------- |
-| `site_name`   | string | Display name for your site                  |
-| `description` | string | Description of your documentation site      |
-| `thumbnail`   | string | URL to a thumbnail image for social sharing |
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
 
 ## License
 
-Released under the MIT License. See [LICENSE](LICENSE) for details.
-
-## Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+MIT License - see LICENSE file for details.
 
