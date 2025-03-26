@@ -8,31 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1eda716d35acafe8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "arksurvivalevolved/tranqs/GameUserSettings.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "GameUserSettings"
-            }
-          },
-          {
             "id": "49f9845ef22fff90",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "mc/paper/SwiftChop/SwiftChop.md",
+                "file": "arksurvivalevolved/crafter/crafter.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "SwiftChop"
+              "title": "crafter"
             }
           }
         ]
@@ -153,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/tranqs/GameUserSettings.md",
+                "file": "arksurvivalevolved/crafter/crafter.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of GameUserSettings"
+              "title": "Outline of crafter"
             }
           }
         ],
@@ -180,8 +166,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1eda716d35acafe8",
+  "active": "49f9845ef22fff90",
   "lastOpenFiles": [
+    "arksurvivalevolved/stacks/stacks.md",
+    "arksurvivalevolved/crafter/crafter.md",
+    "arksurvivalevolved/net-ammo/net-ammo.md",
+    "Pasted image 20250326200750.png",
+    "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
+    "welcome.md",
+    "arksurvivalevolved/tranqs/GameUserSettings.md",
     "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
     "arksurvivalevolved/harvs-corner/harvs-corner.md",
     "arksurvivalevolved/excalutils/GameUserSettings.md",
@@ -191,14 +184,9 @@
     "arksurvivalascended/arksurvivalascended.md",
     "arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md",
     "arksurvivalevolved/tranqs/tranqs.md",
-    "arksurvivalevolved/tranqs/GameUserSettings.md",
-    "arksurvivalevolved/crafter/crafter.md",
-    "welcome.md",
     "arksurvivalevolved/crafter/Codes&Entries.md",
     "arksurvivalevolved/crafter/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox/GameUserSettings.md",
-    "Pasted image 20250326200750.png",
-    "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
     "arksurvivalevolved/arksurvivalevolved.md",
     "minecraft/paper/extensions/permissions.md",
     "arksurvivalevolved/dropstoragebox",
@@ -211,9 +199,7 @@
     "arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
-    "arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/UtilitiesRemaster",
-    "arksurvivalascended/tranqs/index.md",
     "asa/tranqs/tranqs-sniper",
     "arksurvivalascended/spyglass",
     "ase/excalutils/Untitled",
