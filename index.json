@@ -54,7 +54,7 @@
     {
       "title": "ARK Survival Evolved",
       "icon": "",
-      "defaultOpen": false,
+      "defaultOpen": true,
       "showfolderpage": "false",
       "sort": 2,
       "slug": "ark-survival-evolved",
@@ -401,7 +401,7 @@
     {
       "title": "ARK Survival Ascended",
       "icon": "",
-      "defaultOpen": false,
+      "defaultOpen": true,
       "showfolderpage": "false",
       "sort": 3,
       "slug": "ark-survival-ascended",
@@ -592,7 +592,7 @@
     {
       "title": "Minecraft",
       "icon": "",
-      "defaultOpen": false,
+      "defaultOpen": true,
       "showfolderpage": "false",
       "sort": 4,
       "slug": "minecraft",
