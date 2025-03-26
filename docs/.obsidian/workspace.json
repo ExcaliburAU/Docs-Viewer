@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/crafter/crafter.md",
-                "mode": "source",
-                "source": false
+                "file": "arksurvivalevolved/harvs-corner/harvs-corner.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "crafter"
+              "title": "harvs-corner"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/crafter/crafter.md",
+                "file": "arksurvivalevolved/harvs-corner/harvs-corner.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of crafter"
+              "title": "Outline of harvs-corner"
             }
           }
         ],
@@ -182,8 +182,9 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "arksurvivalascended/arksurvivalascended.md",
     "arksurvivalevolved/crafter/crafter.md",
+    "arksurvivalevolved/harvs-corner/harvs-corner.md",
+    "arksurvivalascended/arksurvivalascended.md",
     "welcome.md",
     "arksurvivalevolved/crafter/Codes&Entries.md",
     "arksurvivalevolved/crafter/GameUserSettings.md",
@@ -218,7 +219,6 @@
     "ase/excalutils/Untitled",
     "arksurvivalevolved/excalutils",
     "minecraft/paper/SwiftChop",
-    "arksurvivalevolved/tranqs/index.md",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
