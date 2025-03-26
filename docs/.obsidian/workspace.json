@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
+                "file": "arksurvivalevolved/crafter/Codes&Entries.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GameUserSettings"
+              "title": "Codes&Entries"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
+                "file": "arksurvivalevolved/crafter/Codes&Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of GameUserSettings"
+              "title": "Outline of Codes&Entries"
             }
           }
         ],
@@ -182,11 +182,12 @@
   },
   "active": "1eda716d35acafe8",
   "lastOpenFiles": [
+    "arksurvivalevolved/crafter/GameUserSettings.md",
+    "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
     "arksurvivalevolved/arksurvivalevolved.md",
     "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
-    "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
     "minecraft/paper/extensions/permissions.md",
     "arksurvivalevolved/DropStoragebox",
     "minecraft/paper/SwiftChop/SwiftChop.md",

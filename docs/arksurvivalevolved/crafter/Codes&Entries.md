@@ -1,3 +1,9 @@
+---
+title: Spawn Codes & Engram Entries
+icon: 
+defaultOpen: false
+sort: 2
+---
 ## ExcaliburCrafter
 ```ini
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ExcaliburCrafter_C",EngramHidden=true)

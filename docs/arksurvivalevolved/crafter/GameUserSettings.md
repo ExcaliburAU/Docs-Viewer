@@ -1,3 +1,10 @@
+---
+title: Game User Settings
+icon: 
+defaultOpen: false
+sort: 1
+---
+
 ```ini
 [ExcaliburCrafter]
 FoundationRequired=true
