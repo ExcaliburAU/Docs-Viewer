@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/Crafter/Codes&Entries.md",
+                "file": "arksurvivalevolved/crafter/crafter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Codes&Entries"
+              "title": "crafter"
             }
           },
           {
@@ -153,13 +153,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/Crafter/Codes&Entries.md",
+                "file": "arksurvivalevolved/crafter/crafter.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Codes&Entries"
+              "title": "Outline of crafter"
             }
           }
         ],
@@ -180,9 +180,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba3b4ab7076efb70",
+  "active": "1eda716d35acafe8",
   "lastOpenFiles": [
-    "arksurvivalevolved/Crafter/GameUserSettings.md",
+    "arksurvivalascended/arksurvivalascended.md",
+    "arksurvivalevolved/crafter/crafter.md",
+    "welcome.md",
+    "arksurvivalevolved/crafter/Codes&Entries.md",
+    "arksurvivalevolved/crafter/GameUserSettings.md",
     "arksurvivalevolved/DropStoragebox/GameUserSettings.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
@@ -194,8 +198,6 @@
     "arksurvivalevolved/excalutils/GameUserSettings.md",
     "arksurvivalevolved/tranqs/GameUserSettings.md",
     "minecraft/minecraft.md",
-    "welcome.md",
-    "arksurvivalascended/arksurvivalascended.md",
     "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
     "arksurvivalascended/tranqs/GameUserSettings.md",
     "arksurvivalascended/spyglass/GameUserSettings.md",
@@ -221,8 +223,6 @@
     "logo2.png",
     "logo.png",
     "arksurvivalevolved/excalibur-tranqs",
-    "arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md",
-    "arksurvivalascended/trashcan/GameUserSettings.md",
     "images/Screenshot.png"
   ]
 }
