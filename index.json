@@ -92,71 +92,13 @@
           "path": "docs/arksurvivalevolved/crafter/crafter.md"
         },
         {
-          "title": "DropStoragebox",
-          "type": "folder",
-          "slug": "ark-survival-evolved/dropstoragebox",
-          "items": [
-            {
-              "title": "Game User Settings",
-              "icon": "",
-              "defaultOpen": "false",
-              "sort": "1",
-              "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
-              "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
-            }
-          ]
-        },
-        {
-          "title": "excalibur-tranqs",
-          "type": "folder",
-          "slug": "ark-survival-evolved/excalibur-tranqs",
-          "items": [
-            {
-              "slug": "ark-survival-evolved/excalibur-tranqs/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalevolved/excalibur-tranqs/GameUserSettings.md"
-            }
-          ]
-        },
-        {
-          "title": "excalutils",
-          "type": "folder",
-          "slug": "ark-survival-evolved/excalutils",
-          "items": [
-            {
-              "headers": [
-                "Item Settings",
-                "Structure Settings",
-                "Raft Settings",
-                "Spyglass Settings"
-              ],
-              "slug": "ark-survival-evolved/excalutils/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalevolved/excalutils/GameUserSettings.md"
-            },
-            {
-              "headers": [
-                "Items",
-                "Color Brush",
-                "Net Gun Ammo",
-                "Reusable Bola",
-                "Grappling Crossbow",
-                "Structures",
-                "Potent Stimulant",
-                "Concentrated Stimulant",
-                "Distilled Stimulant",
-                "Pure Stimulant"
-              ],
-              "slug": "ark-survival-evolved/excalutils/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md"
-            }
-          ]
-        },
-        {
-          "title": "harvs-corner",
-          "type": "folder",
+          "title": "Harvs Corner",
+          "icon": "",
+          "defaultOpen": "false",
+          "showfolderpage": "false",
+          "sort": "1",
           "slug": "ark-survival-evolved/harvs-corner",
+          "type": "folder",
           "items": [
             {
               "slug": "ark-survival-evolved/harvs-corner/gameusersettings",
@@ -217,6 +159,69 @@
               "slug": "ark-survival-evolved/harvs-corner/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md"
+            }
+          ],
+          "path": "docs/arksurvivalevolved/harvs-corner/harvs-corner.md"
+        },
+        {
+          "title": "DropStoragebox",
+          "type": "folder",
+          "slug": "ark-survival-evolved/dropstoragebox",
+          "items": [
+            {
+              "title": "Game User Settings",
+              "icon": "",
+              "defaultOpen": "false",
+              "sort": "1",
+              "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
+              "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
+            }
+          ]
+        },
+        {
+          "title": "excalibur-tranqs",
+          "type": "folder",
+          "slug": "ark-survival-evolved/excalibur-tranqs",
+          "items": [
+            {
+              "slug": "ark-survival-evolved/excalibur-tranqs/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/excalibur-tranqs/GameUserSettings.md"
+            }
+          ]
+        },
+        {
+          "title": "excalutils",
+          "type": "folder",
+          "slug": "ark-survival-evolved/excalutils",
+          "items": [
+            {
+              "headers": [
+                "Item Settings",
+                "Structure Settings",
+                "Raft Settings",
+                "Spyglass Settings"
+              ],
+              "slug": "ark-survival-evolved/excalutils/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalevolved/excalutils/GameUserSettings.md"
+            },
+            {
+              "headers": [
+                "Items",
+                "Color Brush",
+                "Net Gun Ammo",
+                "Reusable Bola",
+                "Grappling Crossbow",
+                "Structures",
+                "Potent Stimulant",
+                "Concentrated Stimulant",
+                "Distilled Stimulant",
+                "Pure Stimulant"
+              ],
+              "slug": "ark-survival-evolved/excalutils/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md"
             }
           ]
         },
