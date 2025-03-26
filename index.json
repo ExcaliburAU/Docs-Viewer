@@ -61,16 +61,20 @@
       "type": "folder",
       "items": [
         {
-          "title": "crafter",
+          "title": "Excalibur Crafter",
+          "icon": "",
+          "defaultOpen": "false",
+          "showfolderpage": "false",
+          "sort": "1",
+          "slug": "ark-survival-evolved/excalibur-crafter",
           "type": "folder",
-          "slug": "ark-survival-evolved/crafter",
           "items": [
             {
               "title": "Game User Settings",
               "icon": "",
               "defaultOpen": "false",
               "sort": "1",
-              "slug": "ark-survival-evolved/crafter/game-user-settings",
+              "slug": "ark-survival-evolved/excalibur-crafter/game-user-settings",
               "path": "docs/arksurvivalevolved/crafter/GameUserSettings.md"
             },
             {
@@ -81,10 +85,11 @@
               "headers": [
                 "ExcaliburCrafter"
               ],
-              "slug": "ark-survival-evolved/crafter/spawn-codes-engram-entries",
+              "slug": "ark-survival-evolved/excalibur-crafter/spawn-codes-engram-entries",
               "path": "docs/arksurvivalevolved/crafter/Codes&Entries.md"
             }
-          ]
+          ],
+          "path": "docs/arksurvivalevolved/crafter/crafter.md"
         },
         {
           "title": "DropStoragebox",
