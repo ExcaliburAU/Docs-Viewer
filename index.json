@@ -639,9 +639,12 @@
           "type": "folder",
           "items": [
             {
-              "title": "extensions",
-              "type": "folder",
+              "title": "Extensions",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
               "slug": "minecraft/paper-plugins/extensions",
+              "type": "folder",
               "items": [
                 {
                   "headers": [
@@ -658,9 +661,14 @@
                   "title": "permissions",
                   "path": "docs/minecraft/paper/extensions/permissions.md"
                 }
-              ]
+              ],
+              "path": "docs/minecraft/paper/extensions/extensions.md"
             },
             {
+              "title": "Swift Chop",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
               "headers": [
                 "Features",
                 "Configuration",
@@ -668,8 +676,7 @@
                 "Authors",
                 "License"
               ],
-              "slug": "minecraft/paper-plugins/swiftchop",
-              "title": "SwiftChop",
+              "slug": "minecraft/paper-plugins/swift-chop",
               "type": "folder",
               "items": [],
               "path": "docs/minecraft/paper/SwiftChop/SwiftChop.md"
