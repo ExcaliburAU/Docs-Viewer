@@ -14,15 +14,18 @@ Welcome to the official documentation site for EXAU Development. Here you'll fin
 - **Excalibur Net Ammo**
 - **Excalibur Stacks**
 - **Harvs Corner**
+- **DropStorageBox**
 
 ### ARK: Survival Ascended Mods
 - **Excalibur Tranqs**
 - **Excalibur Crafter**
-- **Excalibur Cropplots**
+- **Excalibur Crop Plots**
 - **Excalibur Trashcan**
+- **Excalibur Spyglass**
 
 ### Minecraft
 - **Extensions**
+- **SwiftChop**
 
 ## Getting Started
 
