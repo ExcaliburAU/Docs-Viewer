@@ -668,7 +668,7 @@
               "title": "Swift Chop",
               "icon": "",
               "defaultOpen": false,
-              "showfolderpage": "false",
+              "showfolderpage": "true",
               "headers": [
                 "Features",
                 "Configuration",
