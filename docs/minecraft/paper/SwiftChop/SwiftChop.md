@@ -1,4 +1,9 @@
-
+---
+title: Swift Chop
+icon: 
+defaultOpen: false
+showfolderpage: false
+---
 SwiftChop is a Minecraft plugin that allows you to chop down trees faster. It includes features such as configurable chop speed, durability warnings for tools, and automatic sapling replanting.
 
 ## Features

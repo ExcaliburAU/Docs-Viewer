@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalascended/spyglass/spyglass.md",
+                "file": "minecraft/paper/swiftchop/swiftchop.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "spyglass"
+              "title": "swiftchop"
             }
           }
         ]
@@ -139,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalascended/spyglass/spyglass.md",
+                "file": "minecraft/paper/swiftchop/swiftchop.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of spyglass"
+              "title": "Outline of swiftchop"
             }
           }
         ],
@@ -166,10 +166,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49f9845ef22fff90",
+  "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
-    "arksurvivalascended/tranqs/tranqs.md",
+    "minecraft/paper/swiftchop/swiftchop.md",
+    "minecraft/paper/swiftchop/swiftchop.md",
+    "minecraft/paper/extensions/extensions.md",
     "arksurvivalascended/spyglass/spyglass.md",
+    "arksurvivalascended/tranqs/tranqs.md",
     "arksurvivalascended/trashcan/trashcan.md",
     "arksurvivalascended/cropplots/cropplots.md",
     "arksurvivalascended/crafter/crafter.md",
@@ -193,9 +196,6 @@
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
     "arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md",
     "arksurvivalevolved/tranqs/tranqs.md",
-    "arksurvivalevolved/crafter/Codes&Entries.md",
-    "arksurvivalevolved/crafter/GameUserSettings.md",
-    "arksurvivalevolved/dropstoragebox/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
@@ -204,7 +204,7 @@
     "arksurvivalascended/spyglass",
     "ase/excalutils/Untitled",
     "arksurvivalevolved/excalutils",
-    "minecraft/paper/SwiftChop",
+    "minecraft/paper/swiftchop",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
