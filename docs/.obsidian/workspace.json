@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "arksurvivalevolved/utilities/utilities.md",
+                "file": "arksurvivalascended/spyglass/spyglass.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "utilities"
+              "title": "spyglass"
             }
           }
         ]
@@ -139,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "arksurvivalevolved/utilities/utilities.md",
+                "file": "arksurvivalascended/spyglass/spyglass.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of utilities"
+              "title": "Outline of spyglass"
             }
           }
         ],
@@ -168,8 +168,14 @@
   },
   "active": "49f9845ef22fff90",
   "lastOpenFiles": [
-    "welcome.md",
+    "arksurvivalascended/tranqs/tranqs.md",
+    "arksurvivalascended/spyglass/spyglass.md",
+    "arksurvivalascended/trashcan/trashcan.md",
+    "arksurvivalascended/cropplots/cropplots.md",
+    "arksurvivalascended/crafter/crafter.md",
+    "minecraft/paper/paper.md",
     "arksurvivalevolved/utilities/utilities.md",
+    "welcome.md",
     "minecraft/minecraft.md",
     "arksurvivalevolved/arksurvivalevolved.md",
     "arksurvivalascended/arksurvivalascended.md",
@@ -190,13 +196,7 @@
     "arksurvivalevolved/crafter/Codes&Entries.md",
     "arksurvivalevolved/crafter/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox/GameUserSettings.md",
-    "minecraft/paper/extensions/permissions.md",
     "arksurvivalevolved/dropstoragebox",
-    "minecraft/paper/SwiftChop/SwiftChop.md",
-    "arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md",
-    "arksurvivalascended/tranqs/GameUserSettings.md",
-    "arksurvivalascended/spyglass/GameUserSettings.md",
-    "arksurvivalascended/spyglass/to do.md",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
     "arksurvivalevolved/UtilitiesRemaster",
