@@ -414,12 +414,16 @@
       "type": "folder",
       "items": [
         {
-          "title": "crafter",
+          "title": "Excalibur Crafter",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 1,
+          "slug": "ark-survival-ascended/excalibur-crafter",
           "type": "folder",
-          "slug": "ark-survival-ascended/crafter",
           "items": [
             {
-              "slug": "ark-survival-ascended/crafter/gameusersettings",
+              "slug": "ark-survival-ascended/excalibur-crafter/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/crafter/GameUserSettings.md"
             },
@@ -427,65 +431,24 @@
               "headers": [
                 "ExcaliburCrafter"
               ],
-              "slug": "ark-survival-ascended/crafter/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/excalibur-crafter/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/crafter/Spawn Codes & Engram Entries.md"
             }
-          ]
+          ],
+          "path": "docs/arksurvivalascended/crafter/crafter.md"
         },
         {
-          "title": "cropplots",
+          "title": "Excalibur Tranqs",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 2,
+          "slug": "ark-survival-ascended/excalibur-tranqs",
           "type": "folder",
-          "slug": "ark-survival-ascended/cropplots",
           "items": [
             {
-              "slug": "ark-survival-ascended/cropplots/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalascended/cropplots/GameUserSettings.md"
-            },
-            {
-              "headers": [
-                "Excalibur Crop Plot",
-                "Excalibur Grow Lamp"
-              ],
-              "slug": "ark-survival-ascended/cropplots/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md"
-            }
-          ]
-        },
-        {
-          "title": "spyglass",
-          "type": "folder",
-          "slug": "ark-survival-ascended/spyglass",
-          "items": [
-            {
-              "slug": "ark-survival-ascended/spyglass/gameusersettings",
-              "title": "GameUserSettings",
-              "path": "docs/arksurvivalascended/spyglass/GameUserSettings.md"
-            },
-            {
-              "headers": [
-                "Spyglass"
-              ],
-              "slug": "ark-survival-ascended/spyglass/spawn-codes-engram-entries",
-              "title": "Spawn Codes & Engram Entries",
-              "path": "docs/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md"
-            },
-            {
-              "slug": "ark-survival-ascended/spyglass/to-do",
-              "title": "to do",
-              "path": "docs/arksurvivalascended/spyglass/to do.md"
-            }
-          ]
-        },
-        {
-          "title": "tranqs",
-          "type": "folder",
-          "slug": "ark-survival-ascended/tranqs",
-          "items": [
-            {
-              "slug": "ark-survival-ascended/tranqs/gameusersettings",
+              "slug": "ark-survival-ascended/excalibur-tranqs/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/tranqs/GameUserSettings.md"
             },
@@ -498,14 +461,14 @@
                 "**Support**",
                 "**Note**"
               ],
-              "slug": "ark-survival-ascended/tranqs/index",
+              "slug": "ark-survival-ascended/excalibur-tranqs/index",
               "title": "index",
               "path": "docs/arksurvivalascended/tranqs/index.md"
             },
             {
               "title": "patch-notes",
               "type": "folder",
-              "slug": "ark-survival-ascended/tranqs/patch-notes",
+              "slug": "ark-survival-ascended/excalibur-tranqs/patch-notes",
               "items": [
                 {
                   "headers": [
@@ -513,7 +476,7 @@
                     "Changes",
                     "Removal"
                   ],
-                  "slug": "ark-survival-ascended/tranqs/patch-notes/02-23-25",
+                  "slug": "ark-survival-ascended/excalibur-tranqs/patch-notes/02-23-25",
                   "title": "02-23-25",
                   "path": "docs/arksurvivalascended/tranqs/patch-notes/02-23-25.md"
                 }
@@ -566,19 +529,50 @@
                 "Structures",
                 "Workbench/CharcoalBaker/Meat Spoiler"
               ],
-              "slug": "ark-survival-ascended/tranqs/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/excalibur-tranqs/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md"
             }
-          ]
+          ],
+          "path": "docs/arksurvivalascended/tranqs/tranqs.md"
         },
         {
-          "title": "trashcan",
+          "title": "Excalibur Crop Plots",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 3,
+          "slug": "ark-survival-ascended/excalibur-crop-plots",
           "type": "folder",
-          "slug": "ark-survival-ascended/trashcan",
           "items": [
             {
-              "slug": "ark-survival-ascended/trashcan/gameusersettings",
+              "slug": "ark-survival-ascended/excalibur-crop-plots/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalascended/cropplots/GameUserSettings.md"
+            },
+            {
+              "headers": [
+                "Excalibur Crop Plot",
+                "Excalibur Grow Lamp"
+              ],
+              "slug": "ark-survival-ascended/excalibur-crop-plots/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md"
+            }
+          ],
+          "path": "docs/arksurvivalascended/cropplots/cropplots.md"
+        },
+        {
+          "title": "Excalibur Trashcan",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 4,
+          "slug": "ark-survival-ascended/excalibur-trashcan",
+          "type": "folder",
+          "items": [
+            {
+              "slug": "ark-survival-ascended/excalibur-trashcan/gameusersettings",
               "title": "GameUserSettings",
               "path": "docs/arksurvivalascended/trashcan/GameUserSettings.md"
             },
@@ -586,11 +580,42 @@
               "headers": [
                 "ExcaliburTrashcan"
               ],
-              "slug": "ark-survival-ascended/trashcan/spawn-codes-engram-entries",
+              "slug": "ark-survival-ascended/excalibur-trashcan/spawn-codes-engram-entries",
               "title": "Spawn Codes & Engram Entries",
               "path": "docs/arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md"
             }
-          ]
+          ],
+          "path": "docs/arksurvivalascended/trashcan/trashcan.md"
+        },
+        {
+          "title": "Excalibur Spyglass",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 5,
+          "slug": "ark-survival-ascended/excalibur-spyglass",
+          "type": "folder",
+          "items": [
+            {
+              "slug": "ark-survival-ascended/excalibur-spyglass/gameusersettings",
+              "title": "GameUserSettings",
+              "path": "docs/arksurvivalascended/spyglass/GameUserSettings.md"
+            },
+            {
+              "headers": [
+                "Spyglass"
+              ],
+              "slug": "ark-survival-ascended/excalibur-spyglass/spawn-codes-engram-entries",
+              "title": "Spawn Codes & Engram Entries",
+              "path": "docs/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md"
+            },
+            {
+              "slug": "ark-survival-ascended/excalibur-spyglass/to-do",
+              "title": "to do",
+              "path": "docs/arksurvivalascended/spyglass/to do.md"
+            }
+          ],
+          "path": "docs/arksurvivalascended/spyglass/spyglass.md"
         }
       ],
       "path": "docs/arksurvivalascended/arksurvivalascended.md"
@@ -605,14 +630,18 @@
       "type": "folder",
       "items": [
         {
-          "title": "paper",
+          "title": "Paper Plugins",
+          "icon": "",
+          "defaultOpen": true,
+          "showfolderpage": "false",
+          "sort": 1,
+          "slug": "minecraft/paper-plugins",
           "type": "folder",
-          "slug": "minecraft/paper",
           "items": [
             {
               "title": "extensions",
               "type": "folder",
-              "slug": "minecraft/paper/extensions",
+              "slug": "minecraft/paper-plugins/extensions",
               "items": [
                 {
                   "headers": [
@@ -625,7 +654,7 @@
                     "Special Permissions",
                     "Default Permissions"
                   ],
-                  "slug": "minecraft/paper/extensions/permissions",
+                  "slug": "minecraft/paper-plugins/extensions/permissions",
                   "title": "permissions",
                   "path": "docs/minecraft/paper/extensions/permissions.md"
                 }
@@ -639,13 +668,14 @@
                 "Authors",
                 "License"
               ],
-              "slug": "minecraft/paper/swiftchop",
+              "slug": "minecraft/paper-plugins/swiftchop",
               "title": "SwiftChop",
               "type": "folder",
               "items": [],
               "path": "docs/minecraft/paper/SwiftChop/SwiftChop.md"
             }
-          ]
+          ],
+          "path": "docs/minecraft/paper/paper.md"
         }
       ],
       "path": "docs/minecraft/minecraft.md"
