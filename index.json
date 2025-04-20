@@ -39,15 +39,14 @@
   },
   "documents": [
     {
-      "title": "Welcome to EXAU Documentation",
+      "title": "Introduction",
       "slug": "welcome",
       "sort": 0,
       "headers": [
-        "Available Documentation",
-        "ARK: Survival Evolved Mods",
-        "ARK: Survival Ascended Mods",
-        "Minecraft",
-        "Getting Started",
+        "Modding",
+        "Games",
+        "Discord Bots",
+        "Unreal Engine Assets",
         "Need Help?"
       ],
       "path": "docs/welcome.md"
