@@ -53,30 +53,6 @@
       "path": "docs/welcome.md"
     },
     {
-      "title": "Announcements",
-      "icon": "",
-      "defaultOpen": true,
-      "showfolderpage": "false",
-      "sort": 1,
-      "slug": "announcements",
-      "type": "folder",
-      "items": [
-        {
-          "title": "Modding Support Update",
-          "icon": "",
-          "defaultOpen": false,
-          "sort": 1,
-          "headers": [
-            "❗ What This Means",
-            "🚀 What’s Next?"
-          ],
-          "slug": "announcements/modding-support-update",
-          "path": "docs/Announcements/moddingsupport.md"
-        }
-      ],
-      "path": "docs/Announcements/Announcements.md"
-    },
-    {
       "title": "ARK",
       "icon": "",
       "defaultOpen": true,
@@ -85,6 +61,30 @@
       "slug": "ark",
       "type": "folder",
       "items": [
+        {
+          "title": "Announcements",
+          "icon": "",
+          "defaultOpen": true,
+          "showfolderpage": "false",
+          "sort": 1,
+          "slug": "ark/announcements",
+          "type": "folder",
+          "items": [
+            {
+              "title": "Modding Support Update",
+              "icon": "",
+              "defaultOpen": false,
+              "sort": 1,
+              "headers": [
+                "❗ What This Means",
+                "🚀 What’s Next?"
+              ],
+              "slug": "ark/announcements/modding-support-update",
+              "path": "docs/ARK/Announcements/moddingsupport.md"
+            }
+          ],
+          "path": "docs/ARK/Announcements/Announcements.md"
+        },
         {
           "title": "Evolved",
           "icon": "",
