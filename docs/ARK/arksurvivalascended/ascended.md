@@ -1,5 +1,5 @@
 ---
-title: ARK Survival Ascended
+title: Ascended
 icon: 
 defaultOpen: true
 showfolderpage: false

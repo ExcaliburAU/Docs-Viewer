@@ -1,5 +1,5 @@
 ---
-title: ARK Survival Evolved
+title: Evolved
 icon: 
 defaultOpen: true
 showfolderpage: false

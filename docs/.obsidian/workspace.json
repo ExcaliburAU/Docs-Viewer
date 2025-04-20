@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Announcements/Announcements.md",
+                "file": "ARK/arksurvivalevolved/crafter/Codes&Entries.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Announcements"
+              "title": "Codes&Entries"
             }
           }
         ]
@@ -139,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Announcements/Announcements.md",
+                "file": "ARK/arksurvivalevolved/crafter/Codes&Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Announcements"
+              "title": "Outline of Codes&Entries"
             }
           }
         ],
@@ -168,45 +168,45 @@
   },
   "active": "2fb4a4a0c7acbeab",
   "lastOpenFiles": [
-    "arksurvivalascended/arksurvivalascended.md",
+    "ARK/arksurvivalevolved/evolved.md",
+    "ARK/arksurvivalascended/ascended.md",
+    "ARK/ARK.md",
     "Announcements/Announcements.md",
-    "arksurvivalevolved/arksurvivalevolved.md",
+    "ARK",
     "Announcements",
-    "arksurvivalevolved/crafter/crafter.md",
+    "ARK/arksurvivalevolved/crafter/crafter.md",
     "welcome.md",
     "images/logo.png",
     "minecraft/paper/swiftchop/swiftchop.md",
     "minecraft/paper/swiftchop/swiftchop.md",
     "minecraft/paper/extensions/extensions.md",
-    "arksurvivalascended/spyglass/spyglass.md",
-    "arksurvivalascended/tranqs/tranqs.md",
-    "arksurvivalascended/trashcan/trashcan.md",
-    "arksurvivalascended/cropplots/cropplots.md",
-    "arksurvivalascended/crafter/crafter.md",
+    "ARK/arksurvivalascended/spyglass/spyglass.md",
+    "ARK/arksurvivalascended/tranqs/tranqs.md",
+    "ARK/arksurvivalascended/trashcan/trashcan.md",
+    "ARK/arksurvivalascended/cropplots/cropplots.md",
+    "ARK/arksurvivalascended/crafter/crafter.md",
     "minecraft/paper/paper.md",
-    "arksurvivalevolved/utilities/utilities.md",
+    "ARK/arksurvivalevolved/utilities/utilities.md",
     "minecraft/minecraft.md",
-    "arksurvivalevolved/stacks/stacks.md",
-    "arksurvivalevolved/net-ammo/net-ammo.md",
+    "ARK/arksurvivalevolved/stacks/stacks.md",
+    "ARK/arksurvivalevolved/net-ammo/net-ammo.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
-    "arksurvivalevolved/tranqs/GameUserSettings.md",
+    "ARK/arksurvivalevolved/tranqs/GameUserSettings.md",
     "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
-    "arksurvivalevolved/harvs-corner/harvs-corner.md",
+    "ARK/arksurvivalevolved/harvs-corner/harvs-corner.md",
     "arksurvivalevolved/excalutils/GameUserSettings.md",
-    "arksurvivalevolved/harvs-corner/GameUserSettings.md",
+    "ARK/arksurvivalevolved/harvs-corner/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox/dropstoragebox.md",
     "arksurvivalevolved/excalutils/Spawn Codes & Engram Entries.md",
-    "arksurvivalevolved/UtilitiesRemaster/Config/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
     "arksurvivalevolved/UtilitiesRemaster",
     "asa/tranqs/tranqs-sniper",
-    "arksurvivalascended/spyglass",
+    "ARK/arksurvivalascended/spyglass",
     "ase/excalutils/Untitled",
     "arksurvivalevolved/excalutils",
-    "minecraft/paper/swiftchop",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
