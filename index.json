@@ -60,7 +60,20 @@
       "sort": 1,
       "slug": "announcements",
       "type": "folder",
-      "items": [],
+      "items": [
+        {
+          "title": "\"Modding Support Update\"",
+          "icon": "",
+          "defaultOpen": false,
+          "sort": 1,
+          "headers": [
+            "❗ What This Means",
+            "🚀 What’s Next?"
+          ],
+          "slug": "announcements/modding-support-update",
+          "path": "docs/Announcements/moddingsupport.md"
+        }
+      ],
       "path": "docs/Announcements/Announcements.md"
     },
     {
