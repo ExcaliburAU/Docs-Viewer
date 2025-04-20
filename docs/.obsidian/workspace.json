@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/modding.md",
+                "file": "welcome.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "modding"
+              "title": "welcome"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/modding.md",
+                "file": "welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of modding"
+              "title": "Outline of welcome"
             }
           }
         ],
@@ -184,14 +184,14 @@
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
     "modding/ARK/ARK.md",
+    "modding/ARK/Announcements/Announcements.md",
+    "modding/ARK/Announcements/20-04-2025.md",
     "modding/modding.md",
     "modding/minecraft/minecraft.md",
     "modding",
     "modding/minecraft/paper/swiftchop/swiftchop.md",
     "minecraft/paper/swiftchop/extensions 1.md",
     "modding/minecraft/paper/extensions/extensions.md",
-    "modding/ARK/Announcements/Announcements.md",
-    "modding/ARK/Announcements/20-04-2025.md",
     "modding/ARK/evolved/evolved.md",
     "modding/ARK/evolved/crafter/GameUserSettings.md",
     "modding/ARK/evolved/crafter/crafter.md",
