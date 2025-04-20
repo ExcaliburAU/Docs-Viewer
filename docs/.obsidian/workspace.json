@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "welcome.md",
+                "file": "discord-bots/discord-bots.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "welcome"
+              "title": "discord-bots"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "welcome.md",
+                "file": "discord-bots/discord-bots.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of welcome"
+              "title": "Outline of discord-bots"
             }
           }
         ],
@@ -183,6 +183,9 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "welcome.md",
+    "discord-bots/discord-bots.md",
+    "discord-bots",
     "modding/ARK/ARK.md",
     "modding/ARK/Announcements/Announcements.md",
     "modding/ARK/Announcements/20-04-2025.md",
@@ -203,7 +206,6 @@
     "modding/ARK/evolved/crafter/Codes&Entries.md",
     "modding/ARK",
     "modding/ARK/Announcements",
-    "welcome.md",
     "images/logo.png",
     "modding/ARK/ascended/spyglass/spyglass.md",
     "modding/ARK/ascended/tranqs/tranqs.md",
@@ -216,12 +218,10 @@
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
     "modding/ARK/evolved/tranqs/GameUserSettings.md",
-    "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
     "arksurvivalevolved/UtilitiesRemaster",
-    "asa/tranqs/tranqs-sniper",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
