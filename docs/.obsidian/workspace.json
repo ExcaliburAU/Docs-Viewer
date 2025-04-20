@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "minecraft/paper/paper.md",
+                "file": "minecraft/fabric/fabric.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "paper"
+              "title": "fabric"
+            }
+          },
+          {
+            "id": "9e34a5bbc901c56f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Announcements/moddingsupport.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "moddingsupport"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -139,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "minecraft/paper/paper.md",
+                "file": "Announcements/moddingsupport.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of paper"
+              "title": "Outline of moddingsupport"
             }
           }
         ],
@@ -166,18 +181,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2fb4a4a0c7acbeab",
+  "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "ARK/evolved/crafter/GameUserSettings.md",
+    "ARK/evolved/crafter/crafter.md",
+    "Announcements/moddingsupport.md",
+    "Announcements/Announcements.md",
+    "Announcements/ARK",
     "minecraft/fabric/fabric.md",
     "minecraft/paper/paper.md",
     "minecraft/fabric",
     "minecraft/minecraft.md",
     "ARK/ascended/ascended.md",
     "ARK/evolved/evolved.md",
-    "ARK/evolved/crafter/crafter.md",
-    "ARK/evolved/crafter/GameUserSettings.md",
     "ARK/ARK.md",
-    "Announcements/Announcements.md",
     "ARK/evolved/crafter/Codes&Entries.md",
     "ARK",
     "Announcements",
@@ -199,14 +216,12 @@
     "ARK/evolved/tranqs/GameUserSettings.md",
     "arksurvivalevolved/excalibur-tranqs/GameUserSettings.md",
     "ARK/evolved/harvs-corner/harvs-corner.md",
-    "arksurvivalevolved/excalutils/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
     "arksurvivalevolved/UtilitiesRemaster",
     "asa/tranqs/tranqs-sniper",
     "ARK/ascended/spyglass",
-    "ase/excalutils/Untitled",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
