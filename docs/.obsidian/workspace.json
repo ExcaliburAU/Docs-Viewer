@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARK/Announcements/moddingsupport.md",
+                "file": "ARK/Announcements/20-04-2025.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "moddingsupport"
+              "title": "20-04-2025"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ARK/Announcements/moddingsupport.md",
+                "file": "ARK/Announcements/20-04-2025.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of moddingsupport"
+              "title": "Outline of 20-04-2025"
             }
           }
         ],
@@ -181,11 +181,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9e34a5bbc901c56f",
+  "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
     "ARK/Announcements/Announcements.md",
     "ARK/ARK.md",
-    "ARK/Announcements/moddingsupport.md",
+    "ARK/Announcements/20-04-2025.md",
     "ARK/evolved/crafter/GameUserSettings.md",
     "ARK/evolved/crafter/crafter.md",
     "Announcements/ARK",
