@@ -73,9 +73,13 @@
       "type": "folder",
       "items": [
         {
-          "title": "arksurvivalascended",
+          "title": "Evolved",
+          "icon": "",
+          "defaultOpen": true,
+          "showfolderpage": "false",
+          "sort": 2,
+          "slug": "ark-survival/evolved",
           "type": "folder",
-          "slug": "ark-survival/arksurvivalascended",
           "items": [
             {
               "title": "Excalibur Crafter",
@@ -83,227 +87,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "ark-survival/arksurvivalascended/excalibur-crafter",
-              "type": "folder",
-              "items": [
-                {
-                  "slug": "ark-survival/arksurvivalascended/excalibur-crafter/gameusersettings",
-                  "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalascended/crafter/GameUserSettings.md"
-                },
-                {
-                  "headers": [
-                    "ExcaliburCrafter"
-                  ],
-                  "slug": "ark-survival/arksurvivalascended/excalibur-crafter/spawn-codes-engram-entries",
-                  "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalascended/crafter/Spawn Codes & Engram Entries.md"
-                }
-              ],
-              "path": "docs/ARK/arksurvivalascended/crafter/crafter.md"
-            },
-            {
-              "title": "Excalibur Tranqs",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 2,
-              "slug": "ark-survival/arksurvivalascended/excalibur-tranqs",
-              "type": "folder",
-              "items": [
-                {
-                  "slug": "ark-survival/arksurvivalascended/excalibur-tranqs/gameusersettings",
-                  "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalascended/tranqs/GameUserSettings.md"
-                },
-                {
-                  "headers": [
-                    "**Tranq Tiers**",
-                    "**Features**",
-                    "**Modular Addons**",
-                    "**Documentation**",
-                    "**Support**",
-                    "**Note**"
-                  ],
-                  "slug": "ark-survival/arksurvivalascended/excalibur-tranqs/index",
-                  "title": "index",
-                  "path": "docs/ARK/arksurvivalascended/tranqs/index.md"
-                },
-                {
-                  "title": "patch-notes",
-                  "type": "folder",
-                  "slug": "ark-survival/arksurvivalascended/excalibur-tranqs/patch-notes",
-                  "items": [
-                    {
-                      "headers": [
-                        "Added",
-                        "Changes",
-                        "Removal"
-                      ],
-                      "slug": "ark-survival/arksurvivalascended/excalibur-tranqs/patch-notes/02-23-25",
-                      "title": "02-23-25",
-                      "path": "docs/ARK/arksurvivalascended/tranqs/patch-notes/02-23-25.md"
-                    }
-                  ]
-                },
-                {
-                  "headers": [
-                    "Narcotics",
-                    "Potent Narcotic",
-                    "Concentrated Narcotic",
-                    "Distilled Narcotic",
-                    "Pure Narcotic",
-                    "Stimulants",
-                    "Potent Stimulant",
-                    "Concentrated Stimulant",
-                    "Distilled Stimulant",
-                    "Pure Stimulant",
-                    "Arrows",
-                    "Potent Tranq Arrow",
-                    "Concentrated Tranq Arrow",
-                    "Distilled Tranq Arrow",
-                    "Pure Tranq Arrow",
-                    "Darts",
-                    "Potent Tranq Dart",
-                    "Concentrated Tranq Dart",
-                    "Distilled Tranq Dart",
-                    "Pure Tranq Dart",
-                    "Spear Bolts",
-                    "Potent Tranq Spear Bolt",
-                    "Concentrated Tranq Spear Bolt",
-                    "Distilled Tranq Spear Bolt",
-                    "Pure Tranq Spear Bolt",
-                    "Shock Darts",
-                    "Potent Shock Dart",
-                    "Concentrated Shock Dart",
-                    "Distilled Shock Dart",
-                    "Pure Shock Dart",
-                    "Fabricated Sniper Rifle",
-                    "Potent Tranq Sniper Bullet",
-                    "Concentrated Tranq Sniper Bullet",
-                    "Distilled Tranq Sniper Bullet",
-                    "Pure Tranq Sniper Bullet",
-                    "Boomerang",
-                    "Potent Boomerang",
-                    "Concentrated Boomerang",
-                    "Distilled Boomerang",
-                    "Pure Boomerang",
-                    "Items",
-                    "Food Remover",
-                    "Structures",
-                    "Workbench/CharcoalBaker/Meat Spoiler"
-                  ],
-                  "slug": "ark-survival/arksurvivalascended/excalibur-tranqs/spawn-codes-engram-entries",
-                  "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalascended/tranqs/Spawn Codes & Engram Entries.md"
-                }
-              ],
-              "path": "docs/ARK/arksurvivalascended/tranqs/tranqs.md"
-            },
-            {
-              "title": "Ascended",
-              "icon": "",
-              "defaultOpen": true,
-              "showfolderpage": "false",
-              "sort": 3,
-              "slug": "ark-survival/arksurvivalascended/ascended",
-              "path": "docs/ARK/arksurvivalascended/ascended.md"
-            },
-            {
-              "title": "Excalibur Crop Plots",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 3,
-              "slug": "ark-survival/arksurvivalascended/excalibur-crop-plots",
-              "type": "folder",
-              "items": [
-                {
-                  "slug": "ark-survival/arksurvivalascended/excalibur-crop-plots/gameusersettings",
-                  "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalascended/cropplots/GameUserSettings.md"
-                },
-                {
-                  "headers": [
-                    "Excalibur Crop Plot",
-                    "Excalibur Grow Lamp"
-                  ],
-                  "slug": "ark-survival/arksurvivalascended/excalibur-crop-plots/spawn-codes-engram-entries",
-                  "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalascended/cropplots/Spawn Codes & Engram Entries.md"
-                }
-              ],
-              "path": "docs/ARK/arksurvivalascended/cropplots/cropplots.md"
-            },
-            {
-              "title": "Excalibur Trashcan",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 4,
-              "slug": "ark-survival/arksurvivalascended/excalibur-trashcan",
-              "type": "folder",
-              "items": [
-                {
-                  "slug": "ark-survival/arksurvivalascended/excalibur-trashcan/gameusersettings",
-                  "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalascended/trashcan/GameUserSettings.md"
-                },
-                {
-                  "headers": [
-                    "ExcaliburTrashcan"
-                  ],
-                  "slug": "ark-survival/arksurvivalascended/excalibur-trashcan/spawn-codes-engram-entries",
-                  "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalascended/trashcan/Spawn Codes & Engram Entries.md"
-                }
-              ],
-              "path": "docs/ARK/arksurvivalascended/trashcan/trashcan.md"
-            },
-            {
-              "title": "Excalibur Spyglass",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 5,
-              "slug": "ark-survival/arksurvivalascended/excalibur-spyglass",
-              "type": "folder",
-              "items": [
-                {
-                  "slug": "ark-survival/arksurvivalascended/excalibur-spyglass/gameusersettings",
-                  "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalascended/spyglass/GameUserSettings.md"
-                },
-                {
-                  "headers": [
-                    "Spyglass"
-                  ],
-                  "slug": "ark-survival/arksurvivalascended/excalibur-spyglass/spawn-codes-engram-entries",
-                  "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalascended/spyglass/Spawn Codes & Engram Entries.md"
-                },
-                {
-                  "slug": "ark-survival/arksurvivalascended/excalibur-spyglass/to-do",
-                  "title": "to do",
-                  "path": "docs/ARK/arksurvivalascended/spyglass/to do.md"
-                }
-              ],
-              "path": "docs/ARK/arksurvivalascended/spyglass/spyglass.md"
-            }
-          ]
-        },
-        {
-          "title": "arksurvivalevolved",
-          "type": "folder",
-          "slug": "ark-survival/arksurvivalevolved",
-          "items": [
-            {
-              "title": "Excalibur Crafter",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 1,
-              "slug": "ark-survival/arksurvivalevolved/excalibur-crafter",
+              "slug": "ark-survival/evolved/excalibur-crafter",
               "type": "folder",
               "items": [
                 {
@@ -311,8 +95,8 @@
                   "icon": "",
                   "defaultOpen": false,
                   "sort": 1,
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-crafter/game-user-settings",
-                  "path": "docs/ARK/arksurvivalevolved/crafter/GameUserSettings.md"
+                  "slug": "ark-survival/evolved/excalibur-crafter/game-user-settings",
+                  "path": "docs/ARK/evolved/crafter/GameUserSettings.md"
                 },
                 {
                   "title": "Spawn Codes & Engram Entries",
@@ -322,11 +106,11 @@
                   "headers": [
                     "ExcaliburCrafter"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-crafter/spawn-codes-engram-entries",
-                  "path": "docs/ARK/arksurvivalevolved/crafter/Codes&Entries.md"
+                  "slug": "ark-survival/evolved/excalibur-crafter/spawn-codes-engram-entries",
+                  "path": "docs/ARK/evolved/crafter/Codes&Entries.md"
                 }
               ],
-              "path": "docs/ARK/arksurvivalevolved/crafter/crafter.md"
+              "path": "docs/ARK/evolved/crafter/crafter.md"
             },
             {
               "title": "Excalibur Stacks",
@@ -334,7 +118,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "ark-survival/arksurvivalevolved/excalibur-stacks",
+              "slug": "ark-survival/evolved/excalibur-stacks",
               "type": "folder",
               "items": [
                 {
@@ -348,14 +132,14 @@
                     "Modifying `GameUserSettings.ini`",
                     "Example: Blacklisting Items"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-stacks/gameusersettings",
+                  "slug": "ark-survival/evolved/excalibur-stacks/gameusersettings",
                   "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalevolved/stacks/GameUserSettings.md"
+                  "path": "docs/ARK/evolved/stacks/GameUserSettings.md"
                 },
                 {
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-stacks/immersivetaming",
+                  "slug": "ark-survival/evolved/excalibur-stacks/immersivetaming",
                   "title": "ImmersiveTaming",
-                  "path": "docs/ARK/arksurvivalevolved/stacks/ImmersiveTaming.md"
+                  "path": "docs/ARK/evolved/stacks/ImmersiveTaming.md"
                 },
                 {
                   "headers": [
@@ -369,21 +153,12 @@
                     "Stryder Box",
                     "Travel Terminal"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-stacks/spawn-codes-engram-entries",
+                  "slug": "ark-survival/evolved/excalibur-stacks/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalevolved/stacks/Spawn Codes & Engram Entries.md"
+                  "path": "docs/ARK/evolved/stacks/Spawn Codes & Engram Entries.md"
                 }
               ],
-              "path": "docs/ARK/arksurvivalevolved/stacks/stacks.md"
-            },
-            {
-              "title": "Evolved",
-              "icon": "",
-              "defaultOpen": true,
-              "showfolderpage": "false",
-              "sort": 2,
-              "slug": "ark-survival/arksurvivalevolved/evolved",
-              "path": "docs/ARK/arksurvivalevolved/evolved.md"
+              "path": "docs/ARK/evolved/stacks/stacks.md"
             },
             {
               "title": "Excalibur Tranqs",
@@ -391,27 +166,27 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 2,
-              "slug": "ark-survival/arksurvivalevolved/excalibur-tranqs",
+              "slug": "ark-survival/evolved/excalibur-tranqs",
               "type": "folder",
               "items": [
                 {
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-tranqs/gameusersettings",
+                  "slug": "ark-survival/evolved/excalibur-tranqs/gameusersettings",
                   "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalevolved/tranqs/GameUserSettings.md"
+                  "path": "docs/ARK/evolved/tranqs/GameUserSettings.md"
                 },
                 {
                   "headers": [
                     "Config",
                     "Patch Notes"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-tranqs/index",
+                  "slug": "ark-survival/evolved/excalibur-tranqs/index",
                   "title": "index",
-                  "path": "docs/ARK/arksurvivalevolved/tranqs/index.md"
+                  "path": "docs/ARK/evolved/tranqs/index.md"
                 },
                 {
                   "title": "patch-notes",
                   "type": "folder",
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-tranqs/patch-notes",
+                  "slug": "ark-survival/evolved/excalibur-tranqs/patch-notes",
                   "items": [
                     {
                       "headers": [
@@ -421,9 +196,9 @@
                         "Vanilla Creatures",
                         "Kraken Better Dinos"
                       ],
-                      "slug": "ark-survival/arksurvivalevolved/excalibur-tranqs/patch-notes/12-11-24",
+                      "slug": "ark-survival/evolved/excalibur-tranqs/patch-notes/12-11-24",
                       "title": "12-11-24",
-                      "path": "docs/ARK/arksurvivalevolved/tranqs/patch-notes/12-11-24.md"
+                      "path": "docs/ARK/evolved/tranqs/patch-notes/12-11-24.md"
                     }
                   ]
                 },
@@ -475,12 +250,12 @@
                     "Charcoal Baker",
                     "Meat Spoiler"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-tranqs/spawn-codes-engram-entries",
+                  "slug": "ark-survival/evolved/excalibur-tranqs/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalevolved/tranqs/Spawn Codes & Engram Entries.md"
+                  "path": "docs/ARK/evolved/tranqs/Spawn Codes & Engram Entries.md"
                 }
               ],
-              "path": "docs/ARK/arksurvivalevolved/tranqs/tranqs.md"
+              "path": "docs/ARK/evolved/tranqs/tranqs.md"
             },
             {
               "title": "Harvs Corner",
@@ -488,55 +263,55 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 3,
-              "slug": "ark-survival/arksurvivalevolved/harvs-corner",
+              "slug": "ark-survival/evolved/harvs-corner",
               "type": "folder",
               "items": [
                 {
-                  "slug": "ark-survival/arksurvivalevolved/harvs-corner/gameusersettings",
+                  "slug": "ark-survival/evolved/harvs-corner/gameusersettings",
                   "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalevolved/harvs-corner/GameUserSettings.md"
+                  "path": "docs/ARK/evolved/harvs-corner/GameUserSettings.md"
                 },
                 {
                   "title": "patch-notes",
                   "type": "folder",
-                  "slug": "ark-survival/arksurvivalevolved/harvs-corner/patch-notes",
+                  "slug": "ark-survival/evolved/harvs-corner/patch-notes",
                   "items": [
                     {
                       "title": "2024",
                       "type": "folder",
-                      "slug": "ark-survival/arksurvivalevolved/harvs-corner/patch-notes/2024",
+                      "slug": "ark-survival/evolved/harvs-corner/patch-notes/2024",
                       "items": [
                         {
                           "headers": [
                             "Update 16/12 - 1",
                             "Update 16/12 - 2"
                           ],
-                          "slug": "ark-survival/arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24",
+                          "slug": "ark-survival/evolved/harvs-corner/patch-notes/2024/12-16-24",
                           "title": "12-16-24",
-                          "path": "docs/ARK/arksurvivalevolved/harvs-corner/patch-notes/2024/12-16-24.md"
+                          "path": "docs/ARK/evolved/harvs-corner/patch-notes/2024/12-16-24.md"
                         },
                         {
                           "headers": [
                             "Update 17/12"
                           ],
-                          "slug": "ark-survival/arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24",
+                          "slug": "ark-survival/evolved/harvs-corner/patch-notes/2024/12-17-24",
                           "title": "12-17-24",
-                          "path": "docs/ARK/arksurvivalevolved/harvs-corner/patch-notes/2024/12-17-24.md"
+                          "path": "docs/ARK/evolved/harvs-corner/patch-notes/2024/12-17-24.md"
                         }
                       ]
                     },
                     {
                       "title": "2025",
                       "type": "folder",
-                      "slug": "ark-survival/arksurvivalevolved/harvs-corner/patch-notes/2025",
+                      "slug": "ark-survival/evolved/harvs-corner/patch-notes/2025",
                       "items": [
                         {
                           "headers": [
                             "Update 01/12"
                           ],
-                          "slug": "ark-survival/arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25",
+                          "slug": "ark-survival/evolved/harvs-corner/patch-notes/2025/01-12-25",
                           "title": "01-12-25",
-                          "path": "docs/ARK/arksurvivalevolved/harvs-corner/patch-notes/2025/01-12-25.md"
+                          "path": "docs/ARK/evolved/harvs-corner/patch-notes/2025/01-12-25.md"
                         }
                       ]
                     }
@@ -547,12 +322,12 @@
                     "Items",
                     "Structures"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/harvs-corner/spawn-codes-engram-entries",
+                  "slug": "ark-survival/evolved/harvs-corner/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalevolved/harvs-corner/Spawn Codes & Engram Entries.md"
+                  "path": "docs/ARK/evolved/harvs-corner/Spawn Codes & Engram Entries.md"
                 }
               ],
-              "path": "docs/ARK/arksurvivalevolved/harvs-corner/harvs-corner.md"
+              "path": "docs/ARK/evolved/harvs-corner/harvs-corner.md"
             },
             {
               "title": "Excalibur Net Ammo",
@@ -560,24 +335,24 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 4,
-              "slug": "ark-survival/arksurvivalevolved/excalibur-net-ammo",
+              "slug": "ark-survival/evolved/excalibur-net-ammo",
               "type": "folder",
               "items": [
                 {
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-net-ammo/gameusersettings",
+                  "slug": "ark-survival/evolved/excalibur-net-ammo/gameusersettings",
                   "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalevolved/net-ammo/GameUserSettings.md"
+                  "path": "docs/ARK/evolved/net-ammo/GameUserSettings.md"
                 },
                 {
                   "headers": [
                     "Net Everything Ammo"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-net-ammo/spawn-codes-engram-entries",
+                  "slug": "ark-survival/evolved/excalibur-net-ammo/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalevolved/net-ammo/Spawn Codes & Engram Entries.md"
+                  "path": "docs/ARK/evolved/net-ammo/Spawn Codes & Engram Entries.md"
                 }
               ],
-              "path": "docs/ARK/arksurvivalevolved/net-ammo/net-ammo.md"
+              "path": "docs/ARK/evolved/net-ammo/net-ammo.md"
             },
             {
               "title": "Excalibur Utilities",
@@ -585,13 +360,13 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 6,
-              "slug": "ark-survival/arksurvivalevolved/excalibur-utilities",
+              "slug": "ark-survival/evolved/excalibur-utilities",
               "type": "folder",
               "items": [
                 {
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-utilities/gameusersettings",
+                  "slug": "ark-survival/evolved/excalibur-utilities/gameusersettings",
                   "title": "GameUserSettings",
-                  "path": "docs/ARK/arksurvivalevolved/utilities/GameUserSettings.md"
+                  "path": "docs/ARK/evolved/utilities/GameUserSettings.md"
                 },
                 {
                   "headers": [
@@ -624,14 +399,231 @@
                     "Scrap Forge",
                     "Workbench"
                   ],
-                  "slug": "ark-survival/arksurvivalevolved/excalibur-utilities/spawn-codes-engram-entries",
+                  "slug": "ark-survival/evolved/excalibur-utilities/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
-                  "path": "docs/ARK/arksurvivalevolved/utilities/Spawn Codes & Engram Entries.md"
+                  "path": "docs/ARK/evolved/utilities/Spawn Codes & Engram Entries.md"
                 }
               ],
-              "path": "docs/ARK/arksurvivalevolved/utilities/utilities.md"
+              "path": "docs/ARK/evolved/utilities/utilities.md"
             }
-          ]
+          ],
+          "path": "docs/ARK/evolved/evolved.md"
+        },
+        {
+          "title": "Ascended",
+          "icon": "",
+          "defaultOpen": true,
+          "showfolderpage": "false",
+          "sort": 3,
+          "slug": "ark-survival/ascended",
+          "type": "folder",
+          "items": [
+            {
+              "title": "Excalibur Crafter",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 1,
+              "slug": "ark-survival/ascended/excalibur-crafter",
+              "type": "folder",
+              "items": [
+                {
+                  "slug": "ark-survival/ascended/excalibur-crafter/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/ARK/ascended/crafter/GameUserSettings.md"
+                },
+                {
+                  "headers": [
+                    "ExcaliburCrafter"
+                  ],
+                  "slug": "ark-survival/ascended/excalibur-crafter/spawn-codes-engram-entries",
+                  "title": "Spawn Codes & Engram Entries",
+                  "path": "docs/ARK/ascended/crafter/Spawn Codes & Engram Entries.md"
+                }
+              ],
+              "path": "docs/ARK/ascended/crafter/crafter.md"
+            },
+            {
+              "title": "Excalibur Tranqs",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 2,
+              "slug": "ark-survival/ascended/excalibur-tranqs",
+              "type": "folder",
+              "items": [
+                {
+                  "slug": "ark-survival/ascended/excalibur-tranqs/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/ARK/ascended/tranqs/GameUserSettings.md"
+                },
+                {
+                  "headers": [
+                    "**Tranq Tiers**",
+                    "**Features**",
+                    "**Modular Addons**",
+                    "**Documentation**",
+                    "**Support**",
+                    "**Note**"
+                  ],
+                  "slug": "ark-survival/ascended/excalibur-tranqs/index",
+                  "title": "index",
+                  "path": "docs/ARK/ascended/tranqs/index.md"
+                },
+                {
+                  "title": "patch-notes",
+                  "type": "folder",
+                  "slug": "ark-survival/ascended/excalibur-tranqs/patch-notes",
+                  "items": [
+                    {
+                      "headers": [
+                        "Added",
+                        "Changes",
+                        "Removal"
+                      ],
+                      "slug": "ark-survival/ascended/excalibur-tranqs/patch-notes/02-23-25",
+                      "title": "02-23-25",
+                      "path": "docs/ARK/ascended/tranqs/patch-notes/02-23-25.md"
+                    }
+                  ]
+                },
+                {
+                  "headers": [
+                    "Narcotics",
+                    "Potent Narcotic",
+                    "Concentrated Narcotic",
+                    "Distilled Narcotic",
+                    "Pure Narcotic",
+                    "Stimulants",
+                    "Potent Stimulant",
+                    "Concentrated Stimulant",
+                    "Distilled Stimulant",
+                    "Pure Stimulant",
+                    "Arrows",
+                    "Potent Tranq Arrow",
+                    "Concentrated Tranq Arrow",
+                    "Distilled Tranq Arrow",
+                    "Pure Tranq Arrow",
+                    "Darts",
+                    "Potent Tranq Dart",
+                    "Concentrated Tranq Dart",
+                    "Distilled Tranq Dart",
+                    "Pure Tranq Dart",
+                    "Spear Bolts",
+                    "Potent Tranq Spear Bolt",
+                    "Concentrated Tranq Spear Bolt",
+                    "Distilled Tranq Spear Bolt",
+                    "Pure Tranq Spear Bolt",
+                    "Shock Darts",
+                    "Potent Shock Dart",
+                    "Concentrated Shock Dart",
+                    "Distilled Shock Dart",
+                    "Pure Shock Dart",
+                    "Fabricated Sniper Rifle",
+                    "Potent Tranq Sniper Bullet",
+                    "Concentrated Tranq Sniper Bullet",
+                    "Distilled Tranq Sniper Bullet",
+                    "Pure Tranq Sniper Bullet",
+                    "Boomerang",
+                    "Potent Boomerang",
+                    "Concentrated Boomerang",
+                    "Distilled Boomerang",
+                    "Pure Boomerang",
+                    "Items",
+                    "Food Remover",
+                    "Structures",
+                    "Workbench/CharcoalBaker/Meat Spoiler"
+                  ],
+                  "slug": "ark-survival/ascended/excalibur-tranqs/spawn-codes-engram-entries",
+                  "title": "Spawn Codes & Engram Entries",
+                  "path": "docs/ARK/ascended/tranqs/Spawn Codes & Engram Entries.md"
+                }
+              ],
+              "path": "docs/ARK/ascended/tranqs/tranqs.md"
+            },
+            {
+              "title": "Excalibur Crop Plots",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 3,
+              "slug": "ark-survival/ascended/excalibur-crop-plots",
+              "type": "folder",
+              "items": [
+                {
+                  "slug": "ark-survival/ascended/excalibur-crop-plots/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/ARK/ascended/cropplots/GameUserSettings.md"
+                },
+                {
+                  "headers": [
+                    "Excalibur Crop Plot",
+                    "Excalibur Grow Lamp"
+                  ],
+                  "slug": "ark-survival/ascended/excalibur-crop-plots/spawn-codes-engram-entries",
+                  "title": "Spawn Codes & Engram Entries",
+                  "path": "docs/ARK/ascended/cropplots/Spawn Codes & Engram Entries.md"
+                }
+              ],
+              "path": "docs/ARK/ascended/cropplots/cropplots.md"
+            },
+            {
+              "title": "Excalibur Trashcan",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 4,
+              "slug": "ark-survival/ascended/excalibur-trashcan",
+              "type": "folder",
+              "items": [
+                {
+                  "slug": "ark-survival/ascended/excalibur-trashcan/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/ARK/ascended/trashcan/GameUserSettings.md"
+                },
+                {
+                  "headers": [
+                    "ExcaliburTrashcan"
+                  ],
+                  "slug": "ark-survival/ascended/excalibur-trashcan/spawn-codes-engram-entries",
+                  "title": "Spawn Codes & Engram Entries",
+                  "path": "docs/ARK/ascended/trashcan/Spawn Codes & Engram Entries.md"
+                }
+              ],
+              "path": "docs/ARK/ascended/trashcan/trashcan.md"
+            },
+            {
+              "title": "Excalibur Spyglass",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 5,
+              "slug": "ark-survival/ascended/excalibur-spyglass",
+              "type": "folder",
+              "items": [
+                {
+                  "slug": "ark-survival/ascended/excalibur-spyglass/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/ARK/ascended/spyglass/GameUserSettings.md"
+                },
+                {
+                  "headers": [
+                    "Spyglass"
+                  ],
+                  "slug": "ark-survival/ascended/excalibur-spyglass/spawn-codes-engram-entries",
+                  "title": "Spawn Codes & Engram Entries",
+                  "path": "docs/ARK/ascended/spyglass/Spawn Codes & Engram Entries.md"
+                },
+                {
+                  "slug": "ark-survival/ascended/excalibur-spyglass/to-do",
+                  "title": "to do",
+                  "path": "docs/ARK/ascended/spyglass/to do.md"
+                }
+              ],
+              "path": "docs/ARK/ascended/spyglass/spyglass.md"
+            }
+          ],
+          "path": "docs/ARK/ascended/ascended.md"
         }
       ],
       "path": "docs/ARK/ARK.md"
