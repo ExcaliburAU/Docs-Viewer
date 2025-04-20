@@ -638,12 +638,23 @@
       "type": "folder",
       "items": [
         {
-          "title": "Paper Plugins",
+          "title": "Fabric",
           "icon": "",
           "defaultOpen": false,
           "showfolderpage": "false",
           "sort": 1,
-          "slug": "minecraft/paper-plugins",
+          "slug": "minecraft/fabric",
+          "type": "folder",
+          "items": [],
+          "path": "docs/minecraft/fabric/fabric.md"
+        },
+        {
+          "title": "Paper",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 1,
+          "slug": "minecraft/paper",
           "type": "folder",
           "items": [
             {
@@ -651,7 +662,7 @@
               "icon": "",
               "defaultOpen": false,
               "showfolderpage": "false",
-              "slug": "minecraft/paper-plugins/extensions",
+              "slug": "minecraft/paper/extensions",
               "type": "folder",
               "items": [
                 {
@@ -665,7 +676,7 @@
                     "Special Permissions",
                     "Default Permissions"
                   ],
-                  "slug": "minecraft/paper-plugins/extensions/permissions",
+                  "slug": "minecraft/paper/extensions/permissions",
                   "title": "permissions",
                   "path": "docs/minecraft/paper/extensions/permissions.md"
                 }
@@ -684,7 +695,7 @@
                 "Authors",
                 "License"
               ],
-              "slug": "minecraft/paper-plugins/swift-chop",
+              "slug": "minecraft/paper/swift-chop",
               "type": "folder",
               "items": [],
               "path": "docs/minecraft/paper/SwiftChop/SwiftChop.md"
