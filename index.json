@@ -53,6 +53,17 @@
       "path": "docs/welcome.md"
     },
     {
+      "title": "Announcements",
+      "icon": "",
+      "defaultOpen": true,
+      "showfolderpage": "false",
+      "sort": 1,
+      "slug": "announcements",
+      "type": "folder",
+      "items": [],
+      "path": "docs/Announcements/Announcements.md"
+    },
+    {
       "title": "ARK Survival Evolved",
       "icon": "",
       "defaultOpen": true,
@@ -671,22 +682,6 @@
         }
       ],
       "path": "docs/minecraft/minecraft.md"
-    },
-    {
-      "title": "Announcementd",
-      "type": "folder",
-      "slug": "announcementd",
-      "items": [
-        {
-          "title": "Announcements",
-          "icon": "",
-          "defaultOpen": true,
-          "showfolderpage": "false",
-          "sort": 1,
-          "slug": "announcementd/announcements",
-          "path": "docs/Announcementd/Announcements.md"
-        }
-      ]
     }
   ]
 }
