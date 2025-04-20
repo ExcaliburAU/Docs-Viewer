@@ -1,5 +1,5 @@
 ---
-title: Paper
+title: Fabric
 icon: 
 defaultOpen: false
 showfolderpage: false
