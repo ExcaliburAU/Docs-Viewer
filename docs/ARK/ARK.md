@@ -1,5 +1,5 @@
 ---
-title: ARK Survival
+title: ARK
 icon: 
 defaultOpen: true
 showfolderpage: false
