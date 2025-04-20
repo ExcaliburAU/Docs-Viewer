@@ -43,10 +43,6 @@
       "slug": "welcome",
       "sort": 0,
       "headers": [
-        "Modding",
-        "Games",
-        "Discord Bots",
-        "Unreal Engine Assets",
         "Need Help?"
       ],
       "path": "docs/welcome.md"
@@ -729,6 +725,17 @@
         }
       ],
       "path": "docs/modding/modding.md"
+    },
+    {
+      "title": "Discord Bots",
+      "icon": "",
+      "defaultOpen": true,
+      "showfolderpage": "false",
+      "sort": 2,
+      "slug": "discord-bots",
+      "type": "folder",
+      "items": [],
+      "path": "docs/discord-bots/discord-bots.md"
     }
   ]
 }
