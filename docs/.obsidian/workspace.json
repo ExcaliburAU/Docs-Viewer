@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Announcements/moddingsupport.md",
+                "file": "ARK/Announcements/moddingsupport.md",
                 "mode": "source",
                 "source": true
               },
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Announcements/moddingsupport.md",
+                "file": "ARK/Announcements/moddingsupport.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -183,10 +183,11 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "ARK/Announcements/Announcements.md",
+    "ARK/ARK.md",
+    "ARK/Announcements/moddingsupport.md",
     "ARK/evolved/crafter/GameUserSettings.md",
     "ARK/evolved/crafter/crafter.md",
-    "Announcements/moddingsupport.md",
-    "Announcements/Announcements.md",
     "Announcements/ARK",
     "minecraft/fabric/fabric.md",
     "minecraft/paper/paper.md",
@@ -194,10 +195,9 @@
     "minecraft/minecraft.md",
     "ARK/ascended/ascended.md",
     "ARK/evolved/evolved.md",
-    "ARK/ARK.md",
     "ARK/evolved/crafter/Codes&Entries.md",
     "ARK",
-    "Announcements",
+    "ARK/Announcements",
     "welcome.md",
     "images/logo.png",
     "minecraft/paper/swiftchop/swiftchop.md",
