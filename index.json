@@ -385,21 +385,6 @@
             }
           ],
           "path": "docs/arksurvivalevolved/utilities/utilities.md"
-        },
-        {
-          "title": "DropStoragebox",
-          "type": "folder",
-          "slug": "ark-survival-evolved/dropstoragebox",
-          "items": [
-            {
-              "title": "Game User Settings",
-              "icon": "",
-              "defaultOpen": false,
-              "sort": 1,
-              "slug": "ark-survival-evolved/dropstoragebox/game-user-settings",
-              "path": "docs/arksurvivalevolved/DropStoragebox/GameUserSettings.md"
-            }
-          ]
         }
       ],
       "path": "docs/arksurvivalevolved/arksurvivalevolved.md"
@@ -686,6 +671,22 @@
         }
       ],
       "path": "docs/minecraft/minecraft.md"
+    },
+    {
+      "title": "Announcementd",
+      "type": "folder",
+      "slug": "announcementd",
+      "items": [
+        {
+          "title": "Announcements",
+          "icon": "",
+          "defaultOpen": true,
+          "showfolderpage": "false",
+          "sort": 1,
+          "slug": "announcementd/announcements",
+          "path": "docs/Announcementd/Announcements.md"
+        }
+      ]
     }
   ]
 }
