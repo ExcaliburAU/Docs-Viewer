@@ -1,7 +1,7 @@
 ---
 title: Paper Plugins
 icon: 
-defaultOpen: true
+defaultOpen: false
 showfolderpage: false
 sort: 1
 ---

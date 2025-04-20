@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ARK/ARK.md",
+                "file": "minecraft/paper/paper.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "ARK"
+              "title": "paper"
             }
           }
         ]
@@ -139,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ARK/ARK.md",
+                "file": "minecraft/paper/paper.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ARK"
+              "title": "Outline of paper"
             }
           }
         ],
@@ -168,14 +168,16 @@
   },
   "active": "2fb4a4a0c7acbeab",
   "lastOpenFiles": [
-    "ARK/evolved/crafter/Codes&Entries.md",
-    "ARK/evolved/evolved.md",
+    "minecraft/minecraft.md",
     "ARK/ascended/ascended.md",
+    "ARK/evolved/evolved.md",
+    "ARK/evolved/crafter/crafter.md",
+    "ARK/evolved/crafter/GameUserSettings.md",
     "ARK/ARK.md",
     "Announcements/Announcements.md",
+    "ARK/evolved/crafter/Codes&Entries.md",
     "ARK",
     "Announcements",
-    "ARK/evolved/crafter/crafter.md",
     "welcome.md",
     "images/logo.png",
     "minecraft/paper/swiftchop/swiftchop.md",
@@ -188,7 +190,6 @@
     "ARK/ascended/crafter/crafter.md",
     "minecraft/paper/paper.md",
     "ARK/evolved/utilities/utilities.md",
-    "minecraft/minecraft.md",
     "ARK/evolved/stacks/stacks.md",
     "ARK/evolved/net-ammo/net-ammo.md",
     "Pasted image 20250326200750.png",
@@ -198,7 +199,6 @@
     "ARK/evolved/harvs-corner/harvs-corner.md",
     "arksurvivalevolved/excalutils/GameUserSettings.md",
     "ARK/evolved/harvs-corner/GameUserSettings.md",
-    "arksurvivalevolved/dropstoragebox/dropstoragebox.md",
     "arksurvivalevolved/dropstoragebox",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
