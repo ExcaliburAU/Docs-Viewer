@@ -1,5 +1,5 @@
 ---
-title: "Modding Support Update"
+title: Modding Support Update
 icon: 
 defaultOpen: false
 sort: 1
