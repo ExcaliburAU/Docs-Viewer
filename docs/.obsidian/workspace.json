@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "welcome.md",
+                "file": "Announcementd/Announcements.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "welcome"
+              "title": "Announcements"
             }
           }
         ]
@@ -139,13 +139,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "welcome.md",
+                "file": "Announcementd/Announcements.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of welcome"
+              "title": "Outline of Announcements"
             }
           }
         ],
@@ -168,6 +168,12 @@
   },
   "active": "2fb4a4a0c7acbeab",
   "lastOpenFiles": [
+    "arksurvivalascended/arksurvivalascended.md",
+    "Announcementd/Announcements.md",
+    "arksurvivalevolved/arksurvivalevolved.md",
+    "Announcementd",
+    "arksurvivalevolved/crafter/crafter.md",
+    "welcome.md",
     "images/logo.png",
     "minecraft/paper/swiftchop/swiftchop.md",
     "minecraft/paper/swiftchop/swiftchop.md",
@@ -179,11 +185,7 @@
     "arksurvivalascended/crafter/crafter.md",
     "minecraft/paper/paper.md",
     "arksurvivalevolved/utilities/utilities.md",
-    "welcome.md",
     "minecraft/minecraft.md",
-    "arksurvivalevolved/arksurvivalevolved.md",
-    "arksurvivalascended/arksurvivalascended.md",
-    "arksurvivalevolved/crafter/crafter.md",
     "arksurvivalevolved/stacks/stacks.md",
     "arksurvivalevolved/net-ammo/net-ammo.md",
     "Pasted image 20250326200750.png",
@@ -208,7 +210,6 @@
     "images/logo2.png",
     "logo2.png",
     "logo.png",
-    "arksurvivalevolved/excalibur-tranqs",
     "images/Screenshot.png"
   ]
 }
