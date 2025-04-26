@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/ascended/tranqs/tranqs.md",
+                "file": "modding/minecraft/minecraft.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "tranqs"
+              "title": "minecraft"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/ascended/tranqs/tranqs.md",
+                "file": "modding/minecraft/minecraft.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of tranqs"
+              "title": "Outline of minecraft"
             }
           }
         ],
@@ -183,19 +183,19 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
-    "modding/ARK/ascended/tranqs/GameUserSettings.md",
+    "modding/ARK/ARK.md",
+    "modding/modding.md",
     "modding/ARK/ascended/tranqs/tranqs.md",
+    "modding/ARK/ascended/tranqs/GameUserSettings.md",
     "modding/ARK/ascended/tranqs/patch-notes/02-23-25.md",
     "modding/ARK/ascended/tranqs/index.md",
     "modding/ARK/news/news.md",
     "modding/minecraft/paper/swiftchop/swiftchop.md",
     "welcome.md",
-    "modding/ARK/ARK.md",
     "modding/minecraft/paper/extensions/extensions.md",
     "modding/ARK/news/20-04-2025.md",
     "discord-bots/discord-bots.md",
     "discord-bots",
-    "modding/modding.md",
     "modding/minecraft/minecraft.md",
     "modding",
     "minecraft/paper/swiftchop/extensions 1.md",

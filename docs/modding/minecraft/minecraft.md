@@ -1,7 +1,7 @@
 ---
 title: Minecraft
 icon: 
-defaultOpen: true
+defaultOpen: false
 showfolderpage: false
 sort: 2
 ---

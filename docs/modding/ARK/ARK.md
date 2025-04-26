@@ -1,7 +1,7 @@
 ---
 title: ARK
 icon: 
-defaultOpen: true
+defaultOpen: false
 showfolderpage: false
 sort: 1
 ---
