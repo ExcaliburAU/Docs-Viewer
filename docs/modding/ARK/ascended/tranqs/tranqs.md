@@ -10,7 +10,7 @@ Boost your ARK experience with this mod, featuring four tiers of narcotics, stim
 
 ---
 
-### **Tranq Tiers**
+### Tranq Tiers
 
 Experience Tranqs with increasing potency, scaled from the vanilla base:
 
@@ -21,7 +21,7 @@ Experience Tranqs with increasing potency, scaled from the vanilla base:
 
 ---
 
-### **Features**
+### Features
 
 - **Core Version**: Includes upgraded narcotics, stimulants, and vanilla tranqs.
 
@@ -33,15 +33,7 @@ Experience Tranqs with increasing potency, scaled from the vanilla base:
 
 ---
 
-### **Documentation**
-
-Looking for **Spawn Codes, Engram Entries, or INI Settings**?  
-Check out the full documentation at:  
-[**docs.exau.dev**](https://docs.exau.dev)
-
----
-
-### **Note**
+### Note
 
 Comments are disabled as I’m focusing on developing my own game. Modding remains a hobby, so I may be less active here.
 
