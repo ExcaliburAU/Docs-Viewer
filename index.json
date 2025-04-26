@@ -466,6 +466,12 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 2,
+                  "headers": [
+                    "**Tranq Tiers**",
+                    "**Features**",
+                    "**Documentation**",
+                    "**Note**"
+                  ],
                   "slug": "mods/ark/ascended/excalibur-tranqs",
                   "type": "folder",
                   "items": [
@@ -473,36 +479,6 @@
                       "slug": "mods/ark/ascended/excalibur-tranqs/gameusersettings",
                       "title": "GameUserSettings",
                       "path": "docs/modding/ARK/ascended/tranqs/GameUserSettings.md"
-                    },
-                    {
-                      "headers": [
-                        "**Tranq Tiers**",
-                        "**Features**",
-                        "**Modular Addons**",
-                        "**Documentation**",
-                        "**Support**",
-                        "**Note**"
-                      ],
-                      "slug": "mods/ark/ascended/excalibur-tranqs/index",
-                      "title": "index",
-                      "path": "docs/modding/ARK/ascended/tranqs/index.md"
-                    },
-                    {
-                      "title": "patch-notes",
-                      "type": "folder",
-                      "slug": "mods/ark/ascended/excalibur-tranqs/patch-notes",
-                      "items": [
-                        {
-                          "headers": [
-                            "Added",
-                            "Changes",
-                            "Removal"
-                          ],
-                          "slug": "mods/ark/ascended/excalibur-tranqs/patch-notes/02-23-25",
-                          "title": "02-23-25",
-                          "path": "docs/modding/ARK/ascended/tranqs/patch-notes/02-23-25.md"
-                        }
-                      ]
                     },
                     {
                       "headers": [
