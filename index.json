@@ -59,7 +59,7 @@
         {
           "title": "ARK",
           "icon": "",
-          "defaultOpen": true,
+          "defaultOpen": false,
           "showfolderpage": "false",
           "sort": 1,
           "slug": "mods/ark",
@@ -623,7 +623,7 @@
         {
           "title": "Minecraft",
           "icon": "",
-          "defaultOpen": true,
+          "defaultOpen": false,
           "showfolderpage": "false",
           "sort": 2,
           "slug": "mods/minecraft",
