@@ -467,10 +467,9 @@
                   "showfolderpage": "true",
                   "sort": 2,
                   "headers": [
-                    "**Tranq Tiers**",
-                    "**Features**",
-                    "**Documentation**",
-                    "**Note**"
+                    "Tranq Tiers",
+                    "Features",
+                    "Note"
                   ],
                   "slug": "mods/ark/ascended/excalibur-tranqs",
                   "type": "folder",
