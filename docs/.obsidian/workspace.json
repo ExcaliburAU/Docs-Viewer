@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/minecraft/paper/swiftchop/swiftchop.md",
+                "file": "modding/ARK/ascended/tranqs/tranqs.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "swiftchop"
+              "title": "tranqs"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/minecraft/paper/swiftchop/swiftchop.md",
+                "file": "modding/ARK/ascended/tranqs/tranqs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of swiftchop"
+              "title": "Outline of tranqs"
             }
           }
         ],
@@ -183,13 +183,17 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
-    "modding/ARK/ARK.md",
-    "modding/minecraft/paper/swiftchop/swiftchop.md",
-    "modding/minecraft/paper/extensions/extensions.md",
+    "modding/ARK/ascended/tranqs/GameUserSettings.md",
+    "modding/ARK/ascended/tranqs/tranqs.md",
+    "modding/ARK/ascended/tranqs/patch-notes/02-23-25.md",
+    "modding/ARK/ascended/tranqs/index.md",
     "modding/ARK/news/news.md",
+    "modding/minecraft/paper/swiftchop/swiftchop.md",
+    "welcome.md",
+    "modding/ARK/ARK.md",
+    "modding/minecraft/paper/extensions/extensions.md",
     "modding/ARK/news/20-04-2025.md",
     "discord-bots/discord-bots.md",
-    "welcome.md",
     "discord-bots",
     "modding/modding.md",
     "modding/minecraft/minecraft.md",
@@ -208,16 +212,12 @@
     "modding/ARK/news",
     "images/logo.png",
     "modding/ARK/ascended/spyglass/spyglass.md",
-    "modding/ARK/ascended/tranqs/tranqs.md",
     "modding/ARK/ascended/trashcan/trashcan.md",
     "modding/ARK/ascended/cropplots/cropplots.md",
     "modding/ARK/ascended/crafter/crafter.md",
     "modding/ARK/evolved/utilities/utilities.md",
-    "modding/ARK/evolved/stacks/stacks.md",
-    "modding/ARK/evolved/net-ammo/net-ammo.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
-    "modding/ARK/evolved/tranqs/GameUserSettings.md",
     "arksurvivalevolved/dropstoragebox",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
