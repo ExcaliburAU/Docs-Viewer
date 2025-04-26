@@ -1,8 +1,8 @@
 ---
 title: Excalibur Tranqs
 icon: 
-defaultOpen: true
-showfolderpage: false
+defaultOpen: false
+showfolderpage: true
 sort: 2
 ## Enhance Your Gameplay
 
