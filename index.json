@@ -48,6 +48,27 @@
       "path": "docs/welcome.md"
     },
     {
+      "title": "Announcements",
+      "icon": "",
+      "defaultOpen": true,
+      "showfolderpage": "true",
+      "sort": 1,
+      "slug": "announcements",
+      "type": "folder",
+      "items": [
+        {
+          "title": "Discord Closure",
+          "icon": "",
+          "defaultOpen": true,
+          "showfolderpage": "true",
+          "sort": 1,
+          "slug": "announcements/discord-closure",
+          "path": "docs/announcements/discord-closure.md"
+        }
+      ],
+      "path": "docs/announcements/announcements.md"
+    },
+    {
       "title": "Mods",
       "icon": "",
       "defaultOpen": true,
@@ -625,7 +646,7 @@
           "icon": "",
           "defaultOpen": false,
           "showfolderpage": "false",
-          "sort": 2,
+          "sort": 3,
           "slug": "mods/minecraft",
           "type": "folder",
           "items": [
