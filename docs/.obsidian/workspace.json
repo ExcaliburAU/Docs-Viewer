@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/minecraft/minecraft.md",
+                "file": "announcements/discord-closure.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "minecraft"
+              "title": "discord-closure"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/minecraft/minecraft.md",
+                "file": "announcements/discord-closure.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of minecraft"
+              "title": "Outline of discord-closure"
             }
           }
         ],
@@ -183,6 +183,11 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "announcements/announcements.md",
+    "announcements/discord-closure.md",
+    "discord-bots/discord-bots.md",
+    "announcements",
+    "modding/minecraft/minecraft.md",
     "modding/ARK/ARK.md",
     "modding/modding.md",
     "modding/ARK/ascended/tranqs/tranqs.md",
@@ -194,9 +199,7 @@
     "welcome.md",
     "modding/minecraft/paper/extensions/extensions.md",
     "modding/ARK/news/20-04-2025.md",
-    "discord-bots/discord-bots.md",
     "discord-bots",
-    "modding/minecraft/minecraft.md",
     "modding",
     "minecraft/paper/swiftchop/extensions 1.md",
     "modding/ARK/evolved/evolved.md",
@@ -214,14 +217,11 @@
     "modding/ARK/ascended/spyglass/spyglass.md",
     "modding/ARK/ascended/trashcan/trashcan.md",
     "modding/ARK/ascended/cropplots/cropplots.md",
-    "modding/ARK/ascended/crafter/crafter.md",
-    "modding/ARK/evolved/utilities/utilities.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
     "arksurvivalevolved/dropstoragebox",
     "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
     "arksurvivalevolved/UtilitiesRemaster/Config",
-    "arksurvivalevolved/UtilitiesRemaster",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
