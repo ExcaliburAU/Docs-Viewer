@@ -1,9 +1,0 @@
-```ini
-[ExcaliburTranqs]
-FoundationRequired=true
-WorkbenchCraftingSpeed=1.0
-WorkbenchSlotCount=100
-MeatSpoilerBonusPrime=4
-MeatSpoilerSlotCount=100
-CharcoalBakerSlotCount=100
-```
