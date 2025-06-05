@@ -94,20 +94,7 @@
               "sort": 1,
               "slug": "mods/ark/announcements",
               "type": "folder",
-              "items": [
-                {
-                  "title": "Modding Support Update",
-                  "icon": "",
-                  "defaultOpen": false,
-                  "sort": 1,
-                  "headers": [
-                    "❗ What This Means",
-                    "🚀 What’s Next?"
-                  ],
-                  "slug": "mods/ark/announcements/modding-support-update",
-                  "path": "docs/modding/ARK/news/20-04-2025.md"
-                }
-              ],
+              "items": [],
               "path": "docs/modding/ARK/news/news.md"
             },
             {
