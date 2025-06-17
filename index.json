@@ -380,6 +380,37 @@
                   "path": "docs/modding/ARK/evolved/net-ammo/net-ammo.md"
                 },
                 {
+                  "title": "Excalibur Raft",
+                  "icon": "",
+                  "defaultOpen": false,
+                  "showfolderpage": "false",
+                  "sort": 5,
+                  "slug": "mods/ark/evolved/excalibur-raft",
+                  "type": "folder",
+                  "items": [
+                    {
+                      "title": "Game User Settings",
+                      "icon": "",
+                      "defaultOpen": false,
+                      "sort": 1,
+                      "slug": "mods/ark/evolved/excalibur-raft/game-user-settings",
+                      "path": "docs/modding/ARK/evolved/raft/GameUserSettings.md"
+                    },
+                    {
+                      "title": "Spawn Codes & Engram Entries",
+                      "icon": "",
+                      "defaultOpen": false,
+                      "sort": 2,
+                      "headers": [
+                        "Excalibur Raft"
+                      ],
+                      "slug": "mods/ark/evolved/excalibur-raft/spawn-codes-engram-entries",
+                      "path": "docs/modding/ARK/evolved/raft/Codes&Entries.md"
+                    }
+                  ],
+                  "path": "docs/modding/ARK/evolved/raft/raft.md"
+                },
+                {
                   "title": "Excalibur Utilities",
                   "icon": "",
                   "defaultOpen": false,
@@ -430,6 +461,26 @@
                     }
                   ],
                   "path": "docs/modding/ARK/evolved/utilities/utilities.md"
+                },
+                {
+                  "title": "EXUtilties",
+                  "icon": "",
+                  "defaultOpen": false,
+                  "showfolderpage": "false",
+                  "sort": 7,
+                  "slug": "mods/ark/evolved/exutilties",
+                  "type": "folder",
+                  "items": [
+                    {
+                      "title": "Game User Settings",
+                      "icon": "",
+                      "defaultOpen": false,
+                      "sort": 1,
+                      "slug": "mods/ark/evolved/exutilties/game-user-settings",
+                      "path": "docs/modding/ARK/evolved/exutilities/GameUserSettings.md"
+                    }
+                  ],
+                  "path": "docs/modding/ARK/evolved/exutilities/exutilities.md"
                 }
               ],
               "path": "docs/modding/ARK/evolved/evolved.md"
