@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "announcements/discord-closure.md",
+                "file": "modding/ARK/evolved/crafter/crafter.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "crafter"
+            }
+          },
+          {
+            "id": "87c27926fc54bbaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "modding/ARK/evolved/raft/Codes&Entries.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "discord-closure"
+              "title": "Codes&Entries"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -154,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "announcements/discord-closure.md",
+                "file": "modding/ARK/evolved/raft/Codes&Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of discord-closure"
+              "title": "Outline of Codes&Entries"
             }
           }
         ],
@@ -181,10 +195,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9e34a5bbc901c56f",
+  "active": "ba3b4ab7076efb70",
   "lastOpenFiles": [
-    "announcements/announcements.md",
+    "modding/ARK/evolved/raft/GameUserSettings.md",
+    "modding/ARK/evolved/raft/Codes&Entries.md",
+    "modding/ARK/evolved/raft/raft.md",
+    "modding/ARK/evolved/raft/gameusersettings.md",
+    "modding/ARK/evolved/exutilities/exutilities.md",
+    "modding/ARK/evolved/crafter/crafter.md",
+    "modding/ARK/evolved/crafter/GameUserSettings.md",
+    "modding/ARK/evolved/exutilities/GameUserSettings.md",
+    "modding/ARK/evolved/raft",
+    "modding/ARK/evolved/utilities/GameUserSettings.md",
+    "modding/ARK/evolved/crafter/Codes&Entries.md",
     "announcements/discord-closure.md",
+    "modding/ARK/evolved/exutilities",
+    "modding/ARK/evolved/Untitled.md",
+    "announcements/announcements.md",
     "discord-bots/discord-bots.md",
     "announcements",
     "modding/minecraft/minecraft.md",
@@ -201,27 +228,14 @@
     "modding/ARK/news/20-04-2025.md",
     "discord-bots",
     "modding",
-    "minecraft/paper/swiftchop/extensions 1.md",
-    "modding/ARK/evolved/evolved.md",
-    "modding/ARK/evolved/crafter/GameUserSettings.md",
-    "modding/ARK/evolved/crafter/crafter.md",
     "Announcements/ARK",
-    "modding/minecraft/fabric/fabric.md",
-    "modding/minecraft/paper/paper.md",
     "modding/minecraft/fabric",
-    "modding/ARK/ascended/ascended.md",
-    "modding/ARK/evolved/crafter/Codes&Entries.md",
     "modding/ARK",
     "modding/ARK/news",
     "images/logo.png",
-    "modding/ARK/ascended/spyglass/spyglass.md",
-    "modding/ARK/ascended/trashcan/trashcan.md",
-    "modding/ARK/ascended/cropplots/cropplots.md",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
     "arksurvivalevolved/dropstoragebox",
-    "arksurvivalevolved/UtilitiesRemaster/PatchNotes",
-    "arksurvivalevolved/UtilitiesRemaster/Config",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
