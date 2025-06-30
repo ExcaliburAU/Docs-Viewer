@@ -382,8 +382,8 @@
                 {
                   "title": "Excalibur Raft",
                   "icon": "",
-                  "defaultOpen": false,
-                  "showfolderpage": "false",
+                  "defaultOpen": true,
+                  "showfolderpage": "true",
                   "sort": 5,
                   "slug": "mods/ark/evolved/excalibur-raft",
                   "type": "folder",
