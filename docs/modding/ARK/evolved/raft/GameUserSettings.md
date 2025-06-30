@@ -6,8 +6,11 @@ sort: 1
 ---
 
 ```ini
-[ExcaliburRaft] 
-RaftSpeed=1 # Speed multiplier 
-RaftMaxStructuresNum=140 # Maximum buildable structures RaftMaxStructuresHeight=2200 # Maximum build height 
-RaftHealth=35000 # Total health points
+[ExcaliburRaft]  
+RaftSpeed=1  
+RaftMaxStructuresNum=140  
+RaftMaxStructuresHeight=2200  
+RaftHealth=35000  
+DisableFogRemover=false  
+DisableClearWater=false
 ```

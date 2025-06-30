@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/evolved/raft/Codes&Entries.md",
-                "mode": "source",
+                "file": "modding/ARK/evolved/raft/raft.md",
+                "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Codes&Entries"
+              "title": "raft"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/evolved/raft/Codes&Entries.md",
+                "file": "modding/ARK/evolved/raft/raft.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Codes&Entries"
+              "title": "Outline of raft"
             }
           }
         ],
@@ -195,10 +195,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba3b4ab7076efb70",
+  "active": "87c27926fc54bbaf",
   "lastOpenFiles": [
-    "modding/ARK/evolved/raft/GameUserSettings.md",
     "modding/ARK/evolved/raft/Codes&Entries.md",
+    "modding/ARK/evolved/raft/GameUserSettings.md",
     "modding/ARK/evolved/raft/raft.md",
     "modding/ARK/evolved/raft/gameusersettings.md",
     "modding/ARK/evolved/exutilities/exutilities.md",
