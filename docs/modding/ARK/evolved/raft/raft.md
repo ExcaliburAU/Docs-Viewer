@@ -1,8 +1,8 @@
 ---
 title: Excalibur Raft
 icon: 
-defaultOpen: false
-showfolderpage: false
+defaultOpen: true
+showfolderpage: true
 sort: 5
 ---
 MOD ID: 3501520631  
