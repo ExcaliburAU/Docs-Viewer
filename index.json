@@ -370,12 +370,12 @@
                   "path": "docs/modding/ARK/evolved/net-ammo/net-ammo.md"
                 },
                 {
-                  "title": "Excalibur Raft",
+                  "title": "Excalibur Raft & Clarity Pack",
                   "icon": "",
-                  "defaultOpen": true,
+                  "defaultOpen": false,
                   "showfolderpage": "true",
                   "sort": 5,
-                  "slug": "modding/ark/evolved/excalibur-raft",
+                  "slug": "modding/ark/evolved/excalibur-raft-clarity-pack",
                   "type": "folder",
                   "items": [
                     {
@@ -383,7 +383,7 @@
                       "icon": "",
                       "defaultOpen": false,
                       "sort": 1,
-                      "slug": "modding/ark/evolved/excalibur-raft/game-user-settings",
+                      "slug": "modding/ark/evolved/excalibur-raft-clarity-pack/game-user-settings",
                       "path": "docs/modding/ARK/evolved/raft/GameUserSettings.md"
                     },
                     {
@@ -394,7 +394,7 @@
                       "headers": [
                         "Excalibur Raft"
                       ],
-                      "slug": "modding/ark/evolved/excalibur-raft/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/excalibur-raft-clarity-pack/spawn-codes-engram-entries",
                       "path": "docs/modding/ARK/evolved/raft/Codes&Entries.md"
                     }
                   ],
