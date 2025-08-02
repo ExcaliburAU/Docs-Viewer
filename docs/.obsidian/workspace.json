@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "announcements/announcements.md",
+                "file": "modding/modding.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "announcements"
+              "title": "modding"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "announcements/announcements.md",
+                "file": "modding/modding.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of announcements"
+              "title": "Outline of modding"
             }
           }
         ],
@@ -197,9 +197,10 @@
   },
   "active": "87c27926fc54bbaf",
   "lastOpenFiles": [
+    "modding/ARK/evolved/gaia/gaia.md",
+    "announcements/announcements.md",
     "modding/modding.md",
     "modding/ARK/news/news.md",
-    "modding/ARK/evolved/gaia/gaia.md",
     "modding/ARK/evolved/crafter/crafter.md",
     "modding/ARK/ARK.md",
     "modding/ARK/evolved/gaia",
@@ -216,7 +217,6 @@
     "announcements/discord-closure.md",
     "modding/ARK/evolved/exutilities",
     "modding/ARK/evolved/Untitled.md",
-    "announcements/announcements.md",
     "discord-bots/discord-bots.md",
     "announcements",
     "modding/minecraft/minecraft.md",

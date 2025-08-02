@@ -1,5 +1,5 @@
 ---
-title: Mods
+title: Modding
 icon: 
 defaultOpen: true
 showfolderpage: false
