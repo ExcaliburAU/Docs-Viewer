@@ -22,6 +22,7 @@ A standalone overhaul of the vanilla raft from Excalibur Utilities—featuring i
 - Optional fog remover + Crystal Clear  
   
 **GameUserSetting:**  
+```ini
 [ExcaliburRaft]  
 RaftSpeed=1  
 RaftMaxStructuresNum=140  
@@ -29,9 +30,13 @@ RaftMaxStructuresHeight=2200
 RaftHealth=35000  
 DisableFogRemover=false  
 DisableClearWater=false  
-  
+```  
 **Engram Entry Override:**  
+```
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ExcaliburRaft_C",EngramHidden=true)  
-  
+```
+
 **Spawn Code:**  
+```
 admincheat GiveItem "Blueprint'/Game/Mods/ExcaliburRaft/BP/PrimalItem_ExcaliburRaft.PrimalItem_ExcaliburRaft'" 1 1 0
+```
