@@ -370,12 +370,12 @@
                   "path": "docs/modding/ARK/evolved/net-ammo/net-ammo.md"
                 },
                 {
-                  "title": "Excalibur Raft & Clarity Pack",
+                  "title": "Raft & Clarity Pack",
                   "icon": "",
                   "defaultOpen": false,
                   "showfolderpage": "true",
                   "sort": 5,
-                  "slug": "modding/ark/evolved/excalibur-raft-clarity-pack",
+                  "slug": "modding/ark/evolved/raft-clarity-pack",
                   "type": "folder",
                   "items": [],
                   "path": "docs/modding/ARK/evolved/raft/raft.md"
