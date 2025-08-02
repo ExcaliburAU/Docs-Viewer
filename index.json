@@ -77,17 +77,6 @@
           "type": "folder",
           "items": [
             {
-              "title": "Announcements",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 1,
-              "slug": "modding/ark/announcements",
-              "type": "folder",
-              "items": [],
-              "path": "docs/modding/ARK/news/news.md"
-            },
-            {
               "title": "Evolved",
               "icon": "",
               "defaultOpen": true,
@@ -100,31 +89,11 @@
                   "title": "Excalibur Crafter",
                   "icon": "",
                   "defaultOpen": false,
-                  "showfolderpage": "false",
+                  "showfolderpage": "true",
                   "sort": 1,
                   "slug": "modding/ark/evolved/excalibur-crafter",
                   "type": "folder",
-                  "items": [
-                    {
-                      "title": "Game User Settings",
-                      "icon": "",
-                      "defaultOpen": false,
-                      "sort": 1,
-                      "slug": "modding/ark/evolved/excalibur-crafter/game-user-settings",
-                      "path": "docs/modding/ARK/evolved/crafter/GameUserSettings.md"
-                    },
-                    {
-                      "title": "Spawn Codes & Engram Entries",
-                      "icon": "",
-                      "defaultOpen": false,
-                      "sort": 2,
-                      "headers": [
-                        "ExcaliburCrafter"
-                      ],
-                      "slug": "modding/ark/evolved/excalibur-crafter/spawn-codes-engram-entries",
-                      "path": "docs/modding/ARK/evolved/crafter/Codes&Entries.md"
-                    }
-                  ],
+                  "items": [],
                   "path": "docs/modding/ARK/evolved/crafter/crafter.md"
                 },
                 {
