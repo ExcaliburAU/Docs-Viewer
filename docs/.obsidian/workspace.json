@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/evolved/raft/raft.md",
+                "file": "modding/ARK/ARK.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "raft"
+              "title": "ARK"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/evolved/raft/raft.md",
+                "file": "modding/ARK/ARK.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of raft"
+              "title": "Outline of ARK"
             }
           }
         ],
@@ -183,8 +183,10 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
-    "modding/ARK/evolved/net-ammo/net-ammo.md",
+    "modding/ARK/evolved/evolved.md",
+    "modding/minecraft/minecraft.md",
     "modding/ARK/evolved/raft/raft.md",
+    "modding/ARK/evolved/net-ammo/net-ammo.md",
     "modding/ARK/evolved/exutilities/GameUserSettings.md",
     "modding/ARK/evolved/raft/Codes&Entries.md",
     "modding/ARK/evolved/raft/GameUserSettings.md",
@@ -207,12 +209,10 @@
     "modding/ARK/evolved/Untitled.md",
     "discord-bots/discord-bots.md",
     "announcements",
-    "modding/minecraft/minecraft.md",
     "modding/ARK/ascended/tranqs/tranqs.md",
     "modding/ARK/ascended/tranqs/GameUserSettings.md",
     "modding/ARK/ascended/tranqs/patch-notes/02-23-25.md",
     "modding/ARK/ascended/tranqs/index.md",
-    "modding/minecraft/paper/swiftchop/swiftchop.md",
     "discord-bots",
     "modding",
     "Announcements/ARK",

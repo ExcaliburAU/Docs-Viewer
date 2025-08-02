@@ -1,7 +1,7 @@
 ---
 title: Evolved
 icon: 
-defaultOpen: false
+defaultOpen: true
 showfolderpage: false
 sort: 2
 ---
