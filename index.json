@@ -59,12 +59,12 @@
       "path": "docs/announcements/announcements.md"
     },
     {
-      "title": "Mods",
+      "title": "Modding",
       "icon": "",
       "defaultOpen": true,
       "showfolderpage": "false",
       "sort": 1,
-      "slug": "mods",
+      "slug": "modding",
       "type": "folder",
       "items": [
         {
@@ -73,7 +73,7 @@
           "defaultOpen": false,
           "showfolderpage": "false",
           "sort": 1,
-          "slug": "mods/ark",
+          "slug": "modding/ark",
           "type": "folder",
           "items": [
             {
@@ -82,7 +82,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "mods/ark/announcements",
+              "slug": "modding/ark/announcements",
               "type": "folder",
               "items": [],
               "path": "docs/modding/ARK/news/news.md"
@@ -93,7 +93,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 2,
-              "slug": "mods/ark/evolved",
+              "slug": "modding/ark/evolved",
               "type": "folder",
               "items": [
                 {
@@ -102,7 +102,7 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 1,
-                  "slug": "mods/ark/evolved/excalibur-crafter",
+                  "slug": "modding/ark/evolved/excalibur-crafter",
                   "type": "folder",
                   "items": [
                     {
@@ -110,7 +110,7 @@
                       "icon": "",
                       "defaultOpen": false,
                       "sort": 1,
-                      "slug": "mods/ark/evolved/excalibur-crafter/game-user-settings",
+                      "slug": "modding/ark/evolved/excalibur-crafter/game-user-settings",
                       "path": "docs/modding/ARK/evolved/crafter/GameUserSettings.md"
                     },
                     {
@@ -121,7 +121,7 @@
                       "headers": [
                         "ExcaliburCrafter"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-crafter/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/excalibur-crafter/spawn-codes-engram-entries",
                       "path": "docs/modding/ARK/evolved/crafter/Codes&Entries.md"
                     }
                   ],
@@ -133,7 +133,7 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 1,
-                  "slug": "mods/ark/evolved/excalibur-stacks",
+                  "slug": "modding/ark/evolved/excalibur-stacks",
                   "type": "folder",
                   "items": [
                     {
@@ -147,12 +147,12 @@
                         "Modifying `GameUserSettings.ini`",
                         "Example: Blacklisting Items"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-stacks/gameusersettings",
+                      "slug": "modding/ark/evolved/excalibur-stacks/gameusersettings",
                       "title": "GameUserSettings",
                       "path": "docs/modding/ARK/evolved/stacks/GameUserSettings.md"
                     },
                     {
-                      "slug": "mods/ark/evolved/excalibur-stacks/immersivetaming",
+                      "slug": "modding/ark/evolved/excalibur-stacks/immersivetaming",
                       "title": "ImmersiveTaming",
                       "path": "docs/modding/ARK/evolved/stacks/ImmersiveTaming.md"
                     },
@@ -168,7 +168,7 @@
                         "Stryder Box",
                         "Travel Terminal"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-stacks/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/excalibur-stacks/spawn-codes-engram-entries",
                       "title": "Spawn Codes & Engram Entries",
                       "path": "docs/modding/ARK/evolved/stacks/Spawn Codes & Engram Entries.md"
                     }
@@ -181,11 +181,11 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 2,
-                  "slug": "mods/ark/evolved/excalibur-tranqs",
+                  "slug": "modding/ark/evolved/excalibur-tranqs",
                   "type": "folder",
                   "items": [
                     {
-                      "slug": "mods/ark/evolved/excalibur-tranqs/gameusersettings",
+                      "slug": "modding/ark/evolved/excalibur-tranqs/gameusersettings",
                       "title": "GameUserSettings",
                       "path": "docs/modding/ARK/evolved/tranqs/GameUserSettings.md"
                     },
@@ -194,14 +194,14 @@
                         "Config",
                         "Patch Notes"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-tranqs/index",
+                      "slug": "modding/ark/evolved/excalibur-tranqs/index",
                       "title": "index",
                       "path": "docs/modding/ARK/evolved/tranqs/index.md"
                     },
                     {
                       "title": "patch-notes",
                       "type": "folder",
-                      "slug": "mods/ark/evolved/excalibur-tranqs/patch-notes",
+                      "slug": "modding/ark/evolved/excalibur-tranqs/patch-notes",
                       "items": [
                         {
                           "headers": [
@@ -211,7 +211,7 @@
                             "Vanilla Creatures",
                             "Kraken Better Dinos"
                           ],
-                          "slug": "mods/ark/evolved/excalibur-tranqs/patch-notes/12-11-24",
+                          "slug": "modding/ark/evolved/excalibur-tranqs/patch-notes/12-11-24",
                           "title": "12-11-24",
                           "path": "docs/modding/ARK/evolved/tranqs/patch-notes/12-11-24.md"
                         }
@@ -265,7 +265,7 @@
                         "Charcoal Baker",
                         "Meat Spoiler"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-tranqs/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/excalibur-tranqs/spawn-codes-engram-entries",
                       "title": "Spawn Codes & Engram Entries",
                       "path": "docs/modding/ARK/evolved/tranqs/Spawn Codes & Engram Entries.md"
                     }
@@ -278,30 +278,30 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 3,
-                  "slug": "mods/ark/evolved/harvs-corner",
+                  "slug": "modding/ark/evolved/harvs-corner",
                   "type": "folder",
                   "items": [
                     {
-                      "slug": "mods/ark/evolved/harvs-corner/gameusersettings",
+                      "slug": "modding/ark/evolved/harvs-corner/gameusersettings",
                       "title": "GameUserSettings",
                       "path": "docs/modding/ARK/evolved/harvs-corner/GameUserSettings.md"
                     },
                     {
                       "title": "patch-notes",
                       "type": "folder",
-                      "slug": "mods/ark/evolved/harvs-corner/patch-notes",
+                      "slug": "modding/ark/evolved/harvs-corner/patch-notes",
                       "items": [
                         {
                           "title": "2024",
                           "type": "folder",
-                          "slug": "mods/ark/evolved/harvs-corner/patch-notes/2024",
+                          "slug": "modding/ark/evolved/harvs-corner/patch-notes/2024",
                           "items": [
                             {
                               "headers": [
                                 "Update 16/12 - 1",
                                 "Update 16/12 - 2"
                               ],
-                              "slug": "mods/ark/evolved/harvs-corner/patch-notes/2024/12-16-24",
+                              "slug": "modding/ark/evolved/harvs-corner/patch-notes/2024/12-16-24",
                               "title": "12-16-24",
                               "path": "docs/modding/ARK/evolved/harvs-corner/patch-notes/2024/12-16-24.md"
                             },
@@ -309,7 +309,7 @@
                               "headers": [
                                 "Update 17/12"
                               ],
-                              "slug": "mods/ark/evolved/harvs-corner/patch-notes/2024/12-17-24",
+                              "slug": "modding/ark/evolved/harvs-corner/patch-notes/2024/12-17-24",
                               "title": "12-17-24",
                               "path": "docs/modding/ARK/evolved/harvs-corner/patch-notes/2024/12-17-24.md"
                             }
@@ -318,13 +318,13 @@
                         {
                           "title": "2025",
                           "type": "folder",
-                          "slug": "mods/ark/evolved/harvs-corner/patch-notes/2025",
+                          "slug": "modding/ark/evolved/harvs-corner/patch-notes/2025",
                           "items": [
                             {
                               "headers": [
                                 "Update 01/12"
                               ],
-                              "slug": "mods/ark/evolved/harvs-corner/patch-notes/2025/01-12-25",
+                              "slug": "modding/ark/evolved/harvs-corner/patch-notes/2025/01-12-25",
                               "title": "01-12-25",
                               "path": "docs/modding/ARK/evolved/harvs-corner/patch-notes/2025/01-12-25.md"
                             }
@@ -337,7 +337,7 @@
                         "Items",
                         "Structures"
                       ],
-                      "slug": "mods/ark/evolved/harvs-corner/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/harvs-corner/spawn-codes-engram-entries",
                       "title": "Spawn Codes & Engram Entries",
                       "path": "docs/modding/ARK/evolved/harvs-corner/Spawn Codes & Engram Entries.md"
                     }
@@ -350,11 +350,11 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 4,
-                  "slug": "mods/ark/evolved/excalibur-net-ammo",
+                  "slug": "modding/ark/evolved/excalibur-net-ammo",
                   "type": "folder",
                   "items": [
                     {
-                      "slug": "mods/ark/evolved/excalibur-net-ammo/gameusersettings",
+                      "slug": "modding/ark/evolved/excalibur-net-ammo/gameusersettings",
                       "title": "GameUserSettings",
                       "path": "docs/modding/ARK/evolved/net-ammo/GameUserSettings.md"
                     },
@@ -362,7 +362,7 @@
                       "headers": [
                         "Net Everything Ammo"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-net-ammo/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/excalibur-net-ammo/spawn-codes-engram-entries",
                       "title": "Spawn Codes & Engram Entries",
                       "path": "docs/modding/ARK/evolved/net-ammo/Spawn Codes & Engram Entries.md"
                     }
@@ -375,7 +375,7 @@
                   "defaultOpen": true,
                   "showfolderpage": "true",
                   "sort": 5,
-                  "slug": "mods/ark/evolved/excalibur-raft",
+                  "slug": "modding/ark/evolved/excalibur-raft",
                   "type": "folder",
                   "items": [
                     {
@@ -383,7 +383,7 @@
                       "icon": "",
                       "defaultOpen": false,
                       "sort": 1,
-                      "slug": "mods/ark/evolved/excalibur-raft/game-user-settings",
+                      "slug": "modding/ark/evolved/excalibur-raft/game-user-settings",
                       "path": "docs/modding/ARK/evolved/raft/GameUserSettings.md"
                     },
                     {
@@ -394,7 +394,7 @@
                       "headers": [
                         "Excalibur Raft"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-raft/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/excalibur-raft/spawn-codes-engram-entries",
                       "path": "docs/modding/ARK/evolved/raft/Codes&Entries.md"
                     }
                   ],
@@ -406,11 +406,11 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 6,
-                  "slug": "mods/ark/evolved/excalibur-utilities",
+                  "slug": "modding/ark/evolved/excalibur-utilities",
                   "type": "folder",
                   "items": [
                     {
-                      "slug": "mods/ark/evolved/excalibur-utilities/gameusersettings",
+                      "slug": "modding/ark/evolved/excalibur-utilities/gameusersettings",
                       "title": "GameUserSettings",
                       "path": "docs/modding/ARK/evolved/utilities/GameUserSettings.md"
                     },
@@ -445,7 +445,7 @@
                         "Scrap Forge",
                         "Workbench"
                       ],
-                      "slug": "mods/ark/evolved/excalibur-utilities/spawn-codes-engram-entries",
+                      "slug": "modding/ark/evolved/excalibur-utilities/spawn-codes-engram-entries",
                       "title": "Spawn Codes & Engram Entries",
                       "path": "docs/modding/ARK/evolved/utilities/Spawn Codes & Engram Entries.md"
                     }
@@ -458,7 +458,7 @@
                   "defaultOpen": false,
                   "showfolderpage": "false",
                   "sort": 7,
-                  "slug": "mods/ark/evolved/exutilties",
+                  "slug": "modding/ark/evolved/exutilties",
                   "type": "folder",
                   "items": [
                     {
@@ -466,7 +466,7 @@
                       "icon": "",
                       "defaultOpen": false,
                       "sort": 1,
-                      "slug": "mods/ark/evolved/exutilties/game-user-settings",
+                      "slug": "modding/ark/evolved/exutilties/game-user-settings",
                       "path": "docs/modding/ARK/evolved/exutilities/GameUserSettings.md"
                     }
                   ],
@@ -478,7 +478,7 @@
                   "defaultOpen": false,
                   "showfolderpage": "true",
                   "sort": 100,
-                  "slug": "mods/ark/evolved/gaia-reforged",
+                  "slug": "modding/ark/evolved/gaia-reforged",
                   "type": "folder",
                   "items": [],
                   "path": "docs/modding/ARK/evolved/gaia/gaia.md"
@@ -495,7 +495,7 @@
           "defaultOpen": false,
           "showfolderpage": "false",
           "sort": 3,
-          "slug": "mods/minecraft",
+          "slug": "modding/minecraft",
           "type": "folder",
           "items": [
             {
@@ -504,7 +504,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "mods/minecraft/fabric",
+              "slug": "modding/minecraft/fabric",
               "type": "folder",
               "items": [],
               "path": "docs/modding/minecraft/fabric/fabric.md"
@@ -515,7 +515,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "mods/minecraft/paper",
+              "slug": "modding/minecraft/paper",
               "type": "folder",
               "items": [
                 {
@@ -523,7 +523,7 @@
                   "icon": "",
                   "defaultOpen": false,
                   "showfolderpage": "false",
-                  "slug": "mods/minecraft/paper/extensions",
+                  "slug": "modding/minecraft/paper/extensions",
                   "type": "folder",
                   "items": [
                     {
@@ -537,7 +537,7 @@
                         "Special Permissions",
                         "Default Permissions"
                       ],
-                      "slug": "mods/minecraft/paper/extensions/permissions",
+                      "slug": "modding/minecraft/paper/extensions/permissions",
                       "title": "permissions",
                       "path": "docs/modding/minecraft/paper/extensions/permissions.md"
                     }
@@ -556,7 +556,7 @@
                     "Authors",
                     "License"
                   ],
-                  "slug": "mods/minecraft/paper/swift-chop",
+                  "slug": "modding/minecraft/paper/swift-chop",
                   "type": "folder",
                   "items": [],
                   "path": "docs/modding/minecraft/paper/swiftchop/swiftchop.md"
