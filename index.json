@@ -55,17 +55,7 @@
       "sort": 1,
       "slug": "announcements",
       "type": "folder",
-      "items": [
-        {
-          "title": "Discord Closure",
-          "icon": "",
-          "defaultOpen": true,
-          "showfolderpage": "true",
-          "sort": 1,
-          "slug": "announcements/discord-closure",
-          "path": "docs/announcements/discord-closure.md"
-        }
-      ],
+      "items": [],
       "path": "docs/announcements/announcements.md"
     },
     {
