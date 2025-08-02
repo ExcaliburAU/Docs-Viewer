@@ -481,6 +481,17 @@
                     }
                   ],
                   "path": "docs/modding/ARK/evolved/exutilities/exutilities.md"
+                },
+                {
+                  "title": "Gaia Reforged",
+                  "icon": "",
+                  "defaultOpen": false,
+                  "showfolderpage": "true",
+                  "sort": 100,
+                  "slug": "mods/ark/evolved/gaia-reforged",
+                  "type": "folder",
+                  "items": [],
+                  "path": "docs/modding/ARK/evolved/gaia/gaia.md"
                 }
               ],
               "path": "docs/modding/ARK/evolved/evolved.md"
