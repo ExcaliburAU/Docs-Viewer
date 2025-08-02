@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/evolved/crafter/crafter.md",
+                "file": "modding/ARK/evolved/stacks/ImmersiveTaming.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "crafter"
+              "title": "ImmersiveTaming"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/evolved/crafter/crafter.md",
+                "file": "modding/ARK/evolved/stacks/ImmersiveTaming.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of crafter"
+              "title": "Outline of ImmersiveTaming"
             }
           }
         ],
@@ -183,9 +183,11 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "modding/ARK/evolved/stacks/stacks.md",
+    "modding/ARK/evolved/stacks/GameUserSettings.md",
+    "modding/ARK/evolved/crafter/crafter.md",
     "modding/ARK/evolved/crafter/Codes&Entries.md",
     "modding/ARK/evolved/raft/raft.md",
-    "modding/ARK/evolved/crafter/crafter.md",
     "modding/ARK/evolved/crafter/GameUserSettings.md",
     "modding/minecraft/minecraft.md",
     "modding/ARK/ARK.md",
@@ -211,8 +213,6 @@
     "announcements",
     "modding/ARK/ascended/tranqs/tranqs.md",
     "modding/ARK/ascended/tranqs/GameUserSettings.md",
-    "modding/ARK/ascended/tranqs/patch-notes/02-23-25.md",
-    "modding/ARK/ascended/tranqs/index.md",
     "discord-bots",
     "modding",
     "Announcements/ARK",
