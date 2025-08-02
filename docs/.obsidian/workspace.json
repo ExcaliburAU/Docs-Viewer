@@ -27,30 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/evolved/crafter/crafter.md",
+                "file": "modding/ARK/evolved/net-ammo/net-ammo.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "crafter"
-            }
-          },
-          {
-            "id": "87c27926fc54bbaf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "modding/ARK/evolved/raft/raft.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "raft"
+              "title": "net-ammo"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -168,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/evolved/raft/raft.md",
+                "file": "modding/ARK/evolved/net-ammo/net-ammo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of raft"
+              "title": "Outline of net-ammo"
             }
           }
         ],
@@ -195,11 +181,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "87c27926fc54bbaf",
+  "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "modding/ARK/evolved/raft/raft.md",
+    "modding/ARK/evolved/exutilities/GameUserSettings.md",
+    "modding/ARK/evolved/raft/Codes&Entries.md",
+    "modding/ARK/evolved/raft/GameUserSettings.md",
     "modding/ARK/evolved/net-ammo/GameUserSettings.md",
     "modding/ARK/evolved/net-ammo/net-ammo.md",
-    "modding/ARK/evolved/raft/raft.md",
     "modding/modding.md",
     "modding/ARK/evolved/gaia/gaia.md",
     "announcements/announcements.md",
@@ -207,12 +196,9 @@
     "modding/ARK/evolved/crafter/crafter.md",
     "modding/ARK/ARK.md",
     "modding/ARK/evolved/gaia",
-    "modding/ARK/evolved/raft/Codes&Entries.md",
-    "modding/ARK/evolved/raft/GameUserSettings.md",
     "modding/ARK/evolved/raft/gameusersettings.md",
     "modding/ARK/evolved/exutilities/exutilities.md",
     "modding/ARK/evolved/crafter/GameUserSettings.md",
-    "modding/ARK/evolved/exutilities/GameUserSettings.md",
     "modding/ARK/evolved/raft",
     "modding/ARK/evolved/utilities/GameUserSettings.md",
     "modding/ARK/evolved/crafter/Codes&Entries.md",
