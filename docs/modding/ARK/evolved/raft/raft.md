@@ -1,16 +1,37 @@
 ---
-title: Excalibur Raft
+title: Excalibur Raft & Clarity Pack
 icon: 
-defaultOpen: true
+defaultOpen: false
 showfolderpage: true
 sort: 5
 ---
-MOD ID: 3501520631  
+**MOD ID: 3501520631**  
   
-Requested by P0wer [(https://www.twitch.tv/p0wermad1)](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=http%3A%2F%2F%28https%3A%2F%2Fwww.twitch.tv%2Fp0wermad1%29)  
+Requested by P0wer – [https://www.twitch.tv/p0wermad1](steam://openurl_external/https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fwww.twitch.tv%2Fp0wermad1)  
   
-A standalone upgrade of the default raft from Excalibur Utilities. Built for survivors who need more than a floating plank.  
+A standalone overhaul of the vanilla raft from Excalibur Utilities—featuring improved speed, handling, durability, and build limits, with optional visual enhancements like fog removal and crystal-clear water. Built for survivors who want real utility, not just a floating box.  
   
-Includes faster speed with reverse, sharper turning, higher weight capacity, double structure limit, 35,000 HP with motorboat-level resistance, and metal class so it's ignored by Leeds. Can be picked up via the MU Menu.  
+**Features:**  
+- Boosted speed (with reverse)  
+- Tighter turning  
+- Higher weight capacity  
+- Double the structure limit  
+- 35,000 HP with motorboat-tier resistance  
+- Metal-class—ignored by Leeds  
+- Pickup enabled via the MU Menu  
+- Optional fog remover + Crystal Clear  
   
-Also includes optional fog remover and clear water features.
+**GameUserSetting:**  
+[ExcaliburRaft]  
+RaftSpeed=1  
+RaftMaxStructuresNum=140  
+RaftMaxStructuresHeight=2200  
+RaftHealth=35000  
+DisableFogRemover=false  
+DisableClearWater=false  
+  
+**Engram Entry Override:**  
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_ExcaliburRaft_C",EngramHidden=true)  
+  
+**Spawn Code:**  
+admincheat GiveItem "Blueprint'/Game/Mods/ExcaliburRaft/BP/PrimalItem_ExcaliburRaft.PrimalItem_ExcaliburRaft'" 1 1 0

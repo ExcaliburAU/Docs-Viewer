@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/modding.md",
+                "file": "modding/ARK/evolved/raft/raft.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "modding"
+              "title": "raft"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/modding.md",
+                "file": "modding/ARK/evolved/raft/raft.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of modding"
+              "title": "Outline of raft"
             }
           }
         ],
@@ -197,9 +197,9 @@
   },
   "active": "87c27926fc54bbaf",
   "lastOpenFiles": [
+    "modding/modding.md",
     "modding/ARK/evolved/gaia/gaia.md",
     "announcements/announcements.md",
-    "modding/modding.md",
     "modding/ARK/news/news.md",
     "modding/ARK/evolved/crafter/crafter.md",
     "modding/ARK/ARK.md",
