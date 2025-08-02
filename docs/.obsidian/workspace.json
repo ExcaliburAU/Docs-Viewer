@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/evolved/gaia/gaia.md",
+                "file": "announcements/announcements.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "gaia"
+              "title": "announcements"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/evolved/gaia/gaia.md",
+                "file": "announcements/announcements.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of gaia"
+              "title": "Outline of announcements"
             }
           }
         ],
@@ -197,8 +197,10 @@
   },
   "active": "87c27926fc54bbaf",
   "lastOpenFiles": [
-    "modding/ARK/evolved/crafter/crafter.md",
+    "modding/modding.md",
+    "modding/ARK/news/news.md",
     "modding/ARK/evolved/gaia/gaia.md",
+    "modding/ARK/evolved/crafter/crafter.md",
     "modding/ARK/ARK.md",
     "modding/ARK/evolved/gaia",
     "modding/ARK/evolved/raft/raft.md",
@@ -218,12 +220,10 @@
     "discord-bots/discord-bots.md",
     "announcements",
     "modding/minecraft/minecraft.md",
-    "modding/modding.md",
     "modding/ARK/ascended/tranqs/tranqs.md",
     "modding/ARK/ascended/tranqs/GameUserSettings.md",
     "modding/ARK/ascended/tranqs/patch-notes/02-23-25.md",
     "modding/ARK/ascended/tranqs/index.md",
-    "modding/ARK/news/news.md",
     "modding/minecraft/paper/swiftchop/swiftchop.md",
     "welcome.md",
     "modding/minecraft/paper/extensions/extensions.md",
