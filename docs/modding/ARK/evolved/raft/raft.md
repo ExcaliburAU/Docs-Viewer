@@ -1,5 +1,5 @@
 ---
-title: Excalibur Raft & Clarity Pack
+title: Raft & Clarity Pack
 icon: 
 defaultOpen: false
 showfolderpage: true

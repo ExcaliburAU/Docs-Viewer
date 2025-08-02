@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/evolved/net-ammo/net-ammo.md",
+                "file": "modding/ARK/evolved/raft/raft.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "net-ammo"
+              "title": "raft"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/evolved/net-ammo/net-ammo.md",
+                "file": "modding/ARK/evolved/raft/raft.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of net-ammo"
+              "title": "Outline of raft"
             }
           }
         ],
@@ -183,12 +183,12 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "modding/ARK/evolved/net-ammo/net-ammo.md",
     "modding/ARK/evolved/raft/raft.md",
     "modding/ARK/evolved/exutilities/GameUserSettings.md",
     "modding/ARK/evolved/raft/Codes&Entries.md",
     "modding/ARK/evolved/raft/GameUserSettings.md",
     "modding/ARK/evolved/net-ammo/GameUserSettings.md",
-    "modding/ARK/evolved/net-ammo/net-ammo.md",
     "modding/modding.md",
     "modding/ARK/evolved/gaia/gaia.md",
     "announcements/announcements.md",
