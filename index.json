@@ -377,27 +377,7 @@
                   "sort": 5,
                   "slug": "modding/ark/evolved/excalibur-raft-clarity-pack",
                   "type": "folder",
-                  "items": [
-                    {
-                      "title": "Game User Settings",
-                      "icon": "",
-                      "defaultOpen": false,
-                      "sort": 1,
-                      "slug": "modding/ark/evolved/excalibur-raft-clarity-pack/game-user-settings",
-                      "path": "docs/modding/ARK/evolved/raft/GameUserSettings.md"
-                    },
-                    {
-                      "title": "Spawn Codes & Engram Entries",
-                      "icon": "",
-                      "defaultOpen": false,
-                      "sort": 2,
-                      "headers": [
-                        "Excalibur Raft"
-                      ],
-                      "slug": "modding/ark/evolved/excalibur-raft-clarity-pack/spawn-codes-engram-entries",
-                      "path": "docs/modding/ARK/evolved/raft/Codes&Entries.md"
-                    }
-                  ],
+                  "items": [],
                   "path": "docs/modding/ARK/evolved/raft/raft.md"
                 },
                 {
@@ -451,26 +431,6 @@
                     }
                   ],
                   "path": "docs/modding/ARK/evolved/utilities/utilities.md"
-                },
-                {
-                  "title": "EXUtilties",
-                  "icon": "",
-                  "defaultOpen": false,
-                  "showfolderpage": "false",
-                  "sort": 7,
-                  "slug": "modding/ark/evolved/exutilties",
-                  "type": "folder",
-                  "items": [
-                    {
-                      "title": "Game User Settings",
-                      "icon": "",
-                      "defaultOpen": false,
-                      "sort": 1,
-                      "slug": "modding/ark/evolved/exutilties/game-user-settings",
-                      "path": "docs/modding/ARK/evolved/exutilities/GameUserSettings.md"
-                    }
-                  ],
-                  "path": "docs/modding/ARK/evolved/exutilities/exutilities.md"
                 },
                 {
                   "title": "Gaia Reforged",
