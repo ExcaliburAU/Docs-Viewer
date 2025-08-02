@@ -70,7 +70,7 @@
         {
           "title": "ARK",
           "icon": "",
-          "defaultOpen": false,
+          "defaultOpen": true,
           "showfolderpage": "false",
           "sort": 1,
           "slug": "modding/ark",
@@ -90,7 +90,7 @@
             {
               "title": "Evolved",
               "icon": "",
-              "defaultOpen": false,
+              "defaultOpen": true,
               "showfolderpage": "false",
               "sort": 2,
               "slug": "modding/ark/evolved",
