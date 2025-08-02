@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/ARK.md",
-                "mode": "preview",
+                "file": "modding/ARK/evolved/crafter/crafter.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "ARK"
+              "title": "crafter"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/ARK.md",
+                "file": "modding/ARK/evolved/crafter/crafter.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ARK"
+              "title": "Outline of crafter"
             }
           }
         ],
@@ -183,9 +183,13 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
-    "modding/ARK/evolved/evolved.md",
-    "modding/minecraft/minecraft.md",
+    "modding/ARK/evolved/crafter/Codes&Entries.md",
     "modding/ARK/evolved/raft/raft.md",
+    "modding/ARK/evolved/crafter/crafter.md",
+    "modding/ARK/evolved/crafter/GameUserSettings.md",
+    "modding/minecraft/minecraft.md",
+    "modding/ARK/ARK.md",
+    "modding/ARK/evolved/evolved.md",
     "modding/ARK/evolved/net-ammo/net-ammo.md",
     "modding/ARK/evolved/exutilities/GameUserSettings.md",
     "modding/ARK/evolved/raft/Codes&Entries.md",
@@ -195,15 +199,11 @@
     "modding/ARK/evolved/gaia/gaia.md",
     "announcements/announcements.md",
     "modding/ARK/news/news.md",
-    "modding/ARK/evolved/crafter/crafter.md",
-    "modding/ARK/ARK.md",
     "modding/ARK/evolved/gaia",
     "modding/ARK/evolved/raft/gameusersettings.md",
     "modding/ARK/evolved/exutilities/exutilities.md",
-    "modding/ARK/evolved/crafter/GameUserSettings.md",
     "modding/ARK/evolved/raft",
     "modding/ARK/evolved/utilities/GameUserSettings.md",
-    "modding/ARK/evolved/crafter/Codes&Entries.md",
     "announcements/discord-closure.md",
     "modding/ARK/evolved/exutilities",
     "modding/ARK/evolved/Untitled.md",
