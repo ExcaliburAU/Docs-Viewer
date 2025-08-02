@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/evolved/raft/raft.md",
-                "mode": "preview",
+                "file": "modding/ARK/evolved/gaia/gaia.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "raft"
+              "title": "gaia"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/evolved/raft/raft.md",
+                "file": "modding/ARK/evolved/gaia/gaia.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of raft"
+              "title": "Outline of gaia"
             }
           }
         ],
@@ -197,12 +197,15 @@
   },
   "active": "87c27926fc54bbaf",
   "lastOpenFiles": [
+    "modding/ARK/evolved/crafter/crafter.md",
+    "modding/ARK/evolved/gaia/gaia.md",
+    "modding/ARK/ARK.md",
+    "modding/ARK/evolved/gaia",
+    "modding/ARK/evolved/raft/raft.md",
     "modding/ARK/evolved/raft/Codes&Entries.md",
     "modding/ARK/evolved/raft/GameUserSettings.md",
-    "modding/ARK/evolved/raft/raft.md",
     "modding/ARK/evolved/raft/gameusersettings.md",
     "modding/ARK/evolved/exutilities/exutilities.md",
-    "modding/ARK/evolved/crafter/crafter.md",
     "modding/ARK/evolved/crafter/GameUserSettings.md",
     "modding/ARK/evolved/exutilities/GameUserSettings.md",
     "modding/ARK/evolved/raft",
@@ -215,7 +218,6 @@
     "discord-bots/discord-bots.md",
     "announcements",
     "modding/minecraft/minecraft.md",
-    "modding/ARK/ARK.md",
     "modding/modding.md",
     "modding/ARK/ascended/tranqs/tranqs.md",
     "modding/ARK/ascended/tranqs/GameUserSettings.md",
@@ -225,7 +227,6 @@
     "modding/minecraft/paper/swiftchop/swiftchop.md",
     "welcome.md",
     "modding/minecraft/paper/extensions/extensions.md",
-    "modding/ARK/news/20-04-2025.md",
     "discord-bots",
     "modding",
     "Announcements/ARK",
@@ -235,7 +236,6 @@
     "images/logo.png",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
-    "arksurvivalevolved/dropstoragebox",
     "images/logo2.png",
     "logo2.png",
     "logo.png",
