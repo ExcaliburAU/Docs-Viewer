@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/stacks/stacks.md",
+                "file": "modding/ARK/tranqs/Spawn Codes & Engram Entries.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "stacks"
+              "title": "Spawn Codes & Engram Entries"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/stacks/stacks.md",
+                "file": "modding/ARK/tranqs/Spawn Codes & Engram Entries.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of stacks"
+              "title": "Outline of Spawn Codes & Engram Entries"
             }
           }
         ],
@@ -183,12 +183,14 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "modding/ARK/tranqs/index.md",
+    "modding/ARK/tranqs/GameUserSettings.md",
+    "modding/ARK/stacks/stacks.md",
     "modding/ARK/stacks/GameUserSettings.md",
     "modding/ARK/crafter/crafter.md",
     "modding/ARK/ARK.md",
     "modding/ARK/evolved/evolved.md",
     "modding/ARK/stacks/ImmersiveTaming.md",
-    "modding/ARK/stacks/stacks.md",
     "modding/ARK/evolved/crafter/Codes&Entries.md",
     "modding/ARK/raft/raft.md",
     "modding/ARK/evolved/crafter/GameUserSettings.md",
@@ -210,9 +212,7 @@
     "announcements/discord-closure.md",
     "modding/ARK/evolved/exutilities",
     "modding/ARK/evolved/Untitled.md",
-    "discord-bots/discord-bots.md",
     "announcements",
-    "modding/ARK/ascended/tranqs/tranqs.md",
     "discord-bots",
     "modding",
     "Announcements/ARK",

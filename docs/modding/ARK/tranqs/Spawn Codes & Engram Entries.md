@@ -201,22 +201,22 @@ OverrideNamedEngramEntries=(EngramClassName="EngramEntry_PureBoomerang_ExTranq_C
 admincheat GiveItem "Blueprint'/Game/Mods/ProgressiveTranqs/Items/Weapon/Boomerang/PrimalItem_PureBoomerang_ExTranq.PrimalItem_PureBoomerang_ExTranq'" 1 1 0
 ```
 ## Items
-### Tame Helper
-```ini
-OverrideNamedEngramEntries=(EngramClassName="EngramEntry_TamingPotion_ExTranq_C",EngramHidden=true)
-
-admincheat GiveItem "Blueprint'/Game/Mods/2962071508/Items/Consumables/Potions/PrimalItemConsumable_TameHelper_ExTranq.PrimalItemConsumable_TameHelper_ExTranq'" 1 1 0
-```
 ## Structures
+### Workbench
+```ini
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_Workbench_EXT_C",EngramHidden=true)
+
+admincheat GiveItem "Blueprint'/Game/Mods/ProgressiveTranqs/Structures/Workbench/PrimalItemStructure_Workbench_EXT.PrimalItemStructure_Workbench_EXT'" 1 1 0
+```
 ### Charcoal Baker
 ```ini
 OverrideNamedEngramEntries=(EngramClassName="EngramEntry_CharcoalBaker_ExTranq_C",EngramHidden=true)
 
-admincheat GiveItem "Blueprint'/Game/Mods/2962071508/Structures/CharcoalBaker/PrimalItemStructure_CharcoalBaker_ExTranqs.PrimalItemStructure_CharcoalBaker_ExTranqs'" 1 1 0
+admincheat GiveItem "Blueprint'/Game/Mods/ProgressiveTranqs/Structures/CharcoalBaker/PrimalItemStructure_CharcoalBaker_ExTranqs.PrimalItemStructure_CharcoalBaker_ExTranqs'" 1 1 0
 ```
 ### Meat Spoiler
 ```ini
-OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MeatSpoiler_ExTranq",EngramHidden=true)
+OverrideNamedEngramEntries=(EngramClassName="EngramEntry_MeatSpoiler_ExTranq_C",EngramHidden=true)
 
-admincheat GiveItem "Blueprint'/Game/Mods/2962071508/Structures/Spoiler/PrimalItemStructure_MeatSpoiler_ExTranq.PrimalItemStructure_MeatSpoiler_ExTranq'" 1 1 0
+admincheat GiveItem "Blueprint'/Game/Mods/ProgressiveTranqs/Structures/Spoiler/PrimalItemStructure_MeatSpoiler_ExTranq.PrimalItemStructure_MeatSpoiler_ExTranq'" 1 1 0
 ```
