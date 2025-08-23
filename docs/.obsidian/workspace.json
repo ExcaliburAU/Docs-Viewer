@@ -25,12 +25,14 @@
             "id": "9e34a5bbc901c56f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "images/image.webp"
+                "file": "modding/ARK/announcements/Post Aquatica.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-image",
-              "title": "image"
+              "icon": "lucide-file",
+              "title": "Post Aquatica"
             }
           }
         ],
@@ -152,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "images/image.webp",
+                "file": "modding/ARK/announcements/Post Aquatica.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of image"
+              "title": "Outline of Post Aquatica"
             }
           }
         ],
@@ -181,9 +183,10 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
-    "images/logo.png",
-    "modding/ARK/announcements/Post Aquatica.md",
+    "images/image.png",
     "images/image.webp",
+    "modding/ARK/announcements/Post Aquatica.md",
+    "images/logo.png",
     "image.webp",
     "modding/modding.md",
     "images/images.md",
