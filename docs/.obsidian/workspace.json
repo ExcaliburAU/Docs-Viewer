@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/announcements/announcements.md",
+                "file": "modding/ARK/ARK.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "announcements"
+              "title": "ARK"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/announcements/announcements.md",
+                "file": "modding/ARK/ARK.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of announcements"
+              "title": "Outline of ARK"
             }
           }
         ],
@@ -183,8 +183,8 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
-    "modding/ARK/ARK.md",
     "modding/ARK/announcements/announcements.md",
+    "modding/ARK/ARK.md",
     "modding/ARK/announcements",
     "announcements/announcements.md",
     "modding/ARK/tranqs/Spawn Codes & Engram Entries.md",
