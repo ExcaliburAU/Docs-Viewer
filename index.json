@@ -77,6 +77,17 @@
           "type": "folder",
           "items": [
             {
+              "title": "Announcements",
+              "icon": "",
+              "defaultOpen": true,
+              "showfolderpage": "false",
+              "sort": 1,
+              "slug": "modding/ark-survival-evolved/announcements",
+              "type": "folder",
+              "items": [],
+              "path": "docs/modding/ARK/announcements/announcements.md"
+            },
+            {
               "title": "Excalibur Stacks",
               "icon": "",
               "defaultOpen": false,
