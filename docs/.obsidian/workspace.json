@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/ARK.md",
+                "file": "modding/ARK/announcements/Post Aquatica.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "ARK"
+              "title": "Post Aquatica"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/ARK.md",
+                "file": "modding/ARK/announcements/Post Aquatica.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ARK"
+              "title": "Outline of Post Aquatica"
             }
           }
         ],
@@ -183,6 +183,13 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "images/image.webp",
+    "modding/ARK/announcements/Post Aquatica.md",
+    "image.webp",
+    "images/logo.png",
+    "modding/modding.md",
+    "images/images.md",
+    "discord-bots/discord-bots.md",
     "modding/ARK/announcements/announcements.md",
     "modding/ARK/ARK.md",
     "modding/ARK/announcements",
@@ -204,14 +211,9 @@
     "modding/ARK/evolved/raft/Codes&Entries.md",
     "modding/ARK/evolved/raft/GameUserSettings.md",
     "modding/ARK/net-ammo/GameUserSettings.md",
-    "modding/modding.md",
     "modding/ARK/evolved/gaia/gaia.md",
-    "modding/ARK/news/news.md",
     "modding/ARK/evolved/gaia",
-    "modding/ARK/evolved/raft/gameusersettings.md",
-    "modding/ARK/evolved/exutilities/exutilities.md",
     "modding/ARK/raft",
-    "modding/ARK/utilities/GameUserSettings.md",
     "modding/ARK/evolved/exutilities",
     "announcements",
     "discord-bots",
@@ -219,7 +221,6 @@
     "Announcements/ARK",
     "modding/minecraft/fabric",
     "modding/ARK",
-    "images/logo.png",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
     "images/logo2.png",

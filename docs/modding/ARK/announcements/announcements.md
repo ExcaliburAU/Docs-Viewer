@@ -1,7 +1,7 @@
 ---
 title: Announcements
 icon: 
-defaultOpen: true
+defaultOpen: false
 showfolderpage: false
 sort: 1
 ---
