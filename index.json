@@ -48,12 +48,12 @@
       "path": "docs/welcome.md"
     },
     {
-      "title": "Modding",
+      "title": "Game Modding",
       "icon": "",
       "defaultOpen": true,
       "showfolderpage": "false",
       "sort": 1,
-      "slug": "modding",
+      "slug": "game-modding",
       "type": "folder",
       "items": [
         {
@@ -62,7 +62,7 @@
           "defaultOpen": false,
           "showfolderpage": "false",
           "sort": 1,
-          "slug": "modding/ark-survival-evolved",
+          "slug": "game-modding/ark-survival-evolved",
           "type": "folder",
           "items": [
             {
@@ -71,11 +71,11 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "modding/ark-survival-evolved/announcements",
+              "slug": "game-modding/ark-survival-evolved/announcements",
               "type": "folder",
               "items": [
                 {
-                  "slug": "modding/ark-survival-evolved/announcements/post-aquatica",
+                  "slug": "game-modding/ark-survival-evolved/announcements/post-aquatica",
                   "title": "Post Aquatica",
                   "path": "docs/modding/ARK/announcements/Post Aquatica.md"
                 }
@@ -88,7 +88,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "modding/ark-survival-evolved/excalibur-stacks",
+              "slug": "game-modding/ark-survival-evolved/excalibur-stacks",
               "type": "folder",
               "items": [
                 {
@@ -102,12 +102,12 @@
                     "Modifying `GameUserSettings.ini`",
                     "Example: Blacklisting Items"
                   ],
-                  "slug": "modding/ark-survival-evolved/excalibur-stacks/gameusersettings",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-stacks/gameusersettings",
                   "title": "GameUserSettings",
                   "path": "docs/modding/ARK/stacks/GameUserSettings.md"
                 },
                 {
-                  "slug": "modding/ark-survival-evolved/excalibur-stacks/immersivetaming",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-stacks/immersivetaming",
                   "title": "ImmersiveTaming",
                   "path": "docs/modding/ARK/stacks/ImmersiveTaming.md"
                 },
@@ -123,7 +123,7 @@
                     "Stryder Box",
                     "Travel Terminal"
                   ],
-                  "slug": "modding/ark-survival-evolved/excalibur-stacks/spawn-codes-engram-entries",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-stacks/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
                   "path": "docs/modding/ARK/stacks/Spawn Codes & Engram Entries.md"
                 }
@@ -136,7 +136,7 @@
               "defaultOpen": false,
               "showfolderpage": "true",
               "sort": 2,
-              "slug": "modding/ark-survival-evolved/excalibur-crafter",
+              "slug": "game-modding/ark-survival-evolved/excalibur-crafter",
               "type": "folder",
               "items": [],
               "path": "docs/modding/ARK/crafter/crafter.md"
@@ -147,11 +147,11 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 2,
-              "slug": "modding/ark-survival-evolved/excalibur-tranqs",
+              "slug": "game-modding/ark-survival-evolved/excalibur-tranqs",
               "type": "folder",
               "items": [
                 {
-                  "slug": "modding/ark-survival-evolved/excalibur-tranqs/gameusersettings",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-tranqs/gameusersettings",
                   "title": "GameUserSettings",
                   "path": "docs/modding/ARK/tranqs/GameUserSettings.md"
                 },
@@ -160,14 +160,14 @@
                     "Config",
                     "Patch Notes"
                   ],
-                  "slug": "modding/ark-survival-evolved/excalibur-tranqs/index",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-tranqs/index",
                   "title": "index",
                   "path": "docs/modding/ARK/tranqs/index.md"
                 },
                 {
                   "title": "patch-notes",
                   "type": "folder",
-                  "slug": "modding/ark-survival-evolved/excalibur-tranqs/patch-notes",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-tranqs/patch-notes",
                   "items": [
                     {
                       "headers": [
@@ -177,7 +177,7 @@
                         "Vanilla Creatures",
                         "Kraken Better Dinos"
                       ],
-                      "slug": "modding/ark-survival-evolved/excalibur-tranqs/patch-notes/12-11-24",
+                      "slug": "game-modding/ark-survival-evolved/excalibur-tranqs/patch-notes/12-11-24",
                       "title": "12-11-24",
                       "path": "docs/modding/ARK/tranqs/patch-notes/12-11-24.md"
                     }
@@ -231,7 +231,7 @@
                     "Charcoal Baker",
                     "Meat Spoiler"
                   ],
-                  "slug": "modding/ark-survival-evolved/excalibur-tranqs/spawn-codes-engram-entries",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-tranqs/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
                   "path": "docs/modding/ARK/tranqs/Spawn Codes & Engram Entries.md"
                 }
@@ -244,30 +244,30 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 3,
-              "slug": "modding/ark-survival-evolved/harvs-corner",
+              "slug": "game-modding/ark-survival-evolved/harvs-corner",
               "type": "folder",
               "items": [
                 {
-                  "slug": "modding/ark-survival-evolved/harvs-corner/gameusersettings",
+                  "slug": "game-modding/ark-survival-evolved/harvs-corner/gameusersettings",
                   "title": "GameUserSettings",
                   "path": "docs/modding/ARK/harvs-corner/GameUserSettings.md"
                 },
                 {
                   "title": "patch-notes",
                   "type": "folder",
-                  "slug": "modding/ark-survival-evolved/harvs-corner/patch-notes",
+                  "slug": "game-modding/ark-survival-evolved/harvs-corner/patch-notes",
                   "items": [
                     {
                       "title": "2024",
                       "type": "folder",
-                      "slug": "modding/ark-survival-evolved/harvs-corner/patch-notes/2024",
+                      "slug": "game-modding/ark-survival-evolved/harvs-corner/patch-notes/2024",
                       "items": [
                         {
                           "headers": [
                             "Update 16/12 - 1",
                             "Update 16/12 - 2"
                           ],
-                          "slug": "modding/ark-survival-evolved/harvs-corner/patch-notes/2024/12-16-24",
+                          "slug": "game-modding/ark-survival-evolved/harvs-corner/patch-notes/2024/12-16-24",
                           "title": "12-16-24",
                           "path": "docs/modding/ARK/harvs-corner/patch-notes/2024/12-16-24.md"
                         },
@@ -275,7 +275,7 @@
                           "headers": [
                             "Update 17/12"
                           ],
-                          "slug": "modding/ark-survival-evolved/harvs-corner/patch-notes/2024/12-17-24",
+                          "slug": "game-modding/ark-survival-evolved/harvs-corner/patch-notes/2024/12-17-24",
                           "title": "12-17-24",
                           "path": "docs/modding/ARK/harvs-corner/patch-notes/2024/12-17-24.md"
                         }
@@ -284,13 +284,13 @@
                     {
                       "title": "2025",
                       "type": "folder",
-                      "slug": "modding/ark-survival-evolved/harvs-corner/patch-notes/2025",
+                      "slug": "game-modding/ark-survival-evolved/harvs-corner/patch-notes/2025",
                       "items": [
                         {
                           "headers": [
                             "Update 01/12"
                           ],
-                          "slug": "modding/ark-survival-evolved/harvs-corner/patch-notes/2025/01-12-25",
+                          "slug": "game-modding/ark-survival-evolved/harvs-corner/patch-notes/2025/01-12-25",
                           "title": "01-12-25",
                           "path": "docs/modding/ARK/harvs-corner/patch-notes/2025/01-12-25.md"
                         }
@@ -303,7 +303,7 @@
                     "Items",
                     "Structures"
                   ],
-                  "slug": "modding/ark-survival-evolved/harvs-corner/spawn-codes-engram-entries",
+                  "slug": "game-modding/ark-survival-evolved/harvs-corner/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
                   "path": "docs/modding/ARK/harvs-corner/Spawn Codes & Engram Entries.md"
                 }
@@ -316,11 +316,11 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 4,
-              "slug": "modding/ark-survival-evolved/excalibur-net-ammo",
+              "slug": "game-modding/ark-survival-evolved/excalibur-net-ammo",
               "type": "folder",
               "items": [
                 {
-                  "slug": "modding/ark-survival-evolved/excalibur-net-ammo/gameusersettings",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-net-ammo/gameusersettings",
                   "title": "GameUserSettings",
                   "path": "docs/modding/ARK/net-ammo/GameUserSettings.md"
                 },
@@ -328,7 +328,7 @@
                   "headers": [
                     "Net Everything Ammo"
                   ],
-                  "slug": "modding/ark-survival-evolved/excalibur-net-ammo/spawn-codes-engram-entries",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-net-ammo/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
                   "path": "docs/modding/ARK/net-ammo/Spawn Codes & Engram Entries.md"
                 }
@@ -341,7 +341,7 @@
               "defaultOpen": false,
               "showfolderpage": "true",
               "sort": 5,
-              "slug": "modding/ark-survival-evolved/raft-clarity-pack",
+              "slug": "game-modding/ark-survival-evolved/raft-clarity-pack",
               "type": "folder",
               "items": [],
               "path": "docs/modding/ARK/raft/raft.md"
@@ -352,11 +352,11 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 6,
-              "slug": "modding/ark-survival-evolved/excalibur-utilities",
+              "slug": "game-modding/ark-survival-evolved/excalibur-utilities",
               "type": "folder",
               "items": [
                 {
-                  "slug": "modding/ark-survival-evolved/excalibur-utilities/gameusersettings",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-utilities/gameusersettings",
                   "title": "GameUserSettings",
                   "path": "docs/modding/ARK/utilities/GameUserSettings.md"
                 },
@@ -391,7 +391,7 @@
                     "Scrap Forge",
                     "Workbench"
                   ],
-                  "slug": "modding/ark-survival-evolved/excalibur-utilities/spawn-codes-engram-entries",
+                  "slug": "game-modding/ark-survival-evolved/excalibur-utilities/spawn-codes-engram-entries",
                   "title": "Spawn Codes & Engram Entries",
                   "path": "docs/modding/ARK/utilities/Spawn Codes & Engram Entries.md"
                 }
@@ -407,7 +407,7 @@
           "defaultOpen": false,
           "showfolderpage": "false",
           "sort": 3,
-          "slug": "modding/minecraft",
+          "slug": "game-modding/minecraft",
           "type": "folder",
           "items": [
             {
@@ -416,7 +416,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "modding/minecraft/fabric",
+              "slug": "game-modding/minecraft/fabric",
               "type": "folder",
               "items": [],
               "path": "docs/modding/minecraft/fabric/fabric.md"
@@ -427,7 +427,7 @@
               "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
-              "slug": "modding/minecraft/paper",
+              "slug": "game-modding/minecraft/paper",
               "type": "folder",
               "items": [
                 {
@@ -435,7 +435,7 @@
                   "icon": "",
                   "defaultOpen": false,
                   "showfolderpage": "false",
-                  "slug": "modding/minecraft/paper/extensions",
+                  "slug": "game-modding/minecraft/paper/extensions",
                   "type": "folder",
                   "items": [
                     {
@@ -449,7 +449,7 @@
                         "Special Permissions",
                         "Default Permissions"
                       ],
-                      "slug": "modding/minecraft/paper/extensions/permissions",
+                      "slug": "game-modding/minecraft/paper/extensions/permissions",
                       "title": "permissions",
                       "path": "docs/modding/minecraft/paper/extensions/permissions.md"
                     }
@@ -468,7 +468,7 @@
                     "Authors",
                     "License"
                   ],
-                  "slug": "modding/minecraft/paper/swift-chop",
+                  "slug": "game-modding/minecraft/paper/swift-chop",
                   "type": "folder",
                   "items": [],
                   "path": "docs/modding/minecraft/paper/swiftchop/swiftchop.md"
