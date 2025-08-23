@@ -1,5 +1,5 @@
 ---
-title: Modding
+title: Game Modding
 icon: 
 defaultOpen: true
 showfolderpage: false

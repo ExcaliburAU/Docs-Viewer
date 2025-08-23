@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/announcements/Post Aquatica.md",
+                "file": "modding/modding.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Post Aquatica"
+              "title": "modding"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/announcements/Post Aquatica.md",
+                "file": "modding/modding.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Post Aquatica"
+              "title": "Outline of modding"
             }
           }
         ],
@@ -183,16 +183,16 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
-    "images/image.png",
-    "images/image.webp",
+    "modding/ARK/ARK.md",
+    "modding/ARK/announcements/announcements.md",
     "modding/ARK/announcements/Post Aquatica.md",
-    "images/logo.png",
-    "image.webp",
     "modding/modding.md",
+    "images/image.webp",
+    "image.webp",
+    "images/image.png",
+    "images/logo.png",
     "images/images.md",
     "discord-bots/discord-bots.md",
-    "modding/ARK/announcements/announcements.md",
-    "modding/ARK/ARK.md",
     "modding/ARK/announcements",
     "announcements/announcements.md",
     "modding/ARK/tranqs/Spawn Codes & Engram Entries.md",
