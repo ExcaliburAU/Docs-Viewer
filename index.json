@@ -48,17 +48,6 @@
       "path": "docs/welcome.md"
     },
     {
-      "title": "Announcements",
-      "icon": "",
-      "defaultOpen": true,
-      "showfolderpage": "true",
-      "sort": 1,
-      "slug": "announcements",
-      "type": "folder",
-      "items": [],
-      "path": "docs/announcements/announcements.md"
-    },
-    {
       "title": "Modding",
       "icon": "",
       "defaultOpen": true,
@@ -79,12 +68,18 @@
             {
               "title": "Announcements",
               "icon": "",
-              "defaultOpen": true,
+              "defaultOpen": false,
               "showfolderpage": "false",
               "sort": 1,
               "slug": "modding/ark-survival-evolved/announcements",
               "type": "folder",
-              "items": [],
+              "items": [
+                {
+                  "slug": "modding/ark-survival-evolved/announcements/post-aquatica",
+                  "title": "Post Aquatica",
+                  "path": "docs/modding/ARK/announcements/Post Aquatica.md"
+                }
+              ],
               "path": "docs/modding/ARK/announcements/announcements.md"
             },
             {
@@ -486,17 +481,6 @@
         }
       ],
       "path": "docs/modding/modding.md"
-    },
-    {
-      "title": "Discord Bots",
-      "icon": "",
-      "defaultOpen": true,
-      "showfolderpage": "false",
-      "sort": 2,
-      "slug": "discord-bots",
-      "type": "folder",
-      "items": [],
-      "path": "docs/discord-bots/discord-bots.md"
     }
   ]
 }
