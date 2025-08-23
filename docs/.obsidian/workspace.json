@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/tranqs/Spawn Codes & Engram Entries.md",
+                "file": "modding/ARK/announcements/announcements.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Spawn Codes & Engram Entries"
+              "title": "announcements"
             }
           }
         ],
@@ -154,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/tranqs/Spawn Codes & Engram Entries.md",
+                "file": "modding/ARK/announcements/announcements.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Spawn Codes & Engram Entries"
+              "title": "Outline of announcements"
             }
           }
         ],
@@ -183,12 +183,16 @@
   },
   "active": "9e34a5bbc901c56f",
   "lastOpenFiles": [
+    "modding/ARK/ARK.md",
+    "modding/ARK/announcements/announcements.md",
+    "modding/ARK/announcements",
+    "announcements/announcements.md",
+    "modding/ARK/tranqs/Spawn Codes & Engram Entries.md",
     "modding/ARK/tranqs/index.md",
     "modding/ARK/tranqs/GameUserSettings.md",
     "modding/ARK/stacks/stacks.md",
     "modding/ARK/stacks/GameUserSettings.md",
     "modding/ARK/crafter/crafter.md",
-    "modding/ARK/ARK.md",
     "modding/ARK/evolved/evolved.md",
     "modding/ARK/stacks/ImmersiveTaming.md",
     "modding/ARK/evolved/crafter/Codes&Entries.md",
@@ -202,23 +206,19 @@
     "modding/ARK/net-ammo/GameUserSettings.md",
     "modding/modding.md",
     "modding/ARK/evolved/gaia/gaia.md",
-    "announcements/announcements.md",
     "modding/ARK/news/news.md",
     "modding/ARK/evolved/gaia",
     "modding/ARK/evolved/raft/gameusersettings.md",
     "modding/ARK/evolved/exutilities/exutilities.md",
     "modding/ARK/raft",
     "modding/ARK/utilities/GameUserSettings.md",
-    "announcements/discord-closure.md",
     "modding/ARK/evolved/exutilities",
-    "modding/ARK/evolved/Untitled.md",
     "announcements",
     "discord-bots",
     "modding",
     "Announcements/ARK",
     "modding/minecraft/fabric",
     "modding/ARK",
-    "modding/ARK/news",
     "images/logo.png",
     "Pasted image 20250326200750.png",
     "{6EB915D6-7B55-4972-83A9-B1797F7E4009}.png",
