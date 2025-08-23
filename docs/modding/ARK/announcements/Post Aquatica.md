@@ -15,4 +15,4 @@ If you have a dedicated server, use the **-beta preaquatica** parameter on Steam
 steamcmd +login anonymous +app_update 376030 -beta preaquatica validate +exit
 ```
 
-![[images/image.webp]]
+[[images/image.webp]]
