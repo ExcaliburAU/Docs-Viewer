@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/exauspeed/GameUserSettings.md",
+                "file": "modding/ARK/exauspeed/exauspeed.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "GameUserSettings"
+              "title": "exauspeed"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/exauspeed/GameUserSettings.md",
+                "file": "modding/ARK/exauspeed/exauspeed.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of GameUserSettings"
+              "title": "Outline of exauspeed"
             }
           }
         ],
@@ -198,10 +198,10 @@
   },
   "active": "daa5e009cd44f705",
   "lastOpenFiles": [
-    "modding/ARK/exauspeed/exauspeed.md",
-    "modding/ARK/exauspeed/GameUserSettings.md",
-    "modding/ARK/stacks/stacks.md",
     "modding/ARK/ARK.md",
+    "modding/ARK/exauspeed/GameUserSettings.md",
+    "modding/ARK/exauspeed/exauspeed.md",
+    "modding/ARK/stacks/stacks.md",
     "welcome.md",
     "modding/ARK/exauspeed",
     "modding/modding.md",

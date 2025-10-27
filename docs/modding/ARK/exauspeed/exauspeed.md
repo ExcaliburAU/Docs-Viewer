@@ -1,8 +1,8 @@
 ---
 title: Excalibur Speed Costumes
-icon: 
+icon:
 defaultOpen: false
-showfolderpage: false
+showfolderpage: true
 sort: 1
 ---
 ## Description
