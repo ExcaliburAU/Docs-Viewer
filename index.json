@@ -83,6 +83,30 @@
               "path": "docs/modding/ARK/announcements/announcements.md"
             },
             {
+              "title": "Excalibur Speed Costumes",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 1,
+              "headers": [
+                "Description"
+              ],
+              "slug": "game-modding/ark-survival-evolved/excalibur-speed-costumes",
+              "type": "folder",
+              "items": [
+                {
+                  "headers": [
+                    "Configuration Settings",
+                    "Modifying `GameUserSettings.ini`"
+                  ],
+                  "slug": "game-modding/ark-survival-evolved/excalibur-speed-costumes/gameusersettings",
+                  "title": "GameUserSettings",
+                  "path": "docs/modding/ARK/exauspeed/GameUserSettings.md"
+                }
+              ],
+              "path": "docs/modding/ARK/exauspeed/exauspeed.md"
+            },
+            {
               "title": "Excalibur Stacks",
               "icon": "",
               "defaultOpen": false,
