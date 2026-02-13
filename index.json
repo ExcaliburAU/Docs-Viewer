@@ -42,100 +42,7 @@
       "title": "Introduction",
       "slug": "welcome",
       "sort": 0,
-      "headers": [
-        "Need Help?"
-      ],
       "path": "docs/welcome.md"
-    },
-    {
-      "title": "Game Modding",
-      "icon": "",
-      "defaultOpen": true,
-      "showfolderpage": "false",
-      "sort": 1,
-      "slug": "game-modding",
-      "type": "folder",
-      "items": [
-        {
-          "title": "Minecraft",
-          "icon": "",
-          "defaultOpen": false,
-          "showfolderpage": "false",
-          "sort": 3,
-          "slug": "game-modding/minecraft",
-          "type": "folder",
-          "items": [
-            {
-              "title": "Fabric",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 1,
-              "slug": "game-modding/minecraft/fabric",
-              "type": "folder",
-              "items": [],
-              "path": "docs/modding/minecraft/fabric/fabric.md"
-            },
-            {
-              "title": "Paper",
-              "icon": "",
-              "defaultOpen": false,
-              "showfolderpage": "false",
-              "sort": 1,
-              "slug": "game-modding/minecraft/paper",
-              "type": "folder",
-              "items": [
-                {
-                  "title": "Extensions",
-                  "icon": "",
-                  "defaultOpen": false,
-                  "showfolderpage": "false",
-                  "slug": "game-modding/minecraft/paper/extensions",
-                  "type": "folder",
-                  "items": [
-                    {
-                      "headers": [
-                        "General Commands",
-                        "Teleport System",
-                        "Home System",
-                        "Warp System",
-                        "Kit System",
-                        "Admin Commands",
-                        "Special Permissions",
-                        "Default Permissions"
-                      ],
-                      "slug": "game-modding/minecraft/paper/extensions/permissions",
-                      "title": "permissions",
-                      "path": "docs/modding/minecraft/paper/extensions/permissions.md"
-                    }
-                  ],
-                  "path": "docs/modding/minecraft/paper/extensions/extensions.md"
-                },
-                {
-                  "title": "Swift Chop",
-                  "icon": "",
-                  "defaultOpen": false,
-                  "showfolderpage": "true",
-                  "headers": [
-                    "Features",
-                    "Configuration",
-                    "Commands and Permissions",
-                    "Authors",
-                    "License"
-                  ],
-                  "slug": "game-modding/minecraft/paper/swift-chop",
-                  "type": "folder",
-                  "items": [],
-                  "path": "docs/modding/minecraft/paper/swiftchop/swiftchop.md"
-                }
-              ],
-              "path": "docs/modding/minecraft/paper/paper.md"
-            }
-          ],
-          "path": "docs/modding/minecraft/minecraft.md"
-        }
-      ],
-      "path": "docs/modding/modding.md"
     },
     {
       "title": "Archived",
@@ -510,6 +417,84 @@
             }
           ],
           "path": "docs/Archived/ARK/ARK.md"
+        },
+        {
+          "title": "Minecraft",
+          "icon": "",
+          "defaultOpen": false,
+          "showfolderpage": "false",
+          "sort": 3,
+          "slug": "archived/minecraft",
+          "type": "folder",
+          "items": [
+            {
+              "title": "Fabric",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 1,
+              "slug": "archived/minecraft/fabric",
+              "type": "folder",
+              "items": [],
+              "path": "docs/Archived/minecraft/fabric/fabric.md"
+            },
+            {
+              "title": "Paper",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "false",
+              "sort": 1,
+              "slug": "archived/minecraft/paper",
+              "type": "folder",
+              "items": [
+                {
+                  "title": "Extensions",
+                  "icon": "",
+                  "defaultOpen": false,
+                  "showfolderpage": "false",
+                  "slug": "archived/minecraft/paper/extensions",
+                  "type": "folder",
+                  "items": [
+                    {
+                      "headers": [
+                        "General Commands",
+                        "Teleport System",
+                        "Home System",
+                        "Warp System",
+                        "Kit System",
+                        "Admin Commands",
+                        "Special Permissions",
+                        "Default Permissions"
+                      ],
+                      "slug": "archived/minecraft/paper/extensions/permissions",
+                      "title": "permissions",
+                      "path": "docs/Archived/minecraft/paper/extensions/permissions.md"
+                    }
+                  ],
+                  "path": "docs/Archived/minecraft/paper/extensions/extensions.md"
+                },
+                {
+                  "title": "Swift Chop",
+                  "icon": "",
+                  "defaultOpen": false,
+                  "showfolderpage": "true",
+                  "headers": [
+                    "Features",
+                    "Configuration",
+                    "Commands and Permissions",
+                    "Authors",
+                    "License"
+                  ],
+                  "slug": "archived/minecraft/paper/swift-chop",
+                  "type": "folder",
+                  "items": [],
+                  "path": "docs/Archived/minecraft/paper/swiftchop/swiftchop.md"
+                }
+              ],
+              "path": "docs/Archived/minecraft/paper/paper.md"
+            }
+          ],
+          "path": "docs/Archived/minecraft/minecraft.md"
         }
       ]
     }
