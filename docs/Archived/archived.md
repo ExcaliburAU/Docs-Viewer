@@ -2,7 +2,7 @@
 title: Archived Projects
 icon:
 defaultOpen: true
-showfolderpage: false
+showfolderpage: true
 sort: 1
 slug: archived
 ---

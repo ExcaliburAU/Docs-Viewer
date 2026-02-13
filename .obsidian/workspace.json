@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/welcome.md",
+                "file": "docs/archived/archived.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "welcome"
+              "title": "archived"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/welcome.md",
+                "file": "docs/archived/archived.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for welcome"
+              "title": "Backlinks for archived"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/welcome.md",
+                "file": "docs/archived/archived.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from welcome"
+              "title": "Outgoing links from archived"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/welcome.md",
+                "file": "docs/archived/archived.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of welcome"
+              "title": "Outline of archived"
             }
           }
         ]
@@ -185,9 +185,9 @@
   },
   "active": "031e9166d1032c52",
   "lastOpenFiles": [
+    "docs/welcome.md",
     "docs/images/logo.png",
     "docs/archived/archived.md",
-    "docs/welcome.md",
     "README.md",
     "docs/modding/modding.md",
     "docs/archived/minecraft/minecraft.md",
