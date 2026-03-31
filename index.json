@@ -182,9 +182,9 @@
                   "path": "docs/Archived/ARK/tranqs/index.md"
                 },
                 {
+                  "slug": "archived/ark-survival-evolved/excalibur-tranqs/patch-notes",
                   "title": "patch-notes",
                   "type": "folder",
-                  "slug": "archived/ark-survival-evolved/excalibur-tranqs/patch-notes",
                   "items": [
                     {
                       "headers": [
@@ -198,7 +198,8 @@
                       "title": "12-11-24",
                       "path": "docs/Archived/ARK/tranqs/patch-notes/12-11-24.md"
                     }
-                  ]
+                  ],
+                  "path": "docs/Archived/ARK/tranqs/patch-notes/patch-notes.md"
                 },
                 {
                   "headers": [
@@ -270,14 +271,14 @@
                   "path": "docs/Archived/ARK/harvs-corner/GameUserSettings.md"
                 },
                 {
+                  "slug": "archived/ark-survival-evolved/harvs-corner/patch-notes",
                   "title": "patch-notes",
                   "type": "folder",
-                  "slug": "archived/ark-survival-evolved/harvs-corner/patch-notes",
                   "items": [
                     {
+                      "slug": "archived/ark-survival-evolved/harvs-corner/patch-notes/2024",
                       "title": "2024",
                       "type": "folder",
-                      "slug": "archived/ark-survival-evolved/harvs-corner/patch-notes/2024",
                       "items": [
                         {
                           "headers": [
@@ -296,12 +297,13 @@
                           "title": "12-17-24",
                           "path": "docs/Archived/ARK/harvs-corner/patch-notes/2024/12-17-24.md"
                         }
-                      ]
+                      ],
+                      "path": "docs/Archived/ARK/harvs-corner/patch-notes/2024/2024.md"
                     },
                     {
+                      "slug": "archived/ark-survival-evolved/harvs-corner/patch-notes/2025",
                       "title": "2025",
                       "type": "folder",
-                      "slug": "archived/ark-survival-evolved/harvs-corner/patch-notes/2025",
                       "items": [
                         {
                           "headers": [
@@ -311,9 +313,11 @@
                           "title": "01-12-25",
                           "path": "docs/Archived/ARK/harvs-corner/patch-notes/2025/01-12-25.md"
                         }
-                      ]
+                      ],
+                      "path": "docs/Archived/ARK/harvs-corner/patch-notes/2025/2025.md"
                     }
-                  ]
+                  ],
+                  "path": "docs/Archived/ARK/harvs-corner/patch-notes/patch-notes.md"
                 },
                 {
                   "headers": [
@@ -504,10 +508,15 @@
       "slug": "modding",
       "items": [
         {
-          "title": "ARK",
+          "title": "Ark Survival Ascended",
+          "icon": "",
+          "defaultOpen": true,
+          "showfolderpage": "false",
+          "sort": 1,
+          "slug": "modding/ark-survival-ascended",
           "type": "folder",
-          "slug": "modding/ark",
-          "items": []
+          "items": [],
+          "path": "docs/Modding/ark survival ascended/ark survival ascended.md"
         },
         {
           "title": "Minecraft",
