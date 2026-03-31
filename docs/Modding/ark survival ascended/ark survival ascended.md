@@ -1,5 +1,5 @@
 ---
-title: Minecraft
+title: Ark Survival Ascended
 icon:
 defaultOpen: true
 showfolderpage: false

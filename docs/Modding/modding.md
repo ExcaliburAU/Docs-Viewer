@@ -1,5 +1,5 @@
 ---
-title: Archived Projects
+title: Modding
 icon:
 defaultOpen: true
 showfolderpage: true

@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "modding/ARK/exauspeed/exauspeed.md",
+                "file": "welcome.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "exauspeed"
+              "title": "welcome"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "modding/ARK/exauspeed/exauspeed.md",
+                "file": "welcome.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of exauspeed"
+              "title": "Outline of welcome"
             }
           }
         ],
@@ -192,16 +192,22 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "docs-viewer:Git Commit & Push": false
     }
   },
   "active": "daa5e009cd44f705",
   "lastOpenFiles": [
+    "Modding/Minecraft/Minecraft.md",
+    "Modding/ark survival ascended/ark survival ascended.md",
+    "Modding/Modding.md",
+    "welcome.md",
+    "docs.md",
+    "archived/archived.md",
     "modding/ARK/ARK.md",
     "modding/ARK/exauspeed/GameUserSettings.md",
     "modding/ARK/exauspeed/exauspeed.md",
     "modding/ARK/stacks/stacks.md",
-    "welcome.md",
     "modding/ARK/exauspeed",
     "modding/modding.md",
     "modding/ARK/announcements/announcements.md",
@@ -224,11 +230,6 @@
     "modding/ARK/evolved/crafter/Codes&Entries.md",
     "modding/ARK/raft/raft.md",
     "modding/ARK/evolved/crafter/GameUserSettings.md",
-    "modding/minecraft/minecraft.md",
-    "modding/ARK/net-ammo/net-ammo.md",
-    "modding/ARK/evolved/exutilities/GameUserSettings.md",
-    "modding/ARK/evolved/raft/Codes&Entries.md",
-    "modding/ARK/evolved/raft/GameUserSettings.md",
     "modding/ARK/evolved/gaia",
     "modding/ARK/raft",
     "modding/ARK/evolved/exutilities",
