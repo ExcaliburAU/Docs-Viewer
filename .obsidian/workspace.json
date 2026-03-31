@@ -23,10 +23,14 @@
             "id": "da6240cbc1b975c1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "docs/archived/archived.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "archived"
             }
           }
         ],
@@ -194,11 +198,11 @@
   },
   "active": "da6240cbc1b975c1",
   "lastOpenFiles": [
+    "docs/Modding/modding.md",
     "docs/archived/archived.md",
     "docs/Modding/Minecraft/minecraft.md",
     "docs/Modding/ARK/ark.md",
     "docs/archived/minecraft/minecraft.md",
-    "docs/Modding/modding.md",
     "docs/Modding/Minecraft",
     "docs/Modding/ARK",
     "docs/archived/ARK/announcements/announcements.md",
