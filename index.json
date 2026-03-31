@@ -497,6 +497,25 @@
           "path": "docs/Archived/minecraft/minecraft.md"
         }
       ]
+    },
+    {
+      "title": "Modding",
+      "type": "folder",
+      "slug": "modding",
+      "items": [
+        {
+          "title": "ARK",
+          "type": "folder",
+          "slug": "modding/ark",
+          "items": []
+        },
+        {
+          "title": "Minecraft",
+          "type": "folder",
+          "slug": "modding/minecraft",
+          "items": []
+        }
+      ]
     }
   ]
 }
