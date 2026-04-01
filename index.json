@@ -515,7 +515,17 @@
           "sort": 1,
           "slug": "modding/ark-survival-ascended",
           "type": "folder",
-          "items": [],
+          "items": [
+            {
+              "title": "Excalibur Crafter",
+              "icon": "",
+              "defaultOpen": false,
+              "showfolderpage": "true",
+              "sort": 2,
+              "slug": "modding/ark-survival-ascended/excalibur-crafter",
+              "path": "docs/Modding/ark survival ascended/ExcaliburCrafter.md"
+            }
+          ],
           "path": "docs/Modding/ark survival ascended/ark survival ascended.md"
         },
         {
