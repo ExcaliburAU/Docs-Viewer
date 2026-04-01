@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "welcome.md",
+                "file": "Modding/ark survival ascended/ExcaliburCrafter.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "welcome"
+              "title": "ExcaliburCrafter"
             }
           }
         ],
@@ -168,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "welcome.md",
+                "file": "Modding/ark survival ascended/ExcaliburCrafter.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of welcome"
+              "title": "Outline of ExcaliburCrafter"
             }
           }
         ],
@@ -198,12 +198,14 @@
   },
   "active": "daa5e009cd44f705",
   "lastOpenFiles": [
-    "Modding/Minecraft/Minecraft.md",
-    "Modding/ark survival ascended/ark survival ascended.md",
-    "Modding/Modding.md",
-    "welcome.md",
-    "docs.md",
+    "archived/ARK/crafter/crafter.md",
+    "Modding/ark survival ascended/ExcaliburCrafter.md",
     "archived/archived.md",
+    "Modding/ark survival ascended/ark survival ascended.md",
+    "welcome.md",
+    "Modding/Minecraft/Minecraft.md",
+    "Modding/Modding.md",
+    "docs.md",
     "modding/ARK/ARK.md",
     "modding/ARK/exauspeed/GameUserSettings.md",
     "modding/ARK/exauspeed/exauspeed.md",
@@ -228,8 +230,6 @@
     "modding/ARK/evolved/evolved.md",
     "modding/ARK/stacks/ImmersiveTaming.md",
     "modding/ARK/evolved/crafter/Codes&Entries.md",
-    "modding/ARK/raft/raft.md",
-    "modding/ARK/evolved/crafter/GameUserSettings.md",
     "modding/ARK/evolved/gaia",
     "modding/ARK/raft",
     "modding/ARK/evolved/exutilities",
