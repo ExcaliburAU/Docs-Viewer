@@ -5,7 +5,7 @@ defaultOpen: false
 showfolderpage: true
 sort: 2
 ---
-**MOD ID: 2977491936**
+**Project ID: 1500429**
 
 A streamlined crafting bench that lets you craft any engram you've learned—no need to hunt down specific workbenches. Just make sure the engrams are unlocked on your character. Perfect for centralized crafting in custom setups or modded servers.
 
